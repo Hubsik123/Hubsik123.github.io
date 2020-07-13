@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Calibri;
+}
+#Main {
+    height: 100%;
+    width: 100%;
+}
+/* Banner */
+#Banner {
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(to bottom right, #c7e21d 0%, #99ff99 100%);
+    float: left;
+}
+#Banner h1 {
+    text-align: center;
+    font-size: 2vw;
+    color: #093527;
+}
+/* Menu */
+#Menu {
+    width: 10%;
+    height: 85%;
+    color: #093527;
+    background-color: #E3E7CB;
+    float: left;
+    padding: 0.4vw;
+    overflow: auto;
+}
+#Menu h2 {
+    text-align: center;
+    font-size: 1.5vw;
+}
+#Menu ul {
+    margin: 0;
+    padding: 0;
+}
+#Menu li {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.8vw;
+    font-size: 1vw;
+}
+#Menu a {
+    text-decoration: none;
+    background-color: #a9d6c7;
+    color: #093527;
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #a9d6c7;
+    transition: 0.5s;
+}
+#Menu a:hover {
+    color: #3cd816;
+    border-radius: 50%;
+}
+/* Content */
+#Content {
+    width: 90%;
+    height: 85%;
+    color: #093527;
+    background-color: #F5F9DB;
+    float: left;
+    overflow: auto;      
+    padding: 0.4vw;
+}
+#Content h1 {
+    background-color: #deed78;
+    font-size: 2vw;
+    border-left: 0.25vw #a0b517 solid;
+    text-shadow: 2px 2px 4px #33ff33;
+}
+#Content h2 {
+    font-size: 1.5vw;
+}
+#Content input[type=button] {
+    color: #093527;
+    background-color: #CEE539;
+    border: 0.1vw solid #459078;
+    border-radius: 1vw 1vw 25vw 25vw;
+    width: 80%;
+    margin-left: 10%;  /* Chyba nie tak to powinno być, ale jakoś działa xd, margin auto???*/
+    margin-right: 10%;
+    text-align: center;
+    font-size: 2vw;
+    transition: 0.5s;
+}
+#Content input[type=button]:hover {
+    color: #093527;
+    background-color: #e3f08e;
+    box-shadow: inset 0 0 0 0.2vw #459078;
+}
+#Content input[type=number] {
+    font-size: 1vw;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+#Content table {
+    width: 80%;
+    margin: auto;
+    border-spacing: 0.5vw;
+}
+#Content th {
+    background-color: #CEE539;
+    margin: 1vw;
+}
+#Content td {
+    background-color: #EEF6BB;
+    margin: 1vw;
+}
+/* Footer */
+#Footer {
+    width: 100%;
+    height: 5%;
+    color: #CEE539;
+    background-color: #093527;
+    clear: both;
+    font-size: 1.5vw;
+}
+/* Media, widok na telefonach itp */
+@media (max-width: 600px) { /*Jeżeli rozmiar okna jest mniejszy niż 600px*/
+    #Banner {
+        height: auto;
+    }
+    #Menu {
+        width: 100%;
+        height: auto;
+    }
+    #Menu a {
+        font-size: 2vw;
+    }
+    #Content {
+        width: 100%;
+    }
+    #Footer {
+        height: auto;
+    }
+}
+@media (max-width: 800px) { /*Jeżeli rozmiar okna jest mniejszy niż 800px*/
+    #Banner {
+        height: auto;
+    }
+    #Menu {
+        width: 100%;
+        height: auto;
+    }
+    #Menu a {
+        font-size: 3vw;
+    }
+    #Content {
+        width: 100%;
+    }
+    #Footer {
+        height: auto;
+    }
+}
