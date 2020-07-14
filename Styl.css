@@ -110,6 +110,7 @@ html, body {
     width: 100%;
     height: 100%;
     border: none;
+    margin: 0;
 }
 #Content table {
     width: 80%;
@@ -143,6 +144,7 @@ html, body {
     #Menu {
         width: 100%;
         height: auto;
+        float: none !important;
     }
     #Menu a {
         font-size: 2vw;
@@ -155,24 +157,25 @@ html, body {
     }
 }
 @media (max-width: 800px) { /*Jeżeli rozmiar okna jest mniejszy niż 800px*/
+    /* Baner */
     #Banner {
-        height: auto;
+        height: 10%;
+        color: blue !important;
     }
+    /* Menu */
     #Menu {
         width: 100%;
         height: auto;
+        float: none !important;
     }
     #Menu a {
         font-size: 3vw;
     }
+    /* Content */
     #Content {
         width: 100%;
     }
-    #Content input[type=number] {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
+    /* Footer */
     #Footer {
         height: auto;
     }
