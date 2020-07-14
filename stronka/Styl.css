@@ -127,6 +127,9 @@ html, body {
     margin: 1vw;
     font-size: 1vw;
 }
+#Content a {
+    font-size: 100%;
+}
 /* Footer */
 #Footer {
     width: 100%;
@@ -173,7 +176,7 @@ html, body {
         float: none !important;
     }
     #Menu a {
-        font-size: 3vw;
+        font-size: 2vw;
     }
     /* Content */
     #Content {
