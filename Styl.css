@@ -169,7 +169,7 @@ html, body {
     #Menu {
         width: 100%;
         height: auto;
-        float: none;
+        clear: both;
     }
     #Menu a {
         font-size: 3vw;
