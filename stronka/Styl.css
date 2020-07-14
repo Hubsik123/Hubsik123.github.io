@@ -37,7 +37,7 @@ html, body {
 }
 #Menu h2 {
     text-align: center;
-    font-size: 2vw;
+    font-size: 2.5vw;
 }
 #Menu ul {
     margin: 0;
@@ -129,12 +129,15 @@ html, body {
 }
 #Content a {
     font-size: 1.5vw;
-    text-decoration: none;
+    text-decoration: underline;
     color: #093527;
+    transition: 0.5s;
 }
 #Content a:hover {
     color: #CEE539;
-    text-decoration: underline;
+}
+#Content p {
+    font-size: 1vw;
 }
 /* Footer */
 #Footer {
