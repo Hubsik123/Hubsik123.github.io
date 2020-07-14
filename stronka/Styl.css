@@ -128,7 +128,13 @@ html, body {
     font-size: 1vw;
 }
 #Content a {
-    font-size: 2vw;
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: #093527;
+}
+#Content a:hover {
+    color: #CEE539;
+    text-decoration: underline;
 }
 /* Footer */
 #Footer {
@@ -168,12 +174,14 @@ html, body {
     /* Baner */
     #Banner {
         height: auto;
+        float: left;
     }
     /* Menu */
     #Menu {
         width: 100%;
         height: auto;
         float: none !important;
+        clear: both;
     }
     #Menu a {
         font-size: 2vw;
