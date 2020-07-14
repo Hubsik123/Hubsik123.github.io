@@ -148,7 +148,8 @@ html, body {
     #Menu {
         width: 100%;
         height: auto;
-        float: none;
+        clear: both;
+        float: unset !important;
     }
     #Menu a {
         font-size: 2vw;
@@ -170,6 +171,7 @@ html, body {
         width: 100%;
         height: auto;
         clear: both;
+        float: unset !important;
     }
     #Menu a {
         font-size: 3vw;
