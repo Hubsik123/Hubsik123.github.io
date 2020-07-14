@@ -141,7 +141,7 @@ html, body {
     text-align: center;
 }
 /* Media, widok na telefonach itp */
-@media (max-width: 600px) { /*Jeżeli rozmiar okna jest mniejszy niż 600px*/
+/*@media (max-width: 600px) { /*Jeżeli rozmiar okna jest mniejszy niż 600px
     #Banner {
         height: auto;
     }
@@ -160,16 +160,16 @@ html, body {
     #Footer {
         height: auto;
     }
-}
+}*/
 @media (max-width: 800px) { /*Jeżeli rozmiar okna jest mniejszy niż 800px*/
     /* Baner */
     #Banner {
-        height: 10%;
+        height: auto;
     }
     /* Menu */
     #Menu {
         width: 100%;
-        height: auto;
+        height: auto%;
         float: none !important;
     }
     #Menu a {
@@ -178,6 +178,7 @@ html, body {
     /* Content */
     #Content {
         width: 100%;
+        height: auto;
     }
     /* Footer */
     #Footer {
