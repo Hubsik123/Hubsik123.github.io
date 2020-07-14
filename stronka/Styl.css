@@ -128,7 +128,7 @@ html, body {
     font-size: 1vw;
 }
 #Content a {
-    font-size: 100%;
+    font-size: 2vw;
 }
 /* Footer */
 #Footer {
@@ -182,6 +182,18 @@ html, body {
     #Content {
         width: 100%;
         height: auto;
+    }
+    #Content th {
+        font-size: 2.5vw;
+    }
+    #Content td {
+        font-size: 2vw;
+    }
+    #Content input[type=number] {
+        font-size: 2vw;
+    }
+    #Content a {
+        font-size: 2vw;
     }
     /* Footer */
     #Footer {
