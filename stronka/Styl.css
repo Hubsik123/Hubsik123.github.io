@@ -185,7 +185,7 @@ html, body {
         float: none !important;
     }
     #Menu a {
-        font-size: 3vw;
+        font-size: 999vw;
     }
     /* Content */
     #Content {
@@ -203,6 +203,9 @@ html, body {
     }
     #Content a {
         font-size: 3vw;
+    }
+    #Content p {
+        font-size: 2vw;
     }
     /* Footer */
     #Footer {
