@@ -212,6 +212,7 @@ html, body {
     }
     #Content p {
         font-size: 3vw;
+        display: none;
     }
     /* Footer */
     #Footer {
