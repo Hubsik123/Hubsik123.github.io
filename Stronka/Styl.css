@@ -194,8 +194,10 @@ html, body {
 @media (max-width: 992px) { /*Jeżeli rozmiar okna jest mniejszy niż 992px*/
     /* Baner */
     #Banner {
-        font-size: 4vw;
         height: auto;
+    }
+    #Banner h1 {
+        font-size: 4vw;
     }
     /* Menu */
     #Menu {
@@ -233,7 +235,9 @@ html, body {
     }
     /* Footer */
     #Footer {
-        font-size: 3000vw;
         height: auto;
+    }
+    #Footer p {
+        font-size: 3vw;
     }
 }
