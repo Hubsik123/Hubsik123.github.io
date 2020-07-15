@@ -80,7 +80,8 @@ html, body {
 }
 #Menu hr {
     width: 100%;
-    border: 0.05vw solid #3cd816;
+    border: 2px solid #3cd816;
+    background-color: #3cd816;
     margin-bottom: 0.3vw;
 }
 /* Content */
@@ -193,13 +194,13 @@ html, body {
 @media (max-width: 992px) { /*Jeżeli rozmiar okna jest mniejszy niż 992px*/
     /* Baner */
     #Banner {
+        font-size: 4vw;
         height: auto;
     }
     /* Menu */
     #Menu {
         width: 100%;
         height: auto;
-        float: none !important;
     }
     #Menu a {
         font-size: 5vw;
@@ -210,7 +211,7 @@ html, body {
         height: auto;
     }
     #Content h1 {
-        font-size: 5vw;
+        font-size: 7vw;
     }
     #Content h2 {
         font-size: 4vw;
@@ -232,6 +233,7 @@ html, body {
     }
     /* Footer */
     #Footer {
+        font-size: 3vw;
         height: auto;
     }
 }
