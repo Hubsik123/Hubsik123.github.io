@@ -24,6 +24,8 @@ html, body {
     text-align: center;
     font-size: 2vw;
     color: #093527;
+    margin-top: 0.01vw;
+    margin-bottom: 0.01vw;
 }
 /* Menu */
 #Menu {
@@ -38,6 +40,14 @@ html, body {
 #Menu h2 {
     text-align: center;
     font-size: 2.5vw;
+    margin-top: 0.01vw;
+    margin-bottom: 0.01vw;
+}
+#Menu h3 {
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 0.01vw;
+    margin-bottom: 0.01vw;
 }
 #Menu ul {
     margin: 0;
@@ -88,6 +98,8 @@ html, body {
     font-size: 2vw;
     border-left: 0.25vw #a0b517 solid;
     text-shadow: 2px 2px 4px #33ff33;
+    margin-top: 0.01vw;
+    margin-bottom: 0.01vw;
 }
 #Content h2 {
     font-size: 1.5vw;
@@ -147,7 +159,6 @@ html, body {
 #Footer {
     width: 100%;
     height: 5%;
-    
     background-color: #093527;
     clear: both;
 }
@@ -155,6 +166,8 @@ html, body {
     font-size: 1.5vw;
     color: #CEE539;
     text-align: center;
+    margin-top: 0.01vw;
+    margin-bottom: 0.01vw;
 }
 /* Media, widok na telefonach itp */
 /*@media (max-width: 600px) { /*Jeżeli rozmiar okna jest mniejszy niż 600px
