@@ -24,12 +24,10 @@ html, body {
     text-align: center;
     font-size: 2vw;
     color: #093527;
-    margin-top: 0.01vw;
-    margin-bottom: 0.01vw;
 }
 /* Menu */
 #Menu {
-    width: 10%;
+    width: 15%;
     height: 85%;
     color: #093527;
     background-color: #E3E7CB;
@@ -86,7 +84,7 @@ html, body {
 }
 /* Content */
 #Content {
-    width: 90%;
+    width: 85%;
     height: 85%;
     color: #093527;
     background-color: #F5F9DB;
@@ -198,14 +196,20 @@ html, body {
     }
     #Banner h1 {
         font-size: 4vw;
+        margin-top: 0.01vw;
+        margin-bottom: 0.01vw;
     }
     /* Menu */
     #Menu {
         width: 100%;
         height: auto;
     }
+    #Menu h2 {
+        font-size: 4vw;
+    }
     #Menu a {
-        font-size: 5vw;
+        font-size: 2vw;
+        width: 90%;
     }
     /* Content */
     #Content {
@@ -214,9 +218,13 @@ html, body {
     }
     #Content h1 {
         font-size: 7vw;
+        margin-top: 0.01vw;
+        margin-bottom: 0.01vw;
     }
     #Content h2 {
         font-size: 4vw;
+        margin-top: 0.01vw;
+        margin-bottom: 0.01vw;
     }
     #Content th {
         font-size: 2.5vw;
