@@ -190,7 +190,7 @@ html, body {
         height: auto;
     }
 }*/
-@media (max-width: 992px) { /*Jeżeli rozmiar okna jest mniejszy niż 800px*/
+@media (max-width: 992px) { /*Jeżeli rozmiar okna jest mniejszy niż 992px*/
     /* Baner */
     #Banner {
         height: auto;
