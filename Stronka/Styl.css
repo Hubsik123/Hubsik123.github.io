@@ -59,7 +59,7 @@ html, body {
     list-style-type: none;
     width: 100%;
     text-align: center;
-    margin-bottom: 0.8vw;
+    margin-bottom: 0.5vw;
     font-size: 1vw;
 }
 #Menu a {
@@ -102,6 +102,8 @@ html, body {
 }
 #Content h2 {
     font-size: 1.5vw;
+    margin-top: 0.01vw;
+    margin-bottom: 0.01vw;
 }
 #Content input[type=button] {
     color: #093527;
@@ -210,10 +212,13 @@ html, body {
     #Menu h3 {
         font-size: 3vw;
     }
+    #Menu li {
+        margin-bottom: 7px;
+    }
     #Menu a {
+        padding: 0.5vw;
         font-size: 3vw;
         width: 90%;
-        padding: 3999px;
     }
     /* Content */
     #Content {
@@ -227,8 +232,6 @@ html, body {
     }
     #Content h2 {
         font-size: 4vw;
-        margin-top: 0.01vw;
-        margin-bottom: 0.01vw;
     }
     #Content th {
         font-size: 2.5vw;
