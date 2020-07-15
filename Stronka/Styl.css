@@ -207,9 +207,13 @@ html, body {
     #Menu h2 {
         font-size: 4vw;
     }
+    #Menu h3 {
+        font-size: 3vw;
+    }
     #Menu a {
-        font-size: 2vw;
+        font-size: 3vw;
         width: 90%;
+        padding: 3px;
     }
     /* Content */
     #Content {
