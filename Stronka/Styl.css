@@ -235,10 +235,10 @@ html, body {
         width: 100%;
         height: auto;
     }
-    #Menu h2 {
+    #Menu h1 {
         font-size: 4vw;
     }
-    #Menu h3 {
+    #Menu h2 {
         font-size: 3vw;
     }
     #Menu li {
@@ -280,10 +280,10 @@ html, body {
     }
     #Content .Link_1 {
         font-size: 3vw;
-        border-left: 2.5vw #d3e84a solid;
+        border-left: 3.5vw #d3e84a solid;
     }
     #Content .Link_2 {
-        font-size: 2vw;
+        font-size: 30vw;
     }
     /* Footer */
     #Footer {
