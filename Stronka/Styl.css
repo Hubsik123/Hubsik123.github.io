@@ -13,6 +13,11 @@ html, body {
     height: 100%;
     width: 100%;
 }
+/* Inne*/
+.WIP {
+    color: black;
+    background-color: #ff00ff;
+}
 /* Banner */
 #Banner {
     width: 100%;
@@ -195,9 +200,10 @@ html, body {
 #Content .Link_2:hover {
     color: #33ff33;
     background-color: #093527;
+    border: 0.1vw ridge #33ff33;
 }
 #Content p {
-    font-size: 1vw;
+    font-size: 1.25vw;
 }
 /* Footer */
 #Footer {
