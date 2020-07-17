@@ -195,6 +195,7 @@ html, body {
     /* Baner */
     #Banner {
         height: auto;
+        float: left;
     }
     #Banner h1 {
         font-size: 4vw;
@@ -205,6 +206,7 @@ html, body {
     #Menu {
         width: 100%;
         height: auto;
+        clear: both;
     }
     #Menu h2 {
         font-size: 4vw;
@@ -224,6 +226,7 @@ html, body {
     #Content {
         width: 100%;
         height: auto;
+        clear: both;
     }
     #Content h1 {
         font-size: 7vw;
@@ -251,6 +254,7 @@ html, body {
     /* Footer */
     #Footer {
         height: auto;
+        clear: both;
     }
     #Footer p {
         font-size: 3vw;
