@@ -26,7 +26,8 @@ html, body {
     color: #093527;
     margin-top: 0.5vw;
     margin-bottom: 0.5vw;
-    text-shadow: -5px 5px 0px #00b300, -10px 10px 0px #00cc00, -15px 15px 0px #33ff33;
+    /*text-shadow: -5px 5px 0px #00b300, -10px 10px 0px #00cc00, -15px 15px 0px #33ff33;*/
+    text-shadow: -0.5vw 0.5vw 0vw #00b300, -0.75vw 0.75vw 0vw #00cc00, -1vw 1vw 0vw #33ff33;
 }
 /* Menu */
 #Menu {
@@ -38,13 +39,14 @@ html, body {
     padding: 0.4vw;
     overflow: auto;
 }
-#Menu h2 {
+#Menu h1 {
     text-align: center;
     font-size: 2.5vw;
     margin-top: 0.01vw;
     margin-bottom: 0.01vw;
+    text-shadow: 0.3vw 0.2vw 0px #7A7A7A;
 }
-#Menu h3 {
+#Menu h2 {
     text-align: center;
     font-size: 2vw;
     margin-top: 0.01vw;
@@ -83,8 +85,11 @@ html, body {
 }
 #Menu hr {
     width: 100%;
-    border: 2px solid #3cd816;
-    background-color: #3cd816;
+    height: 0.3vw;
+    /*border: 2px solid #3cd816;
+    background-color: #3cd816;*/
+    background: linear-gradient(to right, #003300 0%, #33ff33 70%);
+    border: 0;
     margin-bottom: 0.3vw;
 }
 /* Content */
@@ -101,9 +106,11 @@ html, body {
     background-color: #deed78;
     font-size: 2vw;
     border-left: 0.25vw #a0b517 solid;
-    text-shadow: 2px 2px 4px #33ff33;
+    /*text-shadow: 2px 2px 4px #33ff33;*/
+    /*text-shadow: #FFFCA8 2px 2px 0px, #9C9C9C 4px 4px 0px;*/
+    text-shadow: #FFFCA8 0.15vw 0.15vw 0vw, #9C9C9C 0.3vw 0.3vw 0vw;
     margin-top: 0.01vw;
-    margin-bottom: 0.01vw;
+    margin-bottom: 0.15vw;
 }
 #Content h2 {
     font-size: 1.5vw;
@@ -165,23 +172,23 @@ html, body {
     text-shadow: 2px 2px 4px #33ff33;
     margin-top: 0.01vw;
     margin-bottom: 0.01vw;
-}
-#Content .Link_1:hover {
-
+    transition: 0.5s;
 }
 #Content .Link_2 { /* Ładny link, używany przy linkach do notatek */
     text-decoration: none;
     display: inline-block;
-    height: 10vw;
-    width: 10vw;
-    color: red;
-    background-color: blue;
-    font-size: 0.25vw;
+    height: 20%;
+    width: 33%;
+    color: #33ff33;
+    background-color: #aaff80;
+    font-size: 1.75vw;
     text-align: center;
-    margin: 0.3vw;
-    padding: 1vw;
-    border: 3px solid green;
+    margin: 0.01vw;
+    padding: 0.01vw;
+    border: 0.1vw solid green;
     border-radius: 1vw;
+    line-break: strict;
+    overflow: hidden;
 }
 #Content .Link_2:hover {
     color: black;
