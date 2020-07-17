@@ -171,9 +171,9 @@ html, body {
     color: #CEE539;
 }
 #Content .Link_1 {
-    background-color: #deed78;
+    background-color: #e8f3a5;
     font-size: 1.5vw;
-    border-left: 0.25vw #a0b517 solid;
+    border-left: 0.25vw #d3e84a solid;
     text-shadow: 2px 2px 4px #33ff33;
     margin-top: 0.01vw;
     margin-bottom: 0.01vw;
@@ -258,6 +258,7 @@ html, body {
         font-size: 7vw;
         margin-top: 0.01vw;
         margin-bottom: 0.01vw;
+        border-left: 2.5vw #a0b517 solid;
     }
     #Content h2 {
         font-size: 4vw;
@@ -276,6 +277,13 @@ html, body {
     }
     #Content p {
         font-size: 3vw;
+    }
+    #Content .Link_1 {
+        font-size: 3vw;
+        border-left: 2.5vw #d3e84a solid;
+    }
+    #Content .Link_2 {
+        font-size: 2vw;
     }
     /* Footer */
     #Footer {
