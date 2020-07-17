@@ -228,6 +228,7 @@ html, body {
         width: 100%;
         height: auto;
         clear: both !important;
+        float: initial !important;
     }
     #Content h1 {
         font-size: 7vw;
@@ -256,6 +257,7 @@ html, body {
     #Footer {
         height: auto;
         clear: both !important;
+        float: initial !important;
     }
     #Footer p {
         font-size: 3vw;
