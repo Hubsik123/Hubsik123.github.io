@@ -70,7 +70,7 @@ html, body {
 #Menu a {
     text-decoration: none;
     background-color: #a9d6c7;
-    border: 1px solid #093527;
+    border: 1px inset #093527;
     color: #093527;
     display: inline-block;
     width: 100%;
@@ -177,21 +177,24 @@ html, body {
 #Content .Link_2 { /* Ładny link, używany przy linkach do notatek */
     text-decoration: none;
     display: inline-block;
-    height: 20%;
+    height: auto;
     width: 33%;
-    color: #33ff33;
+    color: #093527;
     background-color: #aaff80;
     font-size: 1.75vw;
     text-align: center;
-    margin: 0.01vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
     padding: 0.01vw;
-    border: 0.1vw solid green;
+    border: 0.1vw ridge #093527;
     border-radius: 1vw;
     line-break: strict;
     overflow: hidden;
+    transition: 0.5s;
 }
 #Content .Link_2:hover {
-    color: black;
+    color: #33ff33;
+    background-color: #093527;
 }
 #Content p {
     font-size: 1vw;
