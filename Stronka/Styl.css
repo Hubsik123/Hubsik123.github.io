@@ -26,6 +26,7 @@ html, body {
     color: #093527;
     margin-top: 0.5vw;
     margin-bottom: 0.5vw;
+    text-shadow: -5px 5px 0px #00b300, -10px 10px 0px #00cc00, -15px 15px 0px #33ff33;
 }
 /* Menu */
 #Menu {
@@ -78,6 +79,7 @@ html, body {
     color: #3cd816;
     background-color: #093527;
     border-bottom-right-radius: 2vw;
+    font-style: italic;
 }
 #Menu hr {
     width: 100%;
@@ -147,14 +149,25 @@ html, body {
     margin: 1vw;
     font-size: 1vw;
 }
-#Content #Normal_Link { /* Normlany Link*/
+#Content .Normal_Link { /* Normlany Link*/
     font-size: 1.5vw;
     text-decoration: underline;
     color: #093527;
     transition: 0.5s;
 }
-#Content a:hover {
+#Content .Normal_Link:hover {
     color: #CEE539;
+}
+#Content .Link_1 {
+    background-color: #deed78;
+    font-size: 1.5vw;
+    border-left: 0.25vw #a0b517 solid;
+    text-shadow: 2px 2px 4px #33ff33;
+    margin-top: 0.01vw;
+    margin-bottom: 0.01vw;
+}
+#Content .Link_1:hover {
+
 }
 #Content .Link_2 { /* Ładny link, używany przy linkach do notatek */
     text-decoration: none;
@@ -163,12 +176,15 @@ html, body {
     width: 10vw;
     color: red;
     background-color: blue;
-    font-size: 1.25vw;
+    font-size: 0.25vw;
     text-align: center;
     margin: 0.3vw;
     padding: 1vw;
     border: 3px solid green;
     border-radius: 1vw;
+}
+#Content .Link_2:hover {
+    color: black;
 }
 #Content p {
     font-size: 1vw;
