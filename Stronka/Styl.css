@@ -84,7 +84,8 @@ html, body {
 }
 #Menu a:hover {
     color: #3cd816;
-    background-color: #093527;
+    /*background-color: #093527;*/
+    background: linear-gradient(to right, #093527 25%, #33ff33 150%);
     border-bottom-right-radius: 2vw;
     font-style: italic;
 }
@@ -192,15 +193,17 @@ html, body {
     margin-bottom: 0.5vw;
     padding: 0.01vw;
     border: 0.1vw ridge #093527;
-    border-radius: 1vw;
-    line-break: strict;
+    /*border-radius: 1vw;*/
+    border-radius: 1vw 1vw 0vw 0vw;
     overflow: hidden;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
     transition: 0.5s;
 }
 #Content .Link_2:hover {
     color: #33ff33;
-    background-color: #093527;
-    border: 0.1vw ridge #33ff33;
+    /*background-color: #093527;*/
+    background: linear-gradient(to bottom, #003300 -20%, #669900 120%);
+    border: 0.1vw ridge #126d50;
 }
 #Content p {
     font-size: 1.25vw;
@@ -219,7 +222,49 @@ html, body {
     margin-top: 0.01vw;
     margin-bottom: 0.01vw;
 }
-/* Media, widok na telefonach itp */
+    /* Grafiki - to to akurat z internetu skopiowałem (https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp), ale żeby nie było - dużo pozmieniałem*/
+.Grafika {
+    float: left;
+    padding: 0.1vw;
+  }  
+        /* Style the images inside the grid */
+.Grafika img {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.5s;
+}  
+.Grafika img:hover {
+    opacity: 1;
+}  
+        /* Clear floats after the columns */
+.Grafiki:after {
+    content: "";
+    display: table;
+    clear: both;
+}  
+        /* The expanding image container (positioning is needed to position the close button and the text) */
+.Kontener_Obrazkow {
+    position: relative;
+    display: none;
+}  
+        /* Expanding image text */
+#Opis_Obrazka {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}  
+        /* Closable button inside the image */
+.Guzik {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+        /* Media, widok na telefonach itp */
 @media (max-width: 992px) { /*Jeżeli rozmiar okna jest mniejszy niż 992px*/
     /* Baner */
     #Banner {
