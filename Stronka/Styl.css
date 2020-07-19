@@ -119,9 +119,15 @@ html, body {
     margin-bottom: 0.15vw;
 }
 #Content h2 {
+    background-color: #e8f3a5;
     font-size: 1.5vw;
+    border-left: 0.25vw #d3e84a solid;
+    text-shadow: 2px 2px 4px #33ff33;
     margin-top: 0.01vw;
     margin-bottom: 0.01vw;
+    transition: 0.5s;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
 }
 #Content input[type=button] {
     color: #093527;
@@ -162,23 +168,16 @@ html, body {
     margin: 1vw;
     font-size: 1vw;
 }
-#Content .Normal_Link { /* Normlany Link*/
+#Content .Link_1 { /* Normlany Link*/
     font-size: 1.5vw;
+    margin-top: 0.01vw;
+    margin-bottom: 0.01vw;
     text-decoration: underline;
     color: #093527;
     transition: 0.5s;
 }
-#Content .Normal_Link:hover {
-    color: #CEE539;
-}
-#Content .Link_1 {
-    background-color: #e8f3a5;
-    font-size: 1.5vw;
-    border-left: 0.25vw #d3e84a solid;
-    text-shadow: 2px 2px 4px #33ff33;
-    margin-top: 0.01vw;
-    margin-bottom: 0.01vw;
-    transition: 0.5s;
+#Content .Link_1:hover {
+    color: #33ff33;
 }
 #Content .Link_2 { /* Ładny link, używany przy linkach do notatek */
     text-decoration: none;
@@ -187,7 +186,7 @@ html, body {
     width: 33%;
     color: #093527;
     background-color: #aaff80;
-    font-size: 1.75vw;
+    font-size: 1.25vw;
     text-align: center;
     margin-top: 0.5vw;
     margin-bottom: 0.5vw;
@@ -222,14 +221,14 @@ html, body {
     margin-top: 0.01vw;
     margin-bottom: 0.01vw;
 }
-    /* Grafiki - to to akurat z internetu skopiowałem (https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp), ale żeby nie było - dużo pozmieniałem*/
+    /* Grafiki - to to akurat z internetu skopiowałem (https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp), ale żeby nie było - dużo pozmieniałem */
 .Grafika {
     float: left;
     padding: 0.1vw;
     text-align: center;
     width: 25%;
   }  
-        /* Style the images inside the grid */
+        /* Układ obrazków */
 .Grafika img {
     opacity: 0.5;
     cursor: pointer;
@@ -240,18 +239,18 @@ html, body {
 .Grafika img:hover {
     opacity: 1;
 }  
-        /* Clear floats after the columns */
+        /* Ustawienie float */
 .Grafiki:after {
     content: "";
     display: table;
     clear: both;
 }  
-        /* The expanding image container (positioning is needed to position the close button and the text) */
+        /* Miejsce na powiększony obrazek */
 .Kontener_Obrazkow {
     position: relative;
     display: none;
 }  
-        /* Expanding image text */
+        /* Tekst na obrazku */
 #Opis_Obrazka {
     position: absolute;
     bottom: 15px;
@@ -261,7 +260,7 @@ html, body {
     opacity: 0.7;
     font-size: 2vw;
 }  
-        /* Closable button inside the image */
+        /* Guzik do zamknięcia obrazka */
 .Guzik {
     position: absolute;
     top: 10px;
@@ -270,8 +269,30 @@ html, body {
     font-size: 35px;
     cursor: pointer;
 }
-.Sekcja_Grafik {
-    float: initial !important;
+    /* Tooltip - to to akurat z internetu skopiowałem (https://www.w3schools.com/css/css_tooltip.asp), ale żeby nie było - dużo pozmieniałem */
+.Tooltip {
+    position: relative;
+    display: inline-block;
+}
+.Tooltip .Tooltip_Opis {
+    visibility: hidden;
+    width: 250px;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+        /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -125px; /* Tu MUSI być width/2 inaczej nie zadziała*/
+    transition: 0.35s;
+}
+.Tooltip:hover .Tooltip_Opis {
+    visibility: visible;
 }
         /* Media, widok na telefonach itp */
 @media (max-width: 992px) { /*Jeżeli rozmiar okna jest mniejszy niż 992px*/
@@ -330,7 +351,7 @@ html, body {
         font-size: 3vw;
     }
     #Content p {
-        font-size: 2vw;
+        font-size: 2.25vw;
     }
     #Content .Link_1 {
         font-size: 3vw;

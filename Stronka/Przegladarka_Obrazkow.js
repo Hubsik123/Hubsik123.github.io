@@ -1,12 +1,12 @@
 function Powiekszenie_Obrazka(imgs) {
-    // Get the expanded image
+      // Wybranie obrazka do powiększenia
     var Powiekszony_Obrazek = document.getElementById("Powiekszony_Obrazek");
-    // Get the image text
+      // Wybranie tekstu na obrazku
     var Opis_Obrazka = document.getElementById("Opis_Obrazka");
-    // Use the same src in the expanded image as the image being clicked on from the grid
+      // "Przekopiowanie" scr obrazka do tego powiększonego
     Powiekszony_Obrazek.src = imgs.src;
-    // Use the value of the alt attribute of the clickable image as text inside the expanded image
+      // Zamiana "alt" na tekst wyświetlany na obrazku
     Opis_Obrazka.innerHTML = imgs.alt;
-    // Show the container element (hidden with CSS)
+      // Wyświetlenia obrazka
     Powiekszony_Obrazek.parentElement.style.display = "block";
   }
