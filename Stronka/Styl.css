@@ -196,7 +196,6 @@ html, body {
     /*border-radius: 1vw;*/
     border-radius: 1vw 1vw 0vw 0vw;
     overflow: hidden;
-    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
     transition: 0.5s;
 }
 #Content .Link_2:hover {
@@ -204,6 +203,7 @@ html, body {
     /*background-color: #093527;*/
     background: linear-gradient(to bottom, #003300 -20%, #669900 120%);
     border: 0.1vw ridge #126d50;
+    box-shadow: -10px 0px 13px -7px black, 10px 0px 13px -7px black, 5px 5px 15px 5px black;
 }
 #Content p {
     font-size: 1.25vw;
@@ -226,12 +226,16 @@ html, body {
 .Grafika {
     float: left;
     padding: 0.1vw;
+    text-align: center;
+    width: 25%;
   }  
         /* Style the images inside the grid */
 .Grafika img {
     opacity: 0.5;
     cursor: pointer;
     transition: 0.5s;
+    width: 15vw;
+    height: 15vw;
 }  
 .Grafika img:hover {
     opacity: 1;
@@ -253,7 +257,9 @@ html, body {
     bottom: 15px;
     left: 15px;
     color: white;
-    font-size: 20px;
+    background-color: black;
+    opacity: 0.7;
+    font-size: 2vw;
 }  
         /* Closable button inside the image */
 .Guzik {
@@ -263,6 +269,9 @@ html, body {
     color: white;
     font-size: 35px;
     cursor: pointer;
+}
+.Sekcja_Grafik {
+    float: initial !important;
 }
         /* Media, widok na telefonach itp */
 @media (max-width: 992px) { /*Jeżeli rozmiar okna jest mniejszy niż 992px*/
