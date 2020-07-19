@@ -368,6 +368,22 @@ html, body {
     #Footer p {
         font-size: 3vw;
     }
+    /* Grafika */
+    .Grafika {
+        height: 25%;
+        width: 25%;
+      }  
+            /* Układ obrazków */
+    .Grafika img {
+        opacity: 0.5;
+        cursor: pointer;
+        transition: 0.5s;
+        width: 100%;
+        height: 100%;
+    }  
+    .Grafika img:hover {
+        opacity: 1;
+    } 
     /* Tooltip */
     .Tooltip .Tooltip_Opis {
         width: 25vw;

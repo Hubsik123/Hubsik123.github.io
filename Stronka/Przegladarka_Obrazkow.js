@@ -1,4 +1,3 @@
-var CzyPowiekszonoObrazek = false;
 function Powiekszenie_Obrazka(imgs)
 {
         // Wybranie obrazka do powiększenia
