@@ -1,3 +1,8 @@
+function Wersja_Stronki()
+{
+    var Wersja = "v 3"
+    alert("To jest wersja strony nr:\n"+Wersja)
+}
 function Powiekszenie_Obrazka(imgs)
 {
         // Wybranie obrazka do powiększenia
