@@ -16,6 +16,7 @@ html::selection, body::selection {
     height: 100%;
     width: 100%;
 }
+/* Zaznaczony tekst */
 ::selection {
     background-color: lightgreen;
     text-shadow: none;
@@ -82,7 +83,7 @@ html::selection, body::selection {
 #Menu a {
     text-decoration: none;
     background-color: #a9d6c7;
-    border: 1px inset #093527;
+    border: 0.1vw inset #093527;
     color: #093527;
     display: inline-block;
     width: 100%;
@@ -104,7 +105,7 @@ html::selection, body::selection {
     background-color: #3cd816;*/
     background: linear-gradient(to right, #003300 0%, #33ff33 70%);
     border: 0;
-    margin-bottom: 0.3vw;
+    margin: 0;
 }
 /* Content */
 #Content {
@@ -114,7 +115,6 @@ html::selection, body::selection {
     background-color: #F5F9DB;
     float: left;
     overflow: auto; /*Poprawić potem na oveflow: auto; */
-    padding: 0.4vw;
 }
 #Content h1 {
     background-color: #deed78;
@@ -125,6 +125,7 @@ html::selection, body::selection {
     text-shadow: #FFFCA8 0.15vw 0.15vw 0vw, #9C9C9C 0.3vw 0.3vw 0vw;
     margin-top: 0.25vw;
     margin-bottom: 0.25vw;
+    margin-left: 0.125vw;
 }
 #Content h2 {
     background-color: #e8f3a5;
@@ -214,6 +215,7 @@ html::selection, body::selection {
 }
 #Content p {
     font-size: 1.25vw;
+    padding: 0.25vw;
 }
 /* Footer */
 #Footer {
@@ -346,7 +348,7 @@ html::selection, body::selection {
         font-size: 3vw;
     }
     #Menu li {
-        margin-bottom: 7px;
+        margin-bottom: 0.5vw;
     }
     #Menu a {
         padding: 0.5vw;
@@ -387,11 +389,105 @@ html::selection, body::selection {
     }
     #Content .Link_2 {
         font-size: 3vw;
-        /*margin-top: 0 !important;
-        margin-bottom: 0 !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;*/
         width: calc(50% - 0.4vw);
+        /*width: 45%;*/
+    }
+    /* Footer */
+    #Footer {
+        height: auto;
+    }
+    #Footer p {
+        font-size: 3vw;
+    }
+    /* Grafika */
+    .Grafika {
+        height: 25%;
+        width: 25%;
+      }  
+        /* Układ obrazków */
+    .Grafika img {
+        opacity: 0.5;
+        transition: 0.5s;
+        width: 100%;
+        height: 100%;
+    }  
+    .Grafika img:hover {
+        opacity: 1;
+    } 
+    /* Tooltip */
+    .Tooltip .Tooltip_Opis {
+        width: 25vw;
+        margin-left: -12.5vw !important;
+        transition: initial !important;
+    }
+}
+@media (max-width: 600px)
+{
+    /* Baner */
+    #Banner {
+        height: auto;
+    }
+    #Banner h1 {
+        font-size: 4vw;
+        margin-top: 0.01vw;
+        margin-bottom: 0.01vw;
+    }
+    /* Menu */
+    #Menu {
+        width: 100%;
+        height: auto;
+    }
+    #Menu h1 {
+        font-size: 4vw;
+    }
+    #Menu h2 {
+        font-size: 3vw;
+    }
+    #Menu li {
+        margin-bottom: 0.5vw;
+    }
+    #Menu a {
+        padding: 0.5vw;
+        font-size: 3vw;
+        width: 90%;
+    }
+    /* Content */
+    #Content {
+        width: 100%;
+        height: auto;
+    }
+    #Content h1 {
+        font-size: 7vw;
+        margin-top: 0.2vw;
+        margin-bottom: 0.2vw;
+        border-left: 2.5vw #a0b517 solid;
+    }
+    #Content h2 {
+        font-size: 4vw;
+    }
+    #Content th {
+        font-size: 2.5vw;
+    }
+    #Content td {
+        font-size: 3vw;
+    }
+    #Content input[type=number] {
+        font-size: 2vw;
+    }
+    #Content a {
+        font-size: 3vw;
+    }
+    #Content p {
+        font-size: 3vw;
+    }
+    #Content .Link_1 {
+        font-size: 3vw;
+    }
+    #Content .Link_2 {
+        font-size: 3vw;
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+        width: 90%;
         /*width: 45%;*/
     }
     /* Footer */
