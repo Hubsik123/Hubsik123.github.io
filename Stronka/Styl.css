@@ -123,19 +123,19 @@ html::selection, body::selection {
     /*text-shadow: 2px 2px 4px #33ff33;*/
     /*text-shadow: #FFFCA8 2px 2px 0px, #9C9C9C 4px 4px 0px;*/
     text-shadow: #FFFCA8 0.15vw 0.15vw 0vw, #9C9C9C 0.3vw 0.3vw 0vw;
-    margin-top: 0.01vw;
-    margin-bottom: 0.15vw;
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
 }
 #Content h2 {
     background-color: #e8f3a5;
     font-size: 1.5vw;
     border-left: 0.25vw #d3e84a solid;
     text-shadow: 2px 2px 4px #33ff33;
-    margin-top: 0.01vw;
-    margin-bottom: 0.01vw;
-    transition: 0.5s;
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
     margin-left: 2.5vw;
     margin-right: 2.5vw;
+    transition: 0.5s;
 }
 #Content input[type=button] {
     color: #093527;
@@ -189,7 +189,7 @@ html::selection, body::selection {
     text-decoration: none;
     display: inline-block;
     height: auto;
-    width: 33%;
+    width: 33.3%;
     color: #093527;
     background-color: #aaff80;
     font-size: 1.25vw;
@@ -198,7 +198,7 @@ html::selection, body::selection {
     margin-bottom: 0.5vw;
     margin-left: auto;
     margin-right: auto;
-    padding: 0.01vw;
+    padding: 0;
     border: 0.1vw ridge #093527;
     /*border-radius: 1vw;*/
     border-radius: 1vw 1vw 0vw 0vw;
@@ -360,8 +360,8 @@ html::selection, body::selection {
     }
     #Content h1 {
         font-size: 7vw;
-        margin-top: 0.01vw;
-        margin-bottom: 0.01vw;
+        margin-top: 0.2vw;
+        margin-bottom: 0.2vw;
         border-left: 2.5vw #a0b517 solid;
     }
     #Content h2 {
@@ -387,11 +387,11 @@ html::selection, body::selection {
     }
     #Content .Link_2 {
         font-size: 3vw;
-        width: 49%;
+        width: calc(49% - 0.1vw);
         margin-top: 0.2vw;
         margin-bottom: 0.2vw;
-        margin-left: 0.25%;
-        margin-right: 0.25%;
+        margin-left: 0vw;
+        margin-right: 0vw;
     }
     /* Footer */
     #Footer {
