@@ -387,12 +387,12 @@ html::selection, body::selection {
     }
     #Content .Link_2 {
         font-size: 3vw;
-        width: calc(48% - 0.5vw);
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: calc(50% - 0.5vw);
         /*width: 45%;*/
-        margin-top: 0.2vw;
-        margin-bottom: 0.2vw;
-        margin-left: 1%;
-        margin-right: 1%;
     }
     /* Footer */
     #Footer {
