@@ -2,16 +2,23 @@
     box-sizing: border-box;
 }
 html, body {
-    background-color: black;
+    background-color: #F5F9DB;
     color: white;
     width: 100%;
     height: 100%;
     margin: 0;
     font-family: Calibri;
 }
+html::selection, body::selection {
+    background-color: white;
+}
 #Main {
     height: 100%;
     width: 100%;
+}
+::selection {
+    background-color: lightgreen;
+    text-shadow: none;
 }
 /* Inne*/
 .WIP {
@@ -161,13 +168,11 @@ html, body {
 }
 #Content th {
     background-color: #CEE539;
-    margin: 1vw;
     font-size: 1.5vw;
 }
 #Content td {
     background-color: #EEF6BB;
-    margin: 1vw;
-    font-size: 1vw;
+    font-size: 1.25vw;
 }
 #Content .Link_1 { /* Normlany Link*/
     font-size: 1.5vw;
@@ -191,6 +196,8 @@ html, body {
     text-align: center;
     margin-top: 0.5vw;
     margin-bottom: 0.5vw;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0.01vw;
     border: 0.1vw ridge #093527;
     /*border-radius: 1vw;*/
@@ -316,10 +323,6 @@ html, body {
     background: #00e673;
     border-radius: 1.5vw;
 }
-        /* Po najechaniu na zaznaczone miejsce */
-/* ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #093527 15%, #33ff33 75%);
-} */
 /* Media, widok na telefonach itp */
 @media (max-width: 992px) { /*Jeżeli rozmiar okna jest mniejszy niż 992px*/
     /* Baner */
@@ -368,7 +371,7 @@ html, body {
         font-size: 2.5vw;
     }
     #Content td {
-        font-size: 2vw;
+        font-size: 3vw;
     }
     #Content input[type=number] {
         font-size: 2vw;
@@ -381,12 +384,14 @@ html, body {
     }
     #Content .Link_1 {
         font-size: 3vw;
-        border-left: 3.5vw #d3e84a solid;
     }
     #Content .Link_2 {
         font-size: 3vw;
-        width: 50%;
-        margin: 0;
+        width: 49%;
+        margin-top: 0.2vw;
+        margin-bottom: 0.2vw;
+        margin-left: 0.25%;
+        margin-right: 0.25%;
     }
     /* Footer */
     #Footer {
@@ -400,7 +405,7 @@ html, body {
         height: 25%;
         width: 25%;
       }  
-            /* Układ obrazków */
+        /* Układ obrazków */
     .Grafika img {
         opacity: 0.5;
         transition: 0.5s;
