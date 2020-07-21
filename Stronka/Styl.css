@@ -131,7 +131,8 @@ html::selection, body::selection {
     background-color: #e8f3a5;
     font-size: 1.5vw;
     border-left: 0.25vw #d3e84a solid;
-    text-shadow: 2px 2px 4px #33ff33;
+    /*text-shadow: 2px 2px 4px #33ff33;*/
+    text-shadow: 0.25vw 0.25vw 0.5vw #33ff33;
     margin-top: 0.25vw;
     margin-bottom: 0.25vw;
     margin-left: 2.5vw;
@@ -190,7 +191,7 @@ html::selection, body::selection {
     text-decoration: none;
     display: inline-block;
     height: auto;
-    width: calc(33.3% - 0.4vw);
+    width: calc(33.33% - 0.4vw);
     color: #093527;
     background-color: #aaff80;
     font-size: 1.25vw;
@@ -211,7 +212,8 @@ html::selection, body::selection {
     /*background-color: #093527;*/
     background: linear-gradient(to bottom, #003300 -20%, #669900 120%);
     border: 0.1vw ridge #126d50;
-    box-shadow: -10px 0px 13px -7px black, 10px 0px 13px -7px black, 5px 5px 15px 5px black;
+    /*box-shadow: -10px 0px 13px -7px black, 10px 0px 13px -7px black, 5px 5px 15px 5px black;*/
+    box-shadow: -0.5vw 0vw 0.8vw -0.6vw black, 0.5vw 0vw 0.8vw -0.6vw black, 0.3vw 0.3vw 1vw 0.3vw black;
 }
 #Content p {
     font-size: 1.25vw;
@@ -389,7 +391,7 @@ html::selection, body::selection {
     }
     #Content .Link_2 {
         font-size: 3vw;
-        width: calc(50% - 0.4vw);
+        width: calc(50% - 0.5vw);
         /*width: 45%;*/
     }
     /* Footer */
