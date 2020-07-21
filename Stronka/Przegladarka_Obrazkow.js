@@ -1,7 +1,7 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 3"
-    alert("To jest wersja strony nr:\n"+Wersja)
+    var Wersja = "v 4"
+    alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik")
 }
 function Powiekszenie_Obrazka(imgs)
 {

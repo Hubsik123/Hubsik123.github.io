@@ -189,15 +189,15 @@ html::selection, body::selection {
     text-decoration: none;
     display: inline-block;
     height: auto;
-    width: 33.3%;
+    width: calc(33.3% - 0.3vw);
     color: #093527;
     background-color: #aaff80;
     font-size: 1.25vw;
     text-align: center;
     margin-top: 0.5vw;
     margin-bottom: 0.5vw;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0.1vw;
+    margin-right: 0.1vw;
     padding: 0;
     border: 0.1vw ridge #093527;
     /*border-radius: 1vw;*/
