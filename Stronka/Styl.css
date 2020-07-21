@@ -391,8 +391,8 @@ html::selection, body::selection {
         width: 45%;
         margin-top: 0.2vw;
         margin-bottom: 0.2vw;
-        margin-left: initial;
-        margin-right: initial;
+        margin-left: 5%;
+        margin-right: 5%;
         margin: auto;
     }
     /* Footer */
