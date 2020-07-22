@@ -16,6 +16,10 @@ html::selection, body::selection {
     height: 100%;
     width: 100%;
 }
+/* Ikony */
+.material-icons {
+    float: left;
+}
 /* Zaznaczony tekst */
 ::selection {
     background-color: lightgreen;
@@ -36,6 +40,7 @@ html::selection, body::selection {
 #Banner h1 {
     text-align: center;
     font-size: 3vw;
+    font-family: Tangerine;
     color: #093527;
     margin-top: 0.5vw;
     margin-bottom: 0.5vw;
@@ -218,6 +223,7 @@ html::selection, body::selection {
 #Content p {
     font-size: 1.25vw;
     padding: 0.25vw;
+    /*text-indent: 1vw;*/
 }
 /* Footer */
 #Footer {
