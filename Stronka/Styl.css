@@ -529,4 +529,8 @@ html::selection, body::selection {
         margin-left: -12.5vw !important;
         transition: initial !important;
     }
+    /* Ikony */
+    .material-icons {
+    font-size: 5vw !important;
+}
 }
