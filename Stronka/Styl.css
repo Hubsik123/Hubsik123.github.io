@@ -36,6 +36,7 @@ html::selection, body::selection {
     height: 10%;
     background: linear-gradient(to bottom right, #c7e21d 0%, #99ff99 100%);
     float: left;
+    overflow: hidden;
 }
 #Banner h1 {
     text-align: center;
@@ -231,6 +232,7 @@ html::selection, body::selection {
     height: 5%;
     background-color: #093527;
     clear: both;
+    overflow: hidden;
 }
 #Footer p {
     font-size: 1.5vw;
