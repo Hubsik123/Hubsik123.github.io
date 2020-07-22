@@ -1,6 +1,6 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 13";
+    var Wersja = "v 14";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()

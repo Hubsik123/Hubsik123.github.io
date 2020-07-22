@@ -531,6 +531,6 @@ html::selection, body::selection {
     }
     /* Ikony */
     .material-icons {
-    font-size: 5vw !important;
+    font-size: 4vw !important;
 }
 }
