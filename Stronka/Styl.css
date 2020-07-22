@@ -19,6 +19,7 @@ html::selection, body::selection {
 /* Ikony */
 .material-icons {
     float: left;
+    font-size: 2vw !important;
 }
 /* Zaznaczony tekst */
 ::selection {
