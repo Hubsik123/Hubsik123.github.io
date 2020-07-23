@@ -20,6 +20,8 @@ html::selection, body::selection {
 .material-icons {
     float: left;
     font-size: 2vw !important;
+    margin: 0vw;
+    padding: 0vw;
 }
 /* Zaznaczony tekst */
 ::selection {
@@ -89,7 +91,8 @@ html::selection, body::selection {
 }
 #Menu a {
     text-decoration: none;
-    background-color: #a9d6c7;
+    /*background-color: #a9d6c7;*/
+    background-color: #cee539;
     border: 0.1vw inset #093527;
     color: #093527;
     display: inline-block;
@@ -118,14 +121,17 @@ html::selection, body::selection {
 #Content {
     width: 85%;
     height: 85%;
-    color: #093527;
+    /*color: #093527;*/
+    color: black;
     background-color: #F5F9DB;
     float: left;
     overflow: auto; /*Poprawić potem na oveflow: auto; */
 }
 #Content h1 {
-    background-color: #deed78;
+    /*background-color: #deed78;*/
+    background-color: #cee539;
     font-size: 2vw;
+    color: #096527;
     border-left: 0.25vw #a0b517 solid;
     /*text-shadow: 2px 2px 4px #33ff33;*/
     /*text-shadow: #FFFCA8 2px 2px 0px, #9C9C9C 4px 4px 0px;*/
@@ -137,6 +143,7 @@ html::selection, body::selection {
 #Content h2 {
     background-color: #e8f3a5;
     font-size: 1.5vw;
+    color: #459078;
     border-left: 0.25vw #d3e84a solid;
     /*text-shadow: 2px 2px 4px #33ff33;*/
     text-shadow: 0.25vw 0.25vw 0.5vw #33ff33;
@@ -177,6 +184,7 @@ html::selection, body::selection {
 }
 #Content th {
     background-color: #CEE539;
+    color: #096527;
     font-size: 1.5vw;
 }
 #Content td {
@@ -198,13 +206,14 @@ html::selection, body::selection {
     text-decoration: none;
     display: inline-block;
     height: auto;
-    width: calc(33.33% - 0.4vw);
+    /*width: calc(33.33% - 0.4vw); Niby działa ale nie do końca :(*/
+    width: calc(33.33% - 0.5vw);
     color: #093527;
     background-color: #aaff80;
     font-size: 1.25vw;
     text-align: center;
-    margin-top: 0.5vw;
-    margin-bottom: 0.5vw;
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
     margin-left: 0.1vw;
     margin-right: 0.1vw;
     padding: 0;
@@ -532,5 +541,5 @@ html::selection, body::selection {
     /* Ikony */
     .material-icons {
     font-size: 4vw !important;
-}
+    }
 }
