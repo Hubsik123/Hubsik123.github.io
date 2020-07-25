@@ -360,10 +360,11 @@ html::selection, body::selection {
 }*/
 /* Media, widok na telefonach itp */
 @media (max-width: 992px) { /*Jeżeli rozmiar okna jest mniejszy niż 992px*/
+
     /* Baner */
     #Banner {
-        height: auto;
         position: fixed;
+        height: auto;
         left: 0;
         top: 0;
     }
@@ -376,6 +377,7 @@ html::selection, body::selection {
     #Menu {
         width: 100%;
         height: auto;
+        padding-top: 4vw;
     }
     #Menu h1 {
         font-size: 4vw;
@@ -465,104 +467,11 @@ html::selection, body::selection {
 }
 @media (max-width: 600px)
 {
-    /* Baner */
-    #Banner {
-        height: auto;
-        display: block; /* dodane przy sticky banner*/
-    }
-    #Banner h1 {
-        font-size: 4vw;
-        margin-top: 0.01vw;
-        margin-bottom: 0.01vw;
-    }
-    /* Menu */
-    #Menu {
-        width: 100%;
-        height: auto;
-    }
-    #Menu h1 {
-        font-size: 4vw;
-    }
-    #Menu h2 {
-        font-size: 3vw;
-    }
-    #Menu li {
-        margin-bottom: 0.5vw;
-    }
-    #Menu a {
-        padding: 0.5vw;
-        font-size: 3vw;
-        width: 90%;
-    }
-    /* Content */
-    #Content {
-        width: 100%;
-        height: auto;
-    }
-    #Content h1 {
-        font-size: 7vw;
-        margin-top: 0.2vw;
-        margin-bottom: 0.2vw;
-        border-left: 2.5vw #a0b517 solid;
-    }
-    #Content h2 {
-        font-size: 4vw;
-    }
-    #Content th {
-        font-size: 2.5vw;
-    }
-    #Content td {
-        font-size: 3vw;
-    }
-    #Content input[type=number] {
-        font-size: 2vw;
-    }
-    #Content a {
-        font-size: 3vw;
-    }
-    #Content p {
-        font-size: 3vw;
-    }
-    #Content .Link_1 {
-        font-size: 3vw;
-    }
     #Content .Link_2 {
         font-size: 3vw;
         margin-left: 5% !important;
         margin-right: 5% !important;
         width: 90%;
         /*width: 45%;*/
-    }
-    /* Footer */
-    #Footer {
-        height: auto;
-    }
-    #Footer p {
-        font-size: 3vw;
-    }
-    /* Grafika */
-    .Grafika {
-        height: 25%;
-        width: 25%;
-      }  
-        /* Układ obrazków */
-    .Grafika img {
-        opacity: 0.5;
-        transition: 0.5s;
-        width: 100%;
-        height: 100%;
-    }  
-    .Grafika img:hover {
-        opacity: 1;
-    } 
-    /* Tooltip */
-    .Tooltip .Tooltip_Opis {
-        width: 25vw;
-        margin-left: -12.5vw !important;
-        transition: initial !important;
-    }
-    /* Ikony */
-    .material-icons {
-    font-size: 4vw !important;
     }
 }
