@@ -474,7 +474,6 @@ html::selection, body::selection {
     }
     #Menu .material-icons {
         font-size: 3vw !important;
-        color: red !important;
     }
     #Footer .material-icons {
         font-size: 5vw !important;
