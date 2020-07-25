@@ -369,7 +369,7 @@ html::selection, body::selection {
         top: 0;
     }
     #Banner h1 {
-        font-size: 4vw;
+        font-size: 6vw;
         margin-top: 0.01vw;
         margin-bottom: 0.01vw;
     }
@@ -377,7 +377,7 @@ html::selection, body::selection {
     #Menu {
         width: 100%;
         height: auto;
-        padding-top: 4vw;
+        padding-top: 6vw; /* Banner p font size = padding-top */
     }
     #Menu h1 {
         font-size: 4vw;
@@ -403,6 +403,8 @@ html::selection, body::selection {
         margin-top: 0.2vw;
         margin-bottom: 0.2vw;
         border-left: 2.5vw #a0b517 solid;
+        /*padding-bottom: 5vw;*/
+        margin-bottom: 5vw;
     }
     #Content h2 {
         font-size: 4vw;
@@ -431,7 +433,7 @@ html::selection, body::selection {
         /*width: 45%;*/
     }
     #Content table {
-        margin-bottom: 5vw;
+        margin-bottom: 6vw; /* Footer p font  + 1vw*/
     }
     /* Footer */
     #Footer {
@@ -441,7 +443,7 @@ html::selection, body::selection {
         bottom: 0;
     }
     #Footer p {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     /* Grafika */
     .Grafika {
@@ -464,11 +466,21 @@ html::selection, body::selection {
         margin-left: -12.5vw !important;
         transition: initial !important;
     }
+    /* Ikony */
+    #Banner .material-icons {
+        font-size: 6vw !important;
+    }
+    #Menu .material-icons {
+        font-size: 2vw !important;
+    }
+    #Footer .material-icons {
+        font-size: 5vw !important;
+    }
 }
+/* Na jeszcze mniejsze ekrany */
 @media (max-width: 600px)
 {
     #Content .Link_2 {
-        font-size: 3vw;
         margin-left: 5% !important;
         margin-right: 5% !important;
         width: 90%;

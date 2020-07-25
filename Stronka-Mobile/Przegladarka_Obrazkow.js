@@ -1,6 +1,6 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 17 - wersja Mobile";
+    var Wersja = "v 18 - wersja Mobile";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
