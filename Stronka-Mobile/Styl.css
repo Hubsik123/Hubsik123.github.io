@@ -473,7 +473,7 @@ html::selection, body::selection {
         font-size: 6vw !important;
     }
     #Menu .material-icons {
-        font-size: 2vw !important;
+        font-size: 3vw !important;
         color: red !important;
     }
     #Footer .material-icons {
