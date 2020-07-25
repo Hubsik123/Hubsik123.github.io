@@ -474,18 +474,18 @@ html::selection, body::selection {
     }
     #Menu .material-icons {
         font-size: 2vw !important;
+        color: red !important;
     }
     #Footer .material-icons {
         font-size: 5vw !important;
     }
-    .Akapit .material-icons { /* Ikony przy "Ważne"*/
+    .Akapit .material-icons { /* Ikony przy "Ważne" */
         font-size: 3vw !important;
     }
     .MiniBanner .material-icons { /* Ikony przy h1 */
         font-size: 7vw !important;
-        color: blue !important;
     }
-    .DownloadLink .material-icons { /* Ikony przy linkach w tabeli*/
+    .DownloadLink .material-icons { /* Ikony przy linkach w tabeli */
         font-size: 3vw !important;
     }
 }
