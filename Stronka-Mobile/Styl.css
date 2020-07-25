@@ -21,8 +21,9 @@ html::selection, body::selection {
 .material-icons {
     float: left;
     font-size: 2vw !important;
-    margin: 0vw;
-    padding: 0vw;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Żeby ikony nie nachodziły na banner */
 }
 /* Zaznaczony tekst */
 ::selection {
@@ -44,6 +45,7 @@ html::selection, body::selection {
     background: linear-gradient(to bottom right, #c7e21d 0%, #99ff99 100%);
     float: left;
     overflow: hidden;
+    z-index: 2; /* Żeby ikony nie nachodziły na banner */
 }
 #Banner h1 {
     text-align: center;
@@ -475,6 +477,16 @@ html::selection, body::selection {
     }
     #Footer .material-icons {
         font-size: 5vw !important;
+    }
+    .Akapit .material-icons { /* Ikony przy "Ważne"*/
+        font-size: 3vw !important;
+    }
+    .MiniBanner .material-icons { /* Ikony przy h1 */
+        font-size: 7vw !important;
+        color: blue !important;
+    }
+    .DownloadLink .material-icons { /* Ikony przy linkach w tabeli*/
+        font-size: 3vw !important;
     }
 }
 /* Na jeszcze mniejsze ekrany */
