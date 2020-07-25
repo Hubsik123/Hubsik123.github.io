@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 html, body {
-    background-color: #093527;
+    /*background-color: #093527;*/
+    background-image: url("Error.png");
     color: white;
     width: 100%;
     height: 100%;
@@ -20,8 +21,9 @@ html::selection, body::selection {
 .material-icons {
     float: left;
     font-size: 2vw !important;
-    margin: 0vw;
-    padding: 0vw;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Żeby ikony nie nachodziły na banner */
 }
 /* Zaznaczony tekst */
 ::selection {
@@ -43,6 +45,7 @@ html::selection, body::selection {
     background: linear-gradient(to bottom right, #c7e21d 0%, #99ff99 100%);
     float: left;
     overflow: hidden;
+    z-index: 2; /* Żeby ikony nie nachodziły na banner */
 }
 #Banner h1 {
     text-align: center;
@@ -246,13 +249,15 @@ html::selection, body::selection {
     background-color: #093527;
     clear: both;
     overflow: hidden;
+    /*display: block;  dodane przy sticky banner*/
 }
 #Footer p {
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     color: #CEE539;
     text-align: center;
     margin-top: 0.01vw;
     margin-bottom: 0.01vw;
+    display: block;
 }
     /* Grafiki - to to akurat z internetu skopiowałem (https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp), ale żeby nie było - dużo pozmieniałem */
 .Grafika {
@@ -348,14 +353,25 @@ html::selection, body::selection {
     background: #00e673;
     border-radius: 1.5vw;
 }
+/* Przyklejony Banner */
+/*.Przyklejony_Banner {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10%;
+}*/
 /* Media, widok na telefonach itp */
 @media (max-width: 992px) { /*Jeżeli rozmiar okna jest mniejszy niż 992px*/
+
     /* Baner */
     #Banner {
+        position: fixed;
         height: auto;
+        left: 0;
+        top: 0;
     }
     #Banner h1 {
-        font-size: 4vw;
+        font-size: 6vw;
         margin-top: 0.01vw;
         margin-bottom: 0.01vw;
     }
@@ -363,6 +379,7 @@ html::selection, body::selection {
     #Menu {
         width: 100%;
         height: auto;
+        padding-top: 6vw; /* Banner p font size = padding-top */
     }
     #Menu h1 {
         font-size: 4vw;
@@ -388,6 +405,8 @@ html::selection, body::selection {
         margin-top: 0.2vw;
         margin-bottom: 0.2vw;
         border-left: 2.5vw #a0b517 solid;
+        /*padding-bottom: 5vw;*/
+        margin-bottom: 5vw;
     }
     #Content h2 {
         font-size: 4vw;
@@ -415,110 +434,18 @@ html::selection, body::selection {
         width: calc(50% - 0.5vw);
         /*width: 45%;*/
     }
-    /* Footer */
-    #Footer {
-        height: auto;
-    }
-    #Footer p {
-        font-size: 3vw;
-    }
-    /* Grafika */
-    .Grafika {
-        height: 25%;
-        width: 25%;
-      }  
-        /* Układ obrazków */
-    .Grafika img {
-        opacity: 0.5;
-        transition: 0.5s;
-        width: 100%;
-        height: 100%;
-    }  
-    .Grafika img:hover {
-        opacity: 1;
-    } 
-    /* Tooltip */
-    .Tooltip .Tooltip_Opis {
-        width: 25vw;
-        margin-left: -12.5vw !important;
-        transition: initial !important;
-    }
-}
-@media (max-width: 600px)
-{
-    /* Baner */
-    #Banner {
-        height: auto;
-    }
-    #Banner h1 {
-        font-size: 4vw;
-        margin-top: 0.01vw;
-        margin-bottom: 0.01vw;
-    }
-    /* Menu */
-    #Menu {
-        width: 100%;
-        height: auto;
-    }
-    #Menu h1 {
-        font-size: 4vw;
-    }
-    #Menu h2 {
-        font-size: 3vw;
-    }
-    #Menu li {
-        margin-bottom: 0.5vw;
-    }
-    #Menu a {
-        padding: 0.5vw;
-        font-size: 3vw;
-        width: 90%;
-    }
-    /* Content */
-    #Content {
-        width: 100%;
-        height: auto;
-    }
-    #Content h1 {
-        font-size: 7vw;
-        margin-top: 0.2vw;
-        margin-bottom: 0.2vw;
-        border-left: 2.5vw #a0b517 solid;
-    }
-    #Content h2 {
-        font-size: 4vw;
-    }
-    #Content th {
-        font-size: 2.5vw;
-    }
-    #Content td {
-        font-size: 3vw;
-    }
-    #Content input[type=number] {
-        font-size: 2vw;
-    }
-    #Content a {
-        font-size: 3vw;
-    }
-    #Content p {
-        font-size: 3vw;
-    }
-    #Content .Link_1 {
-        font-size: 3vw;
-    }
-    #Content .Link_2 {
-        font-size: 3vw;
-        margin-left: 5% !important;
-        margin-right: 5% !important;
-        width: 90%;
-        /*width: 45%;*/
+    #Content table {
+        margin-bottom: 6vw; /* Footer p font  + 1vw*/
     }
     /* Footer */
     #Footer {
         height: auto;
+        position: fixed;
+        left: 0;
+        bottom: 0;
     }
     #Footer p {
-        font-size: 3vw;
+        font-size: 5vw;
     }
     /* Grafika */
     .Grafika {
@@ -542,7 +469,32 @@ html::selection, body::selection {
         transition: initial !important;
     }
     /* Ikony */
-    .material-icons {
-    font-size: 4vw !important;
+    #Banner .material-icons {
+        font-size: 6vw !important;
+    }
+    #Menu .material-icons {
+        font-size: 3vw !important;
+    }
+    #Footer .material-icons {
+        font-size: 5vw !important;
+    }
+    .Akapit .material-icons { /* Ikony przy "Ważne" */
+        font-size: 3vw !important;
+    }
+    .MiniBanner .material-icons { /* Ikony przy h1 */
+        font-size: 7vw !important;
+    }
+    .DownloadLink .material-icons { /* Ikony przy linkach w tabeli */
+        font-size: 3vw !important;
+    }
+}
+/* Na jeszcze mniejsze ekrany */
+@media (max-width: 600px)
+{
+    #Content .Link_2 {
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+        width: 90%;
+        /*width: 45%;*/
     }
 }
