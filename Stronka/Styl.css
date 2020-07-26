@@ -494,6 +494,10 @@ html::selection, body::selection {
     .DownloadLink .material-icons { /* Ikony przy linkach w tabeli */
         font-size: 3vw !important;
     }
+    /* Inne */
+    .Tekst_1 {
+        text-indent: 5vw;
+    }
 }
 /* Na jeszcze mniejsze ekrany */
 @media (max-width: 600px)

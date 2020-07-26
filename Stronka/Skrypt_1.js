@@ -1,11 +1,11 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 24 - wersja Mobile";
+    var Wersja = "v 25 - wersja Mobile";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
 {
-    alert("Jeśli podoba ci się ta strona, przydały ci sie te notatki, kod tej strony to daj znać znajomym, im też może się przydać. Tylko proszę nie kopiować na chama tych wszystkich materiałów, dużo pracy na to wszystko poszło.\nJesli zobaczysz jakieś błędy to proszę daj o tym znać. Mój adres e-mail:\nhubsik321@gmail.com")
+    alert("Jeśli podoba ci się ta strona, przydały ci sie te notatki, kod tej strony to daj znać znajomym, im też może się przydać.\nJesli zobaczysz jakieś błędy to proszę daj o tym znać. Mój adres e-mail:\nhubsik321@gmail.com")
 }
 function Powiekszenie_Obrazka(imgs)
 {
@@ -20,16 +20,11 @@ function Powiekszenie_Obrazka(imgs)
         // Wyświetlenia obrazka
     Powiekszony_Obrazek.parentElement.style.display = "block";
 }
-function Zamkniecie_Obrazka(imgs)
+function Zamkniecie_Obrazka(imgs) // PRAWIE to samo to funkcja Powiekszenie_Obrazka(imgs) ale ta funkcja zamyka obrazek
 {
-        // Wybranie obrazka do powiększenia
     var Powiekszony_Obrazek = document.getElementById("Powiekszony_Obrazek");
-        // Wybranie tekstu na obrazku
     var Opis_Obrazka = document.getElementById("Opis_Obrazka");
-        // "Przekopiowanie" scr obrazka do tego powiększonego
     Powiekszony_Obrazek.src = imgs.src;
-        // Zamiana "alt" na tekst wyświetlany na obrazku
     Opis_Obrazka.innerHTML = imgs.alt;
-        // Wyświetlenia obrazka
     Powiekszony_Obrazek.parentElement.style.display = "none";
 }
