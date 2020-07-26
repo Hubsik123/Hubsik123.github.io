@@ -36,7 +36,7 @@ html::selection, body::selection {
     background-color: #ff00ff;
 }
 .Tekst_1 {
-    text-indent: 1vw;
+    text-indent: 2.5vw;
 }
 /* Banner */
 #Banner {
@@ -56,6 +56,7 @@ html::selection, body::selection {
     margin-bottom: 0.5vw;
     /*text-shadow: -5px 5px 0px #00b300, -10px 10px 0px #00cc00, -15px 15px 0px #33ff33;*/
     text-shadow: -0.5vw 0.5vw 0vw #00b300, -0.75vw 0.75vw 0vw #00cc00, -1vw 1vw 0vw #33ff33;
+    text-transform: capitalize;
 }
 /* Menu */
 #Menu {
@@ -73,12 +74,14 @@ html::selection, body::selection {
     margin-top: 0.01vw;
     margin-bottom: 0.01vw;
     text-shadow: 0.3vw 0.2vw 0px #7A7A7A;
+    text-transform: capitalize;
 }
 #Menu h2 {
     text-align: center;
     font-size: 2vw;
     margin-top: 0.01vw;
     margin-bottom: 0.01vw;
+    text-transform: capitalize;
 }
 #Menu ul {
     margin: 0;
@@ -106,6 +109,7 @@ html::selection, body::selection {
     transition: 0.5s;
     font-size: 1vw;
     padding: 0.1vw;
+    text-transform: capitalize;
 }
 #Menu a:hover {
     color: #3cd816;
@@ -145,6 +149,7 @@ html::selection, body::selection {
     margin-top: 0.25vw;
     margin-bottom: 0.25vw;
     margin-left: 0.125vw;
+    text-transform: capitalize;
 }
 #Content h2 {
     background-color: #e8f3a5;
@@ -158,6 +163,7 @@ html::selection, body::selection {
     margin-left: 2.5vw;
     margin-right: 2.5vw;
     transition: 0.5s;
+    text-transform: capitalize;
 }
 #Content input[type=button] {
     color: #093527;
@@ -192,6 +198,7 @@ html::selection, body::selection {
     background-color: #CEE539;
     color: #096527;
     font-size: 1.5vw;
+    text-transform: capitalize;
 }
 #Content td {
     background-color: #EEF6BB;
