@@ -357,10 +357,10 @@ html::selection, body::selection {
     width: 1vw;
 }
         /* Ścieżka */
-::-webkit-scrollbar-track {
+/*::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey; 
     border-radius: 1.5vw;
-}
+}*/
         /* Zaznaczone miejsce */
 ::-webkit-scrollbar-thumb {
     /*background: linear-gradient(to bottom, #093527 15%, #33ff33 75%);*/
@@ -455,6 +455,9 @@ html::selection, body::selection {
     #Menu .material-icons {
         font-size: 3vw !important;
     }
+    #LinkiMobile .material-icons {
+        font-size: 3vw !important;
+    }
     #Footer .material-icons {
         font-size: 5vw !important;
     }
@@ -543,9 +546,6 @@ html::selection, body::selection {
         background: linear-gradient(to right, #003300 0%, #33ff33 70%);
         border: 0;
         margin: 0;
-    }
-    #Banner {
-        overflow: auto !important;
     }
     #Menu {
         display: none !important;
