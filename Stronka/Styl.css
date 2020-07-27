@@ -333,6 +333,7 @@ html::selection, body::selection {
     display: inline-block;
 }
 .Tooltip .Tooltip_Opis {
+    font-size: 1vw;
     visibility: hidden;
     width: 100%;
     background-color: black;
@@ -347,7 +348,7 @@ html::selection, body::selection {
     bottom: 100%;
     left: 50%;
     margin-left: -50%; /* Tu MUSI być width/2 inaczej nie zadziała*/
-    transition: 0.35s;
+    /*transition: 0.35s;*/
 }
 .Tooltip:hover .Tooltip_Opis {
     visibility: visible;
