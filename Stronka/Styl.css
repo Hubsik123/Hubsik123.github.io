@@ -375,7 +375,7 @@ html::selection, body::selection {
         overflow: auto;
     }
     #Banner h1 {
-        font-size: 6vw;
+        font-size: 10vw;
         margin-top: 0.01vw;
         margin-bottom: 0.01vw;
     }
@@ -450,7 +450,7 @@ html::selection, body::selection {
     }
     /* Ikony */
     #Banner .material-icons {
-        font-size: 6vw !important;
+        font-size: 10vw !important;
     }
     #Menu .material-icons {
         font-size: 3vw !important;
