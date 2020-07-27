@@ -40,7 +40,7 @@ html::selection, body::selection {
 }
 /* Do menu na tel */
 .IkonaMenuMobile {
-    display: none;
+    display: none !important;
 }
 #LinkiMobile {
     display: none;
@@ -475,11 +475,13 @@ html::selection, body::selection {
         text-indent: 5vw;
     }
     /* Menu na tel*/
-    /*.MobileView {
-        display: inline-block !important;
-    }*/
     .IkonaMenuMobile {
-        display: inline-block;
+        display: inline-block !important;
+        text-shadow: initial;
+        width: 10vw !important;
+        height: 10vw !important;
+        overflow-x: hidden;
+        float: right !important; /* Zignoruj ten "błąd", ale dzięki temu guzik po prawej*/
     }
     #LinkiMobile {
         display: none;
@@ -546,6 +548,9 @@ html::selection, body::selection {
         background: linear-gradient(to right, #003300 0%, #33ff33 70%);
         border: 0;
         margin: 0;
+    }
+    #LinkiMobile .material-icons {
+        font-size: 3vw !important;
     }
     #Menu {
         display: none !important;
