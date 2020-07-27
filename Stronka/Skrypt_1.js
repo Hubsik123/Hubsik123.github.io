@@ -1,6 +1,6 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 36";
+    var Wersja = "v 37";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
@@ -76,12 +76,14 @@ function MobileContent()
 var Zoom = false;
 function ZoomFix()
 {
-    if (Zoom == false)
+    /*if (Zoom == false)
     {
         alert("Jeśli używasz teraz PC:\n   naprawdę... zmieniełeś zoom żeby zobaczć czy strona się 'nie zepsuje'...\nJeśli używasz teraz Telefonu:\n   naprawdę... włączyłeś 'Wersja na Komputer' (albo dałeś zoom tak że coś się zepsuło...) żeby zobaczyć czy strona się nie zepsuje\n\n:(");
         Zoom = true;
 
     }
+    Taki fajny komunikat, ale nie działa najlepiej, za często włącza się przez przypadek np. ctrl+f...
+    */
     var Banner = document.getElementById("Banner");
     var Linki = document.getElementById("LinkiMobile");
     var Content = document.getElementById("Content");
