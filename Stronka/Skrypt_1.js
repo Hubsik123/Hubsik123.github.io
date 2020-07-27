@@ -1,6 +1,6 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 33";
+    var Wersja = "v 34";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
@@ -78,7 +78,7 @@ function ZoomFix()
 {
     if (Zoom == false)
     {
-        alert("Naprawdę... zmieniełeś zoom żeby zobaczć czy strona się 'nie zepsuje'...\n:(");
+        alert("Jeśli używasz teraz PC:\n   naprawdę... zmieniełeś zoom żeby zobaczć czy strona się 'nie zepsuje'...\nJeśli używasz teraz Telefonu:\n   naprawdę... włączyłeś 'Wersja na Komputer' żeby zobaczyć czy strona się nie zepsuje\n\n:(");
         Zoom = true;
 
     }

@@ -475,13 +475,13 @@ html::selection, body::selection {
         text-indent: 5vw;
     }
     /* Menu na tel*/
-    .IkonaMenuMobile {
+    .IkonaMenuMobile { /* Zignoruj ten "błąd", ale dzięki temu guzik po prawej*/
         display: inline-block !important;
         text-shadow: initial;
         width: 10vw !important;
         height: 10vw !important;
         overflow-x: hidden;
-        float: right !important; /* Zignoruj ten "błąd", ale dzięki temu guzik po prawej*/
+        float: right !important; 
     }
     #LinkiMobile {
         display: none;
