@@ -117,7 +117,6 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
     }
 }
 //Dark Mode, to też z internetu, troszkę pozmieniane, https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf
-    
 document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
 {
     const Styl = document.getElementById('CSS');
@@ -145,3 +144,32 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
         localStorage.setItem('CSS',Styl.href)  // if it's dark -> go light
     })
 })
+/*
+document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
+{
+    const Styl = document.getElementById('CSS');
+    const ZapisanyStyl = localStorage.getItem('CSS');
+    var Pasek = document.getElementById('Pasek');
+    if(ZapisanyStyl)
+    {
+        Styl.href = ZapisanyStyl;
+    }
+    const Przycisk = document.getElementById('DarkMode');
+    Przycisk.addEventListener('click', () =>
+    {
+        if(Styl.href.includes('Styl-Ciemny')) // Jasny -> Ciemny
+        {
+            Styl.href = 'Styl.css';
+            Przycisk.innerText = 'Dark Mode';
+            Pasek.setAttribute("content", "#3cd816");
+        }
+        else // Ciemny -> Jasny
+        {
+            Styl.href = 'Styl-Ciemny.css';
+            Przycisk.innerText = 'Light Mode';
+            Pasek.setAttribute("content", "black");
+        }
+        localStorage.setItem('CSS',Styl.href)  // if it's dark -> go light
+    })
+})
+*/
