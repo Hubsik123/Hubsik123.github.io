@@ -1,6 +1,6 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 39";
+    var Wersja = "v 40";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
@@ -120,8 +120,9 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
     
 document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
 {
-    const Styl = document.getElementById('theme');
-    const ZapisanyStyl = localStorage.getItem('theme');
+    const Styl = document.getElementById('CSS');
+    const ZapisanyStyl = localStorage.getItem('CSS');
+    var Pasek = document.getElementById('Pasek');
     if(ZapisanyStyl)
     {
         Styl.href = ZapisanyStyl;
@@ -133,13 +134,15 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
         {
             Styl.href = 'Styl.css';
             Przycisk.innerText = 'Dark Mode';
+            Styl.style.content = '#3cd816';
         }
         else // if it's dark -> go light
         {
             Styl.href = 'Styl-Ciemny.css';
             Przycisk.innerText = 'Light Mode';
+            Styl.style.content = 'black';
         }
-        localStorage.setItem('theme',Styl.href) // Zapisanie obecnego stylu
+        localStorage.setItem('CSS',Styl.href) // Zapisanie obecnego stylu
     })
 })
 /*
