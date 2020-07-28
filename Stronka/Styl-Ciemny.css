@@ -134,7 +134,10 @@ html::selection, body::selection {
     border: none;
     background-color: #666666;
     border-bottom: 0.1vw white dotted;
-    color: red !important;
+    color: white;
+}
+::placeholder {
+    color: white;
 }
 /* Content */
 #Content {
