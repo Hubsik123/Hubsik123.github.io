@@ -1,6 +1,6 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 38";
+    var Wersja = "v 39";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
@@ -116,6 +116,60 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
         }
     }
 }
+//Dark Mode, to też z internetu, troszkę pozmieniane, https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf
+    
+document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
+{
+    const Styl = document.getElementById('theme');
+    const ZapisanyStyl = localStorage.getItem('theme');
+    if(ZapisanyStyl)
+    {
+        Styl.href = ZapisanyStyl;
+    }
+    const Przycisk = document.getElementById('DarkMode');
+    Przycisk.addEventListener('click', () =>
+    {
+        if(Styl.href.includes('Styl-Ciemny')) // if it's light -> go dark
+        {
+            Styl.href = 'Styl.css';
+            Przycisk.innerText = 'Dark Mode';
+        }
+        else // if it's dark -> go light
+        {
+            Styl.href = 'Styl-Ciemny.css';
+            Przycisk.innerText = 'Light Mode';
+        }
+        localStorage.setItem('theme',Styl.href) // Zapisanie obecnego stylu
+    })
+})
+/*
+//Dark Mode
+    // this one is jut to wait for the page to load
+document.addEventListener('DOMContentLoaded', () =>
+{
+    const Styl = document.getElementById('theme');
+    const ZapisanyStyl = localStorage.getItem('theme');
+    if(ZapisanyStyl)
+    {
+        Styl.href = ZapisanyStyl;
+    }
+    const Przycisk = document.getElementById('DarkMode');
+    Przycisk.addEventListener('click', () =>
+    {
+        if(Styl.href.includes('Styl')) // if it's light -> go dark
+        {
+            Styl.href = 'Styl-Ciemny.css';
+            Przycisk.innerText = 'Switch to Jasny mode';
+        }
+        else // if it's dark -> go light
+        {
+            Styl.href = 'Styl.css';
+            Przycisk.innerText = 'Switch to dark mode';
+        }
+        localStorage.setItem('theme',Styl.href) // save the preference to localStorage
+    })
+})
+*/
 /*
 function Wyszukiwarka()
 {

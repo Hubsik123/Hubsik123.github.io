@@ -1,0 +1,556 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html, body {
+    background-image: url("Obrazki/Error.png");
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Calibri;
+}
+html::selection, body::selection {
+    background-color: white;
+}
+#Main {
+    height: 100%;
+    width: 100%;
+}
+/* Ikony */
+.material-icons {
+    float: left;
+    font-size: 2vw !important;
+    margin: 0;
+    padding: 0;
+}
+/* Zaznaczony tekst */
+::selection {
+    background-color: lightgreen;
+    text-shadow: none;
+}
+/* Inne, do używania w akapitach tekstu */
+.WIP {
+    color: black;
+    background-color: #ff00ff;
+}
+.Tekst_1 {
+    text-indent: 2.5vw;
+}
+/* Do menu na tel */
+.IkonaMenuMobile {
+    display: none !important;
+}
+#LinkiMobile {
+    display: none;
+}
+/* Banner */
+#Banner {
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(to bottom right, #000000 0%, #808080 100%);
+    float: left;
+    overflow: hidden;
+}
+#Banner h1 {
+    text-align: center;
+    font-size: 3vw;
+    font-family: Tangerine, Calibri;
+    color: white;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    text-shadow: -0.5vw 0.5vw 0vw #bfbfbf, -0.75vw 0.75vw 0vw #a6a6a6, -1vw 1vw 0vw #8c8c8c;
+    text-transform: capitalize;
+}
+/* Menu */
+#Menu {
+    width: 15%;
+    height: 85%;
+    color: white;
+    background-color: #666666; /*xd*/
+    float: left;
+    padding: 0.4vw;
+    overflow: auto;
+}
+#Menu h1 {
+    text-align: center;
+    font-size: 2.5vw;
+    margin-top: 0.01vw;
+    margin-bottom: 0.01vw;
+    text-shadow: 0.3vw 0.2vw 0px #a6a6a6;
+    text-transform: capitalize;
+}
+#Menu h2 {
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 0.01vw;
+    margin-bottom: 0.01vw;
+    text-transform: capitalize;
+}
+#Menu ul {
+    margin: 0;
+    padding: 0;
+}
+#Menu ol {
+    margin: 0;
+    padding: 0;
+}
+#Menu li {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5vw;
+    font-size: 1vw;
+}
+#Menu a {
+    text-decoration: none;
+    background-color: #4d4d33;
+    border: 0.1vw inset black;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    transition: 0.5s;
+    font-size: 1vw;
+    padding: 0.1vw;
+    text-transform: capitalize;
+}
+#Menu a:hover {
+    color: gray;
+    background: linear-gradient(to right, #093527 25%, #33ff33 150%);
+    border-bottom-right-radius: 2vw;
+    font-style: italic;
+}
+#Menu hr {
+    width: 100%;
+    height: 0.3vw;
+    background: linear-gradient(to bottom right, #000000 0%, #808080 100%);
+    border: 0;
+    margin: 0;
+}
+#Menu input[type=text] {
+    width: 100%;
+    font-size: 1vw;
+    margin-bottom: 0.1vw;
+    border: none;
+    background-color: #666666;
+    border-bottom: 0.1vw white dotted;
+    color: red !important;
+}
+/* Content */
+#Content {
+    width: 85%;
+    height: 85%;
+    color: white;
+    background-color: #404040;
+    float: left;
+    overflow: auto;
+}
+#Content h1 {
+    background-color: #666666;
+    font-size: 2vw;
+    color: #d9d9d9;
+    border-left: 0.25vw white solid;
+    text-shadow: #808080 0.15vw 0.15vw 0vw, #595959 0.3vw 0.3vw 0vw;
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
+    margin-left: 0.125vw;
+    text-transform: capitalize;
+}
+#Content h2 {
+    background-color: #bfbfbf;
+    font-size: 1.5vw;
+    color: white;
+    border-left: 0.25vw white solid;
+    text-shadow: 0.25vw 0.25vw 0.5vw black;
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    transition: 0.5s;
+    text-transform: capitalize;
+}
+#Content input[type=button] { /* WIP */
+    color: #093527;
+    background-color: #CEE539;
+    border: 0.1vw solid #459078;
+    border-radius: 1vw 1vw 25vw 25vw;
+    width: 90%;
+    margin-left: 5%;  /* Chyba nie tak to powinno być, ale jakoś działa xd, margin auto???*/
+    margin-right: 5%;
+    text-align: center;
+    font-size: 2vw;
+    transition: 0.5s;
+}
+#Content input[type=button]:hover {
+    color: #093527;
+    background-color: #e3f08e;
+    box-shadow: inset 0 0 0 0.2vw #459078;
+}
+#Content input[type=number] {
+    font-size: 1vw;
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+}
+#Content table {
+    width: 90%;
+    margin: auto;
+    border-spacing: 0.5vw;
+}
+#Content th {
+    background-color: #808080;
+    color: white;
+    font-size: 1.5vw;
+    text-transform: capitalize;
+    border-bottom: 0.1vw white dotted;
+}
+#Content td {
+    background-color: #b3b3b3;
+    font-size: 1.25vw;
+    color: whitesmoke;
+}
+#Content tr:nth-child(even) td {
+    background-color: #666666;
+}
+#Content .Link_1 { /* Normlany Link*/
+    font-size: 1.5vw;
+    margin-top: 0.01vw;
+    margin-bottom: 0.01vw;
+    text-decoration: underline;
+    color: white;
+    transition: 0.5s;
+}
+#Content .Link_1:hover {
+    color: white;
+}
+#Content .Link_2 { /* Ładny link, używany przy linkach do notatek */
+    text-decoration: none;
+    display: inline-block;
+    height: auto;
+    /*width: calc(33.33% - 0.4vw); Niby działa ale nie do końca :(*/
+    width: calc(33.33% - 0.5vw);
+    color: white;
+    background-color: #a6a6a6;
+    font-size: 1.25vw;
+    text-align: center;
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
+    margin-left: 0.1vw;
+    margin-right: 0.1vw;
+    padding: 0;
+    border: 0.1vw ridge black;
+    border-radius: 1vw 1vw 0vw 0vw;
+    overflow: hidden;
+    transition: 0.5s;
+}
+#Content .Link_2:hover {
+    color: black;
+    background: linear-gradient(to bottom, #000000 -20%, #808080 120%);
+    box-shadow: -0.5vw 0vw 0.8vw -0.6vw black, 0.5vw 0vw 0.8vw -0.6vw black, 0.3vw 0.3vw 1vw 0.3vw black;
+}
+#Content p {
+    font-size: 1.25vw;
+    padding: 0.25vw;
+}
+/* Footer */
+#Footer {
+    width: 100%;
+    height: 5%;
+    background-color: #262626;
+    clear: both;
+    overflow: hidden;
+}
+#Footer p {
+    font-size: 1.25vw;
+    color: white;
+    text-align: center;
+    margin-top: 0.01vw;
+    margin-bottom: 0.01vw;
+    display: block;
+}
+    /* Grafiki - to to akurat z internetu skopiowałem (https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp), ale żeby nie było - dużo pozmieniałem */
+.Grafika {
+    float: left;
+    padding: 0.1vw;
+    text-align: center;
+    height: 10%;
+    width: 10%;
+  }  
+        /* Układ obrazków */
+.Grafika img {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+}  
+.Grafika img:hover {
+    opacity: 1;
+}  
+        /* Ustawienie float */
+.Grafiki:after {
+    content: "";
+    display: table;
+    clear: both;
+}  
+        /* Miejsce na powiększony obrazek */
+.Kontener_Obrazkow {
+    position: relative;
+    display: none;
+}  
+        /* Tekst na obrazku */
+#Opis_Obrazka {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    background-color: black;
+    border-radius: 2.5vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    opacity: 0.7;
+    font-size: 2vw;
+}  
+        /* Guzik do zamknięcia obrazka */
+.Guzik {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    background-color: black;
+    border-radius: 10vw;
+    font-size: 4vw;
+    cursor: pointer;
+}
+    /* Tooltip - to to akurat z internetu skopiowałem (https://www.w3schools.com/css/css_tooltip.asp), ale żeby nie było - dużo pozmieniałem */
+.Tooltip {
+    position: relative;
+    display: inline-block;
+}
+.Tooltip .Tooltip_Opis {
+    font-size: 1vw;
+    visibility: hidden;
+    width: 100%;
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    text-align: center;
+    border-radius: 0.5vw;
+    padding: 0.1vw 0vw;
+        /* Pozycja tooltipa */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -50%; /* Tu MUSI być width/2 inaczej nie zadziała*/
+}
+.Tooltip:hover .Tooltip_Opis {
+    visibility: visible;
+}
+    /* Pasek przewijania */
+::-webkit-scrollbar {
+    width: 1vw;
+}
+        /* Zaznaczone miejsce */
+::-webkit-scrollbar-thumb {
+    /*background: linear-gradient(to bottom, #093527 15%, #33ff33 75%);*/
+    background: #00e673;
+    border-radius: 1.5vw;
+}
+/* Media, widok na telefonach itp */
+@media (max-width: 992px) /*Jeżeli rozmiar okna jest mniejszy niż 992px*/
+{
+    /* Baner */
+    #Banner {
+        overflow: auto;
+    }
+    #Banner h1 {
+        font-size: 10vw;
+        margin-top: 0.01vw;
+        margin-bottom: 0.01vw;
+    }
+    /* Content */
+    #Content {
+        width: 100%;
+        height: 85%;
+        overflow: auto;
+    }
+    #Content h1 {
+        font-size: 7vw;
+        margin-top: 0.2vw;
+        margin-bottom: 0.2vw;
+        border-left: 2.5vw white solid;
+        margin-bottom: 5vw;
+    }
+    #Content h2 {
+        font-size: 4vw;
+    }
+    #Content th {
+        font-size: 2.5vw;
+    }
+    #Content td {
+        font-size: 3vw;
+    }
+    #Content input[type=number] {
+        font-size: 2vw;
+    }
+    #Content a {
+        font-size: 3vw;
+    }
+    #Content p {
+        font-size: 3vw;
+    }
+    #Content .Link_1 {
+        font-size: 3vw;
+    }
+    #Content .Link_2 {
+        font-size: 3vw;
+        width: calc(50% - 0.5vw);
+    }
+    /* Footer */
+    #Footer {
+        height: 5%;
+        overflow: auto;
+    }
+    #Footer p {
+        font-size: 5vw;
+    }
+    /* Grafika */
+    .Grafika {
+        height: 25%;
+        width: 25%;
+      }  
+        /* Układ obrazków */
+    .Grafika img {
+        opacity: 0.5;
+        transition: 0.5s;
+        width: 100%;
+        height: 100%;
+    }  
+    .Grafika img:hover {
+        opacity: 1;
+    } 
+    /* Tooltip */
+    .Tooltip .Tooltip_Opis {
+        width: 25vw;
+        margin-left: -12.5vw !important;
+        transition: initial !important;
+    }
+    /* Ikony */
+    #Banner .material-icons {
+        font-size: 10vw !important;
+    }
+    #Menu .material-icons {
+        font-size: 3vw !important;
+    }
+    #LinkiMobile .material-icons {
+        font-size: 3vw !important;
+    }
+    #Footer .material-icons {
+        font-size: 5vw !important;
+    }
+    .Akapit .material-icons { /* Ikony przy "Ważne" */
+        font-size: 3vw !important;
+    }
+    .MiniBanner .material-icons { /* Ikony przy h1 */
+        font-size: 7vw !important;
+    }
+    .DownloadLink .material-icons { /* Ikony przy linkach w tabeli */
+        font-size: 3vw !important;
+    }
+    /* Inne */
+    .Tekst_1 {
+        text-indent: 5vw;
+    }
+    /* Menu na tel*/
+    .IkonaMenuMobile { /* Zignoruj ten "błąd", ale dzięki temu guzik jest po prawej*/
+        display: inline-block !important;
+        text-shadow: initial;
+        width: 10vw !important;
+        height: 10vw !important;
+        overflow-x: hidden;
+        float: right !important; 
+    }
+    #LinkiMobile {
+        display: none;
+        color: white;
+        background-color: #666666;
+        overflow: auto;
+        padding: 0.4vw;
+        height: 30%;
+        width: 100%;
+    }
+    #LinkiMobile h1 {
+        text-align: center;
+        font-size: 4vw;
+        margin-top: 0.01vw;
+        margin-bottom: 0.01vw;
+        text-shadow: 0.3vw 0.2vw 0px #7A7A7A;
+        text-transform: capitalize;
+    }
+    #LinkiMobile h2 {
+        text-align: center;
+        font-size: 3vw;
+        margin-top: 0.01vw;
+        margin-bottom: 0.01vw;
+        text-transform: capitalize;
+    }
+    #LinkiMobile ul {
+        margin: 0;
+        padding: 0;
+    }
+    #LinkiMobile ol {
+        margin: 0;
+        padding: 0;
+    }
+    #LinkiMobile li {
+        list-style-type: none;
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        text-align: center;
+        margin-bottom: 0.5vw;
+        font-size: 1vw;
+    }
+    #LinkiMobile a {
+        text-decoration: none;
+        background-color: #4d4d33;
+        border: 0.1vw inset black;
+        color: white;
+        display: inline-block;
+        width: 100%;
+        transition: 0.5s;
+        font-size: 3vw;
+        padding: 0.1vw;
+        text-transform: capitalize;
+    }
+    #LinkiMobile a:hover {
+        color: #3cd816;
+        background: linear-gradient(to right, #000000 -10%, #808080 120%);
+        border-bottom-right-radius: 2vw;
+        font-style: italic;
+    }
+    #LinkiMobile hr {
+        width: 100%;
+        height: 0.3vw;
+        background: linear-gradient(to right, #000000 -10%, #808080 120%);
+        border: 0;
+        margin: 0;
+    }
+    #LinkiMobile .material-icons {
+        font-size: 3vw !important;
+    }
+    #Menu {
+        display: none !important;
+    }
+}
+/* Na jeszcze mniejsze ekrany */
+@media (max-width: 600px)
+{
+    #Content .Link_2 {
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+        width: 90%;
+    }
+}
