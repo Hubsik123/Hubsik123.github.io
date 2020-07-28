@@ -134,10 +134,8 @@ html::selection, body::selection {
 #Menu input[type=text] {
     width: 100%;
     font-size: 1vw;
-    margin-bottom: 0.1vw;
     border: none;
     background-color: #666666;
-    border-bottom: 0.1vw white dotted;
     color: white;
 }
 ::placeholder {
@@ -286,7 +284,8 @@ html::selection, body::selection {
     text-align: center;
     margin-top: 0.01vw;
     margin-bottom: 0.01vw;
-    display: block;
+    display: inline;
+    float: right;
 }
     /* Grafiki - to to akurat z internetu skopiowałem (https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp), ale żeby nie było - dużo pozmieniałem */
 .Grafika {
@@ -571,5 +570,68 @@ html::selection, body::selection {
         margin-left: 5% !important;
         margin-right: 5% !important;
         width: 90%;
+    }
+}
+/*Animacja*/
+.Animacja_2 {
+    transition: translate(-50%, -50%);
+    padding: 1vw;
+    display: inline-block;
+    float: right;
+}
+.Animacja_2 span{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1vw;
+    display: inline-block;
+    opacity: 1;
+    transform: translate(-10px, 0), scale(0.4);
+    animation: Nazwa 3.5s forwards;
+    animation-iteration-count: infinite;
+    letter-spacing: 0.75vw;
+    font-family: 'Times New Roman', Times, serif;
+}
+.Animacja_2 span:nth-of-type(2) {
+    /*animation-delay: 0.625s;*/
+    animation-delay: 0.5s;
+}
+.Animacja_2 span:nth-of-type(3) {
+    /*animation-delay: 1.25s;*/
+    animation-delay: 1s;
+}
+.Animacja_2 span:nth-of-type(4) {
+    /*animation-delay: 1.875s;*/
+    animation-delay: 1.5s;
+}
+.Animacja_2 span:nth-of-type(5) {
+    /*animation-delay: 2.5s;*/
+    animation-delay: 2s;
+}
+.Animacja_2 span:nth-of-type(6) {
+    /*animation-delay: 3.125s;*/
+    animation-delay: 2.5s;
+}
+.Animacja_2 span:nth-of-type(7) {
+    /*animation-delay: 3.75s;*/
+    animation-delay: 3s;
+}
+.Animacja_2 span:nth-of-type(8) {
+    /*animation-delay: 4.375s;*/
+    animation-delay: 3.5s;
+}
+@keyframes Nazwa {
+    30% {
+        transform: translate(10px, 0) scale(0.7);
+        color: black;
+    }
+    40% {
+        color: white;
+    }
+    90% {
+        transform: translate(0) scale(1.5);
+    }
+    100% {
+        transform: translate(0) scale(1.5);
+        color: gold;
     }
 }
