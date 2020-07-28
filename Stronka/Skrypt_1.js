@@ -1,6 +1,6 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 37";
+    var Wersja = "v 38";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
@@ -94,3 +94,49 @@ function ZoomFix()
     Content.style.height = "85%";
     Footer.style.height = "5%";
 }
+function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie zmieniać https://www.w3schools.com/howto/howto_js_filter_lists.asp
+{
+    var Input = document.getElementById('Wyszukiwarka');
+    var Filtr = Input.value.toUpperCase();
+    var Lista = document.getElementById("Lista");
+    var Element = Lista.getElementsByTagName('li');
+    var Link, Petla, Wartosc;
+    // Sprawdzanie za pomocą pętli czy podany tekst się zgadza
+    for (Petla = 0; Petla < Element.length; Petla++)
+    {
+    Link = Element[Petla].getElementsByTagName("a")[0];
+    Wartosc = Link.textContent || Link.innerText;
+    if (Wartosc.toUpperCase().indexOf(Filtr) > -1)
+        {
+        Element[Petla].style.display = "";
+        }
+    else
+        {
+        Element[Petla].style.display = "none";
+        }
+    }
+}
+/*
+function Wyszukiwarka()
+{
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('Wyszukiwarka');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("Lista");
+    li = ul.getElementsByTagName('li');
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++)
+    {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1)
+        {
+        li[i].style.display = "";
+        }
+    else
+        {
+        li[i].style.display = "none";
+        }
+    }
+}*/

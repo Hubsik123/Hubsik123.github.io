@@ -20,7 +20,7 @@
             <section id="Banner"> <!-- Banner -->
                 <h1><span class="material-icons IkonaMenuMobile" style="display: inline-block !important; text-shadow: initial; float: left !important;" ondblclick="Feedback()">thumbs_up_down</span>Frekwencja Master Race<span class="material-icons IkonaMenuMobile" onclick="MenuMobile()">menus</span></h1> <!-- Zignoruj ten błąd, bez tego nie działa -->
             </section>
-            <div id="LinkiMobile"> <!-- Menu które wyświetla się małych ekranach (-992px)-->
+            <section id="LinkiMobile"> <!-- Menu które wyświetla się małych ekranach (-992px)-->
                 <h1>Menu</h1>
                 <hr>
                 <ul>
@@ -56,12 +56,13 @@
                             <li><a href="Grafiki-PUTK.html" onclick="MobileContent()">Pracownia Urządzeń Techniki Komputerowej</a></li>
                         </ol> </li>
                 </ul>
-            </div>
+            </section>
             <section id="Menu"> <!-- Menu, które wyświetla się na dużych ekranach (+992px)-->
                 <h1>Menu</h1>
+                <input type="text" id="Wyszukiwarka" onkeyup="Wyszukiwarka()" placeholder="Wpisz tu coś" autocomplete="off">
                 <hr>
-                <ul>
-                    <li><h2><span class="material-icons" style="float: initial;">description</span>Klasa 3</h2>
+                <ul id="Lista">
+                    <h2><span class="material-icons" style="float: initial;">description</span>Klasa 3</h2>
                         <ol>
                             <li><a href="#Informatyka_kl3">Informatyka</a></li>
                             <li><a href="#Jezyk_Polski_kl3">Język Polski</a></li>
@@ -71,8 +72,8 @@
                             <li><a href="#Sieci_kl3">Sieci</a></li>
                             <li><a href="#Strony_Internetowe_kl3">Strony Internetowe</a></li>
                             <li><a href="#Systemy_Baz_Danych_kl3">Systemy Baz Danych</a></li>
-                        </ol> </li>
-                    <li><h2><span class="material-icons" style="float: initial;">description</span>Klasa 2</h2>
+                        </ol>
+                    <h2><span class="material-icons" style="float: initial;">description</span>Klasa 2</h2>
                         <ol>
                             <li><a href="#Jezyk_Polski_kl2">Język Polski</a></li>
                             <li><a href="#Matematyka_kl2">Matematyka</a></li>
@@ -84,23 +85,23 @@
                             <li><a href="#Systemy_kl2">Systemy</a></li>
                             <li><a href="#Systemy_Baz_Danych_kl2">Systemy Baz Danych</a></li>
                             <li><a href="#Urzadzenia_Techniki_Komputerowej_kl2">Urządzenia Techniki Komputerowej</a></li>
-                        </ol> </li>
-                    <li><h2><span class="material-icons" style="float: initial;">open_in_browser</span>Grafiki</h2>
+                        </ol>
+                    <h2><span class="material-icons" style="float: initial;">open_in_browser</span>Grafiki</h2>
                         <ol>
                             <li><a href="Grafiki-Matematyka.html">Matematyka</a></li>
                             <li><a href="Grafiki-Informatyka.html">Informatyka</a></li>
                             <li><a href="Grafiki-Systemy.html">Systemy</a></li>
                             <li><a href="Grafiki-PUTK.html">Pracownia Urządzeń Techniki Komputerowej</a></li>
-                        </ol> </li>
+                        </ol>
                 </ul>
             </section>
             <section id="Content"> <!-- Kontener z zawartością strony -->
             <!-- Komunikat -->
                 <h1>Bierzcie I Uczcie Się Z Tego Wszyscy</h1>
-                <p class="Tekst_1">Na tej stronie znajdziesz trochę notatek, które mogą ci się przydać na kierunku "<strong>Technik-Informatyk</strong>". Możecie wszyscy korzystać z tych notatek, i tej strony, ale <i><strong>ładnie proszę</strong></i>: - nie pobierajcie i mówcie że to wasza zajebiście ciężka praca.</p>
-                <p class="Tekst_1">Wszystkie notatki mogą być nie zaktualizowane o materiał który był niedawno, ponieważ dużo tego wszystkiego było i nie było czasu na dopisywanie wszystkiego. Nazwy plików mogą nie odzwierciedlać <i>dokładnie</i> ich zawartości. Jeśli gdzieś jest np: <span class="WIP">???</span>, <span class="WIP">WIP</span> czy coś podobnego to znaczy że brakuje tam czegoś, niedokończone, możliwe błedy, brak materiałów itp.</p>
-                <div class="Akapit"><span class="material-icons" style="transform: scaleX(-1);">announcement</span></div><p><strong><u>WAŻNE</u>: </strong>Jeśli po pobraniu i otworzenie danego pliku, nie widać gdzieś: np. obrazków, równań, tabel. Otwórz dany plik Wordem. Ta strona może nie działać poprawnie jeśli masz wyłaczony javascript.</p>
-                <div class="Akapit"><span class="material-icons" style="transform: scaleX(-1);">announcement</span></div><p><strong><u>BARDZO WAŻNE</u>: </strong> Strony z grafikami są <i>duże</i> i <i>mogą</i> zużyć dużo transferu. Możesz też pobrać wszystkie grafiki naraz.</p>
+                <p class="Tekst_1">Na tej stronie znajdziesz trochę notatek, które mogą ci się przydać na kierunku "<strong>Technik-Informatyk</strong>". Możecie wszyscy korzystać z tych notatek, i tego całego kodu, ale <i><strong>ładnie proszę</strong></i>: - nie pobierajcie i mówcie że to wasza zajebiście ciężka praca.</p>
+                <p class="Tekst_1">Wszystkie notatki mogą być nie zaktualizowane o materiał który był niedawno, ponieważ dużo tego wszystkiego było i nie było czasu na dopisywanie wszystkiego. Nazwy plików mogą nie odzwierciedlać <i>dokładnie</i> ich zawartości. Jeśli gdzieś jest np: <span class="WIP">???</span>, <span class="WIP">WIP</span> czy coś podobnego to znaczy że brakuje tam czegoś, niedokończone, możliwe błedy, brak materiałów itp. Jeśli wiesz co tam poprawić to daj proszę o tym znać.</p>
+                <div class="Akapit"><span class="material-icons" style="transform: scaleX(-1);">announcement</span></div><p><strong><u>WAŻNE</u>: </strong>Jeśli po pobraniu i otworzenie danego pliku, nie widać gdzieś: np. obrazków, równań, tabel. Otwórz dany plik Wordem. Ta strona może nie działać poprawnie jeśli masz wyłaczony javascript i jeśli będziesz się bawić zoom'em.</p>
+                <div class="Akapit"><span class="material-icons" style="transform: scaleX(-1);">announcement</span></div><p><strong><u>BARDZO WAŻNE</u>: </strong> Strony z grafikami są <i>duże</i> i <i>mogą</i> zużyć dużo transferu, ale dzięki nim możes bez pobierania zobaczyć te wszystkie grafiki. Możesz też pobrać wszystkie grafiki naraz.</p>
             <!-- Notatki -->
                 <!-- Klasa 3 -->    
                 <h1><span class="MiniBanner"><span class="material-icons" style="float: initial;">article</span></span>Klasa 3</h1>
@@ -158,7 +159,7 @@
                         <a href="Notatki/Klasa 2/Systemy Baz Danych/Systemy Baz Danych-Podstawowe Definicje (detal).docx" download class="Link_2">Systemy Baz Danych - Notatki z zeszytu</a>
                     <a name="Urzadzenia_Techniki_Komputerowej_kl2"><h2>Urządzenia Techniki Komputerowej</h2></a>
                         <a href="Notatki/Klasa 2/Urządzenia Techniki Komputerowej/UTK-Zeszyt.docx" download class="Link_2">Urządzenia Techniki Komputerowej - Notatki z zeszytu</a>
-                <!-- Linki do pobrania wszystkich grafik naraz -->
+                <!-- Linki do pobrania wszystkich* grafik naraz, no może nie wszystkich -->
                 <h1><span class="MiniBanner"><span class="material-icons" style="float: initial;">insert_photo</span></span>Grafiki</h1>
                     <p>Jeżeli interesują Cię tylko pojedyncze grafiki to możesz je zobaczyć klikając odpowiedni przycisk w Menu, bez pobierania. Ale ale <i>bardzo prawdopodobne</i> że wejście na stronę z tymi grafikami może zużyć dużo Internetu</p>
             <!-- Tabela z grafikami do pobrania -->

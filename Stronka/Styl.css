@@ -127,6 +127,14 @@ html::selection, body::selection {
     border: 0;
     margin: 0;
 }
+#Menu input[type=text] {
+    width: 100%;
+    font-size: 1vw;
+    margin-bottom: 0.1vw;
+    border: none;
+    background-color: #E3E7CB;
+    border-bottom: 0.1vw black dotted;
+}
 /* Content */
 #Content {
     width: 85%;
@@ -194,6 +202,7 @@ html::selection, body::selection {
     color: #096527;
     font-size: 1.5vw;
     text-transform: capitalize;
+    border-bottom: 0.1vw #096527 dotted;
 }
 #Content td {
     background-color: #EEF6BB;
