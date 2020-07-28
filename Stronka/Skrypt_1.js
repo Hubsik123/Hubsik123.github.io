@@ -1,6 +1,6 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 42";
+    var Wersja = "v 43";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
@@ -130,70 +130,18 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
     const Przycisk = document.getElementById('DarkMode');
     Przycisk.addEventListener('click', () =>
     {
-        if(Styl.href.includes('Styl-Ciemny')) // if it's light -> go dark
+        if(Styl.href.includes('Styl-Ciemny')) // Jasny -> Ciemny
         {
             Styl.href = 'Styl.css';
             Przycisk.innerText = 'Dark Mode';
-            Pasek.setAttribute("content", "#3cd816"); //
+            Pasek.setAttribute("content", "#3cd816");
         }
-        else // if it's dark -> go light
+        else // Ciemny -> Jasny
         {
             Styl.href = 'Styl-Ciemny.css';
             Przycisk.innerText = 'Light Mode';
-            Pasek.setAttribute("content", "black"); //
+            Pasek.setAttribute("content", "black");
         }
-        localStorage.setItem('CSS',Styl.href) // Zapisanie obecnego stylu
+        localStorage.setItem('CSS',Styl.href)  // if it's dark -> go light
     })
 })
-/*
-//Dark Mode
-    // this one is jut to wait for the page to load
-document.addEventListener('DOMContentLoaded', () =>
-{
-    const Styl = document.getElementById('theme');
-    const ZapisanyStyl = localStorage.getItem('theme');
-    if(ZapisanyStyl)
-    {
-        Styl.href = ZapisanyStyl;
-    }
-    const Przycisk = document.getElementById('DarkMode');
-    Przycisk.addEventListener('click', () =>
-    {
-        if(Styl.href.includes('Styl')) // if it's light -> go dark
-        {
-            Styl.href = 'Styl-Ciemny.css';
-            Przycisk.innerText = 'Switch to Jasny mode';
-        }
-        else // if it's dark -> go light
-        {
-            Styl.href = 'Styl.css';
-            Przycisk.innerText = 'Switch to dark mode';
-        }
-        localStorage.setItem('theme',Styl.href) // save the preference to localStorage
-    })
-})
-*/
-/*
-function Wyszukiwarka()
-{
-    // Declare variables
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById('Wyszukiwarka');
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("Lista");
-    li = ul.getElementsByTagName('li');
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++)
-    {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1)
-        {
-        li[i].style.display = "";
-        }
-    else
-        {
-        li[i].style.display = "none";
-        }
-    }
-}*/

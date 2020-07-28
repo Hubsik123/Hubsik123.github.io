@@ -261,6 +261,18 @@ html::selection, body::selection {
     clear: both;
     overflow: hidden;
 }
+#Footer button {
+    color: white;
+    font-size: 2vw;
+    border: 0.1vw ridge black;
+    border-radius: 1vw 1vw 1vw 1vw;
+    background-color: #a6a6a6;
+    transition: 0.5s;
+}
+#Footer button:hover {
+    color: black;
+    background: linear-gradient(to bottom, #000000 -20%, #808080 120%);
+}
 #Footer p {
     font-size: 1.25vw;
     color: white;
