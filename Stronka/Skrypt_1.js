@@ -1,6 +1,6 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 43";
+    var Wersja = "v 44";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
@@ -143,5 +143,6 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
             Pasek.setAttribute("content", "black");
         }
         localStorage.setItem('CSS',Styl.href)  // if it's dark -> go light
+        localStorage.setItem('Pasek',Pasek.setAttribute)
     })
 })
