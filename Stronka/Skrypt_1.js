@@ -1,6 +1,6 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 51";
+    var Wersja = "v 53";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
@@ -28,7 +28,7 @@ function Zamkniecie_Obrazka(imgs) // PRAWIE to samo to funkcja Powiekszenie_Obra
     Opis_Obrazka.innerHTML = imgs.alt;
     Powiekszony_Obrazek.parentElement.style.display = "none";
 }
-var WIP = false; //Niby to całe menu na tel to niby z internetu skopiowane https://www.w3schools.com/howto/howto_js_dropdown.asp i https://www.w3schools.com/howto/howto_js_mobile_navbar.asp, ale to to trzeba praktycznie całe przerobić żeby do czego się nadawało... Trzeba było napisać 3 funkcje żeby to działało...
+var WIP = false; //Niby to całe menu na tel to niby z internetu skopiowane https://www.w3schools.com/howto/howto_js_dropdown.asp i https://www.w3schools.com/howto/howto_js_mobile_navbar.asp, ale to to trzeba praktycznie całe przerobić żeby do czego się nadawało... Trzeba było napisać 3 funkcje żeby to działało (MenuMobile, MobileContent, ZoomFix)...
 function MenuMobile()
 {
     var Banner = document.getElementById("Banner");
