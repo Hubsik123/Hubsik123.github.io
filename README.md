@@ -23,9 +23,10 @@ Jeszcze kilka przydatnych linków:
 
 Hostowanie stron na GitHubie jest bardzo wygodne i łatwe ale ma dwie główne wady:
 
-* Zakaz .PHP, czyli brak "include", co bardzo by ułatwiło wszystko, pomogło by zapobiegać błędom typu coś jest niezaktualizowane na którejś stronie itp.
+* Zakaz .PHP, czyli brak "include", co bardzo by ułatwiło wszystko, pomogło by zapobiegać błędom typu coś jest niezaktualizowane na którejś stronie itp. Jeśli wiesz jak zrobić coś takiego w .html czy .js to prosze daj mi znać
 * 1 GB rozmiaru wszystkicj plików
 
 Jeśli zobaczysz gdzieś błędy, w kodzie albo ortografii to daj proszę znać.:wink: <br>
 <b>By Hubsik 2020</b> :godmode: <br>
+Jeżeli przeczytałeś to wszystko to pozdrawiam. <br>
 :100:% Frekwencja Master Race
