@@ -1,3 +1,4 @@
+/* Zignoruj proszę "błędy" w tym pliku bo dzięki tym błędom strona działa tak jak należy, jak nie widzisz tych błędów to polecam Visual Studio Code */
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -420,6 +421,37 @@ html::selection, body::selection {
     background: #00e673;
     border-radius: 1.5vw;
 }
+    /* Spam, patrz callout, https://www.w3schools.com/howto/howto_js_callout.asp */
+#Spam {
+    position: fixed;
+    bottom: 75px;
+    right: 20px;
+    margin-left: 20px;
+    max-width: 400px;
+}
+.SpamBanner {
+    padding: 25px 15px;
+    background-color: #00b300;
+    font-size: 3vw;
+    color: gold;
+    font-family: Tangerine, Calibri;
+}
+.SpamContent {
+    padding: 1vw;
+    background-color: #33ff33;
+    color: black;
+}
+.SpamGuzik {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.SpamGuzik:hover {
+    color: red;
+}
 /* Media, widok na telefonach itp */
 @media (max-width: 992px) /*Jeżeli rozmiar okna jest mniejszy niż 992px*/
 {
@@ -611,6 +643,10 @@ html::selection, body::selection {
     }
     .Animacja_2 span {
         font-size: 5vw !important;
+    }
+    /* Spam */
+    #Spam {
+        display: none;
     }
 }
 /* Na jeszcze mniejsze ekrany */
