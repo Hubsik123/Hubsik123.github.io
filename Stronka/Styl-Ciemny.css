@@ -119,8 +119,8 @@ html::selection, body::selection {
     text-transform: capitalize;
 }
 #Menu a:hover {
-    color: gray;
-    background: linear-gradient(to right, #093527 25%, #33ff33 150%);
+    color: black;
+    background: linear-gradient(to right, white 25%, black 150%);
     border-bottom-right-radius: 2vw;
     font-style: italic;
 }
@@ -151,7 +151,7 @@ html::selection, body::selection {
     overflow: auto;
 }
 #Content h1 {
-    background-color: #666666;
+    background-color: #262626;
     font-size: 2vw;
     color: #d9d9d9;
     border-left: 0.25vw white solid;
@@ -162,7 +162,7 @@ html::selection, body::selection {
     text-transform: capitalize;
 }
 #Content h2 {
-    background-color: #bfbfbf;
+    background-color: #333333;
     font-size: 1.5vw;
     color: white;
     border-left: 0.25vw white solid;
@@ -211,7 +211,7 @@ html::selection, body::selection {
     border-bottom: 0.1vw white dotted;
 }
 #Content td {
-    background-color: #b3b3b3;
+    background-color: #4d4d4d;
     font-size: 1.25vw;
     color: whitesmoke;
 }
@@ -236,7 +236,7 @@ html::selection, body::selection {
     /*width: calc(33.33% - 0.4vw); Niby działa ale nie do końca :(*/
     width: calc(33.33% - 0.5vw);
     color: white;
-    background-color: #a6a6a6;
+    background-color: #737373;
     font-size: 1.25vw;
     text-align: center;
     margin-top: 0.25vw;
@@ -420,7 +420,7 @@ html::selection, body::selection {
         /* Zaznaczone miejsce */
 ::-webkit-scrollbar-thumb {
     /*background: linear-gradient(to bottom, #093527 15%, #33ff33 75%);*/
-    background: #00e673;
+    background: black;
     border-radius: 1.5vw;
 }
 /* Media, widok na telefonach itp */
