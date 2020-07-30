@@ -1,7 +1,6 @@
-# Hubsik123.github.io
 <h1>Projekt strony z notatkami ze szkoły na kierunku Technik-Informatyk.</h1>
 
-:grinning:Ta strona ma zastąpić moją starą stronę (https://sites.google.com/view/hubsik). Nowa strona jest praktycznie* w pełni pisana ręcznie. Jest (w miarę) responsywna (proszę tylko nie dawać na PC zoom 500% bo włącza się wtedy widok mobilny), działa na telefonach ma tryb ciemny.:smiley_cat:<br>
+:grinning:Ta strona ma zastąpić moją starą stronę (https://sites.google.com/view/hubsik). Nowa strona jest praktycznie* w pełni pisana ręcznie. Jest (w miarę) responsywna (proszę tylko nie dawać na PC zoom 500% bo włącza się wtedy widok mobilny), działa na telefonach, ma też tryb ciemny.:smiley_cat:<br>
 Jedyne co nie było pisane w pełni samodzielne można zlaleść tutaj: <br>
 * https://www.w3schools.com/howto/howto_js_dropdown.asp - Rozwijane menu<br>
 * https://www.w3schools.com/howto/howto_js_mobile_navbar.asp - Rozwijane menu<br>
