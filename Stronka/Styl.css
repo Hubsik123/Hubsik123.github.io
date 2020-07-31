@@ -508,7 +508,6 @@ html::selection, body::selection {
     /* Footer */
     #Footer {
         height: 5%;
-        overflow: auto;
     }
     #Footer p {
         font-size: 5vw;

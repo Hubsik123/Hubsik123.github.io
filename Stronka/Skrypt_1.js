@@ -1,6 +1,6 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 58";
+    var Wersja = "v 59";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
@@ -99,7 +99,8 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
     var Filtr = Input.value.toUpperCase();
     var Lista = document.getElementById("Lista");
     var Element = Lista.getElementsByTagName("li");
-    var wip = document.getElementById("Wyszukiwarka").value;
+    var Meta = document.getElementById("Wyszukiwarka").value;
+    var Tekst = document.getElementById("Wyszukiwarka").value;
     var Link, Petla, Wartosc;
     // Sprawdzanie za pomocą pętli czy podany tekst się zgadza
     for (Petla = 0; Petla < Element.length; Petla++)
@@ -115,12 +116,92 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
         Element[Petla].style.display = "none";
         }
     }
-    switch(wip)
+    switch(Meta) //he he
     {
         case "dzban":
         case "Dzban":
-            alert("Sam jesteś dzban!")
+            document.getElementById("Komunikat").innerHTML = "Sam jesteś dzban!";
             break;
+        case "IDDQD":
+        case "iddqd":
+            document.getElementById("Komunikat").innerHTML = "Rip and tear until it is done.";
+            break;
+        case "Kurwa":
+        case "kurwa":
+            document.getElementById("Komunikat").innerHTML = "NIE TYM TONEM, chamie.\nZapamiętam to sobie... Będziesz chciał jeszcze jakieś notatki...";
+            document.getElementById("Content").style.display = "none";
+            break;
+        case "Diablo lepsze":
+        case "Diablo 4":
+            document.getElementById("Komunikat").innerHTML = "PoE i tak znacznie lepsze.";
+            var Secret = document.createElement("a");
+            Secret.href = "https://www.pathofexile.com";
+            Secret.click();
+            alert(wip);
+            break;
+        case "Path Of Exile":
+        case "poe":
+            document.getElementById("Komunikat").innerHTML = "PoE fajna gierka.";
+            var Secret = document.createElement("a");
+            Secret.href = "https://www.pathofexile.com";
+            Secret.click();
+            alert(wip);
+            break;
+        case "Rick roll":
+        case "rick roll":
+            document.getElementById("Komunikat").innerHTML = "Never Gonna Give You Up.";
+            var Secret = document.createElement("a");
+            Secret.href = "https://youtu.be/dQw4w9WgXcQ?t=42";
+            Secret.click();
+            alert(wip);
+            break;
+        // Metody wyświetlania tekstu
+        case "360":
+            //document.getElementById("Komunikat").innerHTML = "Zatkało?";
+            document.getElementById("Komunikat").animate
+                (
+                    [
+                        {transform: "rotate(0deg)"},
+                        {transform: "rotate(360deg)"}
+                    ],
+                    {
+                        duration: 2500,
+                        iterations: Infinity
+                    }
+                );
+            break;
+        case "180":
+            //document.getElementById("Komunikat").innerHTML = "Zatkało?";
+            document.getElementById("Komunikat").animate
+                (
+                    [
+                        {transform: "rotateX(360deg)"},
+                        {transform: "rotateX(0deg)"}
+                    ],
+                    {
+                        duration: 2000,
+                        iterations: Infinity
+                    }
+                );
+            break;
+        case "kółko":
+           // document.getElementById("Komunikat").innerHTML = "Zatkało?";
+            document.getElementById("Komunikat").animate
+                (
+                    [
+                        {transform: "rotateY(360deg)"},
+                        {transform: "rotateY(0deg)"},
+                        {transform: "rotateY(360deg)"}
+                    ],
+                    {
+                        duration: 5000,
+                        iterations: Infinity
+                    }
+                );
+            break;
+        default:
+            document.getElementById("Komunikat").innerHTML = "";
+            //document.getElementById("Content").style.display = "block"; Specjalnie tu jest komentarz ;)
     }
 }
 //Dark Mode, to też z internetu, troszkę pozmieniane, https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf
@@ -151,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
         localStorage.setItem('CSS',Styl.href)  // Ciemny -> Jasny
     })
 })
-// Bardzo ważne skrypty
+// Bardzo ważne skrypty, to akurat jest w pełni pisane samodzielnie
     //Sktypt 1
 var Licznik_1 = 0;
 function Rotate()
@@ -159,9 +240,8 @@ function Rotate()
     Licznik_1++;
     if (Licznik_1 >= 5)
     {
-        document.getElementById("Main").style.transform = "scaleY(-1)";
-        document.getElementById("Main").style.transform = "scaleX(-1)";
         alert("No i co teraz? Po co Ci było tak klikać???");
+        document.getElementById("Main").style.transform = "scaleX(-1)";        
     }
 }
     //Skrypt 2
@@ -170,8 +250,8 @@ function Color()
 {
     Licznik_2++;
     if (Licznik_2 >= 10)
-    {  
-            // Za dużo roboty żeby coś naprawdę fajnego z css zrobić...
+    {
+        alert("To nie jest żaden Clicker! Może ten przycisk też ma uczucia?!");
         document.getElementById("Banner").style.display = "none";
         document.getElementById("Content").style.display = "none";
         document.getElementById("LinkiMobile").style.display = "none";
@@ -181,6 +261,5 @@ function Color()
         //document.getElementById("Main").style.backgroundImage = "initial";
         //document.getElementById("Main").style.backgroundColor = "white";
         document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.png)"
-        alert("To nie jest żaden Clicker! Może ten przycisk też ma uczucia?!");
     }
 }
