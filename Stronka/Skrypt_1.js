@@ -1,21 +1,11 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 57";
+    var Wersja = "v 58";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
 {
     alert("Jeśli podoba ci się ta strona, przydały ci sie te notatki, kod tej strony to daj znać znajomym, im też może się przydać.\nJesli zobaczysz jakieś błędy to proszę daj o tym znać. Mój adres e-mail:\nhubsik321@gmail.com")
-}
-var Licznik_1 = 0;
-function Rotate()
-{
-    Licznik_1++;
-    if (Licznik_1 >= 5)
-    {
-        document.getElementById("Main").style.transform = "scaleY(-1)";
-        alert("No i co teraz? Po co Ci było tak klikać???");
-    }
 }
 function Powiekszenie_Obrazka(imgs)
 {
@@ -161,6 +151,20 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
         localStorage.setItem('CSS',Styl.href)  // Ciemny -> Jasny
     })
 })
+// Bardzo ważne skrypty
+    //Sktypt 1
+var Licznik_1 = 0;
+function Rotate()
+{
+    Licznik_1++;
+    if (Licznik_1 >= 5)
+    {
+        document.getElementById("Main").style.transform = "scaleY(-1)";
+        document.getElementById("Main").style.transform = "scaleX(-1)";
+        alert("No i co teraz? Po co Ci było tak klikać???");
+    }
+}
+    //Skrypt 2
 var Licznik_2 = 0;
 function Color()
 {
@@ -174,8 +178,9 @@ function Color()
         document.getElementById("Menu").style.display = "none";
         document.getElementById("Footer").style.display = "none";
         document.getElementById("Spam").style.display = "none";
-        document.getElementById("Main").style.backgroundImage = "initial";
-        document.getElementById("Main").style.backgroundColor = "white";
+        //document.getElementById("Main").style.backgroundImage = "initial";
+        //document.getElementById("Main").style.backgroundColor = "white";
+        document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.png)"
         alert("To nie jest żaden Clicker! Może ten przycisk też ma uczucia?!");
     }
 }
