@@ -10,6 +10,7 @@ Jedyne co nie było pisane w pełni samodzielne można zlaleść tutaj:
 * https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp - Galeria obrazków
 * https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf - Tryb ciemny
 * https://youtu.be/nZsEYi3Uxro - Animacja
+* https://www.w3schools.com/howto/howto_js_callout.asp - Spam
 
 Żeby nie było, z Internetu "skopiowałem" tylko pierdoły które pozwoliłyby na lepszy wygląd strony i jej więkzsą funkcjonalnosć. <br>
 :thinking:A i tak 99% kodu trzeba było bardzo mocno pozmieniać żęby w ogóle się na coś przydał, działał poprawnie, i poprawić tak żeby działało na pc i na tel :innocent: i nie generował nowych dziwnych błędów:hankey:. Gdyby tylko dało się skopiować JAKIŚ kod z Internetu i go wkleić bez żadnej edycji, który i tak by działał to świat był by piękny... <br>
@@ -20,6 +21,8 @@ Jeszcze kilka przydatnych linków:
 * https://www.w3schools.com/colors/colors_gradient.asp - Narzędzie do robienia gradientów
 * https://www.w3schools.com/colors/colors_schemes.asp - Narzędzie do wybierania schematu kolorów
 * https://www.piskelapp.com - Narzędzie do robienia pixel artu, można tu łatwo zrobić favicon
+* https://material.io/resources/icons/?style=baseline - Ikony
+* https://developers.google.com/fonts - Czcionki
 
 Hostowanie stron na GitHubie jest bardzo wygodne i łatwe ale ma dwie główne wady:
 
