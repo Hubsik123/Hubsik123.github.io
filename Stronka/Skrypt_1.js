@@ -1,20 +1,19 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 56";
+    var Wersja = "v 57";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
 {
     alert("Jeśli podoba ci się ta strona, przydały ci sie te notatki, kod tej strony to daj znać znajomym, im też może się przydać.\nJesli zobaczysz jakieś błędy to proszę daj o tym znać. Mój adres e-mail:\nhubsik321@gmail.com")
 }
-var Licznik = 0;
+var Licznik_1 = 0;
 function Rotate()
 {
-    Licznik++;
-    if (Licznik >= 5)
+    Licznik_1++;
+    if (Licznik_1 >= 5)
     {
-        var Stronka = document.getElementById("Main");
-        Stronka.style.transform = "scaleY(-1)";
+        document.getElementById("Main").style.transform = "scaleY(-1)";
         alert("No i co teraz? Po co Ci było tak klikać???");
     }
 }
@@ -162,3 +161,21 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
         localStorage.setItem('CSS',Styl.href)  // Ciemny -> Jasny
     })
 })
+var Licznik_2 = 0;
+function Color()
+{
+    Licznik_2++;
+    if (Licznik_2 >= 10)
+    {  
+            // Za dużo roboty żeby coś naprawdę fajnego z css zrobić...
+        document.getElementById("Banner").style.display = "none";
+        document.getElementById("Content").style.display = "none";
+        document.getElementById("LinkiMobile").style.display = "none";
+        document.getElementById("Menu").style.display = "none";
+        document.getElementById("Footer").style.display = "none";
+        document.getElementById("Spam").style.display = "none";
+        document.getElementById("Main").style.backgroundImage = "initial";
+        document.getElementById("Main").style.backgroundColor = "white";
+        alert("To nie jest żaden Clicker! Może ten przycisk też ma uczucia?!");
+    }
+}
