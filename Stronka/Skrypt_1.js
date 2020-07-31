@@ -1,11 +1,22 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 55";
+    var Wersja = "v 56";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
 {
     alert("Jeśli podoba ci się ta strona, przydały ci sie te notatki, kod tej strony to daj znać znajomym, im też może się przydać.\nJesli zobaczysz jakieś błędy to proszę daj o tym znać. Mój adres e-mail:\nhubsik321@gmail.com")
+}
+var Licznik = 0;
+function Rotate()
+{
+    Licznik++;
+    if (Licznik >= 5)
+    {
+        var Stronka = document.getElementById("Main");
+        Stronka.style.transform = "scaleY(-1)";
+        alert("No i co teraz? Po co Ci było tak klikać???");
+    }
 }
 function Powiekszenie_Obrazka(imgs)
 {
@@ -82,8 +93,7 @@ function ZoomFix()
         Zoom = true;
 
     }
-    Taki fajny komunikat, ale nie działa najlepiej, za często włącza się przez przypadek np. ctrl+f...
-    */
+    Taki fajny komunikat, ale nie działa najlepiej, za często włącza się przez przypadek np. ctrl+f... */
     var Banner = document.getElementById("Banner");
     var Linki = document.getElementById("LinkiMobile");
     var Content = document.getElementById("Content");
@@ -96,10 +106,11 @@ function ZoomFix()
 }
 function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie zmieniać https://www.w3schools.com/howto/howto_js_filter_lists.asp
 {
-    var Input = document.getElementById('Wyszukiwarka');
+    var Input = document.getElementById("Wyszukiwarka");
     var Filtr = Input.value.toUpperCase();
     var Lista = document.getElementById("Lista");
-    var Element = Lista.getElementsByTagName('li');
+    var Element = Lista.getElementsByTagName("li");
+    var wip = document.getElementById("Wyszukiwarka").value;
     var Link, Petla, Wartosc;
     // Sprawdzanie za pomocą pętli czy podany tekst się zgadza
     for (Petla = 0; Petla < Element.length; Petla++)
@@ -114,6 +125,13 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
         {
         Element[Petla].style.display = "none";
         }
+    }
+    switch(wip)
+    {
+        case "dzban":
+        case "Dzban":
+            alert("Sam jesteś dzban!")
+            break;
     }
 }
 //Dark Mode, to też z internetu, troszkę pozmieniane, https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf
@@ -141,35 +159,6 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
             Przycisk.innerText = 'Light Mode';
             Pasek.setAttribute("content", "black");
         }
-        localStorage.setItem('CSS',Styl.href)  // if it's dark -> go light
+        localStorage.setItem('CSS',Styl.href)  // Ciemny -> Jasny
     })
 })
-/*
-document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
-{
-    const Styl = document.getElementById('CSS');
-    const ZapisanyStyl = localStorage.getItem('CSS');
-    var Pasek = document.getElementById('Pasek');
-    if(ZapisanyStyl)
-    {
-        Styl.href = ZapisanyStyl;
-    }
-    const Przycisk = document.getElementById('DarkMode');
-    Przycisk.addEventListener('click', () =>
-    {
-        if(Styl.href.includes('Styl-Ciemny')) // Jasny -> Ciemny
-        {
-            Styl.href = 'Styl.css';
-            Przycisk.innerText = 'Dark Mode';
-            Pasek.setAttribute("content", "#3cd816");
-        }
-        else // Ciemny -> Jasny
-        {
-            Styl.href = 'Styl-Ciemny.css';
-            Przycisk.innerText = 'Light Mode';
-            Pasek.setAttribute("content", "black");
-        }
-        localStorage.setItem('CSS',Styl.href)  // if it's dark -> go light
-    })
-})
-*/
