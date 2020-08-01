@@ -1,6 +1,6 @@
 function Wersja_Stronki()
 {
-    var Wersja = "v 59";
+    var Wersja = "v 60";
     alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
 }
 function Feedback()
@@ -60,6 +60,7 @@ function MenuMobile()
         Content.style.height = "85%";
         Footer.style.height = "5%";
     }
+    Background();
 }
 function MobileContent()
 {
@@ -72,6 +73,7 @@ function MobileContent()
     Content.style.display = "block";
     Content.style.height = "85%";
     Footer.style.height = "5%";
+    Background();
 }
 var Zoom = false;
 function ZoomFix()
@@ -92,6 +94,7 @@ function ZoomFix()
     Content.style.display = "block";
     Content.style.height = "85%";
     Footer.style.height = "5%";
+    Background();
 }
 function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie zmieniać https://www.w3schools.com/howto/howto_js_filter_lists.asp
 {
@@ -248,7 +251,7 @@ function Rotate()
 }
     //Skrypt 2
 var Licznik_2 = 0;
-function Color()
+function Background()
 {
     Licznik_2++;
     if (Licznik_2 >= 10)
