@@ -10,7 +10,7 @@ REM Klasa 3
     copy /Y "D:\Google Drive\Szkoła\Do Szkoły-Technikum 3 kl\Pracownia Baz Danych\Pracownia baz danych-Notatka.docx" "C:\GitHub\Stronka\Hubsik123.github.io\Stronka\Notatki\Klasa 3\Pracownia Baz Danych\Pracownia baz danych-Notatka.docx"
     REM Matematyka
     copy /Y "D:\Google Drive\Szkoła\Do Szkoły-Technikum 3 kl\Matematyka\Matematyka-Trygonometria.docx" "C:\GitHub\Stronka\Hubsik123.github.io\Stronka\Notatki\Klasa 3\Matematyka\Matematyka-Trygonometria.docx"
-    copy /Y "D:\Google Drive\Szkoła\Do Szkoły-Technikum 3 kl\Matematyka\Metamatyka-Ciągi.docx" "C:\GitHub\Stronka\Hubsik123.github.io\Stronka\Notatki\Klasa 3\Matematyka\Metamatyka-Ciągi.docx"
+    copy /Y "D:\Google Drive\Szkoła\Do Szkoły-Technikum 3 kl\Matematyka\Matematyka-Ciągi.docx" "C:\GitHub\Stronka\Hubsik123.github.io\Stronka\Notatki\Klasa 3\Matematyka\Matematyka-Ciągi.docx"
     REM Pracownia Sieciowych Systemów Operacyjnych
     copy /Y "D:\Google Drive\Szkoła\Do Szkoły-Technikum 3 kl\Pracownia Sieciowych Systemów Operacyjnych\Notatki\PSSO-Ubuntu Server.docx" "C:\GitHub\Stronka\Hubsik123.github.io\Stronka\Notatki\Klasa 3\Pracownia Sieciowych Systemów Operacyjnych\PSSO-Ubuntu Server.docx"
     REM Strony Internetowe

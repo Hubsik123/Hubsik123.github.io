@@ -137,7 +137,6 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             var Secret = document.createElement("a");
             Secret.href = "https://www.pathofexile.com";
             Secret.click();
-            alert(wip);
             break;
         case "Path Of Exile":
         case "poe":
@@ -145,7 +144,6 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             var Secret = document.createElement("a");
             Secret.href = "https://www.pathofexile.com";
             Secret.click();
-            alert(wip);
             break;
         case "Rick roll":
         case "rick roll":
@@ -153,7 +151,6 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             var Secret = document.createElement("a");
             Secret.href = "https://youtu.be/dQw4w9WgXcQ?t=42";
             Secret.click();
-            alert(wip);
             break;
         // Metody wyświetlania tekstu
         case "360":
@@ -240,8 +237,13 @@ function Rotate()
     Licznik_1++;
     if (Licznik_1 >= 5)
     {
-        alert("No i co teraz? Po co Ci było tak klikać???");
-        document.getElementById("Main").style.transform = "scaleX(-1)";        
+        //alert("No i co teraz? Po co Ci było tak klikać???");
+        document.getElementById("Main").style.transform = "scaleX(-1)";
+        document.getElementById("Meta").innerHTML = "No i co teraz?";
+        document.getElementById("Meta").style.transform = "scaleX(-1)";
+        document.getElementById("Meta").style.color = "red";
+        document.getElementById("Meta").style.textShadow = "initial";
+        document.getElementById("Meta").style.fontFamily = "Calibri";
     }
 }
     //Skrypt 2
