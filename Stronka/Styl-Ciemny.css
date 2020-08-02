@@ -429,8 +429,8 @@ html::selection, body::selection {
     position: fixed;
     bottom: 75px;
     right: 20px;
-    margin-left: 20px;
-    max-width: 400px;
+    max-width: 500px;
+    max-height: 500px;
 }
 .SpamBanner {
     padding: 25px 15px;
@@ -438,7 +438,6 @@ html::selection, body::selection {
     font-size: 3vw;
     color: gold;
     font-family: Tangerine, Calibri;
-    border-radius: 2.5vw 2.5vw 0vw 0vw;
 }
 .SpamContent {
     padding: 1vw;

@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 10 razy na guzik "Dark Mode"
 function Wersja_Stronki()
 {
-    var Wersja = "v 62";
+    var Wersja = "v 63";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -265,6 +265,10 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
         localStorage.setItem('CSS',Styl.href)  // Ciemny -> Jasny
     })
 })
+function No_Spam()
+{
+    document.getElementById("Spam").style.display = "none";
+}
 // Bardzo ważne skrypty, to akurat jest w pełni pisane samodzielnie (...nikt by na internety takich pierdół nie dawał), z wiadomych wzgledów nie będzie tu żadnych komentarzy...
     //Sktypt 1
 var Licznik_1 = 0;
@@ -301,7 +305,8 @@ function Background()
         document.getElementById("Spam").style.display = "block";
         //document.getElementById("Main").style.backgroundImage = "initial";
         //document.getElementById("Main").style.backgroundColor = "white";
-        document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.png)"
+        //document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.png)"
+        document.getElementById("Main").style.backgroundImage = "url(Obrazki/Frajer.png)"
         Troll_2 = true;
     }
 }
