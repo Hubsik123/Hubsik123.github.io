@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 10 razy na guzik "Dark Mode"
 function Wersja_Stronki()
 {
-    var Wersja = "v 63";
+    var Wersja = "v 64";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
