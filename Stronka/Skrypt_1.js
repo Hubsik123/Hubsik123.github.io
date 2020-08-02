@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 10 razy na guzik "Dark Mode"
 function Wersja_Stronki()
 {
-    var Wersja = "v 64";
+    var Wersja = "v 65";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -126,9 +126,9 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             document.getElementById("Komunikat").innerHTML = "Ciekawe czy to też wpiszesz?";
             break;
         case "Ciekawe czy to też wpiszesz":
-            document.getElementById("Komunikat").innerHTML = "Wow, naprawdę nie masz co robić. Tylko bawić się w przepisyuwanie jakiś pierdół...";
+            document.getElementById("Komunikat").innerHTML = "Wow, naprawdę nie masz co robić. Tylko bawić się w przepisywanie  jakiś pierdół...";
             break;
-        case "Wow, naprawdę nie masz co robić. Tylko bawić się w przepisyuwanie jakiś pierdół":
+        case "Wow, naprawdę nie masz co robić. Tylko bawić się w przepisywanie  jakiś pierdół":
             document.getElementById("Komunikat").innerHTML = "Ale serio, przestań albo będę musiał Cię powstrzymać!";
             break;
         case "Ale serio, przestań albo będę musiał Cię powstrzymać":
@@ -305,8 +305,7 @@ function Background()
         document.getElementById("Spam").style.display = "block";
         //document.getElementById("Main").style.backgroundImage = "initial";
         //document.getElementById("Main").style.backgroundColor = "white";
-        //document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.png)"
-        document.getElementById("Main").style.backgroundImage = "url(Obrazki/Frajer.png)"
+        document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.png)";
         Troll_2 = true;
     }
 }
@@ -345,6 +344,7 @@ function Final()
         document.getElementById("Meta").innerHTML = "To koniec!";
         document.getElementById("Meta").style.transform = "initial";
         document.getElementById("Meta").style.textShadow = "initial";
+        document.body.style.backgroundImage = "url(Obrazki/Frajer.png)";
         document.getElementById("Main").animate
         (
             [
@@ -352,7 +352,7 @@ function Final()
                 {transform: "rotate(360deg)"}
             ],
                 {
-                    duration: 5000,
+                    duration: 3500,
                     iterations: Infinity
                 }
         );
