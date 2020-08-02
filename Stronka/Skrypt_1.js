@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 10 razy na guzik "Dark Mode"
 function Wersja_Stronki()
 {
-    var Wersja = "v 61";
+    var Wersja = "v 62";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -63,7 +63,7 @@ function MenuMobile()
         Content.style.height = "85%";
         Footer.style.height = "5%";
     }
-    Background();
+    //Background();
 }
 function MobileContent()
 {
@@ -76,7 +76,7 @@ function MobileContent()
     Content.style.display = "block";
     Content.style.height = "85%";
     Footer.style.height = "5%";
-    Background();
+    //Background();
 }
 var Zoom = false;
 function ZoomFix()
@@ -97,7 +97,6 @@ function ZoomFix()
     Content.style.display = "block";
     Content.style.height = "85%";
     Footer.style.height = "5%";
-    Background();
 }
 function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie zmieniać https://www.w3schools.com/howto/howto_js_filter_lists.asp, ale można taki jeden mały detal dodać...
 {
@@ -123,6 +122,24 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
     switch(Input.value) //he he
     {
     //Komunikaty
+        case "Wpisz tu coś":
+            document.getElementById("Komunikat").innerHTML = "Ciekawe czy to też wpiszesz?";
+            break;
+        case "Ciekawe czy to też wpiszesz":
+            document.getElementById("Komunikat").innerHTML = "Wow, naprawdę nie masz co robić. Tylko bawić się w przepisyuwanie jakiś pierdół...";
+            break;
+        case "Wow, naprawdę nie masz co robić. Tylko bawić się w przepisyuwanie jakiś pierdół":
+            document.getElementById("Komunikat").innerHTML = "Ale serio, przestań albo będę musiał Cię powstrzymać!";
+            break;
+        case "Ale serio, przestań albo będę musiał Cię powstrzymać":
+            document.getElementById("Banner").style.display = "none";
+            document.getElementById("Content").style.display = "none";
+            document.getElementById("LinkiMobile").style.display = "none";
+            document.getElementById("Menu").style.display = "none";
+            document.getElementById("Footer").style.display = "none";
+            document.getElementById("Spam").style.display = "none";
+            document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.png)"
+            break;
         case "dzban":
         case "Dzban":
             document.getElementById("Komunikat").innerHTML = "Sam jesteś dzban!";
@@ -248,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
         localStorage.setItem('CSS',Styl.href)  // Ciemny -> Jasny
     })
 })
-// Bardzo ważne skrypty, to akurat jest w pełni pisane samodzielnie (...nikt by na internety takich pierdół nie dawał)
+// Bardzo ważne skrypty, to akurat jest w pełni pisane samodzielnie (...nikt by na internety takich pierdół nie dawał), z wiadomych wzgledów nie będzie tu żadnych komentarzy...
     //Sktypt 1
 var Licznik_1 = 0;
 var Troll_1 = false;
@@ -307,10 +324,12 @@ function Anty_Spam()
         Final();
     }
 }
+var Troll_4 = false;
 function Final()
 {
     if (Troll_1 == true && Troll_2 == true && Troll_3 == true)
     {
+        Troll_4 = true;
         alert("Żarty się skończyły! Bo już w sumie nic nie zostało lol");
         document.getElementById("Banner").style.display = "block";
         document.getElementById("Content").style.display = "block";
@@ -318,8 +337,8 @@ function Final()
         document.getElementById("Footer").style.display = "block";
         document.getElementById("Spam").style.display = "block";
         document.getElementById("Main").style.transform = "scaleX(-1)";
-        document.getElementById("Meta").innerHTML = "Frekwencja Master Race";
-        document.getElementById("Meta").style.transform = "scaleX(-1)";
+        document.getElementById("Meta").innerHTML = "To koniec!";
+        document.getElementById("Meta").style.transform = "initial";
         document.getElementById("Meta").style.textShadow = "initial";
         document.getElementById("Main").animate
         (
@@ -328,9 +347,24 @@ function Final()
                 {transform: "rotate(360deg)"}
             ],
                 {
-                    duration: 2500,
+                    duration: 5000,
                     iterations: Infinity
                 }
         );
     }
+}
+function Kalendarz()
+{
+    var Data = new Date();
+    var Miesiac = Data.getMonth();
+    var Dzien = Data.getDate();
+    if (Miesiac == 2 && Dzien == 3)
+    {
+        alert("Happy Birthday To Me");
+        document.getElementById("Meta").innerHTML = "Happy birthday to me";
+    }
+    /*else
+    {
+        alert(Miesiac+"\n"+Dzien);
+    }*/
 }

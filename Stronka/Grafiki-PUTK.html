@@ -20,36 +20,88 @@
                 <h1><span class="material-icons IkonaMenuMobile" style="display: inline-block !important; text-shadow: initial; float: left !important;" onclick="Feedback()">thumbs_up_down</span>Frekwencja Master Race<span class="material-icons IkonaMenuMobile" onclick="MenuMobile()">menus</span></h1> <!-- Zignoruj ten błąd, bez tego nie działa -->
             </section>
             <div id="LinkiMobile">
-                <h1>Menu</h1>
+                <h1 onclick="Rotate()">Menu</h1>
                 <hr>
-                <ul>
+                <ul id="Lista">
                     <li><h2><span class="material-icons" style="float: initial;">web</span>Notatki</h2>
-                    <ol>
-                        <li><a href="index.html" onclick="MobileContent()">Strona Główna</a></li>
-                    </ol> </li>
+                        <ol>
+                            <li><a href="index.html" onclick="MobileContent()">Strona Główna</a></li>
+                        </ol> </li>
                     <li><h2><span class="material-icons" style="float: initial;">description</span>Klasa 3</h2>
                         <ol>
-                            <li><a href="Grafiki-Matematyka.html" onclick="MobileContent()">Matematyka</a></li>
-                            <li><a href="Grafiki-Informatyka.html" onclick="MobileContent()">Informatyka</a></li>
-                            <li><a href="Grafiki-Systemy.html" onclick="MobileContent()">Systemy</a></li>
-                            <li><a href="Grafiki-PUTK.html" onclick="MobileContent()">Pracownia Urządzeń Techniki Komputerowej</a></li>
+                            <li><a href="index.html#Informatyka_kl3">Informatyka</a></li>
+                            <li><a href="index.html#Jezyk_Polski_kl3">Język Polski</a></li>
+                            <li><a href="index.html#Matematyka_kl3">Matematyka</a></li>
+                            <li><a href="index.html#Pracownia_Baz_Danych_kl3">Pracownia Baz Danych</a></li>
+                            <li><a href="index.html#Pracownia_Sieciowych_Systemow_Operacyjnych_kl3">Pracownia Sieciowych Systemów Operacyjnych</a></li>
+                            <li><a href="index.html#Sieci_kl3">Sieci</a></li>
+                            <li><a href="index.html#Strony_Internetowe_kl3">Strony Internetowe</a></li>
+                            <li><a href="index.html#Systemy_Baz_Danych_kl3">Systemy Baz Danych</a></li>
                         </ol> </li>
-                </ul>
-            </div>
-            <section id="Menu">
-            <!-- Menu -->
-                <h1>Menu</h1>
-                <hr>
-                <ul>
-                    <li><h2><span class="material-icons" style="float: initial;">web</span>Notatki</h2></li>
-                    <li><a href="index.html">Strona Główna</a></li>
+                    <li><h2><span class="material-icons" style="float: initial;">description</span>Klasa 2</h2>
+                        <ol>
+                            <li><a href="index.html#Jezyk_Polski_kl2">Język Polski</a></li>
+                            <li><a href="index.html#Matematyka_kl2">Matematyka</a></li>
+                            <li><a href="index.html#Podstawy_Przedsiebiorczosci_kl2">Podstawy Przedsiębiorczości</a></li>
+                            <li><a href="index.html#Pracownia_Sieci_Komputerowych_kl2">Pracownia Sieci Komputerowych</a></li>
+                            <li><a href="index.html#Pracownia_Sieciowych_Systemow_Operacyjnych_kl2">Pracownia Sieciowych Systemów Operacyjnych</a></li>
+                            <li><a href="index.html#Sieci_kl2">Sieci</a></li>
+                            <li><a href="index.html#Strony_Internetowe_kl2">Strony Internetowe</a></li>
+                            <li><a href="index.html#Systemy_kl2">Systemy</a></li>
+                            <li><a href="index.html#Systemy_Baz_Danych_kl2">Systemy Baz Danych</a></li>
+                            <li><a href="index.html#Urzadzenia_Techniki_Komputerowej_kl2">Urządzenia Techniki Komputerowej</a></li>
+                        </ol></li>
                     <li><h2><span class="material-icons" style="float: initial;">open_in_browser</span>Grafiki</h2>
                         <ol>
                             <li><a href="Grafiki-Matematyka.html">Matematyka</a></li>
                             <li><a href="Grafiki-Informatyka.html">Informatyka</a></li>
                             <li><a href="Grafiki-Systemy.html">Systemy</a></li>
                             <li><a href="Grafiki-PUTK.html">Pracownia Urządzeń Techniki Komputerowej</a></li>
+                        </ol></li>
+                </ul>
+            </div>
+            <section id="Menu">
+            <!-- Menu -->
+                <h1 onclick="Rotate()">Menu</h1>
+                <input type="text" id="Wyszukiwarka" onkeyup="Wyszukiwarka()" placeholder="Wpisz tu coś" autocomplete="off" autofocus>
+                <hr>
+                <p id="Komunikat"><p></p>
+                <ul id="Lista">
+                    <li><h2><span class="material-icons" style="float: initial;">web</span>Notatki</h2>
+                        <ol>
+                            <li><a href="index.html" onclick="MobileContent()">Strona Główna</a></li>
                         </ol> </li>
+                    <h2><span class="material-icons" style="float: initial;">description</span>Klasa 3</h2>
+                        <ol>
+                            <li><a href="index.html#Informatyka_kl3">Informatyka</a></li>
+                            <li><a href="index.html#Jezyk_Polski_kl3">Język Polski</a></li>
+                            <li><a href="index.html#Matematyka_kl3">Matematyka</a></li>
+                            <li><a href="index.html#Pracownia_Baz_Danych_kl3">Pracownia Baz Danych</a></li>
+                            <li><a href="index.html#Pracownia_Sieciowych_Systemow_Operacyjnych_kl3">Pracownia Sieciowych Systemów Operacyjnych</a></li>
+                            <li><a href="index.html#Sieci_kl3">Sieci</a></li>
+                            <li><a href="index.html#Strony_Internetowe_kl3">Strony Internetowe</a></li>
+                            <li><a href="index.html#Systemy_Baz_Danych_kl3">Systemy Baz Danych</a></li>
+                        </ol>
+                    <h2><span class="material-icons" style="float: initial;">description</span>Klasa 2</h2>
+                        <ol>
+                            <li><a href="index.html#Jezyk_Polski_kl2">Język Polski</a></li>
+                            <li><a href="index.html#Matematyka_kl2">Matematyka</a></li>
+                            <li><a href="index.html#Podstawy_Przedsiebiorczosci_kl2">Podstawy Przedsiębiorczości</a></li>
+                            <li><a href="index.html#Pracownia_Sieci_Komputerowych_kl2">Pracownia Sieci Komputerowych</a></li>
+                            <li><a href="index.html#Pracownia_Sieciowych_Systemow_Operacyjnych_kl2">Pracownia Sieciowych Systemów Operacyjnych</a></li>
+                            <li><a href="index.html#Sieci_kl2">Sieci</a></li>
+                            <li><a href="index.html#Strony_Internetowe_kl2">Strony Internetowe</a></li>
+                            <li><a href="index.html#Systemy_kl2">Systemy</a></li>
+                            <li><a href="index.html#Systemy_Baz_Danych_kl2">Systemy Baz Danych</a></li>
+                            <li><a href="index.html#Urzadzenia_Techniki_Komputerowej_kl2">Urządzenia Techniki Komputerowej</a></li>
+                        </ol>
+                    <h2><span class="material-icons" style="float: initial;">open_in_browser</span>Grafiki</h2>
+                        <ol>
+                            <li><a href="Grafiki-Matematyka.html">Matematyka</a></li>
+                            <li><a href="Grafiki-Informatyka.html">Informatyka</a></li>
+                            <li><a href="Grafiki-Systemy.html">Systemy</a></li>
+                            <li><a href="Grafiki-PUTK.html">Pracownia Urządzeń Techniki Komputerowej</a></li>
+                        </ol>
                 </ul>
             </section>
             <section id="Content">
@@ -163,8 +215,25 @@
                     <div id="Opis_Obrazka"></div> <!-- Tekst na obrazku -->
                 </div>
             </section>
-            <section id="Footer">
-                <p><button id="DarkMode" style="float: left;">Dark Mode</button>By Hubsik <span class="material-icons" style="transform: scaleX(-1); float: initial;" ondblclick="Wersja_Stronki()">comment</span></p>
+            <section id="Footer"> <!-- Stopka -->
+                <!-- <p><button id="DarkMode" style="float: left;">Dark Mode</button>By Hubsik <span class="material-icons" style="transform: scaleX(-1); float: initial;" ondblclick="Wersja_Stronki()">comment</span></p> -->
+                <button id="DarkMode" style="float: left;" onclick="Background()">Dark Mode</button>
+                <span class="material-icons" style="float: right; transform: scaleX(-1);" ondblclick="Wersja_Stronki()">comment</span>
+                <div class="Animacja_2">
+                        <span>H</span>
+                        <span>u</span>
+                        <span>b</span>
+                        <span>s</span>
+                        <span>i</span>
+                        <span>k</span>
+                </div><p>By: </p>
+            </section>
+            <section id="Spam" onclick="Anty_Spam()">
+                <div class="SpamBanner">Uwaga:</div>
+                <span class="SpamGuzik" onclick="this.parentElement.style.display='none';" id="DelMe">&times;</span>
+                <div class="SpamContent">
+                    <p>Ale tak na poważnie na moment...<br>Jeśli ta stronka ci się przydała i podoba Ci się to powiedz proszę o tym swoim znajomym.</p>
+                </div>
             </section>
         </section>
     </body>

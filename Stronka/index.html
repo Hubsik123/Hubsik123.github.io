@@ -16,7 +16,7 @@
         <meta name="author" content="Hubert Michna">
     </head>
     <!-- <body oncontextmenu="return false">, mam nadzieje że nie będę musiał tego używać, nawet jeśli to nie wiele da...-->
-    <body onresize="ZoomFix()">
+    <body onresize="ZoomFix()" onload="Kalendarz()">
         <section id="Main"> <!-- Główny kontener -->
             <section id="Banner"> <!-- Banner -->
                 <h1 id="Meta"><span class="material-icons IkonaMenuMobile" style="display: inline-block !important; text-shadow: initial; float: left !important;" onclick="Feedback()">thumbs_up_down</span>Frekwencja Master Race<span class="material-icons IkonaMenuMobile" onclick="MenuMobile()">menus</span></h1> <!-- Zignoruj ten błąd, bez tego nie działa -->
@@ -60,10 +60,14 @@
             </section>
             <section id="Menu"> <!-- Menu, które wyświetla się na dużych ekranach (+992px)-->
                 <h1 onclick="Rotate()">Menu</h1>
-                <input type="text" id="Wyszukiwarka" onkeyup="Wyszukiwarka()" placeholder="Wpisz tu coś" autocomplete="off">
+                <input type="text" id="Wyszukiwarka" onkeyup="Wyszukiwarka()" placeholder="Wpisz tu coś" autocomplete="off" autofocus>
                 <hr>
                 <p id="Komunikat"><p></p>
                 <ul id="Lista">
+                    <li><h2><span class="material-icons" style="float: initial;">web</span>Notatki</h2>
+                        <ol>
+                            <li><a href="index.html" onclick="MobileContent()">Strona Główna</a></li>
+                        </ol> </li>
                     <h2><span class="material-icons" style="float: initial;">description</span>Klasa 3</h2>
                         <ol>
                             <li><a href="#Informatyka_kl3">Informatyka</a></li>

@@ -569,7 +569,7 @@ html::selection, body::selection {
         width: 10vw !important;
         height: 10vw !important;
         overflow-x: hidden;
-        float: right !important; 
+        float: right !important;
     }
     #LinkiMobile {
         display: none;
