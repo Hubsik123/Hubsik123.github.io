@@ -1,7 +1,10 @@
+// Ale tak na serio:
+    // Czytanie kodu akurat T E G O pliku to odpuść sobie... możesz sobie zepsuć niespodzianke...
+    // Jeśli dalej to czytasz to kliknij 10 razy na guzik "Dark Mode"
 function Wersja_Stronki()
 {
-    var Wersja = "v 60";
-    alert("To jest wersja strony nr:\n"+Wersja+"\nMam tylko nadzieję że będę pamiętać żeby atkualizować ten licznik.")
+    var Wersja = "v 61";
+    alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
 {
@@ -96,16 +99,14 @@ function ZoomFix()
     Footer.style.height = "5%";
     Background();
 }
-function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie zmieniać https://www.w3schools.com/howto/howto_js_filter_lists.asp
+function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie zmieniać https://www.w3schools.com/howto/howto_js_filter_lists.asp, ale można taki jeden mały detal dodać...
 {
     var Input = document.getElementById("Wyszukiwarka");
     var Filtr = Input.value.toUpperCase();
     var Lista = document.getElementById("Lista");
     var Element = Lista.getElementsByTagName("li");
-    var Meta = document.getElementById("Wyszukiwarka").value;
-    var Tekst = document.getElementById("Wyszukiwarka").value;
     var Link, Petla, Wartosc;
-    // Sprawdzanie za pomocą pętli czy podany tekst się zgadza
+        // Sprawdzanie za pomocą pętli czy podany tekst się zgadza
     for (Petla = 0; Petla < Element.length; Petla++)
     {
     Link = Element[Petla].getElementsByTagName("a")[0];
@@ -119,7 +120,7 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
         Element[Petla].style.display = "none";
         }
     }
-    switch(Meta) //he he
+    switch(Input.value) //he he
     {
     //Komunikaty
         case "dzban":
@@ -163,9 +164,16 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             Secret.href = "https://d07riv.github.io/diabloweb/";
             Secret.click();
             break;
+        case "Diabolo":
+        case "diabolo":
+            document.getElementById("Komunikat").innerHTML = "SZYBKO dzwońcie po egzorcystę!!!";
+            var Secret = document.createElement("a");
+            Secret.href = "https://youtu.be/bCVR1s4o77c?t=123";
+            Secret.click();
+            break;
     // Metody wyświetlania tekstu
         case "360":
-            //document.getElementById("Komunikat").innerHTML = "Zatkało?";
+            document.getElementById("Komunikat").innerHTML = "Zatkało?";
             document.getElementById("Komunikat").animate
                 (
                     [
@@ -179,7 +187,7 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
                 );
             break;
         case "180":
-            //document.getElementById("Komunikat").innerHTML = "Zatkało?";
+            document.getElementById("Komunikat").innerHTML = "Zatkało?";
             document.getElementById("Komunikat").animate
                 (
                     [
@@ -193,7 +201,7 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
                 );
             break;
         case "kółko":
-           // document.getElementById("Komunikat").innerHTML = "Zatkało?";
+            document.getElementById("Komunikat").innerHTML = "Zatkało?";
             document.getElementById("Komunikat").animate
                 (
                     [
@@ -240,13 +248,14 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
         localStorage.setItem('CSS',Styl.href)  // Ciemny -> Jasny
     })
 })
-// Bardzo ważne skrypty, to akurat jest w pełni pisane samodzielnie
+// Bardzo ważne skrypty, to akurat jest w pełni pisane samodzielnie (...nikt by na internety takich pierdół nie dawał)
     //Sktypt 1
 var Licznik_1 = 0;
+var Troll_1 = false;
 function Rotate()
 {
     Licznik_1++;
-    if (Licznik_1 >= 5)
+    if (Licznik_1 >= 5 && Troll_1 == false)
     {
         //alert("No i co teraz? Po co Ci było tak klikać???");
         document.getElementById("Main").style.transform = "scaleX(-1)";
@@ -255,14 +264,16 @@ function Rotate()
         document.getElementById("Meta").style.color = "red";
         document.getElementById("Meta").style.textShadow = "initial";
         document.getElementById("Meta").style.fontFamily = "Calibri";
+        Troll_1 = true;
     }
 }
     //Skrypt 2
 var Licznik_2 = 0;
+var Troll_2 = false;
 function Background()
 {
     Licznik_2++;
-    if (Licznik_2 >= 10)
+    if (Licznik_2 >= 10 && Troll_2 == false)
     {
         alert("To nie jest żaden Clicker! Może ten przycisk też ma uczucia?!");
         document.getElementById("Banner").style.display = "none";
@@ -270,9 +281,56 @@ function Background()
         document.getElementById("LinkiMobile").style.display = "none";
         document.getElementById("Menu").style.display = "none";
         document.getElementById("Footer").style.display = "none";
-        document.getElementById("Spam").style.display = "none";
+        document.getElementById("Spam").style.display = "block";
         //document.getElementById("Main").style.backgroundImage = "initial";
         //document.getElementById("Main").style.backgroundColor = "white";
         document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.png)"
+        Troll_2 = true;
+    }
+}
+var Licznik_3 = 0;
+var Troll_3 = false;
+function Anty_Spam()
+{
+    Licznik_3++;
+    if (Licznik_3 >= 7 && Troll_3 == false)
+    {
+        alert("Nie wiesz jak normlanie to zamknąć? To co teraz zrobisz?")
+        document.getElementById("Banner").style.display = "none";
+        document.getElementById("Content").style.display = "none";
+        document.getElementById("LinkiMobile").style.display = "none";
+        document.getElementById("Menu").style.display = "none";
+        document.getElementById("Footer").style.display = "none";
+        document.getElementById("Spam").style.display = "block";
+        document.getElementById("DelMe").style.display = "none";
+        Troll_3 = true;
+        Final();
+    }
+}
+function Final()
+{
+    if (Troll_1 == true && Troll_2 == true && Troll_3 == true)
+    {
+        alert("Żarty się skończyły! Bo już w sumie nic nie zostało lol");
+        document.getElementById("Banner").style.display = "block";
+        document.getElementById("Content").style.display = "block";
+        document.getElementById("Menu").style.display = "block";
+        document.getElementById("Footer").style.display = "block";
+        document.getElementById("Spam").style.display = "block";
+        document.getElementById("Main").style.transform = "scaleX(-1)";
+        document.getElementById("Meta").innerHTML = "Frekwencja Master Race";
+        document.getElementById("Meta").style.transform = "scaleX(-1)";
+        document.getElementById("Meta").style.textShadow = "initial";
+        document.getElementById("Main").animate
+        (
+            [
+                {transform: "rotate(0deg)"},
+                {transform: "rotate(360deg)"}
+            ],
+                {
+                    duration: 2500,
+                    iterations: Infinity
+                }
+        );
     }
 }
