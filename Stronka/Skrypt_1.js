@@ -121,6 +121,7 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
     }
     switch(Meta) //he he
     {
+    //Komunikaty
         case "dzban":
         case "Dzban":
             document.getElementById("Komunikat").innerHTML = "Sam jesteś dzban!";
@@ -155,7 +156,14 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             Secret.href = "https://youtu.be/dQw4w9WgXcQ?t=42";
             Secret.click();
             break;
-        // Metody wyświetlania tekstu
+        case "Diablo 1":
+        case "diablo 1":
+            document.getElementById("Komunikat").innerHTML = "Diablo 1 fajna gierka. I to jeszcze w przeglądarce za darmo!";
+            var Secret = document.createElement("a");
+            Secret.href = "https://d07riv.github.io/diabloweb/";
+            Secret.click();
+            break;
+    // Metody wyświetlania tekstu
         case "360":
             //document.getElementById("Komunikat").innerHTML = "Zatkało?";
             document.getElementById("Komunikat").animate
