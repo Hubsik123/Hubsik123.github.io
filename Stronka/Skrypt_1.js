@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 10 razy na guzik "Dark Mode"
 function Wersja_Stronki()
 {
-    var Wersja = "v 65";
+    var Wersja = "v 66";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -344,7 +344,7 @@ function Final()
         document.getElementById("Meta").innerHTML = "To koniec!";
         document.getElementById("Meta").style.transform = "initial";
         document.getElementById("Meta").style.textShadow = "initial";
-        document.body.style.backgroundImage = "url(Obrazki/Frajer.png)";
+        document.body.style.backgroundImage = "url(Obrazki/Frajer.gif)";
         document.getElementById("Main").animate
         (
             [
