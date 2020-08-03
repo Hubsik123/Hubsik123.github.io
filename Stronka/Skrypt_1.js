@@ -322,7 +322,7 @@ function Background()
         //document.getElementById("Spam").style.display = "block";
         //document.getElementById("Main").style.backgroundImage = "initial";
         //document.getElementById("Main").style.backgroundColor = "white";
-        document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.png)";
+        document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.gif)";
         Troll_2 = true;
         Smutny_Dzbanek()
         Final();
