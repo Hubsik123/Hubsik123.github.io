@@ -120,9 +120,9 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             document.getElementById("Komunikat").innerHTML = "Ciekawe czy to też wpiszesz?";
             break;
         case "Ciekawe czy to też wpiszesz":
-            document.getElementById("Komunikat").innerHTML = "Wow, naprawdę nie masz co robić. Tylko bawić się w przepisywanie  jakiś pierdół...";
+            document.getElementById("Komunikat").innerHTML = "Wow, naprawdę nie masz co robić. Tylko bawić się w przepisywanie jakichś pierdół...";
             break;
-        case "Wow, naprawdę nie masz co robić. Tylko bawić się w przepisywanie  jakiś pierdół":
+        case "Wow, naprawdę nie masz co robić. Tylko bawić się w przepisywanie jakichś pierdół":
             document.getElementById("Komunikat").innerHTML = "Ale serio, przestań albo będę musiał Cię powstrzymać!";
             break;
         case "Ale serio, przestań albo będę musiał Cię powstrzymać":
