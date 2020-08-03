@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 67";
+    var Wersja = "v 68";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -297,6 +297,7 @@ function Rotate()
         document.getElementById("Meta").style.textShadow = "initial";
         document.getElementById("Meta").style.fontFamily = "Calibri";
         Troll_1 = true;
+        Smutny_Dzbanek()
     }
 }
     //Skrypt 2
@@ -323,6 +324,7 @@ function Background()
         //document.getElementById("Main").style.backgroundColor = "white";
         document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.png)";
         Troll_2 = true;
+        Smutny_Dzbanek()
         Final();
     }
 }
@@ -338,6 +340,7 @@ function Anty_Spam()
         document.getElementById("SpamContent").innerHTML = "Nie wiesz jak normlanie to zamknąć? W takim razie... męcz się z tym teraz...";
         document.getElementById("SpamGuzik").style.display = "none";
         Troll_3 = true;
+        Smutny_Dzbanek()
         Final();
     }
 }
@@ -377,6 +380,14 @@ function Final()
     {
         alert("Naprawdę?! Znowu to zrobiłeś? Aż mi się już nie chce prograwać tej opcji dalej...");
     }*/
+}
+function Smutny_Dzbanek()
+{
+    if (Troll_1 == true || Troll_2 == true || Troll_3 == true)
+    {
+        //document.getElementsByTagName("body").style.cursor = "url('Obrazki/Smutny Dzbanek.png'), auto";
+        document.getElementById("Main").style.cursor = "url('Obrazki/Smutny Dzbanek.png'), auto";
+    }
 }
 function Kalendarz()
 {
