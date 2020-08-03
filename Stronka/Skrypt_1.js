@@ -81,13 +81,6 @@ function MobileContent()
 var Zoom = false;
 function ZoomFix()
 {
-    /*if (Zoom == false)
-    {
-        alert("Jeśli używasz teraz PC:\n   naprawdę... zmieniełeś zoom żeby zobaczć czy strona się 'nie zepsuje'...\nJeśli używasz teraz Telefonu:\n   naprawdę... włączyłeś 'Wersja na Komputer' (albo dałeś zoom tak że coś się zepsuło...) żeby zobaczyć czy strona się nie zepsuje\n\n:(");
-        Zoom = true;
-
-    }
-    Taki fajny komunikat, ale nie działa najlepiej, za często włącza się przez przypadek np. ctrl+f... */
     var Banner = document.getElementById("Banner");
     var Linki = document.getElementById("LinkiMobile");
     var Content = document.getElementById("Content");
@@ -98,7 +91,7 @@ function ZoomFix()
     Content.style.height = "85%";
     Footer.style.height = "5%";
 }
-function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie zmieniać https://www.w3schools.com/howto/howto_js_filter_lists.asp, ale można taki jeden mały detal dodać...
+function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie zmieniać https://www.w3schools.com/howto/howto_js_filter_lists.asp, ale można było taki jeden mały detal dodać... to dodałem...
 {
     var Input = document.getElementById("Wyszukiwarka");
     var Filtr = Input.value.toUpperCase();
@@ -187,6 +180,23 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             var Secret = document.createElement("a");
             Secret.href = "https://youtu.be/bCVR1s4o77c?t=123";
             Secret.click();
+            break;
+        case "Przepraszam":
+        case "przepraszam":
+            if (Troll_4 == true)
+            {
+                /*document.getElementById("Banner").style.display = "block";
+                document.getElementById("Content").style.display = "block";
+                document.getElementById("Menu").style.display = "block";
+                document.getElementById("Footer").style.display = "block";
+                document.getElementById("Spam").style.display = "block";
+                document.getElementById("Main").style.transform = "scaleX(-1)";
+                document.getElementById("Meta").innerHTML = "To twoja ostatnia szansa nie zmarnuj tego...!";
+                //document.getElementById("Main").cancel();
+                Animacja.cancel();*/
+                alert("Dobrze wiesz, że to wszystko poszło za daleko i zostało Ci tylko ctrl+F5...");
+            }
+            document.getElementById("Komunikat").innerHTML = "Spokojnie... jeszcze nie czas na przeprosiny... Tylko nie klikaj 5 razy na 'Menu'";
             break;
     // Metody wyświetlania tekstu
         case "360":
@@ -317,24 +327,19 @@ function Anty_Spam()
     if (Licznik_3 >= 7 && Troll_3 == false)
     {
         alert("Nie wiesz jak normlanie to zamknąć? To co teraz zrobisz?")
-        document.getElementById("Banner").style.display = "none";
-        document.getElementById("Content").style.display = "none";
-        document.getElementById("LinkiMobile").style.display = "none";
-        document.getElementById("Menu").style.display = "none";
-        document.getElementById("Footer").style.display = "none";
-        document.getElementById("Spam").style.display = "block";
         document.getElementById("DelMe").style.display = "none";
         Troll_3 = true;
         Final();
     }
 }
 var Troll_4 = false;
+//var Animacja = document.getElementById("Main");
 function Final()
 {
     if (Troll_1 == true && Troll_2 == true && Troll_3 == true)
     {
         Troll_4 = true;
-        alert("Żarty się skończyły! Bo już w sumie nic nie zostało lol");
+        prompt("Przeproś! Żarty się skończyły! Bo już w sumie nic nie zostało lol");
         document.getElementById("Banner").style.display = "block";
         document.getElementById("Content").style.display = "block";
         document.getElementById("Menu").style.display = "block";
@@ -345,6 +350,7 @@ function Final()
         document.getElementById("Meta").style.transform = "initial";
         document.getElementById("Meta").style.textShadow = "initial";
         document.body.style.backgroundImage = "url(Obrazki/Frajer.gif)";
+        //Animacja.animate
         document.getElementById("Main").animate
         (
             [
@@ -356,6 +362,11 @@ function Final()
                     iterations: Infinity
                 }
         );
+        document.getElementById("Wyszukiwarka").focus();
+    }
+    else
+    {
+        alert("Naprawdę?! Znowu to zrobiłeś? Aż mi się już nie chce prograwać tej opcji dalej...");
     }
 }
 function Kalendarz()
