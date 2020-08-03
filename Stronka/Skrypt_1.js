@@ -1,9 +1,9 @@
 // Ale tak na serio:
     // Czytanie kodu akurat T E G O pliku to odpuść sobie... możesz sobie zepsuć niespodzianke...
-    // Jeśli dalej to czytasz to kliknij 10 razy na guzik "Dark Mode"
+    // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 66";
+    var Wersja = "v 67";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -90,6 +90,7 @@ function ZoomFix()
     Content.style.display = "block";
     Content.style.height = "85%";
     Footer.style.height = "5%";
+    Background();
 }
 function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie zmieniać https://www.w3schools.com/howto/howto_js_filter_lists.asp, ale można było taki jeden mały detal dodać... to dodałem...
 {
@@ -301,22 +302,28 @@ function Rotate()
     //Skrypt 2
 var Licznik_2 = 0;
 var Troll_2 = false;
-function Background()
+function Do_Background()
 {
     Licznik_2++;
+}
+function Background()
+{
+    //Licznik_2++;
+    //if (Licznik_2 >= 10 && Troll_2 == false)
     if (Licznik_2 >= 10 && Troll_2 == false)
     {
-        alert("To nie jest żaden Clicker! Może ten przycisk też ma uczucia?!");
+        //alert("To nie jest żaden Clicker! Może ten przycisk też ma uczucia?!");
         document.getElementById("Banner").style.display = "none";
         document.getElementById("Content").style.display = "none";
         document.getElementById("LinkiMobile").style.display = "none";
         document.getElementById("Menu").style.display = "none";
         document.getElementById("Footer").style.display = "none";
-        document.getElementById("Spam").style.display = "block";
+        //document.getElementById("Spam").style.display = "block";
         //document.getElementById("Main").style.backgroundImage = "initial";
         //document.getElementById("Main").style.backgroundColor = "white";
         document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.png)";
         Troll_2 = true;
+        Final();
     }
 }
 var Licznik_3 = 0;
@@ -327,7 +334,9 @@ function Anty_Spam()
     if (Licznik_3 >= 7 && Troll_3 == false)
     {
         alert("Nie wiesz jak normlanie to zamknąć? To co teraz zrobisz?")
-        document.getElementById("DelMe").style.display = "none";
+        document.getElementById("SpamBanner").innerHTML = "To co teraz zrobisz?";
+        document.getElementById("SpamContent").innerHTML = "Nie wiesz jak normlanie to zamknąć? W takim razie... męcz się z tym teraz...";
+        document.getElementById("SpamGuzik").style.display = "none";
         Troll_3 = true;
         Final();
     }
@@ -364,10 +373,10 @@ function Final()
         );
         document.getElementById("Wyszukiwarka").focus();
     }
-    else
+    /*else
     {
         alert("Naprawdę?! Znowu to zrobiłeś? Aż mi się już nie chce prograwać tej opcji dalej...");
-    }
+    }*/
 }
 function Kalendarz()
 {

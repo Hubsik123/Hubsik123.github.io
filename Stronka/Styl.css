@@ -437,21 +437,21 @@ html::selection, body::selection {
     max-width: 500px;
     max-height: 500px;
 }
-.SpamBanner {
+#SpamBanner {
     padding: 25px 15px;
     background-color: #00b300;
     font-size: 3vw;
     color: gold;
     font-family: Tangerine, Calibri;
 }
-.SpamContent {
+#SpamContent {
     padding: 1vw;
     background-color: #33ff33;
     color: black;
     border-radius: 0vw 0vw 2.5vw 2.5vw;
     font-size: 1vw;
 }
-.SpamGuzik {
+#SpamGuzik {
     position: absolute;
     top: 5px;
     right: 15px;
@@ -459,7 +459,7 @@ html::selection, body::selection {
     font-size: 30px;
     cursor: pointer;
 }
-.SpamGuzik:hover {
+#SpamGuzik:hover {
     color: black;
     cursor: url(Obrazki/Dzbanek.png), auto;
 }
