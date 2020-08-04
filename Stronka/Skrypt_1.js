@@ -1,9 +1,9 @@
-// Ale tak na serio:
+//! Ale tak na serio:
     // Czytanie kodu akurat T E G O pliku to odpuść sobie... możesz sobie zepsuć niespodzianke...
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 68";
+    var Wersja = "v 69";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -145,6 +145,8 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
         case "Kurwa":
         case "kurwa":
             document.getElementById("Komunikat").innerHTML = "NIE TYM TONEM, chamie.\nZapamiętam to sobie... Będziesz chciał jeszcze jakieś notatki...";
+            var Audio = document.getElementById("Muzyka");
+            Audio.play();
             document.getElementById("Content").style.display = "none";
             break;
         case "Diablo lepsze":
@@ -186,18 +188,12 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
         case "przepraszam":
             if (Troll_4 == true)
             {
-                /*document.getElementById("Banner").style.display = "block";
-                document.getElementById("Content").style.display = "block";
-                document.getElementById("Menu").style.display = "block";
-                document.getElementById("Footer").style.display = "block";
-                document.getElementById("Spam").style.display = "block";
-                document.getElementById("Main").style.transform = "scaleX(-1)";
-                document.getElementById("Meta").innerHTML = "To twoja ostatnia szansa nie zmarnuj tego...!";
-                //document.getElementById("Main").cancel();
-                Animacja.cancel();*/
                 alert("Dobrze wiesz, że to wszystko poszło za daleko i zostało Ci tylko ctrl+F5...");
             }
-            document.getElementById("Komunikat").innerHTML = "Spokojnie... jeszcze nie czas na przeprosiny... Tylko nie klikaj 5 razy na 'Menu'";
+            else
+            {
+                document.getElementById("Komunikat").innerHTML = "Spokojnie... jeszcze nie czas na przeprosiny... Tylko nie klikaj 5 razy na 'Menu'";
+            }
             break;
     // Metody wyświetlania tekstu
         case "360":
@@ -278,10 +274,17 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
 })
 function No_Spam()
 {
-    document.getElementById("Spam").style.display = "none";
+    if (Troll_3 == true)
+    {
+        document.getElementById("Spam").style.display = "block";
+    }
+    else
+    {
+        document.getElementById("Spam").style.display = "none";
+    }
 }
-// Bardzo ważne skrypty, to akurat jest w pełni pisane samodzielnie (...nikt by na internety takich pierdół nie dawał), z wiadomych wzgledów nie będzie tu żadnych komentarzy...
-    //Sktypt 1
+// !Bardzo ważne skrypty, to akurat jest w pełni pisane samodzielnie (...nikt by na internety takich pierdół nie dawał), z wiadomych wzgledów nie będzie tu żadnych komentarzy...
+    // Sktypt 1
 var Licznik_1 = 0;
 var Troll_1 = false;
 function Rotate()
@@ -297,7 +300,7 @@ function Rotate()
         document.getElementById("Meta").style.textShadow = "initial";
         document.getElementById("Meta").style.fontFamily = "Calibri";
         Troll_1 = true;
-        Smutny_Dzbanek()
+        Smutny_Dzbanek();
     }
 }
     //Skrypt 2
@@ -324,7 +327,7 @@ function Background()
         //document.getElementById("Main").style.backgroundColor = "white";
         document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.gif)";
         Troll_2 = true;
-        Smutny_Dzbanek()
+        Smutny_Dzbanek();
         Final();
     }
 }
@@ -335,23 +338,23 @@ function Anty_Spam()
     Licznik_3++;
     if (Licznik_3 >= 7 && Troll_3 == false)
     {
-        alert("Nie wiesz jak normlanie to zamknąć? To co teraz zrobisz?")
         document.getElementById("SpamBanner").innerHTML = "To co teraz zrobisz?";
         document.getElementById("SpamContent").innerHTML = "Nie wiesz jak normlanie to zamknąć? W takim razie... męcz się z tym teraz...";
         document.getElementById("SpamGuzik").style.display = "none";
         Troll_3 = true;
-        Smutny_Dzbanek()
+        Smutny_Dzbanek();
         Final();
     }
 }
 var Troll_4 = false;
-//var Animacja = document.getElementById("Main");
 function Final()
 {
+    if (Troll_4 == true)
+    {
+        alert("Naprawdę?! Znowu to zrobiłeś? Aż mi się już nie chce prograwać tej opcji dalej...");
+    }
     if (Troll_1 == true && Troll_2 == true && Troll_3 == true)
     {
-        Troll_4 = true;
-        prompt("Przeproś! Żarty się skończyły! Bo już w sumie nic nie zostało lol");
         document.getElementById("Banner").style.display = "block";
         document.getElementById("Content").style.display = "block";
         document.getElementById("Menu").style.display = "block";
@@ -362,7 +365,6 @@ function Final()
         document.getElementById("Meta").style.transform = "initial";
         document.getElementById("Meta").style.textShadow = "initial";
         document.body.style.backgroundImage = "url(Obrazki/Frajer.gif)";
-        //Animacja.animate
         document.getElementById("Main").animate
         (
             [
@@ -374,12 +376,10 @@ function Final()
                     iterations: Infinity
                 }
         );
+        prompt("Przeproś! Żarty się skończyły! Bo już w sumie nic nie zostało lol");
         document.getElementById("Wyszukiwarka").focus();
+        Troll_4 = true;
     }
-    /*else
-    {
-        alert("Naprawdę?! Znowu to zrobiłeś? Aż mi się już nie chce prograwać tej opcji dalej...");
-    }*/
 }
 function Smutny_Dzbanek()
 {
@@ -403,4 +403,65 @@ function Kalendarz()
     {
         alert(Miesiac+"\n"+Dzien);
     }*/
+}
+function Message()
+{
+    var RNG = Math.floor((Math.random() * 10) + 1); //? 1-10
+    switch(RNG)
+    {
+        case 1:
+        {
+            document.getElementById("Message").innerHTML = "FREKWENCJA MASTER RACE, FREKWENCJA MASTER RACE, FREKWENCJA MASTER RACE, FREKWENCJA MASTER RACE, FREKWENCJA MASTER RACE, FREKWENCJA MASTER RACE, FREKWENCJA MASTER RACE, FREKWENCJA MASTER RACE, FREKWENCJA MASTER RACE, FREKWENCJA MASTER RACE, FREKWENCJA MASTER RACE, FREKWENCJA MASTER RACE";
+            break;
+        }
+        case 2:
+        {
+            document.getElementById("Message").innerHTML = "Pamiętaj: palenie szkodzi zdrowiu! To jedno zdanie (niestety) nic nie zmieni, ale weź nie pal w miejscach gdzie przebywają też osoby które nie palą, ładnie proszę.";
+            break;
+        }
+        case 3:
+        {
+            document.getElementById("Message").innerHTML = "Gry nie szkodzą zdrowiu! A kto tak mówi, że skodzą ten dzban!";
+            break;
+        }
+        case 4:
+        {
+            document.getElementById("Message").innerHTML = "a weź... 4";
+            break;
+        }
+        case 5:
+        {
+            document.getElementById("Message").innerHTML = "a weź... 5";
+            break;
+        }
+        case 6:
+        {
+            document.getElementById("Message").innerHTML = "a weź... 6";
+            break;
+        }
+        case 7:
+        {
+            document.getElementById("Message").innerHTML = "a weź... 7 ";
+            break;
+        }
+        case 8:
+        {
+            document.getElementById("Message").innerHTML = "a weź... 8";
+            break;
+        }
+        case 9:
+        {
+            document.getElementById("Message").innerHTML = "a weź... 9 ";
+            break;
+        }
+        case 10:
+        {
+            document.getElementById("Message").innerHTML = "a weź... 10";
+            break;
+        }
+        default:
+        {
+            alert("Nope");
+        }
+    }
 }

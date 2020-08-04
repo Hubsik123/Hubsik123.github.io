@@ -17,7 +17,7 @@
     <body onresize="ZoomFix(); No_Spam()" onload="Kalendarz()">
         <section id="Main">
             <section id="Banner">
-                <h1><span class="material-icons IkonaMenuMobile" style="display: inline-block !important; text-shadow: initial; float: left !important;" onclick="Feedback()">thumbs_up_down</span>Frekwencja Master Race<span class="material-icons IkonaMenuMobile" onclick="MenuMobile()">menus</span></h1> <!-- Zignoruj ten błąd, bez tego nie działa -->
+                <h1 id="Meta"><span class="material-icons IkonaMenuMobile" style="display: inline-block !important; text-shadow: initial; float: left !important;" onclick="Feedback()">thumbs_up_down</span>Frekwencja Master Race<span class="material-icons IkonaMenuMobile" onclick="MenuMobile()">menus</span></h1> <!-- Zignoruj ten błąd, bez tego nie działa -->
             </section>
             <div id="LinkiMobile">
                 <h1 onclick="Rotate()">Menu</h1>
@@ -63,9 +63,13 @@
             <section id="Menu">
             <!-- Menu -->
                 <h1 onclick="Rotate()">Menu</h1>
-                <input type="text" id="Wyszukiwarka" onkeyup="Wyszukiwarka()" placeholder="Wpisz tu coś" autocomplete="off" autofocus>
+                <input type="text" id="Wyszukiwarka" onkeyup="Wyszukiwarka()" placeholder="Wpisz tu coś" autocomplete="off" title="Pierwsze słowo zacznij z dużej litery" autofocus>
                 <hr>
-                <p id="Komunikat"><p></p>
+                <audio controls id="Muzyka" style="display: none;">
+                    <source src="Materiały/Kara.mp4" type="audio/mpeg">
+                    Coś nie działa, szkoda :(
+                </audio>
+                <p id="Komunikat"></p>
                 <ul id="Lista">
                     <li><h2><span class="material-icons" style="float: initial;">web</span>Notatki</h2>
                         <ol>
@@ -218,8 +222,7 @@
                 </div>
             </section>
             <section id="Footer"> <!-- Stopka -->
-                <!-- <p><button id="DarkMode" style="float: left;">Dark Mode</button>By Hubsik <span class="material-icons" style="transform: scaleX(-1); float: initial;" ondblclick="Wersja_Stronki()">comment</span></p> -->
-                <button id="DarkMode" style="float: left;" onclick="Background()">Dark Mode</button>
+                <button id="DarkMode" style="float: left;" onclick="Do_Background(); Background()">Dark Mode</button>
                 <span class="material-icons" style="float: right; transform: scaleX(-1);" ondblclick="Wersja_Stronki()">comment</span>
                 <div class="Animacja_2">
                         <span>H</span>
@@ -229,13 +232,6 @@
                         <span>i</span>
                         <span>k</span>
                 </div><p>By: </p>
-            </section>
-            <section id="Spam" onclick="Anty_Spam()">
-                <div class="SpamBanner">Uwaga:</div>
-                <span class="SpamGuzik" onclick="this.parentElement.style.display='none';" id="DelMe">&times;</span>
-                <div class="SpamContent">
-                    <p>Ale tak na poważnie na moment...<br>Jeśli ta stronka ci się przydała i podoba Ci się to powiedz proszę o tym swoim znajomym.</p>
-                </div>
             </section>
         </section>
     </body>

@@ -15,7 +15,7 @@
         <meta name="author" content="Hubert Michna">
     </head>
     <!-- <body oncontextmenu="return false">, mam nadzieje że nie będę musiał tego używać, nawet jeśli to nie wiele da...-->
-    <body onresize="ZoomFix(); No_Spam()" onload="Kalendarz()">
+    <body onresize="ZoomFix(); No_Spam()" onload="Kalendarz(); Message()">
         <section id="Main"> <!-- Główny kontener -->
             <section id="Banner"> <!-- Banner -->
                 <h1 id="Meta"><span class="material-icons IkonaMenuMobile" style="display: inline-block !important; text-shadow: initial; float: left !important;" onclick="Feedback()">thumbs_up_down</span>Frekwencja Master Race<span class="material-icons IkonaMenuMobile" onclick="MenuMobile()">menus</span></h1> <!-- Zignoruj ten błąd, bez tego nie działa -->
@@ -63,9 +63,13 @@
             </section>
             <section id="Menu"> <!-- Menu, które wyświetla się na dużych ekranach (+992px)-->
                 <h1 onclick="Rotate()">Menu</h1>
-                <input type="text" id="Wyszukiwarka" onkeyup="Wyszukiwarka()" placeholder="Wpisz tu coś" autocomplete="off" autofocus>
+                <input type="text" id="Wyszukiwarka" onkeyup="Wyszukiwarka()" placeholder="Wpisz tu coś" autocomplete="off" title="Pierwsze słowo zacznij z dużej litery" autofocus>
                 <hr>
-                <p id="Komunikat"><p></p>
+                <audio controls id="Muzyka" style="display: none;">
+                    <source src="Materiały/Kara.mp4" type="audio/mpeg">
+                    Coś nie działa, szkoda :(
+                </audio>
+                <p id="Komunikat"></p>
                 <ul id="Lista">
                     <li><h2><span class="material-icons" style="float: initial;">web</span>Notatki</h2>
                         <ol>
@@ -106,7 +110,11 @@
             </section>
             <section id="Content"> <!-- Kontener z zawartością strony -->
             <!-- Komunikat -->
-                <h1>Bierzcie I Uczcie Się Z Tego Wszyscy</h1>
+                <h1>Bierzcie I Uczcie Się Z Tego Wszfghyscy</h1>
+            <!-- Message -->
+            <p style="margin-top: 0; margin-bottom: 0; padding: 0.25vw;" id="Message">Tekst</p>
+            <!-- Normalna zawartość -->
+                <h2>Weź to przeczytaj</h2>
                 <p class="Tekst_1">Na tej stronie znajdziesz trochę notatek, które mogą ci się przydać na kierunku "<strong>Technik-Informatyk</strong>". Możecie wszyscy korzystać z tych notatek, i tego całego kodu, ale <i><strong>ładnie proszę</strong></i>: - nie pobierajcie i mówcie że to wasza zajebiście ciężka praca.</p>
                 <p class="Tekst_1">Wszystkie notatki mogą być nie zaktualizowane o materiał który był niedawno, ponieważ dużo tego wszystkiego było i nie było czasu na dopisywanie wszystkiego. Nazwy plików mogą nie odzwierciedlać <i>dokładnie</i> ich zawartości. Jeśli gdzieś jest np: <span class="WIP">???</span>, <span class="WIP">WIP</span> czy coś podobnego to znaczy że brakuje tam czegoś, niedokończone, możliwe błedy, brak materiałów itp. Jeśli wiesz co tam poprawić to daj proszę o tym znać.</p>
                 <div class="Akapit"><span class="material-icons" style="transform: scaleX(-1);">announcement</span></div><p><strong><u>WAŻNE</u>: </strong>Jeśli po pobraniu i otworzenie danego pliku, nie widać gdzieś: np. obrazków, równań, tabel. Otwórz dany plik Wordem. Ta strona może nie działać poprawnie jeśli masz wyłaczony javascript i jeśli będziesz się bawić zoom'em.</p>
@@ -197,7 +205,6 @@
                     </table>
             </section>
             <section id="Footer"> <!-- Stopka -->
-                <!-- <p><button id="DarkMode" style="float: left;">Dark Mode</button>By Hubsik <span class="material-icons" style="transform: scaleX(-1); float: initial;" ondblclick="Wersja_Stronki()">comment</span></p> -->
                 <button id="DarkMode" style="float: left;" onclick="Do_Background(); Background()">Dark Mode</button>
                 <span class="material-icons" style="float: right; transform: scaleX(-1);" ondblclick="Wersja_Stronki()">comment</span>
                 <div class="Animacja_2">
