@@ -421,7 +421,7 @@ function Message()
         }
         case 3:
         {
-            document.getElementById("Message").innerHTML = "Gry nie szkodzą zdrowiu! A kto tak mówi, że skodzą ten dzban! Ogólnie to Far Cry 3 Blood Dragon miał racje, jeśli nie znasz dokładnie tego tekstu (którego ze względu na to że nie pasuje na głównej stronie wypisywać wulagryzmów) to poszukaj na Internetach.";
+            document.getElementById("Message").innerHTML = "Gry nie szkodzą zdrowiu! A kto tak mówi, że skodzą ten dzban! Ogólnie to Far Cry 3 Blood Dragon miał racje, jeśli nie znasz dokładnie tego tekstu (którego ze względu na to, że nie pasuje na głównej stronie wypisywać wulgaryzmów, nie ma tu) to poszukaj na Internetach.";
             break;
         }
         case 4:
