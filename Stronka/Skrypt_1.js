@@ -421,42 +421,42 @@ function Message()
         }
         case 3:
         {
-            document.getElementById("Message").innerHTML = "Gry nie szkodzą zdrowiu! A kto tak mówi, że skodzą ten dzban!";
+            document.getElementById("Message").innerHTML = "Gry nie szkodzą zdrowiu! A kto tak mówi, że skodzą ten dzban! Ogólnie to Far Cry 3 Blood Dragon miał racje, jeśli nie znasz dokładnie tego tekstu (którego ze względu na to że nie pasuje na głównej stronie wypisywać wulagryzmów) to poszukaj na Internetach.";
             break;
         }
         case 4:
         {
-            document.getElementById("Message").innerHTML = "a weź... 4";
+            document.getElementById("Message").innerHTML = "#Frekwencja_Master_Race #Gaming #Gaming>=Books #Path_Of_Exile #Windows>=Linux>>>MAC #Hack'n'slash #Poe>Diablo_1>Diablo_2>Diablo_3";
             break;
         }
         case 5:
         {
-            document.getElementById("Message").innerHTML = "a weź... 5";
+            document.getElementById("Message").innerHTML = "ZOBACZ JAK JEDNYM ZDANIEM OBRAŻA KSIĄŻKOHOLIKÓW: Nigdy nie rozumiałem ludzi, którzy zawsze mówili że książki są delikatnie mówiąc lepsze niż gry komputerowe, wręcz najwyższą (patrz jedyną) formą intelektualnej rozrywki. Na podtrzymanie (patrz wpajanie) tej teori przytaczane były argumenty że książki poszerzają horyzonty, uczą w sumie wszystkiego co się tylko da... Ale niestety często te oczytane i obeznane w świecie (antycznym) osoby nie tolerowały jakiejkolwiek formy gry komputerowej... Twierdząć że to strata czasu i prowadzenie do tego że mózgi nam zgniją... Ale moim zdaniem - uważam takie osoby są po prosty nie toleranycjne, zachowują się podobnie do rasistów (i moim zdaniem powinni być do nich przyrównywami). Ale jakimś cudem mój mózg ma się w miarę dobrze i to jakoś Ty własnie korzystasz z tej skoromnej stronki i wszystkich plików które są tutaj dostępne.";
             break;
         }
         case 6:
         {
-            document.getElementById("Message").innerHTML = "a weź... 6";
+            document.getElementById("Message").innerHTML = "Tylko nie klikaj na  napis 'Menu' bardzo tego nie lubi.";
             break;
         }
         case 7:
         {
-            document.getElementById("Message").innerHTML = "a weź... 7 ";
+            document.getElementById("Message").innerHTML = "Jeśli korzystasz teraz z PC to spróbuj wpisać jakieś rzeczy w wyszukiwarke, może stanie się coś ciekawego...";
             break;
         }
         case 8:
         {
-            document.getElementById("Message").innerHTML = "a weź... 8";
+            document.getElementById("Message").innerHTML = "Widziałeś już wszystkie 10 z tych pięknych wiadomości powitalnych?";
             break;
         }
         case 9:
         {
-            document.getElementById("Message").innerHTML = "a weź... 9 ";
+            document.getElementById("Message").innerHTML = "Weź czytaj mniej książek... Idź pograć w 'komputr' to rozkaz od WHO!";
             break;
         }
         case 10:
         {
-            document.getElementById("Message").innerHTML = "a weź... 10";
+            document.getElementById("Message").innerHTML = "Jeśli przejmujsez sięm ortografiom i udałó ci siem zobaczyć jakis bład ortograficzny to jeteś w badzo żlym miejscu ;)";
             break;
         }
         default:
