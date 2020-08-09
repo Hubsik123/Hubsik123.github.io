@@ -12,7 +12,7 @@ Jedyne co nie było pisane w pełni samodzielne można zlaleść tutaj:
 * https://youtu.be/nZsEYi3Uxro - Animacja
 * https://www.w3schools.com/howto/howto_js_callout.asp - Spam
 
-Żeby nie było, z Internetu "skopiowałem" tylko pierdoły które pozwoliłyby na lepszy wygląd strony i jej więkzsą funkcjonalnosć. <br>
+Żeby nie było, z Internetu "skopiowałem" tylko pierdoły które pozwoliłyby na lepszy wygląd strony i jej większą funkcjonalnosć. <br>
 :thinking:A i tak 99% kodu trzeba było bardzo mocno pozmieniać żęby w ogóle się na coś przydał, działał poprawnie, i poprawić tak żeby działało na pc i na tel :innocent: i nie generował nowych dziwnych błędów:hankey:. Gdyby tylko dało się skopiować JAKIŚ kod z Internetu i go wkleić bez żadnej edycji, który i tak by działał to świat był by piękny... <br>
 
 Jeszcze kilka przydatnych linków:
