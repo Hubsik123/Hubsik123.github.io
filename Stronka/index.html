@@ -18,7 +18,7 @@
     <body onresize="ZoomFix(); No_Spam()" onload="Kalendarz(); Message()">
         <section id="Main"> <!-- Główny kontener -->
             <section id="Banner"> <!-- Banner -->
-                <h1 id="Meta"><span class="material-icons IkonaMenuMobile" style="display: inline-block !important; text-shadow: initial; float: left !important;" onclick="Feedback()">thumbs_up_down</span>Frekwencja Master Race<span class="material-icons IkonaMenuMobile" onclick="MenuMobile()">menus</span></h1> <!-- Zignoruj ten błąd, bez tego nie działa -->
+                <h1 id="Meta"><span class="material-icons IkonaMenuMobile" style="display: inline-block !important; text-shadow: initial; float: left !important;" onclick="Feedback(); DarkAndLight_2()">thumbs_up_down</span>Frekwencja Master Race<span class="material-icons IkonaMenuMobile" onclick="MenuMobile()">menus</span></h1> <!-- Zignoruj ten błąd, bez tego nie działa -->
             </section>
             <section id="LinkiMobile"> <!-- Menu które wyświetla się małych ekranach (-992px)-->
                 <h1 onclick="Rotate()">Menu</h1>
@@ -65,7 +65,7 @@
                 <h1 onclick="Rotate()">Menu</h1>
                 <input type="text" id="Wyszukiwarka" onkeyup="Wyszukiwarka()" placeholder="Wpisz tu coś" autocomplete="off" title="Pierwsze słowo zacznij z dużej litery" autofocus>
                 <hr>
-                <audio controls id="Muzyka" style="display: none;">
+                <audio controls id="Muzyka" style="display: none;" loop>
                     <source src="Materiały/Kara.mp4" type="audio/mpeg">
                     Coś nie działa, szkoda :(
                 </audio>

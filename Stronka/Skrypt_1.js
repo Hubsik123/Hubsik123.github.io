@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 70";
+    var Wersja = "v 72";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -192,8 +192,17 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             }
             else
             {
-                document.getElementById("Komunikat").innerHTML = "Spokojnie... jeszcze nie czas na przeprosiny... Tylko nie klikaj 5 razy na 'Menu'";
+                document.getElementById("Komunikat").innerHTML = "Spokojnie... jeszcze nie czas na przeprosiny... Jeszcze się nie zaczeło... Tylko nie klikaj 5 razy na 'Menu'";
             }
+            break;
+        case "DROP DATABASE":
+            document.getElementById("Komunikat").innerHTML = "... Serio?";
+            var Secret = document.createElement("a");
+            Secret.href = "https://hubsik123.github.io/Stronka/index.html-ty-dzbanie";
+            Secret.click();
+            break;
+        case "drop database":
+            document.getElementById("Komunikat").innerHTML = "SYNTAX ERROR: Dzbanie, to się C A P S E M pisze!";
             break;
     // Metody wyświetlania tekstu
         case "360":
@@ -465,3 +474,51 @@ function Message()
         }
     }
 }
+
+//! TODO:
+var Timer = 0;
+var Tryb = 0;
+var Licznik_4 = 0;
+function DarkAndLight_1()
+{
+    Timer = setTimeout(DarkAndLight_2, 500);
+}
+function DarkAndLight_2()
+{Licznik_4++;
+    if (Licznik_4 >= 3)
+    {
+        if ((Tryb % 2) == 0)
+        {
+            document.getElementById("CSS").setAttribute("href", "Styl.css");
+        }
+        else
+        {
+            document.getElementById("CSS").setAttribute("href", "Styl-Ciemny.css");
+        }
+        clearTimeout(Timer);
+        Tryb++;
+        DarkAndLight_1();
+    }
+}
+/*
+function SayMyName()
+{
+    alert("wip");
+}
+
+function AFK()
+{
+  setTimeout(Alert_1()
+  {
+  alert("Hello");
+  }, 1000);
+}
+
+function Ads()
+{
+    https://www.w3schools.com/jsref/met_win_settimeout.asp
+    https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_settimeout3
+}
+
+https://www.tutorialrepublic.com/codelab.php?topic=faq&file=jquery-call-a-function-repetitively-with-setinterval-method
+*/
