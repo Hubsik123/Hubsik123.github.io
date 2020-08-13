@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 72";
+    var Wersja = "v 73";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -183,17 +183,6 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             var Secret = document.createElement("a");
             Secret.href = "https://youtu.be/bCVR1s4o77c?t=123";
             Secret.click();
-            break;
-        case "Przepraszam":
-        case "przepraszam":
-            if (Troll_4 == true)
-            {
-                alert("Dobrze wiesz, że to wszystko poszło za daleko i zostało Ci tylko ctrl+F5...");
-            }
-            else
-            {
-                document.getElementById("Komunikat").innerHTML = "Spokojnie... jeszcze nie czas na przeprosiny... Jeszcze się nie zaczeło... Tylko nie klikaj 5 razy na 'Menu'";
-            }
             break;
         case "DROP DATABASE":
             document.getElementById("Komunikat").innerHTML = "... Serio?";
@@ -380,12 +369,16 @@ function Final()
                 {transform: "rotate(0deg)"},
                 {transform: "rotate(360deg)"}
             ],
-                {
-                    duration: 3500,
-                    iterations: Infinity
-                }
+            {
+                duration: 3500,
+                iterations: Infinity
+            }
         );
-        prompt("Przeproś! Żarty się skończyły! Bo już w sumie nic nie zostało lol");
+        var Przeprosiny = prompt("Przeproś! Żarty się skończyły! Bo już w sumie nic nie zostało lol");
+        if (Przeprosiny == "Przepraszam" || Przeprosiny == "przepraszam")
+        {
+            document.location.reload(true);
+        }
         document.getElementById("Wyszukiwarka").focus();
         Troll_4 = true;
     }
@@ -474,8 +467,6 @@ function Message()
         }
     }
 }
-
-//! TODO:
 var Timer = 0;
 var Tryb = 0;
 var Licznik_4 = 0;
@@ -484,8 +475,12 @@ function DarkAndLight_1()
     Timer = setTimeout(DarkAndLight_2, 500);
 }
 function DarkAndLight_2()
-{Licznik_4++;
-    if (Licznik_4 >= 3)
+{
+    if (Licznik_4 < 2)
+    {
+        Licznik_4++;
+    }
+    else
     {
         if ((Tryb % 2) == 0)
         {
@@ -500,25 +495,62 @@ function DarkAndLight_2()
         DarkAndLight_1();
     }
 }
+    //! TODO: Zostawiam to na pamiątke tego że przeglądarka zablokowała "wyskakujące okienka" a taki fajny pomysł miałem :(
 /*
+var Licznik_5 = 0;
+function Ads_1()
+{
+    if (Licznik_5 <= 4)
+    {
+        //alert("wip");
+        Licznik_5++;
+    }
+    else
+    {
+        Ads_Timer = setInterval(Ads_2, 5000)
+        //alert("wip 2");
+    }
+}
+function Ads_2()
+{
+    //alert(Licznik_5);
+    var Ad = window.open("", "Tekst", "width=200,height=200")
+    Ad.document.write("<p>dzban</p>");
+}
+*/
+var Licznik_6 = 0;
 function SayMyName()
 {
-    alert("wip");
+    if (Licznik_6 < 2)
+    {
+        Licznik_6++;
+    }
+    else
+    {
+        var MyName = prompt("Say my name");
+        if (MyName == "Hubsik")
+        {
+            alert("You're goddamn right!");
+        }
+        else
+        {
+            var Akapity = document.getElementsByClassName("Link_2");
+            alert("You don't have damm clue who the hell I am...");
+            for (var x = 0; x < Akapity.length; x++)
+            {
+                document.getElementsByClassName("Link_2")[x].animate
+                (
+                    [
+                        {transform: "rotate(0deg) skewY(120deg)"},
+                        {transform: "rotate(360deg) skewX(120deg)"},
+                        {transform: "rotate(0deg)"}
+                    ],
+                    {
+                        duration: 1000,
+                        iterations: Infinity
+                    }
+                )
+            }
+        }
+    }
 }
-
-function AFK()
-{
-  setTimeout(Alert_1()
-  {
-  alert("Hello");
-  }, 1000);
-}
-
-function Ads()
-{
-    https://www.w3schools.com/jsref/met_win_settimeout.asp
-    https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_settimeout3
-}
-
-https://www.tutorialrepublic.com/codelab.php?topic=faq&file=jquery-call-a-function-repetitively-with-setinterval-method
-*/
