@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 74";
+    var Wersja = "v 75";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -522,20 +522,21 @@ var Licznik_6 = 0;
 var Link2_Fix = false;
 function SayMyName()
 {
-    if (Licznik_6 < 2)
+
+    if (Link2_Fix == false)
     {
-        Licznik_6++;
-    }
-    else
-    {
-        var MyName = prompt("Say my name");
-        if (MyName == "Hubsik")
+        if (Licznik_6 < 2)
         {
-            alert("You're goddamn right!");
+            Licznik_6++;
         }
         else
         {
-            if (Link2_Fix == false)
+            var MyName = prompt("Say my name");
+            if (MyName == "Hubsik")
+            {
+                alert("You're goddamn right!");
+            }
+            else
             {
                 var Guzik_Animacja = document.getElementsByClassName("Link_2");
                 alert("You don't have damm clue who the hell I am...");
@@ -555,7 +556,9 @@ function SayMyName()
                     )
                 }
                 Link2_Fix = true;
+                alert("wip");
             }
         }
     }
+    
 }
