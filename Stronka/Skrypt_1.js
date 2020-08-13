@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 73";
+    var Wersja = "v 74";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -519,6 +519,7 @@ function Ads_2()
 }
 */
 var Licznik_6 = 0;
+var Link2_Fix = false;
 function SayMyName()
 {
     if (Licznik_6 < 2)
@@ -534,22 +535,26 @@ function SayMyName()
         }
         else
         {
-            var Akapity = document.getElementsByClassName("Link_2");
-            alert("You don't have damm clue who the hell I am...");
-            for (var x = 0; x < Akapity.length; x++)
+            if (Link2_Fix == false)
             {
-                document.getElementsByClassName("Link_2")[x].animate
-                (
-                    [
-                        {transform: "rotate(0deg) skewY(120deg)"},
-                        {transform: "rotate(360deg) skewX(120deg)"},
-                        {transform: "rotate(0deg)"}
-                    ],
-                    {
-                        duration: 1000,
-                        iterations: Infinity
-                    }
-                )
+                var Guzik_Animacja = document.getElementsByClassName("Link_2");
+                alert("You don't have damm clue who the hell I am...");
+                for (var x = 0; x < Guzik_Animacja.length; x++)
+                {
+                    document.getElementsByClassName("Link_2")[x].animate
+                    (
+                        [
+                            {transform: "rotate(0deg) skewY(120deg)"},
+                            {transform: "rotate(360deg) skewX(120deg)"},
+                            {transform: "rotate(0deg)"}
+                        ],
+                        {
+                            duration: 1000,
+                            iterations: Infinity
+                        }
+                    )
+                }
+                Link2_Fix = true;
             }
         }
     }
