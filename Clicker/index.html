@@ -13,10 +13,10 @@
                 <textarea id="TextArea" readonly></textarea>
             </section>
             <section id="Content">
-    <label for="Money">Money :</label>
-                    <input type="number" id="Money" placeholder="Ładowanie..."> <br>
-    <label for="Income">Income :</label>
-                    <input type="number" id="Income" placeholder="Ładowanie...">
+                <label for="Money">Money :</label>
+                <input type="number" id="Money" placeholder="Ładowanie..."> <br>
+                <label for="Income">Income :</label>
+                <input type="number" id="Income" placeholder="Ładowanie...">
                 <hr>
                 <button id="Button_Clicker" onclick="Clicker(); Animacja()">Klikej</button>
                 <hr>
@@ -32,12 +32,29 @@
                     </tr>
                     <tr>
                         <td id="Upgrade_2-Opis">Zwiększa ilość $ na kliknięcie o: 3 $</td>
-                        <td id="Upgrade_2-Cena">50 $</td>
+                        <td id="Upgrade_2-Cena">25 $</td>
                         <td id="Upgrade_2-Kup" class="Hover" onclick="Upgrade_2()"><u>Kup</u></td>
                     </tr>
+                    <tr>
+                        <td id="Upgrade_3-Opis">Zwiększa ilość $ na kliknięcie o: 5 $</td>
+                        <td id="Upgrade_3-Cena">50 $</td>
+                        <td id="Upgrade_3-Kup" class="Hover" onclick="Upgrade_3()"><u>Kup</u></td>
+                    </tr>
+                    <tr>
+                        <td id="Upgrade_4-Opis">Zwiększa ilość $ na kliknięcie o: 10 $</td>
+                        <td id="Upgrade_4-Cena">100 $</td>
+                        <td id="Upgrade_4-Kup" class="Hover" onclick="Upgrade_4()"><u>Kup</u></td>
+                    </tr>
+                    <tr>
+                        <td id="Upgrade_5-Opis">Zwiększa ilość $ na kliknięcie o: 25 $</td>
+                        <td id="Upgrade_5-Cena">500 $</td>
+                        <td id="Upgrade_5-Kup" class="Hover" onclick="Upgrade_5()"><u>Kup</u></td>
+                    </tr>
+                    <hr>
                 </table>
                 <hr>
                 <progress>Uda Ci się zebrać tyle $$$ ?</progress>
+                <p id="wip">wip</p>
             </section>
             <section id="Bottom">                
                 <p>By Hubsik</p>
@@ -45,3 +62,11 @@
         </section>
     </body>
 </html>
+
+<!--
+    <tr>
+        <td id="Upgrade_X-Opis">Zwiększa ilość $ na kliknięcie o: _ $</td>
+        <td id="Upgrade_X-Cena">X $</td>
+        <td id="Upgrade_X-Kup" class="Hover" onclick="Upgrade_X()"><u>Kup</u></td>
+    </tr>
+-->

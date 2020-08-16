@@ -194,7 +194,7 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             document.getElementById("Komunikat").innerHTML = "SYNTAX ERROR: Dzbanie, to się C A P S E M pisze!";
             break;
         case "Clicker.html":
-            document.getElementById("Komunikat").innerHTML = "... Serio?";
+            document.getElementById("Komunikat").innerHTML = "Work In Progress jakby co";
             var Secret = document.createElement("a");
             Secret.href = "https://hubsik123.github.io/Clicker/index.html";
             Secret.click();

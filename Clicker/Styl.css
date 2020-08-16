@@ -36,6 +36,7 @@ html, body {
     background-color: #FDB953;
     resize: none;
     border: none;
+    outline: none;
 }
 /* Content */
 #Content {
@@ -46,6 +47,11 @@ html, body {
     float: left;
     padding-left: 7px;
     padding-right: 7px;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 #Button_Clicker {
     display: inline-block;
@@ -73,13 +79,16 @@ html, body {
 }
 progress {
     width: 100%;
-    border: 1px solid Gold;
+    border: 1px solid black;
 }
 progress::-webkit-progress-bar {
     background-color: #834F01;
 }
 progress::-webkit-progress-value {
     background-color: #E88C02;
+}
+progress[value]::-webkit-progress-value {
+    background: linear-gradient(to right, #e88c02 25%, #ffcc00 115%);
 }
 /* Bottom */
 #Bottom {
