@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html, body {
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Calibri;
+    background-color: black;
+    user-select: none; /* Chrome/Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+/* Main */
+#Main {
+    height: 100%;
+    width: 100%;
+}
+/* Top */
+#Top {
+    height: 10%;
+    width: 100%;
+    background-color: #FDB953;
+    color: #302008;
+    float: left;
+    overflow: auto;
+}
+#Top #TextArea {
+    height: 100%;
+    width: 100%;
+    color: #302008;
+    background-color: #FDB953;
+    resize: none;
+    border: none;
+}
+/* Content */
+#Content {
+    height: 85%;
+    width: 100%;
+    background-color: #FEE1B6;
+    color: black;
+    float: left;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+#Button_Clicker {
+    display: inline-block;
+    color: #834F01;
+    background-color: #E88C02;
+    border: 1px gold solid;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    transition: 0.25s;
+}
+#Button_Clicker:active {
+    color: #E88C02;
+    background-color: #834F01;
+}
+/*#Button_Clicker:focus {
+    background-color: blue;
+}*/
+#Content td {
+    transition: 0.5s;
+}
+#Content .Hover:hover {
+    background-color: #E88C02;
+    color: #FEE1B6;
+}
+progress {
+    width: 100%;
+    border: 1px solid Gold;
+}
+progress::-webkit-progress-bar {
+    background-color: #834F01;
+}
+progress::-webkit-progress-value {
+    background-color: #E88C02;
+}
+/* Bottom */
+#Bottom {
+    height: 5%;
+    width: 100%;
+    background-color: #302008;
+    color: #E88C02;
+    clear: both;
+}

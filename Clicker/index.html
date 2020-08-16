@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clicker.html</title>
+        <link rel="stylesheet" type="text/css" href="Styl.css">
+        <script src="Skrypt.js"></script>
+    </head>
+    <body onload="Aktualizacja_1(); Progress()">
+        <section id="Main">
+            <section id="Top">
+                <!--<h1>Clicker.html</h1>
+                <p id="Komunikat"></p>-->
+                <textarea id="TextArea" readonly></textarea>
+            </section>
+            <section id="Content">
+    <label for="Money">Money :</label>
+                    <input type="number" id="Money" placeholder="Ładowanie..."> <br>
+    <label for="Income">Income :</label>
+                    <input type="number" id="Income" placeholder="Ładowanie...">
+                <hr>
+                <button id="Button_Clicker" onclick="Clicker(); Animacja()">Klikej</button>
+                <hr>
+                <table border="1">
+                    <tr>
+                        <th>Opis:</th>
+                        <th colspan="2">Cena:</th>
+                    </tr>
+                    <tr>
+                        <td id="Upgrade_1-Opis">Zwiększa ilość $ na kliknięcie o: 1 $</td>
+                        <td id="Upgrade_1-Cena">10 $</td>
+                        <td id="Upgrade_1-Kup" class="Hover" onclick="Upgrade_1()"><u>Kup</u></td>
+                    </tr>
+                    <tr>
+                        <td id="Upgrade_2-Opis">Zwiększa ilość $ na kliknięcie o: 3 $</td>
+                        <td id="Upgrade_2-Cena">50 $</td>
+                        <td id="Upgrade_2-Kup" class="Hover" onclick="Upgrade_2()"><u>Kup</u></td>
+                    </tr>
+                </table>
+                <hr>
+                <progress>Uda Ci się zebrać tyle $$$ ?</progress>
+            </section>
+            <section id="Bottom">                
+                <p>By Hubsik</p>
+            </section>
+        </section>
+    </body>
+</html>

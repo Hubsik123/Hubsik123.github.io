@@ -193,6 +193,12 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
         case "drop database":
             document.getElementById("Komunikat").innerHTML = "SYNTAX ERROR: Dzbanie, to się C A P S E M pisze!";
             break;
+        case "Clicker.html":
+            document.getElementById("Komunikat").innerHTML = "... Serio?";
+            var Secret = document.createElement("a");
+            Secret.href = "https://hubsik123.github.io/Clicker/index.html";
+            Secret.click();
+            break;
     // Metody wyświetlania tekstu
         case "360":
             document.getElementById("Komunikat").innerHTML = "Zatkało?";
