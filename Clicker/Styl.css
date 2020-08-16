@@ -47,6 +47,7 @@ html, body {
     float: left;
     padding-left: 7px;
     padding-right: 7px;
+    overflow: auto;
 }
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
