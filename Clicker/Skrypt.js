@@ -1,5 +1,5 @@
 var Money = 0;
-var Income = 1000;
+var Income = 1;
 var Progres_Stage = 0;
 var AutoClick_Delay = 6000;
 var Upgrade_1_Ilosc = 1;
@@ -85,21 +85,12 @@ function Komunikat_DELETE()
 {
     document.getElementById("TextArea").innerHTML = "";
 }
-/*function AutoClick_1()
-{
-    var Timer = setTimeout(AutoClick_2(), AutoClick_Delay);
-}
-function AutoClick_2()
-{
-    document.getElementById("Button_Clicker").click();
-    AutoClicker_1();
-}*/
-function AutoClick_1()
+function AutoClick()
 {
     var Timer = setTimeout(function()
         {
             document.getElementById("Button_Clicker").click();
-            AutoClick_1();
+            AutoClick();
         }, AutoClick_Delay);
 }
 function Upgrade_1()
@@ -213,7 +204,7 @@ function AutoClicker_1()
             document.getElementById("AutoClicker_1-Kupione").innerHTML = "Już to kupiłeś";
             AC_Kupione_1 = true;
             AutoClick_Delay = AutoClick_Delay - 1000;
-            AutoClick_1();
+            AutoClick();
         }
         else
         {
@@ -237,7 +228,7 @@ function AutoClicker_2()
             document.getElementById("AutoClicker_2-Kupione").innerHTML = "Już to kupiłeś";
             AC_Kupione_2 = true;
             AutoClick_Delay = AutoClick_Delay - 1000;
-            AutoClick_1();
+            AutoClick();
         }
         else
         {
@@ -261,7 +252,7 @@ function AutoClicker_3()
             document.getElementById("AutoClicker_3-Kupione").innerHTML = "Już to kupiłeś";
             AC_Kupione_3 = true;
             AutoClick_Delay = AutoClick_Delay - 1000;
-            AutoClick_1();
+            AutoClick();
         }
         else
         {
@@ -285,7 +276,7 @@ function AutoClicker_4()
             document.getElementById("AutoClicker_4-Kupione").innerHTML = "Już to kupiłeś";
             AC_Kupione_4 = true;
             AutoClick_Delay = AutoClick_Delay - 1000;
-            AutoClick_1();
+            AutoClick();
         }
         else
         {
@@ -309,7 +300,7 @@ function AutoClicker_5()
             document.getElementById("AutoClicker_5-Kupione").innerHTML = "Już to kupiłeś";
             AC_Kupione_5 = true;
             AutoClick_Delay = AutoClick_Delay - 1000;
-            AutoClick_1();
+            AutoClick();
         }
         else
         {
