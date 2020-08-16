@@ -13,47 +13,92 @@
                 <textarea id="TextArea" readonly></textarea>
             </section>
             <section id="Content">
-                <label for="Money">Money :</label>
+                <label for="Money">Money: </label>
                 <input type="number" id="Money" placeholder="Ładowanie..."> <br>
-                <label for="Income">Income :</label>
-                <input type="number" id="Income" placeholder="Ładowanie...">
+                <label for="Income">Income: </label>
+                <input type="number" id="Income" placeholder="Ładowanie..."> <br>
+                <label for="AutoClickRate">Auto Clicks/s: </label>
+                <input type="number" id="AutoClickRate" placeholder="Ładowanie...">
                 <hr>
+                <progress>Uda Ci się zebrać tyle $$$ ?</progress>
+                <p id="wip">wip</p>
                 <button id="Button_Clicker" onclick="Clicker(); Animacja()">Klikej</button>
                 <hr>
                 <table border="1">
                     <tr>
                         <th>Opis:</th>
                         <th colspan="2">Cena:</th>
+                        <th>Masz:</th>
                     </tr>
                     <tr>
                         <td id="Upgrade_1-Opis">Zwiększa ilość $ na kliknięcie o: 1 $</td>
                         <td id="Upgrade_1-Cena">10 $</td>
                         <td id="Upgrade_1-Kup" class="Hover" onclick="Upgrade_1()"><u>Kup</u></td>
+                        <td id="Upgrade_1-Ilosc">0</td>
                     </tr>
                     <tr>
                         <td id="Upgrade_2-Opis">Zwiększa ilość $ na kliknięcie o: 3 $</td>
                         <td id="Upgrade_2-Cena">25 $</td>
                         <td id="Upgrade_2-Kup" class="Hover" onclick="Upgrade_2()"><u>Kup</u></td>
+                        <td id="Upgrade_2-Ilosc">0</td>
                     </tr>
                     <tr>
                         <td id="Upgrade_3-Opis">Zwiększa ilość $ na kliknięcie o: 5 $</td>
                         <td id="Upgrade_3-Cena">50 $</td>
                         <td id="Upgrade_3-Kup" class="Hover" onclick="Upgrade_3()"><u>Kup</u></td>
+                        <td id="Upgrade_3-Ilosc">0</td>
                     </tr>
                     <tr>
                         <td id="Upgrade_4-Opis">Zwiększa ilość $ na kliknięcie o: 10 $</td>
                         <td id="Upgrade_4-Cena">100 $</td>
                         <td id="Upgrade_4-Kup" class="Hover" onclick="Upgrade_4()"><u>Kup</u></td>
+                        <td id="Upgrade_4-Ilosc">0</td>
                     </tr>
                     <tr>
                         <td id="Upgrade_5-Opis">Zwiększa ilość $ na kliknięcie o: 25 $</td>
                         <td id="Upgrade_5-Cena">500 $</td>
                         <td id="Upgrade_5-Kup" class="Hover" onclick="Upgrade_5()"><u>Kup</u></td>
+                        <td id="Upgrade_5-Ilosc">0</td>
                     </tr>
                 </table>
                 <hr>
-                <progress>Uda Ci się zebrać tyle $$$ ?</progress>
-                <p id="wip">wip</p>
+                <table border="1">
+                    <tr>
+                        <th>Opis:</th>
+                        <th colspan="3">Cena:</th>
+                    </tr>
+                    <tr>
+                        <td id="AutoClicker_1-Opis">Jedno AutoClick/5s</td>
+                        <td id="AutoClicker_1-Cena">1000 $</td>
+                        <td id="AutoClicker_1-Kup" class="Hover" onclick="AutoClicker_1()">Kup</td>
+                        <td id="AutoClicker_1-Kupione">Nie Kupiono</td>
+                    </tr>
+                    <tr>
+                        <td id="AutoClicker_2-Opis">Jedno AutoClick/5s</td>
+                        <td id="AutoClicker_2-Cena">2500 $</td>
+                        <td id="AutoClicker_2-Kup" class="Hover" onclick="AutoClicker_2()">Kup</td>
+                        <td id="AutoClicker_2-Kupione">Nie Kupiono</td>
+                    </tr>
+                    <tr>
+                        <td id="AutoClicker_3-Opis">Jedno AutoClick/5s</td>
+                        <td id="AutoClicker_3-Cena">5000 $</td>
+                        <td id="AutoClicker_3-Kup" class="Hover" onclick="AutoClicker_3()">Kup</td>
+                        <td id="AutoClicker_3-Kupione">Nie Kupiono</td>
+                    </tr>
+                    <tr>
+                        <td id="AutoClicker_4-Opis">Jedno AutoClick/5s</td>
+                        <td id="AutoClicker_4-Cena">7500 $</td>
+                        <td id="AutoClicker_4-Kup" class="Hover" onclick="AutoClicker_4()">Kup</td>
+                        <td id="AutoClicker_4-Kupione">Nie Kupiono</td>
+                    </tr>
+                    <tr>
+                        <td id="AutoClicker_5-Opis">Jedno AutoClick/5s</td>
+                        <td id="AutoClicker_5-Cena">10000 $</td>
+                        <td id="AutoClicker_5-Kup" class="Hover" onclick="AutoClicker_5()">Kup</td>
+                        <td id="AutoClicker_5-Kupione">Nie Kupiono</td>
+                    </tr>
+                </table>
+                <hr>
             </section>
             <section id="Bottom">                
                 <p>By Hubsik</p>
