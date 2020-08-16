@@ -20,6 +20,11 @@ function Aktualizacja_2()
 {
     document.getElementById("Money").value = Money;
     document.getElementById("Income").value = Income;
+    document.getElementById("Upgrade_1-Ilosc").innerHTML = Upgrade_1_Ilosc - 1;
+    document.getElementById("Upgrade_2-Ilosc").innerHTML = Upgrade_2_Ilosc - 1;
+    document.getElementById("Upgrade_3-Ilosc").innerHTML = Upgrade_3_Ilosc - 1;
+    document.getElementById("Upgrade_4-Ilosc").innerHTML = Upgrade_4_Ilosc - 1;
+    document.getElementById("Upgrade_5-Ilosc").innerHTML = Upgrade_5_Ilosc - 1;
     if (AC_Kupione_1 == true || AC_Kupione_2 == true || AC_Kupione_3 == true || AC_Kupione_4 == true || AC_Kupione_5 == true)
     {
         document.getElementById("AutoClickRate").value = (AutoClick_Delay/1000);
