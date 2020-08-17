@@ -2,6 +2,7 @@ var Money = 0;
 var Income = 1;
 var Progres_Stage = 0;
 var AutoClick_Delay = 6000;
+var BiedaIlosc = 0;
 var Upgrade_1_Ilosc = 1;
 var Upgrade_2_Ilosc = 1;
 var Upgrade_3_Ilosc = 1;
@@ -95,7 +96,73 @@ function Progress()
 }
 function Biedak()
 {
-    document.getElementById("TextArea").innerHTML += "Nie masz tyle pieniędzy :(\n";
+    //document.getElementById("TextArea").innerHTML += "Nie masz tyle pieniędzy :(\n";
+    var Tekst = Math.floor((Math.random() * 10) + 1); //? 1 - 10
+    switch (true)
+    {
+        case Tekst == 1:
+        {
+            document.getElementById("TextArea").innerHTML += "Nie masz tyle pieniędzy :(\n";
+            BiedaIlosc++;
+            break;
+        }
+        case Tekst == 2:
+        {
+            document.getElementById("TextArea").innerHTML += "Weź sprawdź ile to kosztuje ...\n";
+            BiedaIlosc++;
+            break;
+        }
+        case Tekst == 3:
+        {
+            document.getElementById("TextArea").innerHTML += "Znowu nie masz pieniędzy :(\n";
+            BiedaIlosc++;
+            break;
+        }
+        case Tekst == 4:
+        {
+            document.getElementById("TextArea").innerHTML += "Nie umiesz w matematyke...\n";
+            BiedaIlosc++;
+            break;
+        }
+        case Tekst == 5:
+        {
+            document.getElementById("TextArea").innerHTML += "Weź naucz się liczyć...\n";
+            BiedaIlosc++;
+            break;
+        }
+        case Tekst == 6:
+        {
+            document.getElementById("TextArea").innerHTML += "Ile razy widzisz już tek komunikat? Odpowiedź: "+BiedaIlosc+"\n";
+            BiedaIlosc++;
+            break;
+        }
+        case Tekst == 7:
+        {
+            document.getElementById("TextArea").innerHTML += "Ile razy mam powtarzać żebyś sprawdził ile to kosztuje...\n";
+            BiedaIlosc++;
+            break;
+        }
+        case Tekst == 8:
+        {
+            document.getElementById("TextArea").innerHTML += "Naprawdę... czy ty specjalnie sprawdzasz ile jest różnych komunikatów o tym jak nie umiesz czytać ze zrozumieniem?\n";
+            BiedaIlosc++;
+            break;
+        }
+        case Tekst == 9:
+        {
+            document.getElementById("TextArea").innerHTML += "Frajer...\n";
+            BiedaIlosc++;
+            break;
+        }
+        case Tekst == 10:
+        {
+            document.getElementById("TextArea").innerHTML += "git gud\n";
+            BiedaIlosc++;
+            break;
+        }
+        default:
+            break;
+    }
     var Timer = setTimeout(Komunikat_DELETE, 2500);
 }
 function Komunikat_DELETE()
