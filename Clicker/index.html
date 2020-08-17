@@ -19,11 +19,15 @@
                 <h1 id="Title">Clicker.html</h1>
                 <hr>
                 <label for="Money">Money: </label>
-                <input type="text" id="Money" placeholder="Ładowanie..."> <br>
+                    <input type="text" id="Money" placeholder="Ładowanie..."> <br>
                 <label for="Income">Income: </label>
-                <input type="text" id="Income" placeholder="Ładowanie..."> <br>
+                    <input type="text" id="Income" placeholder="Ładowanie..."> <br>
                 <label for="AutoClickRate">Auto Clicks/s: </label>
-                <input type="text" id="AutoClickRate" placeholder="Ładowanie...">
+                    <input type="text" id="AutoClickRate" placeholder="Ładowanie..."> <br>
+                <label for="Szansa_na_Crit_Click">Szansa na Crit Click: </label>
+                    <input type="text"id="Szansa_na_Crit_Click" placeholder="Ładowanie..."> <br>
+                <label for="Mnożnik_Crit_Click">Mnożnik Crit Click: </label>
+                    <input type="text" id="Mnożnik_Crit_Click" placeholder="Ładowanie...">
                 <hr>
                 <progress>Uda Ci się zebrać tyle $$$ ?</progress>
                 <p id="Stage" style="white-space: pre;">Ładowanie...</p>
@@ -104,6 +108,15 @@
                         <td id="AutoClicker_5-Kupione">Nie Kupiono</td>
                     </tr>
                 </table>
+                <hr>
+                    <table>
+                        <tr>
+                            <td id="CritChance_1-Opis">Zwiększa ilość $ na kliknięcie o: _ $</td>
+                            <td id="CritChance_1-Cena">X $</td>
+                            <td id="CritChance_1-Kup" class="Hover" onclick="Upgrade_X()"><u>Kup</u></td>
+                            <td id="CritChance_1-Kupione">Nie Kupiono</td>
+                        </tr>
+                    </table>
                 <hr>
             </section>
             <section id="Bottom">                

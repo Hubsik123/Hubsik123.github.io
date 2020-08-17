@@ -4,7 +4,7 @@ var Progres_Stage = 0;
 var AutoClick_Delay = 6000;
 var BiedaIlosc = 0;
 //var Roll_Click = 100;
-var Crit_Click = 20;
+var Crit_Click = 0;
 var Multi_Click = 2;
 var Upgrade_1_Ilosc = 1;
 var Upgrade_2_Ilosc = 1;
@@ -24,6 +24,9 @@ function Aktualizacja_2()
 {
     document.getElementById("Money").value = Money +" $";
     document.getElementById("Income").value = Income + " $";
+    document.getElementById("Szansa_na_Crit_Click").value = Crit_Click + " %";
+    document.getElementById("Mnożnik_Crit_Click").value = Multi_Click + " x";
+    //document.getElementById("").value = " $";
     document.getElementById("Upgrade_1-Ilosc").innerHTML = Upgrade_1_Ilosc - 1;
     document.getElementById("Upgrade_2-Ilosc").innerHTML = Upgrade_2_Ilosc - 1;
     document.getElementById("Upgrade_3-Ilosc").innerHTML = Upgrade_3_Ilosc - 1;
@@ -74,8 +77,12 @@ function Clicker()
     var Roll_Click = Math.floor((Math.random() * 100) + 1); //? 1 - 10
     if (Roll_Click <= Crit_Click)
     {
-        document.getElementById("TextArea").innerHTML += "Crit Click !\n";
         Money = Money + (Income*Multi_Click);
+        document.getElementById("TextArea").innerHTML += "Crit Click !\n";
+        var Timer = setTimeout(function()
+        {
+            document.getElementById("TextArea").innerHTML = "";
+        }, 2500);
     }
     else
     {
