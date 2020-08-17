@@ -3,6 +3,9 @@ var Income = 1;
 var Progres_Stage = 0;
 var AutoClick_Delay = 6000;
 var BiedaIlosc = 0;
+//var Roll_Click = 100;
+var Crit_Click = 20;
+var Multi_Click = 2;
 var Upgrade_1_Ilosc = 1;
 var Upgrade_2_Ilosc = 1;
 var Upgrade_3_Ilosc = 1;
@@ -56,8 +59,8 @@ function Animacja_Auto()
     document.getElementById("Auto_Clicker").animate
     (
         [
-            {transform: "rotateY(360deg)"},
-            {transform: "rotateY(0deg)"},
+            {transform: "rotateX(0deg)"},
+            {transform: "rotateX(360deg)"},
         ],
         {
             duration: 250,
@@ -67,7 +70,17 @@ function Animacja_Auto()
 }
 function Clicker()
 {
-    Money = Money + Income;
+    //Money = Money + Income;
+    var Roll_Click = Math.floor((Math.random() * 100) + 1); //? 1 - 10
+    if (Roll_Click <= Crit_Click)
+    {
+        document.getElementById("TextArea").innerHTML += "Crit Click !\n";
+        Money = Money + (Income*Multi_Click);
+    }
+    else
+    {
+        Money = Money + Income;
+    }
 }
 function Progress()
 {
