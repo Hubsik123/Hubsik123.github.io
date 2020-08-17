@@ -104,10 +104,11 @@ function Progress()
     {
         case Progres_Stage == 0:
         {
-            document.getElementsByTagName("progress")[0].setAttribute("max", 1000);
+            var Finish = 1000;
+            document.getElementsByTagName("progress")[0].setAttribute("max", Finish);
             document.getElementsByTagName("progress")[0].setAttribute("value", Money);
-            document.getElementById("Stage").innerHTML = "Stage 1:\n   "+Money+" / "+ 1000;
-            if (Money >= 1000)
+            document.getElementById("Stage").innerHTML = "Stage 1: Tutorial Part 1\n   "+Money+" / "+ Finish;
+            if (Money >= Finish)
             {
                 Progres_Stage = 1;
             }
@@ -115,12 +116,43 @@ function Progress()
         }
         case Progres_Stage == 1:
         {
+            var Finish = 5000;
             document.getElementsByTagName("progress")[0].removeAttribute("max");
-            document.getElementsByTagName("progress")[0].setAttribute("max", 5000);
+            document.getElementsByTagName("progress")[0].setAttribute("max", Finish);
             document.getElementsByTagName("progress")[0].setAttribute("value", Money);
-            document.getElementById("Stage").innerHTML = "Stage 2:\n   "+Money+" / "+ 5000;
+            document.getElementById("Stage").innerHTML = "Stage 2: Tutorial Part 2\n   "+Money+" / "+ Finish;
+            if (Money >= Finish)
+            {
+                Progres_Stage = 2;
+            }
             break;
         }
+        case Progres_Stage == 2:
+        {
+            var Finish = 10000;
+            document.getElementsByTagName("progress")[0].removeAttribute("max");
+            document.getElementsByTagName("progress")[0].setAttribute("max", Finish);
+            document.getElementsByTagName("progress")[0].setAttribute("value", Money);
+            document.getElementById("Stage").innerHTML = "Stage 3: Tutorial Part 3 - Finish\n   "+Money+" / "+ Finish;
+            if (Money >= Finish)
+            {
+                Progres_Stage = 3;
+            }
+            break;
+        }
+        /*case Progres_Stage == 2:
+        {
+            var Finish = 10000;
+            document.getElementsByTagName("progress")[0].removeAttribute("max");
+            document.getElementsByTagName("progress")[0].setAttribute("max", Finish);
+            document.getElementsByTagName("progress")[0].setAttribute("value", Money);
+            document.getElementById("Stage").innerHTML = "Stage 3: Tutorial Part 2\n   "+Money+" / "+ Finish;
+            if (Money >= Finish)
+            {
+                Progres_Stage = 2;
+            }
+            break;
+        }*/
     }
 }
 function Biedak()
@@ -202,8 +234,8 @@ function AutoClick()
 {
     var Timer = setTimeout(function()
         {
+            Money = Money + Income;
             document.getElementById("Auto_Clicker").click();
-            var Guzik_Auto = "Auto_Clicker";
             Animacja_Auto();
             AutoClick();
         }, AutoClick_Delay);
