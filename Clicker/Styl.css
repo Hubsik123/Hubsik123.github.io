@@ -9,7 +9,7 @@ html, body {
     margin: 0;
     font-family: Calibri;
     background-color: black;
-    user-select: none; /* Chrome/Opera */
+    user-select: none; /* Chrome Opera */
    -webkit-user-select: none; /* Safari */
    -khtml-user-select: none; /* Konqueror HTML */
    -moz-user-select: none; /* Firefox */
@@ -52,10 +52,14 @@ html, body {
 #Content #Title {
     text-align: center;
 }
-input[type=number]::-webkit-inner-spin-button, /* TODO: Usunąć to???*/
+/*input[type=number]::-webkit-inner-spin-button,  Usunąć to???
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}*/
+#Content input[type=text]::selection
+{
+    background-color: green;
 }
 .Button_Clicker {
     display: inline-block;
