@@ -451,3 +451,210 @@ function CritMulti_1()
         }
     }
 }
+function CritMulti_2()
+{
+    if (CritMulti_2_Kupione == false)
+    {
+        if (Money >= 2500)
+        {
+            Money = Money - 2500;
+            document.getElementById("CritChance_2-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("CritChance_2-Kupione").innerHTML = "Już to kupiłeś";
+            CritMulti_2_Kupione = true;
+            Crit_Click = Crit_Click + 10;
+        }
+        else
+        {
+            document.getElementById("CritChance_2-Cena").style.backgroundColor = "tomato";
+            Biedak("CritChance_2-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("CritChance_2-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function CritMulti_3()
+{
+    if (CritMulti_3_Kupione == false)
+    {
+        if (Money >= 5000)
+        {
+            Money = Money - 5000;
+            document.getElementById("CritChance_3-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("CritChance_3-Kupione").innerHTML = "Już to kupiłeś";
+            CritMulti_3_Kupione = true;
+            Crit_Click = Crit_Click + 10;
+        }
+        else
+        {
+            document.getElementById("CritChance_3-Cena").style.backgroundColor = "tomato";
+            Biedak("CritChance_3-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("CritChance_3-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function CritMulti_4()
+{
+    if (CritMulti_4_Kupione == false)
+    {
+        if (Money >= 10000)
+        {
+            Money = Money - 10000;
+            document.getElementById("CritChance_4-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("CritChance_4-Kupione").innerHTML = "Już to kupiłeś";
+            CritMulti_4_Kupione = true;
+            Crit_Click = Crit_Click + 10;
+        }
+        else
+        {
+            document.getElementById("CritChance_4-Cena").style.backgroundColor = "tomato";
+            Biedak("CritChance_4-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("CritChance_4-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function CritMulti_5()
+{
+    if (CritMulti_5_Kupione == false)
+    {
+        if (Money >= 15000)
+        {
+            Money = Money - 15000;
+            document.getElementById("CritChance_5-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("CritChance_5-Kupione").innerHTML = "Już to kupiłeś";
+            CritMulti_5_Kupione = true;
+            Crit_Click = Crit_Click + 10;
+        }
+        else
+        {
+            document.getElementById("CritChance_5-Cena").style.backgroundColor = "tomato";
+            Biedak("CritChance_5-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("CritChance_5-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function CritMulti_6()
+{
+    if (CritMulti_6_Kupione == false)
+    {
+        if (Money >= 30000)
+        {
+            Money = Money - 30000;
+            document.getElementById("CritChance_6-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("CritChance_6-Kupione").innerHTML = "Już to kupiłeś";
+            CritMulti_6_Kupione = true;
+            Crit_Click = Crit_Click + 10;
+        }
+        else
+        {
+            document.getElementById("CritChance_6-Cena").style.backgroundColor = "tomato";
+            Biedak("CritChance_6-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("CritChance_6-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function CritMulti_7()
+{
+    if (CritMulti_7_Kupione == false)
+    {
+        if (Money >= 65000)
+        {
+            Money = Money - 65000;
+            document.getElementById("CritChance_7-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("CritChance_7-Kupione").innerHTML = "Już to kupiłeś";
+            CritMulti_7_Kupione = true;
+            Crit_Click = Crit_Click + 10;
+        }
+        else
+        {
+            document.getElementById("CritChance_7-Cena").style.backgroundColor = "tomato";
+            Biedak("CritChance7-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("CritChance_7-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function CritMulti_8()
+{
+    if (CritMulti_8_Kupione == false)
+    {
+        if (Money >= 100000)
+        {
+            Money = Money - 100000;
+            document.getElementById("CritChance_8-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("CritChance_8-Kupione").innerHTML = "Już to kupiłeś";
+            CritMulti_8_Kupione = true;
+            Crit_Click = Crit_Click + 10;
+        }
+        else
+        {
+            document.getElementById("CritChance_8-Cena").style.backgroundColor = "tomato";
+            Biedak("CritChance_8-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("CritChance_8-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function CritMulti_9()
+{
+    if (CritMulti_9_Kupione == false)
+    {
+        if (Money >= 150000)
+        {
+            Money = Money - 150000;
+            document.getElementById("CritChance_9-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("CritChance_9-Kupione").innerHTML = "Już to kupiłeś";
+            CritMulti_9_Kupione = true;
+            Crit_Click = Crit_Click + 10;
+        }
+        else
+        {
+            document.getElementById("CritChance_9-Cena").style.backgroundColor = "tomato";
+            Biedak("CritChance_9-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("CritChance_9-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function CritMulti_10()
+{
+    if (CritMulti_10_Kupione == false)
+    {
+        if (Money >= 250000)
+        {
+            Money = Money - 250000;
+            document.getElementById("CritChance_10-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("CritChance_10-Kupione").innerHTML = "Już to kupiłeś";
+            CritMulti_10_Kupione = true;
+            Crit_Click = Crit_Click + 10;
+        }
+        else
+        {
+            document.getElementById("CritChance_10-Cena").style.backgroundColor = "tomato";
+            Biedak("CritChance_10-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("CritChance_10-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
