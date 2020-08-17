@@ -18,8 +18,8 @@ function Aktualizacja_1()
 }
 function Aktualizacja_2()
 {
-    document.getElementById("Money").value = Money;
-    document.getElementById("Income").value = Income;
+    document.getElementById("Money").value = Money +" $";
+    document.getElementById("Income").value = Income + " $";
     document.getElementById("Upgrade_1-Ilosc").innerHTML = Upgrade_1_Ilosc - 1;
     document.getElementById("Upgrade_2-Ilosc").innerHTML = Upgrade_2_Ilosc - 1;
     document.getElementById("Upgrade_3-Ilosc").innerHTML = Upgrade_3_Ilosc - 1;
@@ -38,7 +38,21 @@ function Aktualizacja_2()
 }
 function Animacja()
 {
-    document.getElementById("Button_Clicker").animate
+    document.getElementById("Clicker").animate
+    (
+        [
+            {transform: "rotateY(360deg)"},
+            {transform: "rotateY(0deg)"},
+        ],
+        {
+            duration: 250,
+            iterations: 1
+        }
+    );
+}
+function Animacja_Auto()
+{
+    document.getElementById("Auto_Clicker").animate
     (
         [
             {transform: "rotateY(360deg)"},
@@ -62,7 +76,7 @@ function Progress()
         {
             document.getElementsByTagName("progress")[0].setAttribute("max", 1000);
             document.getElementsByTagName("progress")[0].setAttribute("value", Money);
-            document.getElementById("wip").innerHTML = "1";
+            document.getElementById("Stage").innerHTML = "Stage 1:\n   "+Money+" / "+ 1000;
             if (Money >= 1000)
             {
                 Progres_Stage = 1;
@@ -74,12 +88,10 @@ function Progress()
             document.getElementsByTagName("progress")[0].removeAttribute("max");
             document.getElementsByTagName("progress")[0].setAttribute("max", 5000);
             document.getElementsByTagName("progress")[0].setAttribute("value", Money);
-            document.getElementById("wip").innerHTML = "2";
+            document.getElementById("Stage").innerHTML = "Stage 2:\n   "+Money+" / "+ 5000;
             break;
         }
     }
-    //document.getElementsByTagName("progress")[0].setAttribute("max", 1000);
-    //document.getElementsByTagName("progress")[0].setAttribute("value", Money);
 }
 function Biedak()
 {
@@ -94,7 +106,9 @@ function AutoClick()
 {
     var Timer = setTimeout(function()
         {
-            document.getElementById("Button_Clicker").click();
+            document.getElementById("Auto_Clicker").click();
+            var Guzik_Auto = "Auto_Clicker";
+            Animacja_Auto();
             AutoClick();
         }, AutoClick_Delay);
 }

@@ -12,21 +12,22 @@
     <body onload="Aktualizacja_1(); Progress()">
         <section id="Main">
             <section id="Top">
-                <!--<h1>Clicker.html</h1>
-                <p id="Komunikat"></p>-->
                 <textarea id="TextArea" readonly></textarea>
             </section>
             <section id="Content">
+                <h1 id="Title">Clicker.html</h1>
+                <hr>
                 <label for="Money">Money: </label>
-                <input type="number" id="Money" placeholder="Ładowanie..."> <br>
+                <input type="text" id="Money" placeholder="Ładowanie..."> <br>
                 <label for="Income">Income: </label>
-                <input type="number" id="Income" placeholder="Ładowanie..."> <br>
+                <input type="text" id="Income" placeholder="Ładowanie..."> <br>
                 <label for="AutoClickRate">Auto Clicks/s: </label>
-                <input type="number" id="AutoClickRate" placeholder="Ładowanie...">
+                <input type="text" id="AutoClickRate" placeholder="Ładowanie...">
                 <hr>
                 <progress>Uda Ci się zebrać tyle $$$ ?</progress>
-                <p id="wip">wip</p>
-                <button id="Button_Clicker" onclick="Clicker(); Animacja()">Klikej</button>
+                <p id="Stage" style="white-space: pre;">Ładowanie...</p>
+                <button class="Button_Clicker" id="Clicker" onclick="Clicker(); Animacja()">Klikej</button>
+                <button class="Button_Clicker" id="Auto_Clicker">Nie Klikej</button>
                 <hr>
                 <table border="1">
                     <tr>
