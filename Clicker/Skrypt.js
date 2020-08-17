@@ -1,9 +1,8 @@
 var Money = 0;
-var Income = 1;
+var Income = 1000;
 var Progres_Stage = 0;
 var AutoClick_Delay = 6000;
 var BiedaIlosc = 0;
-//var Roll_Click = 100;
 var Crit_Click = 0;
 var Multi_Click = 2;
 var Upgrade_1_Ilosc = 1;
@@ -16,6 +15,16 @@ var AC_Kupione_2 = false;
 var AC_Kupione_3 = false;
 var AC_Kupione_4 = false;
 var AC_Kupione_5 = false;
+var CritMulti_1_Kupione = false;
+var CritMulti_2_Kupione = false;
+var CritMulti_3_Kupione = false;
+var CritMulti_4_Kupione = false;
+var CritMulti_5_Kupione = false;
+var CritMulti_6_Kupione = false;
+var CritMulti_7_Kupione = false;
+var CritMulti_8_Kupione = false;
+var CritMulti_9_Kupione = false;
+var CritMulti_10_Kupione = false;
 function Aktualizacja_1()
 {
     var Timer = setTimeout(Aktualizacja_2, 125);
@@ -74,7 +83,7 @@ function Animacja_Auto()
 function Clicker()
 {
     //Money = Money + Income;
-    var Roll_Click = Math.floor((Math.random() * 100) + 1); //? 1 - 10
+    var Roll_Click = Math.floor((Math.random() * 100) + 1); //? 1 - 100
     if (Roll_Click <= Crit_Click)
     {
         Money = Money + (Income*Multi_Click);
@@ -415,6 +424,29 @@ function AutoClicker_5()
             var Timer = setTimeout(function()
                 {
                     document.getElementById("AutoClicker_5-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function CritMulti_1()
+{
+    if (CritMulti_1_Kupione == false)
+    {
+        if (Money >= 1000)
+        {
+            Money = Money - 1000;
+            document.getElementById("CritChance_1-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("CritChance_1-Kupione").innerHTML = "Już to kupiłeś";
+            CritMulti_1_Kupione = true;
+            Crit_Click = Crit_Click + 10;
+        }
+        else
+        {
+            document.getElementById("CritChance_1-Cena").style.backgroundColor = "tomato";
+            Biedak("CritChance_1-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("CritChance_1-Cena").style.backgroundColor = "initial";
                 }, 2500);
         }
     }
