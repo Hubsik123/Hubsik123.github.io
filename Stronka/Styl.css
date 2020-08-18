@@ -142,6 +142,10 @@ html::selection, body::selection {
     font-size: 1vw;
     border: none;
     background-color: #E3E7CB;
+    color: black;
+}
+::placeholder {
+    color: grey;
 }
 /* Content */
 #Content {
@@ -667,7 +671,7 @@ html::selection, body::selection {
     #Spam {
         display: none;
     }
-    @keyframes Nazwa {
+    /*@keyframes Nazwa {
         30% {
             transform: translate(10px, 0) scale(0.7);
             color: black;
@@ -682,7 +686,7 @@ html::selection, body::selection {
             transform: translate(0) scale(1.5);
             color: gold;
         }
-    }
+    }*/
 }
 /* Na jeszcze mniejsze ekrany */
 @media (max-width: 600px) and (orientation: portrait)
