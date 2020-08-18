@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 79";
+    var Wersja = "v 80";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()

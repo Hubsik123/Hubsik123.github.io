@@ -702,10 +702,10 @@ html::selection, body::selection {
         display: inline-block !important;
     }
     #Footer button {
-        font-size: 2.5vw;
+        font-size: 1.5vw;
     }
     #Footer p {
-        font-size: 3vw;
+        font-size: 1.5vw;
     }
 }
 @keyframes Nazwa {
