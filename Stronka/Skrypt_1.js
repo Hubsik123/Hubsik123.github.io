@@ -3,12 +3,12 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 82";
+    var Wersja = "v 83";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
 {
-    alert("Jeśli podoba ci się ta strona, przydały ci sie te notatki, kod tej strony to daj znać znajomym, im też może się przydać.\nJesli zobaczysz jakieś błędy to proszę daj o tym znać. Mój adres e-mail:\nhubsik321@gmail.com")
+    alert("Jeśli podoba ci się ta strona, przydały ci sie te notatki, kod tej strony to daj znać znajomym, im też może się przydać.\nJesli zobaczysz jakieś błędy to proszę daj o tym znać (screeny, model telefonu, przeglądarka będą bardzo pomocne). Mój adres e-mail:\nhubsik321@gmail.com")
 }
 function Powiekszenie_Obrazka(imgs)
 {
@@ -439,7 +439,7 @@ function Message()
         }
         case 5:
         {
-            document.getElementById("Message").innerHTML = "ZOBACZ JAK JEDNYM ZDANIEM OBRAŻA KSIĄŻKOHOLIKÓW: Nigdy nie rozumiałem ludzi, którzy zawsze mówili że książki są delikatnie mówiąc lepsze niż gry komputerowe, wręcz najwyższą (patrz jedyną) formą intelektualnej rozrywki. Na podtrzymanie (patrz wpajanie) tej teori przytaczane były argumenty że książki poszerzają horyzonty, uczą w sumie wszystkiego co się tylko da... Ale niestety często te oczytane i obeznane w świecie (antycznym) osoby nie tolerowały jakiejkolwiek formy gry komputerowej... Twierdząć że to strata czasu i prowadzenie do tego że mózgi nam zgniją... Ale moim zdaniem - uważam takie osoby są po prosty nie toleranycjne, zachowują się podobnie do rasistów (i moim zdaniem powinni być do nich przyrównywami). Ale jakimś cudem mój mózg ma się w miarę dobrze i to jakoś Ty własnie korzystasz z tej skoromnej stronki i wszystkich plików które są tutaj dostępne.";
+            document.getElementById("Message").innerHTML = "ZOBACZ JAK JEDNYM ZDANIEM OBRAŻA KSIĄŻKOHOLIKÓW: Nigdy nie rozumiałem ludzi, którzy zawsze mówili że książki są delikatnie mówiąc lepsze niż gry komputerowe, wręcz najwyższą (patrz jedyną) formą intelektualnej rozrywki. Na podtrzymanie (patrz wpajanie) tej teori przytaczane były argumenty że książki poszerzają horyzonty, uczą w sumie wszystkiego co się tylko da... Ale niestety często te oczytane i obeznane w świecie (antycznym) osoby nie tolerowały jakiejkolwiek formy gry komputerowej... Twierdząć że to strata czasu i prowadzenie do tego że mózgi nam zgniją... Ale moim zdaniem - uważam takie osoby są po prosty nie toleranycjne, zachowują się na przykład podobnie do rasistów (i moim zdaniem powinni być do nich przyrównywami). Ale jakimś cudem mój mózg ma się w miarę dobrze i to jakoś Ty własnie korzystasz z tej skoromnej stronki i wszystkich plików które są tutaj dostępne. Które zostały zrobione w 200% pod wpływem korzystania z tych całych gier komputerowych. PS: Jak już To 'Diablo' to gra o egzorcyście. Jeśli do Ciebie był skierowany ten krótki tekst - to nie pozdrawiam!";
             break;
         }
         case 6:
