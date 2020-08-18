@@ -1,5 +1,5 @@
 var Money = 0;
-var Income = 1000;
+var Income = 1;
 var Progres_Stage = 0;
 var AutoClick_Delay = 6000;
 var BiedaIlosc = 0;
