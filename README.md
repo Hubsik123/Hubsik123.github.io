@@ -1,7 +1,8 @@
 <h1>Projekt strony z notatkami ze szkoły na kierunku Technik-Informatyk.</h1>
 
-:grinning:Ta strona ma zastąpić moją starą stronę (https://sites.google.com/view/hubsik). Nowa strona jest praktycznie* w pełni pisana ręcznie. Jest (w miarę) responsywna (proszę tylko nie dawać na PC zoom 500% bo włącza się wtedy widok mobilny), działa na telefonach, ma też tryb ciemny.:smiley_cat:<br>
-Jedyne co nie było pisane w pełni samodzielne można zlaleść tutaj:
+:grinning:Ta strona ma zastąpić moją starą stronę (https://sites.google.com/view/hubsik). Nowa strona jest praktycznie* w pełni pisana ręcznie. Jest (w miarę) responsywna, działa na telefonach w orientacji pionowej i poziomej, ma też tryb ciemny.:smiley_cat:<br> <br>
+Jedyne co nie było pisane w pełni samodzielne można znaleźć tutaj:
+
 * https://www.w3schools.com/howto/howto_js_dropdown.asp - Rozwijane menu
 * https://www.w3schools.com/howto/howto_js_mobile_navbar.asp - Rozwijane menu
 * https://www.w3schools.com/css/css_dropdowns.asp - Rozwijane menu
@@ -12,10 +13,12 @@ Jedyne co nie było pisane w pełni samodzielne można zlaleść tutaj:
 * https://youtu.be/nZsEYi3Uxro - Animacja
 * https://www.w3schools.com/howto/howto_js_callout.asp - Spam
 
-Żeby nie było, z Internetu "skopiowałem" tylko pierdoły które pozwoliłyby na lepszy wygląd strony i jej większą funkcjonalnosć. <br>
-:thinking:A i tak 99% kodu trzeba było bardzo mocno pozmieniać żęby w ogóle się na coś przydał, działał poprawnie, i poprawić tak żeby działało na pc i na tel :innocent: i nie generował nowych dziwnych błędów:hankey:. Gdyby tylko dało się skopiować JAKIŚ kod z Internetu i go wkleić bez żadnej edycji, który i tak by działał to świat był by piękny... <br>
+Żeby nie było, z Internetu "skopiowałem" tylko pierdoły które pozwoliłyby na lepszy wygląd strony, jej większą funkcjonalnosć lub poprawki pewnych błedów (które w 99% powodowały te dwie pierwsze rzeczy...). <br>
+:thinking:A i tak 99% kodu trzeba było bardzo mocno pozmieniać (jeśli nie napisać od nowa) żęby w ogóle się na coś przydał, działał poprawnie, i poprawić tak żeby działało na pc i na telefonie :innocent: i nie generował nowych dziwnych błędów. :hankey: <br>
+Gdyby tylko dało się skopiować JAKIŚ kod z Internetu i go wkleić bez żadnej edycji, który i tak by działał to świat był by piękny... <br>
 
-Jeszcze kilka przydatnych linków:
+Kilka przydatnych linków:
+
 * https://www.w3schools.com - Praktycznie wszystko stąd jest bardzo przydatne i dobrze wyjaśnione z dobrymi przykładami (które można modyfikować online) i ćwiczeniami (nie tylko .html, .css i .js)
 * https://www.w3schools.com/colors/colors_picker.asp - Narzędzie do wybierania kolorów i odcieni
 * https://www.w3schools.com/colors/colors_gradient.asp - Narzędzie do robienia gradientów
@@ -24,12 +27,13 @@ Jeszcze kilka przydatnych linków:
 * https://material.io/resources/icons/?style=baseline - Ikony
 * https://developers.google.com/fonts - Czcionki
 
-Hostowanie stron na GitHubie jest bardzo wygodne i łatwe ale ma dwie główne wady:
+Hostowanie stron na GitHubie jest bardzo wygodne i łatwe ale ma dwie wady (ale za cenę 0$ to nie ma co specjalnie narzekać):
 
-* Zakaz .PHP, czyli brak "include", co bardzo by ułatwiło wszystko, pomogło by zapobiegać błędom typu coś jest niezaktualizowane na którejś stronie itp. Jeśli wiesz jak zrobić coś takiego w .html czy .js to prosze daj mi znać
+* Zakaz .php, czyli brak "include", co bardzo by ułatwiło wszystko, pomogło by zapobiegać błędom typu coś jest niezaktualizowane na którejś stronie itp. Jeśli wiesz jak zrobić coś takiego w .html czy .js to prosze daj mi znać
 * 1 GB rozmiaru wszystkicj plików
 
 Jeśli zobaczysz gdzieś błędy, w kodzie albo ortografii to daj proszę znać.:wink: <br>
 <b>By Hubsik 2020</b> :godmode: <br>
-Jeżeli przeczytałeś to wszystko to pozdrawiam. A jeśli wiesz z jakiej gry jest ta ikona powyżej to (na PC) wpisz kod który powodóje tę piękną ikonkę. <br>
-:100:% Frekwencja Master Race
+Jeżeli przeczytałeś to wszystko to pozdrawiam. A jeśli wiesz z jakiej gry jest ta ikona powyżej to wpisz kod który powodóje tę piękną ikonkę w wyszikarkę na mojej stronie. <br>
+:100:% Frekwencja Master Race <br>
+<b>PS: </b>Proszę zignorować wszystkie "warnings". Nic to nie oznacza. Nie wierzysz? Odpal D O W O L N Ą inną stronę i się przekonaj.
