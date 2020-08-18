@@ -242,14 +242,15 @@ html::selection, body::selection {
     display: inline-block;
     height: auto;
     /*width: calc(33.33% - 0.4vw); Niby działa ale nie do końca :(*/
-    width: calc(33.33% - 0.5vw);
+    /*width: calc(33.33% - 0.5vw); -||- */
+    width: calc(33.33% - 1vw);
     color: white;
     background-color: #737373;
     font-size: 1.25vw;
     text-align: center;
     margin-top: 0.25vw;
     margin-bottom: 0.25vw;
-    margin-left: 0.1vw;
+    margin-left: 0.1vw; /* To robi problemy z tym że na tel/zoom nie zgadza się ilość linków na szerokość storny??? */
     margin-right: 0.1vw;
     padding: 0;
     border: 0.1vw ridge black;
@@ -265,7 +266,9 @@ html::selection, body::selection {
 }
 #Content p {
     font-size: 1.25vw;
-    padding: 0.25vw;
+    margin: 0.5vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
 }
 /* Footer */
 #Footer {
@@ -444,7 +447,7 @@ html::selection, body::selection {
     max-height: 500px;
 }
 #SpamBanner {
-    padding: 25px 15px;
+    padding: 1vw;
     background-color: black;
     font-size: 3vw;
     color: gold;
