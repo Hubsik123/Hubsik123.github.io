@@ -1,6 +1,6 @@
 <h1>Projekt strony z notatkami ze szkoły na kierunku Technik-Informatyk.</h1>
 
-:grinning:Ta strona ma zastąpić moją starą stronę (https://sites.google.com/view/hubsik). Nowa strona jest praktycznie* w pełni pisana ręcznie. Jest (w miarę) responsywna, działa na telefonach w orientacji pionowej i poziomej, ma też tryb ciemny.:smiley_cat:<br>
+:grinning:Ta strona ma zastąpić moją starą stronę (https://sites.google.com/view/hubsik). Nowa strona jest praktycznie* w pełni pisana ręcznie. Jest (w miarę) responsywna, działa na telefonach w orientacji pionowej i poziomej, ma też tryb ciemny.:smiley_cat:<br> <br>
 Jedyne co nie było pisane w pełni samodzielne można znaleźć tutaj:
 
 * https://www.w3schools.com/howto/howto_js_dropdown.asp - Rozwijane menu
