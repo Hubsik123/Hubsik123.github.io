@@ -468,7 +468,7 @@ html::selection, body::selection {
     cursor: url(Obrazki/Dzbanek.png), auto;
 }
 /* Media, widok na telefonach itp */
-@media (max-width: 992px) /*Jeżeli rozmiar okna jest mniejszy niż 992px*/
+@media (max-width: 992px) and (orientation: portrait) /*Jeżeli rozmiar okna jest mniejszy niż 992px*/
 {
     /* Baner */
     #Banner {
@@ -531,7 +531,7 @@ html::selection, body::selection {
     .Grafika {
         height: 25%;
         width: 25%;
-      }  
+    }  
         /* Układ obrazków */
     .Grafika img {
         opacity: 0.5;
@@ -664,7 +664,7 @@ html::selection, body::selection {
     }
 }
 /* Na jeszcze mniejsze ekrany */
-@media (max-width: 600px)
+@media (max-width: 600px) and (orientation: portrait)
 {
     #Content .Link_2 {
         margin-left: 5% !important;
