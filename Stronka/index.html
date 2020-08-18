@@ -15,7 +15,7 @@
         <meta name="author" content="Hubert Michna">
     </head>
     <!-- <body oncontextmenu="return false">, mam nadzieje że nie będę musiał tego używać, nawet jeśli to nie wiele da...-->
-    <body onresize="ZoomFix(); No_Spam()" onload="Kalendarz(); Message()">
+    <body onresize="ZoomFix(); No_Spam()" onload="Kalendarz(); Message(); BanSpam()">
         <section id="Main"> <!-- Główny kontener -->
             <section id="Banner"> <!-- Banner -->
                 <h1 id="Meta"><span class="material-icons IkonaMenuMobile" style="display: inline-block !important; text-shadow: initial; float: left !important;" onclick="Feedback(); DarkAndLight_2()">thumbs_up_down</span>Frekwencja Master Race<span class="material-icons IkonaMenuMobile" onclick="MenuMobile()">menus</span></h1> <!-- Zignoruj ten błąd, bez tego nie działa -->
@@ -110,9 +110,9 @@
             </section>
             <section id="Content"> <!-- Kontener z zawartością strony -->
             <!-- Komunikat -->
-                <h1>Bierzcie I Uczcie Się Z Tego Wszyscy</h1>
+                <h1 id="SuperHeader" onclick="SuperH1()">Bierzcie I Uczcie Się Z Tego Wszyscy</h1>
             <!-- Message -->
-            <p style="margin-top: 0; margin-bottom: 0; padding: 0.25vw;" id="Message">Tekst</p>
+            <p style="margin-top: 0; margin-bottom: 0; padding: 0.5vw;" id="Message">Ładowanie...</p>
             <!-- Normalna zawartość -->
                 <h2>Weź to przeczytaj</h2>
                 <p class="Tekst_1">Na tej stronie znajdziesz trochę notatek, które mogą ci się przydać na kierunku "<strong>Technik-Informatyk</strong>". Możecie wszyscy korzystać z tych notatek, i tego całego kodu, ale <i><strong>ładnie proszę</strong></i>: - nie pobierajcie i mówcie że to wasza zajebiście ciężka praca.</p>
@@ -217,11 +217,12 @@
                 </div>
                 <p onclick="SayMyName()">By: <span id="Landscape">Hubsik</span></p>
             </section>
-            <section id="Spam" onclick="Anty_Spam()">
+            <section id="Spam" onclick="NoMoreSpam(); this.style.display='none';" >
+                <!--<div id="SpamBanner">Uwaga:</div>
+                <span id="SpamGuzik" onclick="this.parentElement.style.display='none';">&times;</span>-->
                 <div id="SpamBanner">Uwaga:</div>
-                <span id="SpamGuzik" onclick="this.parentElement.style.display='none';">&times;</span>
                 <div id="SpamContent">
-                    <p>Ale tak na poważnie na moment...<br>Jeśli ta stronka ci się przydała i podoba Ci się to powiedz proszę o tym swoim znajomym.</p>
+                    <p>Ale tak na poważnie na moment...<br>Jeśli ta stronka ci się przydała i podoba Ci się to powiedz proszę o tym swoim znajomym.<br>Jeśli zamkniesz to okno 5 razy to nie będzie się więcej pojawiać.</p>
                 </div>
             </section>
         </section>

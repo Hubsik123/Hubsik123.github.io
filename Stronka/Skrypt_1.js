@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 83";
+    var Wersja = "v 84";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -287,7 +287,42 @@ function No_Spam()
         document.getElementById("Spam").style.display = "none";
     }
 }
-// !Bardzo ważne skrypty, to akurat jest w pełni pisane samodzielnie (...nikt by na internety takich pierdół nie dawał), z wiadomych wzgledów nie będzie tu żadnych komentarzy...
+// !Bardzo ważne skrypty, to akurat jest w pełni pisane samodzielnie (...nikt by na internety takich pierdół nie dawał), z wiadomych wzgledów nie będzie tu żadnych komentarzy z objaśnieniami...
+    //? Blokada Spamu jak się go zamknię ___ razy
+function BanSpam()
+{
+    //localStorage.setItem("BanMeter", 0);
+    if(typeof(Storage) !== "undefined")
+    {
+        if (localStorage.BanMeter  >= 5)
+        {
+            document.getElementById("Spam").style.display = "none";
+            //alert("1\n"+Number(localStorage.BanMeter));
+        }
+        else
+        {
+            //alert("2\n"+Number(localStorage.BanMeter));
+        }
+    }
+    /*else
+    {
+        alert("Coś się zepsuło...");
+    }*/
+}
+    //? Do Blokady Spamu jak się go zamknię ___ razy
+function NoMoreSpam()
+{
+    if (localStorage.getItem("BanMeter") === null)
+    {
+        localStorage.setItem("BanMeter", 0);
+    }
+    else
+    {
+        //localStorage.BanMeter++;
+        localStorage.BanMeter = Number(localStorage.BanMeter) + 1;
+        //alert("4\n"+localStorage.BanMeter);
+    }
+}
     // Sktypt 1
 var Licznik_1 = 0;
 var Troll_1 = false;
@@ -337,14 +372,15 @@ function Background()
 }
 var Licznik_3 = 0;
 var Troll_3 = false;
-function Anty_Spam()
+function SuperH1()
 {
     Licznik_3++;
-    if (Licznik_3 >= 7 && Troll_3 == false)
+    if (Licznik_3 >= 10 && Troll_3 == false)
     {
-        document.getElementById("SpamBanner").innerHTML = "To co teraz zrobisz?";
-        document.getElementById("SpamContent").innerHTML = "Nie wiesz jak normlanie to zamknąć? W takim razie... męcz się z tym teraz...";
-        document.getElementById("SpamGuzik").style.display = "none";
+        document.getElementById("SuperHeader").innerHTML = "W matkę też tak klikasz?!";
+        document.getElementById("SuperHeader").style.color = "white";
+        document.getElementById("SuperHeader").style.backgroundColor = "red";
+        document.getElementById("SuperHeader").style.textShadow = "none";
         Troll_3 = true;
         Smutny_Dzbanek();
         Final();
@@ -469,7 +505,7 @@ function Message()
         }
         default:
         {
-            alert("Nope");
+            alert("Error...");
         }
     }
 }
@@ -501,7 +537,7 @@ function DarkAndLight_2()
         DarkAndLight_1();
     }
 }
-    //! TODO: Zostawiam to na pamiątke tego że przeglądarka zablokowała "wyskakujące okienka" a taki fajny pomysł miałem :(
+    //! Zostawiam to na pamiątke tego że przeglądarka zablokowała "wyskakujące okienka" a taki fajny pomysł miałem :(
 /*
 var Licznik_5 = 0;
 function Ads_1()
@@ -562,9 +598,7 @@ function SayMyName()
                     )
                 }
                 Link2_Fix = true;
-                alert("wip");
             }
         }
     }
-    
 }
