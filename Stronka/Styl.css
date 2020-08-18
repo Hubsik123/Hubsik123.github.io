@@ -664,6 +664,22 @@ html::selection, body::selection {
     #Spam {
         display: none;
     }
+    @keyframes Nazwa {
+        30% {
+            transform: translate(10px, 0) scale(0.7);
+            color: black;
+        }
+        40% {
+            color: white;
+        }
+        90% {
+            transform: translate(0) scale(1.5);
+        }
+        100% {
+            transform: translate(0) scale(1.5);
+            color: gold;
+        }
+    }
 }
 /* Na jeszcze mniejsze ekrany */
 @media (max-width: 600px) and (orientation: portrait)
@@ -672,6 +688,12 @@ html::selection, body::selection {
         margin-left: 5% !important;
         margin-right: 5% !important;
         width: 90%;
+    }
+}
+@media (max-width: 992px) and (orientation: landscape)
+{
+    .Animacja_2 {
+        display: none !important;
     }
 }
 @keyframes Nazwa {
