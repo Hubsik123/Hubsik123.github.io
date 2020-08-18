@@ -500,7 +500,6 @@ html::selection, body::selection {
         margin-top: 0.2vw;
         margin-bottom: 0.2vw;
         border-left: 2.5vw #a0b517 solid;
-        margin-bottom: 5vw;
     }
     #Content h2 {
         font-size: 4vw;
