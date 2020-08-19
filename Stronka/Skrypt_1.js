@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 85";
+    var Wersja = "v 86";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -167,7 +167,7 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
         case "rick roll":
             document.getElementById("Komunikat").innerHTML = "Never Gonna Give You Up.";
             var Secret = document.createElement("a");
-            Secret.href = "https://youtu.be/dQw4w9WgXcQ?t=42";
+            Secret.href = "https://youtu.be/dQw4w9WgXcQ?t=43";
             Secret.click();
             break;
         case "Diablo 1":
@@ -470,7 +470,8 @@ function Message()
         }
         case 4:
         {
-            document.getElementById("Message").innerHTML = "#Frekwencja_Master_Race #Gaming #Gaming>=Books #Path_Of_Exile #Windows>=Linux>>>MAC #Hack'n'slash #Poe>Diablo_1>Diablo_2>Diablo_3";
+            //document.getElementById("Message").innerHTML = "#Frekwencja_Master_Race #Gaming #Gaming>=Books #Path_Of_Exile #Windows>=Linux>>>MAC #Hack'n'slash #Poe>Diablo_1>Diablo_2>Diablo_3";
+            document.getElementById("Message").innerHTML = "01101000 01110100 01110100 01110000 01110011 00111010 00101111 00101111 01111001 01101111 01110101 01110100 01110101 00101110 01100010 01100101 00101111 01100100 01010001 01110111 00110100 01110111 00111001 01010111 01100111 01011000 01100011 01010001 00111111 01110100 00111101 00110100 00110011";
             break;
         }
         case 5:
