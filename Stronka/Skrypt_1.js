@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 91";
+    var Wersja = "v 92";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -275,7 +275,8 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
             Przycisk.innerText = 'Light Mode';
             Pasek.setAttribute("content", "black");
         }
-        localStorage.setItem('CSS',Styl.href)  // Ciemny -> Jasny
+        localStorage.setItem('CSS',Styl.href);
+        localStorage.setItem('Pasek',Pasek.content);
     })
 })
 /*
