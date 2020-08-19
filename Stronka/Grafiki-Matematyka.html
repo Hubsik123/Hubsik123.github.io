@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
     <head>
-        <title>Hubsik</title> <!-- Jeśli to czytasz to pozdrawiam, ale serio nie kopiuj tego .html, .css i .js, najwyżej na własny użytek w celach edukacyjnych ;) (PATRZ: NIE po to żeby oddać jako swoje zadanie domowe, dodatkowe na 6 czy coś) bo dużo roboty na to poszło, jak to skopiujesz to będzie mi smutno :( więc proszę nie rób tego -->
+        <title>Hubsik</title> <!-- Jeśli to czytasz to pozdrawiam, ale serio nie kopiuj za bardzo tego .html, .css i .js, najwyżej na własny użytek w celach edukacyjnych ;) (PATRZ: NIE po to żeby oddać jako swoje zadanie domowe, dodatkowe na 6 czy coś) bo dużo roboty na to poszło, jak to skopiujesz to będzie mi smutno :( więc proszę nie rób tego -->
         <link rel="stylesheet" type="text/css" href="Styl.css" id="CSS">
         <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> <!-- Darmowe czczionki z Google -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Darmowe ikony z Google -->
@@ -14,58 +14,57 @@
         <meta name="description" content="Na tej stronie znajdziesz trochę notatek, które mogą ci się przydać na kierunku Technik-Informatyk.">
         <meta name="author" content="Hubert Michna">
     </head>
-    <body onresize="ZoomFix(); No_Spam()" onload="Kalendarz(); Message()">
-        <section id="Main">
-            <section id="Banner">
-                <h1 id="Meta"><span class="material-icons IkonaMenuMobile" style="display: inline-block !important; text-shadow: initial; float: left !important;" onclick="Feedback()">thumbs_up_down</span>Frekwencja Master Race<span class="material-icons IkonaMenuMobile" onclick="MenuMobile()">menus</span></h1> <!-- Zignoruj ten błąd, bez tego nie działa -->
+    <body onresize="ZoomFix(); No_Spam()" onload="Kalendarz(); Message(); BanSpam()">
+        <section id="Main"> <!-- Główny kontener -->
+            <section id="Banner"> <!-- Banner -->
+                <h1 id="Meta"><span class="material-icons IkonaMenuMobile" style="display: inline-block !important; text-shadow: initial; float: left !important;" onclick="Feedback(); DarkAndLight_2()">thumbs_up_down</span>Frekwencja Master Race<span class="material-icons IkonaMenuMobile" onclick="MenuMobile()">menus</span></h1> <!-- Zignoruj ten błąd, bez tego nie działa -->
             </section>
-            <div id="LinkiMobile">
+            <section id="LinkiMobile"> <!-- Menu które wyświetla się małych ekranach (-992px)-->
                 <h1 onclick="Rotate()">Menu</h1>
                 <hr>
-                <ul id="Lista">
+                <ul>
                     <li><h2><span class="material-icons" style="float: initial;">web</span>Notatki</h2>
                         <ol>
                             <li><a href="index.html" onclick="MobileContent()">Strona Główna</a></li>
                         </ol> </li>
                     <li><h2><span class="material-icons" style="float: initial;">description</span>Klasa 3</h2>
                         <ol>
-                            <li><a href="index.html#Informatyka_kl3">Informatyka</a></li>
-                            <li><a href="index.html#Jezyk_Polski_kl3">Język Polski</a></li>
-                            <li><a href="index.html#Matematyka_kl3">Matematyka</a></li>
-                            <li><a href="index.html#Pracownia_Baz_Danych_kl3">Pracownia Baz Danych</a></li>
-                            <li><a href="index.html#Pracownia_Sieciowych_Systemow_Operacyjnych_kl3">Pracownia Sieciowych Systemów Operacyjnych</a></li>
-                            <li><a href="index.html#Sieci_kl3">Sieci</a></li>
-                            <li><a href="index.html#Strony_Internetowe_kl3">Strony Internetowe</a></li>
-                            <li><a href="index.html#Systemy_Baz_Danych_kl3">Systemy Baz Danych</a></li>
+                            <li><a href="#Informatyka_kl3" onclick="MobileContent()">Informatyka</a></li>
+                            <li><a href="#Jezyk_Polski_kl3" onclick="MobileContent()">Język Polski</a></li>
+                            <li><a href="#Matematyka_kl3" onclick="MobileContent()">Matematyka</a></li>
+                            <li><a href="#Pracownia_Baz_Danych_kl3" onclick="MobileContent()">Pracownia Baz Danych</a></li>
+                            <li><a href="#Pracownia_Sieciowych_Systemow_Operacyjnych_kl3" onclick="MobileContent()">Pracownia Sieciowych Systemów Operacyjnych</a></li>
+                            <li><a href="#Sieci_kl3" onclick="MobileContent()">Sieci</a></li>
+                            <li><a href="#Strony_Internetowe_kl3" onclick="MobileContent()">Strony Internetowe</a></li>
+                            <li><a href="#Systemy_Baz_Danych_kl3" onclick="MobileContent()">Systemy Baz Danych</a></li>
                         </ol> </li>
                     <li><h2><span class="material-icons" style="float: initial;">description</span>Klasa 2</h2>
                         <ol>
-                            <li><a href="index.html#Jezyk_Polski_kl2">Język Polski</a></li>
-                            <li><a href="index.html#Matematyka_kl2">Matematyka</a></li>
-                            <li><a href="index.html#Podstawy_Przedsiebiorczosci_kl2">Podstawy Przedsiębiorczości</a></li>
-                            <li><a href="index.html#Pracownia_Sieci_Komputerowych_kl2">Pracownia Sieci Komputerowych</a></li>
-                            <li><a href="index.html#Pracownia_Sieciowych_Systemow_Operacyjnych_kl2">Pracownia Sieciowych Systemów Operacyjnych</a></li>
-                            <li><a href="index.html#Sieci_kl2">Sieci</a></li>
-                            <li><a href="index.html#Strony_Internetowe_kl2">Strony Internetowe</a></li>
-                            <li><a href="index.html#Systemy_kl2">Systemy</a></li>
-                            <li><a href="index.html#Systemy_Baz_Danych_kl2">Systemy Baz Danych</a></li>
-                            <li><a href="index.html#Urzadzenia_Techniki_Komputerowej_kl2">Urządzenia Techniki Komputerowej</a></li>
-                        </ol></li>
+                            <li><a href="#Jezyk_Polski_kl2" onclick="MobileContent()">Język Polski</a></li>
+                            <li><a href="#Matematyka_kl2" onclick="MobileContent()">Matematyka</a></li>
+                            <li><a href="#Podstawy_Przedsiebiorczosci_kl2" onclick="MobileContent()">Podstawy Przedsiębiorczości</a></li>
+                            <li><a href="#Pracownia_Sieci_Komputerowych_kl2" onclick="MobileContent()">Pracownia Sieci Komputerowych</a></li>
+                            <li><a href="#Pracownia_Sieciowych_Systemow_Operacyjnych_kl2" onclick="MobileContent()">Pracownia Sieciowych Systemów Operacyjnych</a></li>
+                            <li><a href="#Sieci_kl2" onclick="MobileContent()">Sieci</a></li>
+                            <li><a href="#Strony_Internetowe_kl2" onclick="MobileContent()">Strony Internetowe</a></li>
+                            <li><a href="#Systemy_kl2" onclick="MobileContent()">Systemy</a></li>
+                            <li><a href="#Systemy_Baz_Danych_kl2" onclick="MobileContent()">Systemy Baz Danych</a></li>
+                            <li><a href="#Urzadzenia_Techniki_Komputerowej_kl2" onclick="MobileContent()">Urządzenia Techniki Komputerowej</a></li>
+                        </ol> </li>
                     <li><h2><span class="material-icons" style="float: initial;">open_in_browser</span>Grafiki</h2>
                         <ol>
-                            <li><a href="Grafiki-Matematyka.html">Matematyka</a></li>
-                            <li><a href="Grafiki-Informatyka.html">Informatyka</a></li>
-                            <li><a href="Grafiki-Systemy.html">Systemy</a></li>
-                            <li><a href="Grafiki-PUTK.html">Pracownia Urządzeń Techniki Komputerowej</a></li>
-                        </ol></li>
+                            <li><a href="Grafiki-Matematyka.html" onclick="MobileContent()">Matematyka</a></li>
+                            <li><a href="Grafiki-Informatyka.html" onclick="MobileContent()">Informatyka</a></li>
+                            <li><a href="Grafiki-Systemy.html" onclick="MobileContent()">Systemy</a></li>
+                            <li><a href="Grafiki-PUTK.html" onclick="MobileContent()">Pracownia Urządzeń Techniki Komputerowej</a></li>
+                        </ol> </li>
                 </ul>
-            </div>
-            <section id="Menu">
-            <!-- Menu -->
+            </section>
+            <section id="Menu"> <!-- Menu, które wyświetla się na dużych ekranach (+992px)-->
                 <h1 onclick="Rotate()">Menu</h1>
                 <input type="text" id="Wyszukiwarka" onkeyup="Wyszukiwarka()" placeholder="Wpisz tu coś" autocomplete="off" title="Pierwsze słowo zacznij z dużej litery" autofocus>
                 <hr>
-                <audio controls id="Muzyka" style="display: none;">
+                <audio controls id="Muzyka" style="display: none;" loop>
                     <source src="Materiały/Kara.mp4" type="audio/mpeg">
                     Coś nie działa, szkoda :(
                 </audio>
@@ -108,16 +107,19 @@
                         </ol>
                 </ul>
             </section>
-            <section id="Content">
+            <section id="Content"> <!-- Kontener z zawartością strony -->
                 <!-- Komunikat -->
                 <h1 id="SuperHeader" onclick="SuperH1()">Bierzcie I Uczcie Się Z Tego Wszyscy</h1>
-                <!-- Message -->
-                <p style="margin-top: 0; margin-bottom: 0; padding: 0.5vw;" id="Message">Ładowanie...</p>
-                <h2>Informacje: </h2>
-                    <p class="Tekst_1">Na tej stronie znajdziesz trochę notatek, które mogą ci się przydać na kierunku "<strong>Technik-Informatyk</strong>". Możecie wszyscy korzystać z tych notatek, i tego całego kodu, ale <i><strong>ładnie proszę</strong></i>: - nie pobierajcie i mówcie że to wasza zajebiście ciężka praca.</p>
-                    <p class="Tekst_1">Wszystkie notatki mogą być nie zaktualizowane o materiał który był niedawno, ponieważ dużo tego wszystkiego było i nie było czasu na dopisywanie wszystkiego. Nazwy plików mogą nie odzwierciedlać <i>dokładnie</i> ich zawartości. Jeśli gdzieś jest np: <span class="WIP">???</span>, <span class="WIP">WIP</span> czy coś podobnego to znaczy że brakuje tam czegoś, niedokończone, możliwe błedy, brak materiałów itp. Jeśli wiesz co tam poprawić to daj proszę o tym znać.</p>
-                    <div class="Akapit"><span class="material-icons" style="transform: scaleX(-1);">announcement</span></div><p><strong><u>WAŻNE</u>: </strong>Jeśli po pobraniu i otworzenie danego pliku, nie widać gdzieś: np. obrazków, równań, tabel. Otwórz dany plik Wordem. Ta strona może nie działać poprawnie jeśli masz wyłaczony javascript i jeśli będziesz się bawić zoom'em.</p>
-                    <div class="Akapit"><span class="material-icons" style="transform: scaleX(-1);">announcement</span></div><p><strong><u>BARDZO WAŻNE</u>: </strong> Strony z grafikami są <i>duże</i> i <i>mogą</i> zużyć dużo transferu, ale dzięki nim możes bez pobierania zobaczyć te wszystkie grafiki. Możesz też pobrać wszystkie grafiki naraz.</p>
+            <!-- Message -->
+            <p style="margin-top: 0; margin-bottom: 0; padding: 0.5vw;" id="Message">Ładowanie...</p>
+            <!-- Normalna zawartość -->
+                <h2>Weź to przeczytaj</h2>
+                <p class="Tekst_1">Na tej stronie znajdziesz trochę notatek, które mogą ci się przydać na kierunku "<strong>Technik-Informatyk</strong>". Możecie wszyscy korzystać z tych notatek, i tego całego kodu, ale <i><strong>ładnie proszę</strong></i>: - nie pobierajcie i mówcie że to wasza zajebiście ciężka praca.</p>
+                <p class="Tekst_1">Wszystkie notatki mogą być nie zaktualizowane o materiał który był niedawno, ponieważ dużo tego wszystkiego było i nie było czasu na dopisywanie wszystkiego. Nazwy plików mogą nie odzwierciedlać <i>dokładnie</i> ich zawartości. Jeśli gdzieś jest np: <span class="WIP">???</span>, <span class="WIP">WIP</span> czy coś podobnego to znaczy że brakuje tam czegoś, niedokończone, możliwe błedy, brak materiałów itp. Jeśli wiesz co tam poprawić to daj proszę o tym znać.</p>
+                <div class="Akapit"><span class="material-icons" style="transform: scaleX(-1);">announcement</span></div><p><strong><u>WAŻNE</u>: </strong>Jeśli po pobraniu i otworzenie danego pliku, nie widać gdzieś: np. obrazków, równań, tabel. Otwórz dany plik Wordem. Ta strona może nie działać poprawnie jeśli masz wyłaczony javascript i jeśli będziesz się bawić zoom'em.</p>
+                <div class="Akapit"><span class="material-icons" style="transform: scaleX(-1);">announcement</span></div><p><strong><u>BARDZO WAŻNE</u>: </strong> Strony z grafikami są <i>duże</i> i <i>mogą</i> zużyć dużo transferu, ale dzięki nim możes bez pobierania zobaczyć te wszystkie grafiki. Możesz też pobrać wszystkie grafiki naraz.</p>
+                <div class="Akapit"><span class="material-icons" style="transform: scaleX(-1);">announcement</span></div><p><strong><u>NAJWAŻNIEJSZE</u>: </strong>Ta strona do poprawnego działania W Y M A G A włączonych .js i powiadomień ze strony.</p>
+            <!-- Notatki -->
                 <h1>Matematyka</h1>
                 <div class="Grafiki">
                     <div class="Grafika Tooltip">
