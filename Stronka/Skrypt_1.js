@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 90";
+    var Wersja = "v 91";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
     const Styl = document.getElementById('CSS');
     const ZapisanyStyl = localStorage.getItem('CSS');
     var Pasek = document.getElementById('Pasek');
-    var ZapisanyPasek = document.localStorage.getItem('Pasek');
+    var ZapisanyPasek = localStorage.getItem('Pasek');
     if(ZapisanyStyl || ZapisanyPasek)
     {
         Styl.href = ZapisanyStyl;
