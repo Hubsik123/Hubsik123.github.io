@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 89";
+    var Wersja = "v 90";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -254,6 +254,36 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
     const Styl = document.getElementById('CSS');
     const ZapisanyStyl = localStorage.getItem('CSS');
     var Pasek = document.getElementById('Pasek');
+    var ZapisanyPasek = document.localStorage.getItem('Pasek');
+    if(ZapisanyStyl || ZapisanyPasek)
+    {
+        Styl.href = ZapisanyStyl;
+        Pasek.content = ZapisanyPasek;
+    }
+    const Przycisk = document.getElementById('DarkMode');
+    Przycisk.addEventListener('click', () =>
+    {
+        if(Styl.href.includes('Styl-Ciemny')) // Jasny -> Ciemny
+        {
+            Styl.href = 'Styl.css';
+            Przycisk.innerText = 'Dark Mode';
+            Pasek.setAttribute("content", "#3cd816");
+        }
+        else // Ciemny -> Jasny
+        {
+            Styl.href = 'Styl-Ciemny.css';
+            Przycisk.innerText = 'Light Mode';
+            Pasek.setAttribute("content", "black");
+        }
+        localStorage.setItem('CSS',Styl.href)  // Ciemny -> Jasny
+    })
+})
+/*
+document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
+{
+    const Styl = document.getElementById('CSS');
+    const ZapisanyStyl = localStorage.getItem('CSS');
+    var Pasek = document.getElementById('Pasek');
     if(ZapisanyStyl)
     {
         Styl.href = ZapisanyStyl;
@@ -275,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
         }
         localStorage.setItem('CSS',Styl.href)  // Ciemny -> Jasny
     })
-})
+})*/
 function No_Spam()
 {
     if (Troll_3 == true)
