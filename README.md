@@ -3,15 +3,15 @@
 :grinning:Ta strona ma zastąpić moją starą stronę (https://sites.google.com/view/hubsik). Nowa strona jest praktycznie* w pełni pisana ręcznie. Jest (w miarę) responsywna, działa na telefonach w orientacji pionowej i poziomej, ma też tryb ciemny.:smiley_cat:<br> <br>
 Jedyne co nie było pisane w pełni samodzielne można znaleźć tutaj:
 
-* https://www.w3schools.com/howto/howto_js_dropdown.asp - Rozwijane menu
+* https://www.w3schools.com/howto/howto_js_dropdown.asp - Rozwijane menu (To całe menu to praktycznie tylko inspiracja)
 * https://www.w3schools.com/howto/howto_js_mobile_navbar.asp - Rozwijane menu
 * https://www.w3schools.com/css/css_dropdowns.asp - Rozwijane menu
-* https://www.w3schools.com/howto/howto_js_filter_lists.asp - Filtrowanie listy
-* https://www.w3schools.com/css/css_tooltip.asp - Tooltip
-* https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp - Galeria obrazków
-* https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf - Tryb ciemny
-* https://youtu.be/nZsEYi3Uxro - Animacja
-* https://www.w3schools.com/howto/howto_js_callout.asp - Spam
+* https://www.w3schools.com/howto/howto_js_filter_lists.asp - Filtrowanie listy (Zrobienie tak że zostają puste h2 jak wyszukiwarka nic nie pokaże, dodałem też jeden mały detalem - czytaj do końca)
+* https://www.w3schools.com/css/css_tooltip.asp - Tooltip - Przerobienie żeby działało przy innej ilości obrazków i żeby tekst nie wychodził poza Content
+* https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp - Galeria obrazków - Przerobienie żeby działało przy innej ilości obrazków
+* https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf - Tryb ciemny - Dodanie opcji żeby na tel (najlepiej Chrome) kolor karty też się zapisywał
+* https://youtu.be/nZsEYi3Uxro - Animacja - Niewielkie przeróbki, i dużo poprawek żeby animacja nie wychodziła poza ekran (np. na tel orientacja pozioma i pionowa)
+* https://www.w3schools.com/howto/howto_js_callout.asp - Spam - Dużo poprawek żeby komuniakt nie wyświetlał się za każdym razem (najwyżej 5) i zakmnięcie Spamu przy zmianie rozmiaru okna
 
 Żeby nie było, z Internetu "skopiowałem" tylko pierdoły które pozwoliłyby na lepszy wygląd strony, jej większą funkcjonalnosć lub poprawki pewnych błedów (które w 99% powodowały te dwie pierwsze rzeczy...). <br>
 :thinking:A i tak 99% kodu trzeba było bardzo mocno pozmieniać (jeśli nie napisać od nowa) żęby w ogóle się na coś przydał, działał poprawnie, i poprawić tak żeby działało na pc i na telefonie :innocent: i nie generował nowych dziwnych błędów. :hankey: <br>
