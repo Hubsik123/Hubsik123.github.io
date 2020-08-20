@@ -37,7 +37,7 @@ html, body {
     resize: none;
     border: none;
     outline: none;
-    font-family: Consolas;
+    font-family: Consolas, Calibri;
 }
 /* Content */
 #Content {
@@ -52,7 +52,7 @@ html, body {
 }
 #Content #Title {
     text-align: center;
-    font-family: Consolas,'Dancing Script', cursive;
+    font-family: 'Dancing Script', cursive;
     font-size: 3.5vw;
     margin-top: 0.15vw;
     margin-bottom: 0;
