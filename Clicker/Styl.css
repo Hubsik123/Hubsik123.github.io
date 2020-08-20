@@ -28,6 +28,7 @@ html, body {
     color: #302008;
     float: left;
     overflow: auto;
+    border-bottom: 2px dotted #ff8000; /* Mam nadzieje że to niczego nie zepsuje...*/
 }
 #Top #TextArea {
     height: 100%;
@@ -63,8 +64,16 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }*/
-#Content input[type=text]::selection
-{
+#Content label {
+    color: black;
+    width: 20%;
+    float: left;
+}
+#Content input[type=text] {
+    width: 80%;
+    outline: none;
+}
+#Content input[type=text]::selection {
     background: #fdb74e;
 }
 .Button_Clicker {
