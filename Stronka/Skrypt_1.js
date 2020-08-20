@@ -3,7 +3,7 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 92";
+    var Wersja = "v 93";
     alert("To jest wersja strony nr:\n"+Wersja)
 }
 function Feedback()
@@ -454,6 +454,11 @@ function Final()
         }
         document.getElementById("Wyszukiwarka").focus();
         Troll_4 = true;
+        document.getElementById("Komunikat").innerHTML = "PoE i tak znacznie lepsze.";
+        var Secret = document.createElement("a");
+        Secret.target = "_blank";
+        Secret.href = "https://www.youtube.com/watch?v=llqWTJGUFeE";
+        Secret.click();
     }
 }
 function Smutny_Dzbanek()
