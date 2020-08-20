@@ -22,7 +22,7 @@ body { /* Scroll Firefox  */
         /* Zaznaczone miejsce */
 *::-webkit-scrollbar-thumb {
     /*background: linear-gradient(to bottom, #093527 15%, #33ff33 75%);*/
-    background: #00e673;
+    background: black;
     border-radius: 1.5vw;
 }
 html::selection, body::selection {
