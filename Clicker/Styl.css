@@ -59,19 +59,26 @@ html, body {
     margin-bottom: 0;
     background: linear-gradient(to right, #fee1b6, #e88c02,#fee1b6);
 }
-/*input[type=number]::-webkit-inner-spin-button,  Usunąć to???
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}*/
+#Content h2 {
+    text-align: left;
+    margin-top: 0.2vw;
+    margin-bottom: 0.2vw;
+}
 #Content label {
     color: black;
     width: 20%;
     float: left;
+    text-align: right;
 }
 #Content input[type=text] {
     width: 80%;
     outline: none;
+    transition: 1s;
+    border: 1px solid #302008;
+}
+#Content input[type=text]:hover {
+    color: #302008;
+    background-color: #fdc168;
 }
 #Content input[type=text]::selection {
     background: #fdb74e;
@@ -103,6 +110,8 @@ input[type=number]::-webkit-outer-spin-button {
 #Content hr {
     border: none;
     height: 2px;
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
     background-color: #E88C02;
 }
 progress {
