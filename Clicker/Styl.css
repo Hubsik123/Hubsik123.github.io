@@ -37,6 +37,7 @@ html, body {
     resize: none;
     border: none;
     outline: none;
+    font-family: Consolas;
 }
 /* Content */
 #Content {
@@ -51,6 +52,11 @@ html, body {
 }
 #Content #Title {
     text-align: center;
+    font-family: Consolas,'Dancing Script', cursive;
+    font-size: 3.5vw;
+    margin-top: 0.15vw;
+    margin-bottom: 0;
+    background: linear-gradient(to right, #fee1b6, #e88c02,#fee1b6);
 }
 /*input[type=number]::-webkit-inner-spin-button,  Usunąć to???
 input[type=number]::-webkit-outer-spin-button {
@@ -102,6 +108,16 @@ progress::-webkit-progress-value {
 }
 progress[value]::-webkit-progress-value {
     background: linear-gradient(to right, #e88c02 25%, #ffcc00 115%);
+}
+#Content table {
+    border: 1px solid #302008;
+    border-collapse: separate;
+}
+#Content td, th {
+    border: 1px solid #e88c02;
+}
+#Content th {
+    background-color: #FDB953;
 }
 /* Bottom */
 #Bottom {

@@ -1,5 +1,5 @@
 var Money = 0;
-var Income = 100;
+var Income = 1;
 var Progres_Stage = 0;
 var AutoClick_Delay = 6000;
 var BiedaIlosc = 0;
@@ -45,8 +45,8 @@ function Aktualizacja_1()
 }
 function Aktualizacja_2()
 {
-    document.getElementById("Money").value = Money +" $";
-    document.getElementById("Income").value = Income + " $";
+    document.getElementById("Money").value = Formatowanie_Liczb(Money) +" $";
+    document.getElementById("Income").value = Formatowanie_Liczb(Income) + " $";
     document.getElementById("Szansa_na_Crit_Click").value = Crit_Click + " %";
     document.getElementById("Mnożnik_Crit_Click").value = Crit_Multi + " x";
     //document.getElementById("").value = " $";
@@ -123,7 +123,7 @@ function Progress()
             var Finish = 1000;
             document.getElementsByTagName("progress")[0].setAttribute("max", Finish);
             document.getElementsByTagName("progress")[0].setAttribute("value", Money);
-            document.getElementById("Stage").innerHTML = "Stage 1: Tutorial Part 1\n   "+Money+" / "+ Finish;
+            document.getElementById("Stage").innerHTML = "Stage 1: Tutorial Part 1\n   "+Formatowanie_Liczb(Money)+" / "+ Formatowanie_Liczb(Finish);
             if (Money >= Finish)
             {
                 Progres_Stage = 1;
@@ -136,7 +136,7 @@ function Progress()
             document.getElementsByTagName("progress")[0].removeAttribute("max");
             document.getElementsByTagName("progress")[0].setAttribute("max", Finish);
             document.getElementsByTagName("progress")[0].setAttribute("value", Money);
-            document.getElementById("Stage").innerHTML = "Stage 2: Tutorial Part 2\n   "+Money+" / "+ Finish;
+            document.getElementById("Stage").innerHTML = "Stage 2: Tutorial Part 2\n   "+Formatowanie_Liczb(Money)+" / "+ Formatowanie_Liczb(Finish);
             if (Money >= Finish)
             {
                 Progres_Stage = 2;
@@ -149,7 +149,7 @@ function Progress()
             document.getElementsByTagName("progress")[0].removeAttribute("max");
             document.getElementsByTagName("progress")[0].setAttribute("max", Finish);
             document.getElementsByTagName("progress")[0].setAttribute("value", Money);
-            document.getElementById("Stage").innerHTML = "Stage 3: Tutorial Part 3 - Finish\n   "+Money+" / "+ Finish;
+            document.getElementById("Stage").innerHTML = "Stage 3: Tutorial Part 3 - Finish\n   "+Formatowanie_Liczb(Money)+" / "+ Formatowanie_Liczb(Finish);
             if (Money >= Finish)
             {
                 Progres_Stage = 3;
@@ -162,7 +162,7 @@ function Progress()
             document.getElementsByTagName("progress")[0].removeAttribute("max");
             document.getElementsByTagName("progress")[0].setAttribute("max", Finish);
             document.getElementsByTagName("progress")[0].setAttribute("value", Money);
-            document.getElementById("Stage").innerHTML = "Stage 3: Tutorial Part 2\n   "+Money+" / "+ Finish;
+            document.getElementById("Stage").innerHTML = "Stage 3: Tutorial Part 2\n   "+Formatowanie_Liczb(Money)+" / "+ Formatowanie_Liczb(Finish);
             if (Money >= Finish)
             {
                 Progres_Stage = 2;
