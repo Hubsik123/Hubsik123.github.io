@@ -96,12 +96,13 @@ function Animacja_Auto()
 }
 function Clicker()
 {
-    //Money = Money + Income;
+    //Money = Money + Income; - Bez krytów
     var Roll_Click = Math.floor((Math.random() * 100) + 1); //? 1 - 100
     if (Roll_Click <= Crit_Click)
     {
-        Money = Money + floor(Income*Crit_Multi);
-            alert(Money+" + "+Income*Crit_Multi+"\nCrit_Multi: "+Crit_Multi+"\n"+floor(Income*Crit_Multi));
+        //Money = Money + Math.floor(Income*Crit_Multi);
+        Money = Money + (Math.round((Income*Crit_Multi) *10 ) / 10); // Jest 2020, a nie można spokojnie dodać 1+0.1 ...
+            //alert(Money+" + "+Income*Crit_Multi+"\nCrit_Multi: "+Crit_Multi+"\n"+(Math.round((Income*Crit_Multi) *10 ) / 10));
         document.getElementById("TextArea").innerHTML += "Crit Click !\n";
         var Timer = setTimeout(function()
         {
