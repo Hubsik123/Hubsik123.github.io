@@ -1,20 +1,29 @@
+    //! Zmienne Globalne
+        //* Ogólne
 var Money = 0;
-var Income = 1;
+var Income = 10000; //TODO:
+var Real_Income;
+var Real_Income_Crit;
+var Income_Multi = 1;
 var Progres_Stage = 0;
 var AutoClick_Delay = 6000;
 var BiedaIlosc = 0;
 var Crit_Click = 0;
 var Crit_Multi = 1;
+        //* Ilość Ulepszeń Income
 var Upgrade_1_Ilosc = 1;
 var Upgrade_2_Ilosc = 1;
 var Upgrade_3_Ilosc = 1;
 var Upgrade_4_Ilosc = 1;
 var Upgrade_5_Ilosc = 1;
+        //* Kupione AutoClickery
+var AC_Ilosc = 0;
 var AC_Kupione_1 = false;
 var AC_Kupione_2 = false;
 var AC_Kupione_3 = false;
 var AC_Kupione_4 = false;
 var AC_Kupione_5 = false;
+        //* Kupione Szanse Na Crit Click
 var CritChance_1_Kupione = false;
 var CritChance_2_Kupione = false;
 var CritChance_3_Kupione = false;
@@ -25,39 +34,69 @@ var CritChance_7_Kupione = false;
 var CritChance_8_Kupione = false;
 var CritChance_9_Kupione = false;
 var CritChance_10_Kupione = false;
-var Crit_Multi_1_Kupione = false; 
-var Crit_Multi_2_Kupione = false; 
-var Crit_Multi_3_Kupione = false; 
-var Crit_Multi_4_Kupione = false; 
-var Crit_Multi_5_Kupione = false; 
-var Crit_Multi_6_Kupione = false; 
-var Crit_Multi_7_Kupione = false; 
-var Crit_Multi_8_Kupione = false; 
-var Crit_Multi_9_Kupione = false; 
-var Crit_Multi_10_Kupione = false; 
+        //* Kupione Mnożniki Crit Click
+var Crit_Multi_1_Kupione = false;
+var Crit_Multi_2_Kupione = false;
+var Crit_Multi_3_Kupione = false;
+var Crit_Multi_4_Kupione = false;
+var Crit_Multi_5_Kupione = false;
+var Crit_Multi_6_Kupione = false;
+var Crit_Multi_7_Kupione = false;
+var Crit_Multi_8_Kupione = false;
+var Crit_Multi_9_Kupione = false;
+var Crit_Multi_10_Kupione = false;
+        //* Kupione Mnożniki Income
+var Income_Multi_1_Kupione = false;
+var Income_Multi_2_Kupione = false;
+var Income_Multi_3_Kupione = false;
+var Income_Multi_4_Kupione = false;
+var Income_Multi_5_Kupione = false;
+    //! Quality Of Life
 function Formatowanie_Liczb(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     //alert(x);
 }
+    //! Podstawowe Funkcje
 function Aktualizacja_1()
 {
     var Timer = setTimeout(Aktualizacja_2, 125);
 }
 function Aktualizacja_2()
 {
+    Real_Income = Math.floor(Income * Income_Multi);
+    Real_Income_Crit = Math.floor(((Math.round((Income*Crit_Multi) *10 ) / 10)) * Income_Multi);
+        //* Money
     document.getElementById("Money").value = Formatowanie_Liczb(Money) +" $";
+        //* Income
     document.getElementById("Income").value = Formatowanie_Liczb(Income) + " $";
-    document.getElementById("Szansa_na_Crit_Click").value = Crit_Click + " %";
-    document.getElementById("Mnożnik_Crit_Click").value = Crit_Multi + " x";
-    //document.getElementById("").value = " $";
+        //* Mnożnik Income
+    document.getElementById("Income_Multi").value = Math.round(Income_Multi*10)/10+" x";
+    //document.getElementById("Income_Multi").value = Income_Multi;
+    //document.getElementById("Income_Multi").value = Math.floor((Math.round(Crit_Multi) /10) * 10)+" x";
+    //document.getElementById("Income_Multi").value = Math.floor((Math.round(Income_Multi) /10) * 10)+" x";
+        //* Income z mnożnikiem
+    document.getElementById("Real_Income").value = Real_Income+" $";
+        //* Income z mnożnikiem i krytem
+    document.getElementById("Real_Income_Crit").value = Real_Income_Crit+" $";
+        //* Szansa na kryt
+    document.getElementById("Szansa_na_Crit_Click").value = Crit_Click+" %";
+        //* Mnożnik Krytów
+    //document.getElementById("Szansa_na_Crit_Click").value = Crit_Click + " %";
+    //document.getElementById("Mnożnik_Crit_Click").value = Crit_Multi + " x";
+    //document.getElementById("Mnożnik_Crit_Click").value = Math.floor((Math.round(Crit_Multi) / 10) * 10) + " x";
+    //document.getElementById("Mnożnik_Crit_Click").value = (Math.floor((Math.round(Crit_Multi) / 10) * 10)) + " x";
+    document.getElementById("Mnożnik_Crit_Click").value = Math.round((Crit_Multi) * 10) / 10 +" x";
+        //* Ilość ulepszeń
     document.getElementById("Upgrade_1-Ilosc").innerHTML = Upgrade_1_Ilosc - 1;
     document.getElementById("Upgrade_2-Ilosc").innerHTML = Upgrade_2_Ilosc - 1;
     document.getElementById("Upgrade_3-Ilosc").innerHTML = Upgrade_3_Ilosc - 1;
     document.getElementById("Upgrade_4-Ilosc").innerHTML = Upgrade_4_Ilosc - 1;
     document.getElementById("Upgrade_5-Ilosc").innerHTML = Upgrade_5_Ilosc - 1;
+        //* Auto Clickery
     if (AC_Kupione_1 == true || AC_Kupione_2 == true || AC_Kupione_3 == true || AC_Kupione_4 == true || AC_Kupione_5 == true)
     {
-        document.getElementById("AutoClickRate").value = (AutoClick_Delay/1000);
+        //document.getElementById("AutoClickRate").value = (AutoClick_Delay/1000);
+        document.getElementById("AutoClickRate").value = (AC_Ilosc);
     }
     else
     {
@@ -101,7 +140,12 @@ function Clicker()
     if (Roll_Click <= Crit_Click)
     {
         //Money = Money + Math.floor(Income*Crit_Multi);
-        Money = Money + (Math.round((Income*Crit_Multi) *10 ) / 10); // Jest 2020, a nie można spokojnie dodać 1+0.1 ...
+        //Money = Money + (Math.round((Income*Crit_Multi) *10 ) / 10); // Jest 2020, a nie można spokojnie dodać 1+0.1 ...
+        //Money = Math.floor((Money + (Math.round((Income*Crit_Multi) *10 ) / 10)) * Income_Multi);
+        //Real_Income_Crit = Math.floor((Money + (Math.round((Income*Crit_Multi) *10 ) / 10)) * Income_Multi)
+        //Real_Income_Crit = Math.floor(((Math.round((Income*Crit_Multi) *10 ) / 10)) * Income_Multi)
+        Money = Money + Real_Income_Crit;
+        //alert("Kryt: "+Real_Income_Crit);
             //alert(Money+" + "+Income*Crit_Multi+"\nCrit_Multi: "+Crit_Multi+"\n"+(Math.round((Income*Crit_Multi) *10 ) / 10));
         document.getElementById("TextArea").innerHTML += "Crit Click !\n";
         var Timer = setTimeout(function()
@@ -111,7 +155,9 @@ function Clicker()
     }
     else
     {
-        Money = Money + Income;
+        //Real_Income = Math.floor(Income * Income_Multi);
+        Money = Money + Real_Income;
+        //alert(Real_Income);
     }
 }
 function Progress()
@@ -127,6 +173,7 @@ function Progress()
             if (Money >= Finish)
             {
                 Progres_Stage = 1;
+                Income_Multi = Income_Multi + 0.1;
             }
             break;
         }
@@ -140,6 +187,7 @@ function Progress()
             if (Money >= Finish)
             {
                 Progres_Stage = 2;
+                Income_Multi = Income_Multi + 0.1;
             }
             break;
         }
@@ -153,6 +201,49 @@ function Progress()
             if (Money >= Finish)
             {
                 Progres_Stage = 3;
+                Income_Multi = Income_Multi + 0.1;
+            }
+            break;
+        }
+        case Progres_Stage == 3:
+        {
+            var Finish = 25000;
+            document.getElementsByTagName("progress")[0].removeAttribute("max");
+            document.getElementsByTagName("progress")[0].setAttribute("max", Finish);
+            document.getElementsByTagName("progress")[0].setAttribute("value", Money);
+            document.getElementById("Stage").innerHTML = "Stage 4: The Begining\n   "+Formatowanie_Liczb(Money)+" / "+ Formatowanie_Liczb(Finish);
+            if (Money >= Finish)
+            {
+                Progres_Stage = 4;
+                Income_Multi = Income_Multi + 0.1;
+            }
+            break;
+        }
+        case Progres_Stage == 4:
+        {
+            var Finish = 100000;
+            document.getElementsByTagName("progress")[0].removeAttribute("max");
+            document.getElementsByTagName("progress")[0].setAttribute("max", Finish);
+            document.getElementsByTagName("progress")[0].setAttribute("value", Money);
+            document.getElementById("Stage").innerHTML = "Stage 5: Earlygame\n   "+Formatowanie_Liczb(Money)+" / "+ Formatowanie_Liczb(Finish);
+            if (Money >= Finish)
+            {
+                Progres_Stage = 5;
+                Income_Multi = Income_Multi + 0.1;
+            }
+            break;
+        }
+        case Progres_Stage == 5:
+        {
+            var Finish = 500000;
+            document.getElementsByTagName("progress")[0].removeAttribute("max");
+            document.getElementsByTagName("progress")[0].setAttribute("max", Finish);
+            document.getElementsByTagName("progress")[0].setAttribute("value", Money);
+            document.getElementById("Stage").innerHTML = "Stage 6: Earlygame Part 2\n   "+Formatowanie_Liczb(Money)+" / "+ Formatowanie_Liczb(Finish);
+            if (Money >= Finish)
+            {
+                Progres_Stage = 6;
+                Income_Multi = Income_Multi + 0.1;
             }
             break;
         }
@@ -374,6 +465,7 @@ function AutoClicker_1()
             document.getElementById("AutoClicker_1-Kupione").innerHTML = "Już to kupiłeś";
             AC_Kupione_1 = true;
             AutoClick_Delay = AutoClick_Delay - 1000;
+            AC_Ilosc++;
             AutoClick();
         }
         else
@@ -398,6 +490,7 @@ function AutoClicker_2()
             document.getElementById("AutoClicker_2-Kupione").innerHTML = "Już to kupiłeś";
             AC_Kupione_2 = true;
             AutoClick_Delay = AutoClick_Delay - 1000;
+            AC_Ilosc++;
             AutoClick();
         }
         else
@@ -422,6 +515,7 @@ function AutoClicker_3()
             document.getElementById("AutoClicker_3-Kupione").innerHTML = "Już to kupiłeś";
             AC_Kupione_3 = true;
             AutoClick_Delay = AutoClick_Delay - 1000;
+            AC_Ilosc++;
             AutoClick();
         }
         else
@@ -446,6 +540,7 @@ function AutoClicker_4()
             document.getElementById("AutoClicker_4-Kupione").innerHTML = "Już to kupiłeś";
             AC_Kupione_4 = true;
             AutoClick_Delay = AutoClick_Delay - 1000;
+            AC_Ilosc++;
             AutoClick();
         }
         else
@@ -470,6 +565,7 @@ function AutoClicker_5()
             document.getElementById("AutoClicker_5-Kupione").innerHTML = "Już to kupiłeś";
             AC_Kupione_5 = true;
             AutoClick_Delay = AutoClick_Delay - 1000;
+            AC_Ilosc++;
             AutoClick();
         }
         else
@@ -941,6 +1037,122 @@ function CritMulti_10()
             var Timer = setTimeout(function()
                 {
                     document.getElementById("CritMulti_10-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+    //! Income Multi
+function Income_Multi_1()
+{
+    if (Income_Multi_1_Kupione == false)
+    {
+        if (Money >= 10000)
+        {
+            Money = Money - 10000;
+            document.getElementById("IncomeMulti_1-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("IncomeMulti_1-Kupione").innerHTML = "Już to kupiłeś";
+            Income_Multi_1_Kupione = true;
+            Income_Multi = Income_Multi + 0.2;
+        }
+        else
+        {
+            document.getElementById("IncomeMulti_1-Cena").style.backgroundColor = "tomato";
+            Biedak("IncomeMulti_1-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("IncomeMulti_1-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function Income_Multi_2()
+{
+    if (Income_Multi_2_Kupione == false)
+    {
+        if (Money >= 50000)
+        {
+            Money = Money - 50000;
+            document.getElementById("IncomeMulti_2-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("IncomeMulti_2-Kupione").innerHTML = "Już to kupiłeś";
+            Income_Multi_2_Kupione = true;
+            Income_Multi = Income_Multi + 0.2;
+        }
+        else
+        {
+            document.getElementById("IncomeMulti_2-Cena").style.backgroundColor = "tomato";
+            Biedak("IncomeMulti_2-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("IncomeMulti_2-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function Income_Multi_3()
+{
+    if (Income_Multi_3_Kupione == false)
+    {
+        if (Money >= 100000)
+        {
+            Money = Money - 100000;
+            document.getElementById("IncomeMulti_3-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("IncomeMulti_3-Kupione").innerHTML = "Już to kupiłeś";
+            Income_Multi_3_Kupione = true;
+            Income_Multi = Income_Multi + 0.2;
+        }
+        else
+        {
+            document.getElementById("IncomeMulti_3-Cena").style.backgroundColor = "tomato";
+            Biedak("IncomeMulti_3-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("IncomeMulti_3-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function Income_Multi_4()
+{
+    if (Income_Multi_4_Kupione == false)
+    {
+        if (Money >= 500000)
+        {
+            Money = Money - 500000;
+            document.getElementById("IncomeMulti_4-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("IncomeMulti_4-Kupione").innerHTML = "Już to kupiłeś";
+            Income_Multi_4_Kupione = true;
+            Income_Multi = Income_Multi + 0.2;
+        }
+        else
+        {
+            document.getElementById("IncomeMulti_4-Cena").style.backgroundColor = "tomato";
+            Biedak("IncomeMulti_4-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("IncomeMulti_4-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function Income_Multi_5()
+{
+    if (Income_Multi_5_Kupione == false)
+    {
+        if (Money >= 1000000)
+        {
+            Money = Money - 1000000;
+            document.getElementById("IncomeMulti_5-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("IncomeMulti_5-Kupione").innerHTML = "Już to kupiłeś";
+            Income_Multi_5_Kupione = true;
+            Income_Multi = Income_Multi + 0.2;
+        }
+        else
+        {
+            document.getElementById("IncomeMulti_5-Cena").style.backgroundColor = "tomato";
+            Biedak("IncomeMulti_5-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("IncomeMulti_5-Cena").style.backgroundColor = "initial";
                 }, 2500);
         }
     }

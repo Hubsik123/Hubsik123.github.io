@@ -69,12 +69,15 @@ html, body {
     width: 20%;
     float: left;
     text-align: right;
+    white-space: pre;
 }
 #Content input[type=text] {
     width: 80%;
     outline: none;
     transition: 1s;
     border: 1px solid #302008;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 #Content input[type=text]:hover {
     color: #302008;
