@@ -563,7 +563,7 @@ html::selection, body::selection {
     /* Tooltip */
     .Tooltip .Tooltip_Opis {
         width: 25vw;
-        font-size: 2vw;
+        font-size: 4vw;
         margin-left: -12.5vw !important;
         transition: initial !important;
     }
