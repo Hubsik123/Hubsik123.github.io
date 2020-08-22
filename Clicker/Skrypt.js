@@ -1,7 +1,7 @@
     //! Zmienne Globalne
         //* Ogólne
 var Money = 0;
-var Income = 10000; //TODO:
+var Income = 1; //TODO:
 var Real_Income;
 var Real_Income_Crit;
 var Income_Multi = 1;
@@ -71,9 +71,6 @@ function Aktualizacja_2()
     document.getElementById("Income").value = Formatowanie_Liczb(Income) + " $";
         //* Mnożnik Income
     document.getElementById("Income_Multi").value = Math.round(Income_Multi*10)/10+" x";
-    //document.getElementById("Income_Multi").value = Income_Multi;
-    //document.getElementById("Income_Multi").value = Math.floor((Math.round(Crit_Multi) /10) * 10)+" x";
-    //document.getElementById("Income_Multi").value = Math.floor((Math.round(Income_Multi) /10) * 10)+" x";
         //* Income z mnożnikiem
     document.getElementById("Real_Income").value = Real_Income+" $";
         //* Income z mnożnikiem i krytem
@@ -81,10 +78,6 @@ function Aktualizacja_2()
         //* Szansa na kryt
     document.getElementById("Szansa_na_Crit_Click").value = Crit_Click+" %";
         //* Mnożnik Krytów
-    //document.getElementById("Szansa_na_Crit_Click").value = Crit_Click + " %";
-    //document.getElementById("Mnożnik_Crit_Click").value = Crit_Multi + " x";
-    //document.getElementById("Mnożnik_Crit_Click").value = Math.floor((Math.round(Crit_Multi) / 10) * 10) + " x";
-    //document.getElementById("Mnożnik_Crit_Click").value = (Math.floor((Math.round(Crit_Multi) / 10) * 10)) + " x";
     document.getElementById("Mnożnik_Crit_Click").value = Math.round((Crit_Multi) * 10) / 10 +" x";
         //* Ilość ulepszeń
     document.getElementById("Upgrade_1-Ilosc").innerHTML = Upgrade_1_Ilosc - 1;
@@ -95,8 +88,7 @@ function Aktualizacja_2()
         //* Auto Clickery
     if (AC_Kupione_1 == true || AC_Kupione_2 == true || AC_Kupione_3 == true || AC_Kupione_4 == true || AC_Kupione_5 == true)
     {
-        //document.getElementById("AutoClickRate").value = (AutoClick_Delay/1000);
-        document.getElementById("AutoClickRate").value = (AC_Ilosc);
+        document.getElementById("AutoClickRate").value = AC_Ilosc;
     }
     else
     {
