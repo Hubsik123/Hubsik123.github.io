@@ -6,7 +6,7 @@ Jedyne co nie było pisane w pełni samodzielne można znaleźć tutaj:
 * https://www.w3schools.com/howto/howto_js_dropdown.asp - Rozwijane menu (To całe menu to praktycznie tylko inspiracja)
 * https://www.w3schools.com/howto/howto_js_mobile_navbar.asp - Rozwijane menu
 * https://www.w3schools.com/css/css_dropdowns.asp - Rozwijane menu
-* https://www.w3schools.com/howto/howto_js_filter_lists.asp - Filtrowanie listy (Zrobienie tak że zostają puste h2 jak wyszukiwarka nic nie pokaże, dodałem też jeden mały detalem - czytaj do końca)
+* https://www.w3schools.com/howto/howto_js_filter_lists.asp - Filtrowanie listy, w .js nie dużo było do zmiany (dodałem jeden mały detalem - czytaj do końca) ale w .html duuużo, i sprawiało to dużo problemów... więc pozbyłem się listy
 * https://www.w3schools.com/css/css_tooltip.asp - Tooltip - Przerobienie żeby działało przy innej ilości obrazków i żeby tekst nie wychodził poza Content
 * https://www.w3schools.com/howto/howto_js_tab_img_gallery.asp - Galeria obrazków - Przerobienie żeby działało przy innej ilości obrazków
 * https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf - Tryb ciemny - Dodanie opcji żeby na tel (najlepiej Chrome) kolor karty też się zapisywał
