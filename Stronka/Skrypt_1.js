@@ -3,12 +3,12 @@
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
 function Wersja_Stronki()
 {
-    var Wersja = "v 94";
-    alert("To jest wersja strony nr:\n"+Wersja)
+    var Wersja = "v 95";
+    alert("To jest wersja strony nr:\n"+Wersja);
 }
 function Feedback()
 {
-    alert("Jeśli podoba ci się ta strona, przydały ci sie te notatki, kod tej strony to daj znać znajomym, im też może się przydać.\nJesli zobaczysz jakieś błędy to proszę daj o tym znać (screeny, model telefonu, przeglądarka będą bardzo pomocne). Mój adres e-mail:\nhubsik321@gmail.com")
+    alert("Jeśli podoba ci się ta strona, przydały ci sie te notatki, kod tej strony to daj znać znajomym, im też może się przydać.\nJesli zobaczysz jakieś błędy to proszę daj o tym znać (screeny, model telefonu, przeglądarka będą bardzo pomocne). Mój adres e-mail:\nhubsik321@gmail.com");
 }
 function Powiekszenie_Obrazka(imgs)
 {
@@ -161,6 +161,13 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             document.getElementById("Komunikat").innerHTML = "PoE fajna gierka.";
             var Secret = document.createElement("a");
             Secret.href = "https://www.pathofexile.com";
+            Secret.click();
+            break;
+        case "rickroll":
+        case "Rickroll":
+            document.getElementById("Komunikat").innerHTML = "Never Gonna Give You Up.";
+            var Secret = document.createElement("a");
+            Secret.href = "https://youtu.be/dQw4w9WgXcQ?t=43";
             Secret.click();
             break;
         case "Rick roll":
