@@ -299,10 +299,11 @@ html::selection, body::selection {
 #Footer button {
     color: white;
     font-size: 2vw;
-    border: 0.1vw ridge black;
-    border-radius: 1vw 1vw 1vw 1vw;
+    height: 100%;
+    border: none;
     background-color: #a6a6a6;
     transition: 0.5s;
+    outline: none;
 }
 #Footer button:hover {
     color: black;
