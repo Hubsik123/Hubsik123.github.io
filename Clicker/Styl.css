@@ -46,15 +46,13 @@ html, body {
     width: 100%;
     color: black;
     background-color: #FEE1B6;
-    
-    
+
     float: left;
     padding-left: 7px;
     padding-right: 7px;
     overflow: auto;
-}
-#Content {
-    background-image: url("Clicker_Background.png");
+
+    background-image: url("wip2.png");
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
@@ -155,6 +153,7 @@ progress[value]::-webkit-progress-value {
 #Content table {
     border: 1px solid #302008;
     border-collapse: separate;
+    z-index: 2;
 }
 #Content td, th {
     border: 1px solid #e88c02;
@@ -185,6 +184,7 @@ progress[value]::-webkit-progress-value {
     height: 100%;
     background-color: #E88C02;
     text-align: center;
+    margin: 0;
 }
 #Kotwica_1 {
     float: left;
@@ -193,7 +193,6 @@ progress[value]::-webkit-progress-value {
     float: right;
 }
 #Credits {
-    text-align: center;
     width: 60%;
     background-color:#302008;
 }
