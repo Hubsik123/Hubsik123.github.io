@@ -251,7 +251,7 @@ html::selection, body::selection {
     transition: 0.5s;
 }
 #Content .Link_1:hover {
-    color: white;
+    color: gold;
     cursor: url(Obrazki/Dzbanek.png), auto;
 }
 #Content .Link_2 { /* Ładny link, używany przy linkach do notatek */

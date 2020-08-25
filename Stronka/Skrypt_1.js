@@ -1,3 +1,6 @@
+//TODO:
+//! https://youtu.be/BjDebmqFRuc?t=43 DODAĆ TO GDZIEŚ
+
 //! Ale tak na serio:
     // Czytanie kodu akurat T E G O pliku to odpuść sobie... możesz sobie zepsuć niespodzianke...
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
@@ -326,6 +329,8 @@ function No_Spam()
     }
 }
 // !Bardzo ważne skrypty, to akurat jest w pełni pisane samodzielnie (...nikt by na internety takich pierdół nie dawał), z wiadomych wzgledów nie będzie tu żadnych komentarzy z objaśnieniami...
+    //? Do losowych komunikatów
+var Ksiazki_Blokada = false;
     //? Blokada Spamu jak się go zamknię ___ razy
 function BanSpam()
 {
@@ -519,7 +524,21 @@ function Message()
         }
         case 5:
         {
-            document.getElementById("Message").innerHTML = "ZOBACZ JAK JEDNYM ZDANIEM OBRAŻA KSIĄŻKOHOLIKÓW: Nigdy nie rozumiałem ludzi, którzy zawsze mówili że książki są delikatnie mówiąc lepsze niż gry komputerowe, wręcz najwyższą (patrz jedyną) formą intelektualnej rozrywki. Na podtrzymanie (patrz wpajanie) tej teori przytaczane były argumenty że książki poszerzają horyzonty, uczą w sumie wszystkiego co się tylko da... Ale niestety często te oczytane i obeznane w świecie (antycznym) osoby nie tolerowały jakiejkolwiek formy gry komputerowej... Twierdząć że to strata czasu i prowadzenie do tego że mózgi nam zgniją... Ale moim zdaniem - uważam takie osoby są po prosty nie toleranycjne, zachowują się na przykład podobnie do rasistów (i moim zdaniem powinni być do nich przyrównywami). Ale jakimś cudem mój mózg ma się w miarę dobrze i to jakoś Ty własnie korzystasz z tej skoromnej stronki i wszystkich plików które są tutaj dostępne. Które zostały zrobione w 200% pod wpływem korzystania z tych całych gier komputerowych. PS: Jak już To 'Diablo' to gra o egzorcyście. Jeśli do Ciebie był skierowany ten krótki tekst - to nie pozdrawiam!";
+            //document.getElementById("Message").innerHTML = "ZOBACZ JAK JEDNYM ZDANIEM OBRAŻA KSIĄŻKOHOLIKÓW: Nigdy nie rozumiałem ludzi, którzy zawsze mówili że książki są delikatnie mówiąc lepsze niż gry komputerowe, wręcz najwyższą (patrz jedyną) formą intelektualnej rozrywki. Na podtrzymanie (patrz wpajanie) tej teori przytaczane były argumenty że książki poszerzają horyzonty, uczą w sumie wszystkiego co się tylko da... Ale niestety często te oczytane i obeznane w świecie (antycznym) osoby nie tolerowały jakiejkolwiek formy gry komputerowej... Twierdząć że to strata czasu i prowadzenie do tego że mózgi nam zgniją... Ale moim zdaniem - uważam takie osoby są po prostu nie toleranycjne, zachowują się na przykład podobnie do rasistów (i moim zdaniem powinni być do nich przyrównywami). Ale jakimś cudem mój mózg ma się w miarę dobrze i to jakoś Ty własnie korzystasz z tej skoromnej stronki i wszystkich plików które są tutaj dostępne. Które zostały zrobione w 200% pod wpływem korzystania z tych całych gier komputerowych. PS: Jak już To 'Diablo' to gra o egzorcyście. Jeśli do Ciebie był skierowany ten krótki tekst - to nie pozdrawiam!";
+            document.getElementById("Message").innerHTML = "ZOBACZ JAK JEDNYM ZDANIEM OBRAŻA KSIĄŻKOHOLIKÓW: ";
+            var Spoiler = document.createElement("p");
+            Spoiler.innerHTML = "Klikasz na własną odpowiedzialność!";
+            Spoiler.title = "Przed kliknięciem skonsultuj się z lokalnym informatykiem.";
+            Spoiler.setAttribute("class", "Link_1");
+            Spoiler.onclick = function()
+            {
+                if (Ksiazki_Blokada == false)
+                {
+                    document.getElementById("Message").innerHTML = "Nigdy nie rozumiałem ludzi, którzy zawsze mówili że książki są delikatnie mówiąc lepsze niż gry komputerowe, wręcz najwyższą (patrz jedyną) formą intelektualnej rozrywki. Na podtrzymanie (patrz wpajanie) tej teori przytaczane były argumenty że książki poszerzają horyzonty, uczą w sumie wszystkiego co się tylko da (SPOILER ALERT: Gry też poszerzają horyzonty i uczą)... Ale niestety często te oczytane i obeznane w świecie (antycznym) osoby nie tolerowały jakiejkolwiek formy gry komputerowej... Twierdząć że to strata czasu i prowadzenie do tego że mózgi nam zgniją, że nic przez nie nie osiągniemy w życiu, że to po prostu jest złe... Ale moim zdaniem - uważam takie osoby są po prostu nie toleranycjne, zachowują się na przykład podobnie do rasistów (i moim zdaniem powinni być do nich przyrównywami). A argumenty typu 'Od czytania jest siem momdrzejszym', 'tam się tylko w obrazki klika' (A co właśnie robisz? Czytasz z komputra!). Ale jakimś cudem mój mózg ma się w miarę dobrze i to jakoś Ty własnie korzystasz z tej skoromnej stronki i wszystkich plików które są tutaj dostępne. Które zostały zrobione w 200% pod wpływem korzystania z tych całych gier komputerowych. Jeśli do Ciebie był skierowany ten krótki tekst - to nie pozdrawiam!<br>PS: Jak już To 'Diablo' to gra o egzorcyście.<br>PS 2: Jestem bardzo ciekawy dlaczego na każdym etapie mojej edukacji był moment w którym ktoś kazał iść do 'bibloteki' dlatego, że ilość odwiedziń uczniów się nie zgadzała...";
+                    Ksiazki_Blokada = true;
+                }
+            };
+            document.getElementById("Message").appendChild(Spoiler);
             break;
         }
         case 6:
@@ -628,6 +647,27 @@ function SayMyName()
                 alert("You don't have damm clue who the hell I am...");
                 for (var x = 0; x < Guzik_Animacja.length; x++)
                 {
+                    var Kierunek;
+                    var Odstep = Math.floor((Math.random() * 1000) + 1); //? 1 - 1000
+                    var RNG = Math.floor((Math.random() * 100) + 1); //? 1 - 100
+                    switch (true)
+                    {
+                        case (RNG > 0 && RNG <= 25):
+                            Kierunek = "normal";
+                            break;
+                        case (RNG > 25 && RNG <= 50):
+                            Kierunek = "reverse";
+                            break;
+                        case (RNG > 50 && RNG <= 75):
+                            Kierunek = "alternate";
+                            break;
+                        case (RNG > 75 && RNG <= 100):
+                            Kierunek = "alternate";
+                            break;
+                        default:
+                            Kierunek = "normal";
+                            break;
+                    }
                     document.getElementsByClassName("Link_2")[x].animate
                     (
                         [
@@ -636,7 +676,9 @@ function SayMyName()
                             {transform: "rotate(0deg)"}
                         ],
                         {
-                            duration: 1000,
+                            duration: 7500,
+                            delay: Odstep,
+                            direction: Kierunek,
                             iterations: Infinity
                         }
                     )
