@@ -18,7 +18,7 @@
                 <textarea id="TextArea" readonly></textarea>
             </section>
             <section id="Content">
-                <h1 id="Title">Clicker.html</h1>
+                <h1 id="Title" name="#Top">Clicker.html</h1>
                 <hr>
                 <label for="Money">Money: </label>
                     <input type="text" id="Money" placeholder="Ładowanie..." readonly> <br>
@@ -36,11 +36,16 @@
                     <input type="text" id="Szansa_na_Crit_Click" placeholder="Ładowanie..." readonly> <br>
                 <label for="Mnożnik_Crit_Click">Mnożnik Crit Click: </label>
                     <input type="text" id="Mnożnik_Crit_Click" placeholder="Ładowanie..." readonly>
+                <label for="SuperClicker_Multi">Mnożnik Super Clickera: </label>
+                    <input type="text" id="SuperClicker_Multi" placeholder="Ładowanie..." readonly>
+                <label for="SuperClicker_Ammo">Użycia Super Clickera: </label>
+                    <input type="text" id="SuperClicker_Ammo" placeholder="Ładowanie..." readonly>
                 <hr>
                 <progress title="Za każdy ukończony 'Stage' dostajesz Mnożnik Income!">Uda Ci się zebrać tyle $$$ ?</progress>
                 <p id="Stage" style="white-space: pre;">Ładowanie...</p>
                 <button class="Button_Clicker" id="Clicker" onclick="Clicker(); Animacja()">Klikej</button>
                 <button class="Button_Clicker" id="Auto_Clicker">Nie Klikej</button>
+                <button class="Button_SuperClicker" id="Super_Clicker" onclick="Super_Clicker()">Klikaj</button>
                 <hr>
                 <h2>Ulepszenia Income</h2>
                 <table>
@@ -88,31 +93,31 @@
                         <th colspan="3">Cena:</th>
                     </tr>
                     <tr>
-                        <td id="AutoClicker_1-Opis">Jedno AutoClick/5s</td>
+                        <td id="AutoClicker_1-Opis" title="Nie może używać Crit Click">Jedno AutoClick/5s</td>
                         <td id="AutoClicker_1-Cena">1,000 $</td>
                         <td id="AutoClicker_1-Kup" class="Hover" onclick="AutoClicker_1()">Kup</td>
                         <td id="AutoClicker_1-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="AutoClicker_2-Opis">Jedno AutoClick/5s</td>
+                        <td id="AutoClicker_2-Opis" title="Nie może używać Crit Click">Jedno AutoClick/5s</td>
                         <td id="AutoClicker_2-Cena">2,500 $</td>
                         <td id="AutoClicker_2-Kup" class="Hover" onclick="AutoClicker_2()">Kup</td>
                         <td id="AutoClicker_2-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="AutoClicker_3-Opis">Jedno AutoClick/5s</td>
+                        <td id="AutoClicker_3-Opis" title="Nie może używać Crit Click">Jedno AutoClick/5s</td>
                         <td id="AutoClicker_3-Cena">5,000 $</td>
                         <td id="AutoClicker_3-Kup" class="Hover" onclick="AutoClicker_3()">Kup</td>
                         <td id="AutoClicker_3-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="AutoClicker_4-Opis">Jedno AutoClick/5s</td>
+                        <td id="AutoClicker_4-Opis" title="Nie może używać Crit Click">Jedno AutoClick/5s</td>
                         <td id="AutoClicker_4-Cena">7,500 $</td>
                         <td id="AutoClicker_4-Kup" class="Hover" onclick="AutoClicker_4()">Kup</td>
                         <td id="AutoClicker_4-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="AutoClicker_5-Opis">Jedno AutoClick/5s</td>
+                        <td id="AutoClicker_5-Opis" title="Nie może używać Crit Click">Jedno AutoClick/5s</td>
                         <td id="AutoClicker_5-Cena">10,000 $</td>
                         <td id="AutoClicker_5-Kup" class="Hover" onclick="AutoClicker_5()">Kup</td>
                         <td id="AutoClicker_5-Kupione">Nie Kupiono</td>
@@ -126,61 +131,61 @@
                         <th colspan="3">Cena:</th>
                     </tr>
                     <tr>
-                        <td id="CritChance_1-Opis" title="Punków Procentowych">Zwiększa szanse na Crit Click o 10%</td>
+                        <td id="CritChance_1-Opis">Zwiększa szanse na Crit Click o 10%</td>
                         <td id="CritChance_1-Cena">1,000 $</td>
                         <td id="CritChance_1-Kup" class="Hover" onclick="CritChance_1()"><u>Kup</u></td>
                         <td id="CritChance_1-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritChance_2-Opis" title="Punków Procentowych">Zwiększa szanse na Crit Click o 10%</td>
+                        <td id="CritChance_2-Opis">Zwiększa szanse na Crit Click o 10%</td>
                         <td id="CritChance_2-Cena">2,500 $</td>
                         <td id="CritChance_2-Kup" class="Hover" onclick="CritChance_2()"><u>Kup</u></td>
                         <td id="CritChance_2-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritChance_3-Opis" title="Punków Procentowych">Zwiększa szanse na Crit Click o 10%</td>
+                        <td id="CritChance_3-Opis">Zwiększa szanse na Crit Click o 10%</td>
                         <td id="CritChance_3-Cena">5,000 $</td>
                         <td id="CritChance_3-Kup" class="Hover" onclick="CritChance_3()"><u>Kup</u></td>
                         <td id="CritChance_3-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritChance_4-Opis" title="Punków Procentowych">Zwiększa szanse na Crit Click o 10%</td>
+                        <td id="CritChance_4-Opis">Zwiększa szanse na Crit Click o 10%</td>
                         <td id="CritChance_4-Cena">10,000 $</td>
                         <td id="CritChance_4-Kup" class="Hover" onclick="CritChance_4()"><u>Kup</u></td>
                         <td id="CritChance_4-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritChance_5-Opis" title="Punków Procentowych">Zwiększa szanse na Crit Click o 10%</td>
+                        <td id="CritChance_5-Opis">Zwiększa szanse na Crit Click o 10%</td>
                         <td id="CritChance_5-Cena">15,000 $</td>
                         <td id="CritChance_5-Kup" class="Hover" onclick="CritChance_5()"><u>Kup</u></td>
                         <td id="CritChance_5-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritChance_6-Opis" title="Punków Procentowych">Zwiększa szanse na Crit Click o 10%</td>
+                        <td id="CritChance_6-Opis">Zwiększa szanse na Crit Click o 10%</td>
                         <td id="CritChance_6-Cena">30,000 $</td>
                         <td id="CritChance_6-Kup" class="Hover" onclick="CritChance_6()"><u>Kup</u></td>
                         <td id="CritChance_6-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritChance_7-Opis" title="Punków Procentowych">Zwiększa szanse na Crit Click o 10%</td>
+                        <td id="CritChance_7-Opis">Zwiększa szanse na Crit Click o 10%</td>
                         <td id="CritChance_7-Cena">65,000 $</td>
                         <td id="CritChance_7-Kup" class="Hover" onclick="CritChance_7()"><u>Kup</u></td>
                         <td id="CritChance_7-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritChance_8-Opis" title="Punków Procentowych">Zwiększa szanse na Crit Click o 10%</td>
+                        <td id="CritChance_8-Opis">Zwiększa szanse na Crit Click o 10%</td>
                         <td id="CritChance_8-Cena">100,000 $</td>
                         <td id="CritChance_8-Kup" class="Hover" onclick="CritChance_8()"><u>Kup</u></td>
                         <td id="CritChance_8-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritChance_9-Opis" title="Punków Procentowych">Zwiększa szanse na Crit Click o 10%</td>
+                        <td id="CritChance_9-Opis">Zwiększa szanse na Crit Click o 10%</td>
                         <td id="CritChance_9-Cena">150,000 $</td>
                         <td id="CritChance_9-Kup" class="Hover" onclick="CritChance_9()"><u>Kup</u></td>
                         <td id="CritChance_9-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritChance_10-Opis" title="Punków Procentowych">Zwiększa szanse na Crit Click o 10%</td>
+                        <td id="CritChance_10-Opis">Zwiększa szanse na Crit Click o 10%</td>
                         <td id="CritChance_10-Cena">250,000 $</td>
                         <td id="CritChance_10-Kup" class="Hover" onclick="CritChance_10()"><u>Kup</u></td>
                         <td id="CritChance_10-Kupione">Nie Kupiono</td>
@@ -194,61 +199,61 @@
                         <th colspan="3">Cena:</th>
                     </tr>
                     <tr>
-                        <td id="CritMulti_1-Opis" title="Punków Procentowych">Zwiększa mnożnik Crit Click o 10%</td>
+                        <td id="CritMulti_1-Opis">Zwiększa mnożnik Crit Click o 10%</td>
                         <td id="CritMulti_1-Cena">500 $</td>
                         <td id="CritMulti_1-Kup" class="Hover" onclick="CritMulti_1()"><u>Kup</u></td>
                         <td id="CritMulti_1-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritMulti_2-Opis" title="Punków Procentowych">Zwiększa mnożnik Crit Click o 10%</td>
+                        <td id="CritMulti_2-Opis">Zwiększa mnożnik Crit Click o 10%</td>
                         <td id="CritMulti_2-Cena">1,000 $</td>
                         <td id="CritMulti_2-Kup" class="Hover" onclick="CritMulti_2()"><u>Kup</u></td>
                         <td id="CritMulti_2-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritMulti_3-Opis" title="Punków Procentowych">Zwiększa mnożnik Crit Click o 10%</td>
+                        <td id="CritMulti_3-Opis">Zwiększa mnożnik Crit Click o 10%</td>
                         <td id="CritMulti_3-Cena">5,000 $</td>
                         <td id="CritMulti_3-Kup" class="Hover" onclick="CritMulti_3()"><u>Kup</u></td>
                         <td id="CritMulti_3-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritMulti_4-Opis" title="Punków Procentowych">Zwiększa mnożnik Crit Click o 10%</td>
+                        <td id="CritMulti_4-Opis">Zwiększa mnożnik Crit Click o 10%</td>
                         <td id="CritMulti_4-Cena">10,000 $</td>
                         <td id="CritMulti_4-Kup" class="Hover" onclick="CritMulti_4()"><u>Kup</u></td>
                         <td id="CritMulti_4-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritMulti_5-Opis" title="Punków Procentowych">Zwiększa mnożnik Crit Click o 10%</td>
+                        <td id="CritMulti_5-Opis">Zwiększa mnożnik Crit Click o 10%</td>
                         <td id="CritMulti_5-Cena">15,000 $</td>
                         <td id="CritMulti_5-Kup" class="Hover" onclick="CritMulti_5()"><u>Kup</u></td>
                         <td id="CritMulti_5-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritMulti_6-Opis" title="Punków Procentowych">Zwiększa mnożnik Crit Click o 10%</td>
+                        <td id="CritMulti_6-Opis">Zwiększa mnożnik Crit Click o 10%</td>
                         <td id="CritMulti_6-Cena">25,000 $</td>
                         <td id="CritMulti_6-Kup" class="Hover" onclick="CritMulti_6()"><u>Kup</u></td>
                         <td id="CritMulti_6-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritMulti_7-Opis" title="Punków Procentowych">Zwiększa mnożnik Crit Click o 10%</td>
+                        <td id="CritMulti_7-Opis">Zwiększa mnożnik Crit Click o 10%</td>
                         <td id="CritMulti_7-Cena">50,000 $</td>
                         <td id="CritMulti_7-Kup" class="Hover" onclick="CritMulti_7()"><u>Kup</u></td>
                         <td id="CritMulti_7-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritMulti_8-Opis" title="Punków Procentowych">Zwiększa mnożnik Crit Click o 10%</td>
+                        <td id="CritMulti_8-Opis">Zwiększa mnożnik Crit Click o 10%</td>
                         <td id="CritMulti_8-Cena">75,000 $</td>
                         <td id="CritMulti_8-Kup" class="Hover" onclick="CritMulti_8()"><u>Kup</u></td>
                         <td id="CritMulti_8-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritMulti_9-Opis" title="Punków Procentowych">Zwiększa mnożnik Crit Click o 10%</td>
+                        <td id="CritMulti_9-Opis">Zwiększa mnożnik Crit Click o 10%</td>
                         <td id="CritMulti_9-Cena">100,000 $</td>
                         <td id="CritMulti_9-Kup" class="Hover" onclick="CritMulti_9()"><u>Kup</u></td>
                         <td id="CritMulti_9-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="CritMulti_10-Opis" title="Punków Procentowych">Zwiększa mnożnik Crit Click o 10%</td>
+                        <td id="CritMulti_10-Opis">Zwiększa mnożnik Crit Click o 10%</td>
                         <td id="CritMulti_10-Cena">250,000 $</td>
                         <td id="CritMulti_10-Kup" class="Hover" onclick="CritMulti_10()"><u>Kup</u></td>
                         <td id="CritMulti_10-Kupione">Nie Kupiono</td>
@@ -262,40 +267,86 @@
                         <th colspan="3">Cena:</th>
                     </tr>
                     <tr>
-                        <td id="IncomeMulti_1-Opis" title="Punków Procentowych">Zwiększa mnożnik Income o 20%</td>
+                        <td id="IncomeMulti_1-Opis">Zwiększa mnożnik Income o 20%</td>
                         <td id="IncomeMulti_1-Cena">10,000 $</td>
                         <td id="IncomeMulti_1-Kup" class="Hover" onclick="Income_Multi_1()"><u>Kup</u></td>
                         <td id="IncomeMulti_1-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="IncomeMulti_2-Opis" title="Punków Procentowych">Zwiększa mnożnik Income o 20%</td>
+                        <td id="IncomeMulti_2-Opis">Zwiększa mnożnik Income o 20%</td>
                         <td id="IncomeMulti_2-Cena">50,000 $</td>
                         <td id="IncomeMulti_2-Kup" class="Hover" onclick="Income_Multi_2()"><u>Kup</u></td>
                         <td id="IncomeMulti_2-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="IncomeMulti_3-Opis" title="Punków Procentowych">Zwiększa mnożnik Income o 20%</td>
+                        <td id="IncomeMulti_3-Opis">Zwiększa mnożnik Income o 20%</td>
                         <td id="IncomeMulti_3-Cena">100,000 $</td>
                         <td id="IncomeMulti_3-Kup" class="Hover" onclick="Income_Multi_3()"><u>Kup</u></td>
                         <td id="IncomeMulti_3-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="IncomeMulti_4-Opis" title="Punków Procentowych">Zwiększa mnożnik Income o 20%</td>
+                        <td id="IncomeMulti_4-Opis">Zwiększa mnożnik Income o 20%</td>
                         <td id="IncomeMulti_4-Cena">500,000 $</td>
                         <td id="IncomeMulti_4-Kup" class="Hover" onclick="Income_Multi_4()"><u>Kup</u></td>
                         <td id="IncomeMulti_4-Kupione">Nie Kupiono</td>
                     </tr>
                     <tr>
-                        <td id="IncomeMulti_5-Opis" title="Punków Procentowych">Zwiększa mnożnik Income o 20%</td>
+                        <td id="IncomeMulti_5-Opis">Zwiększa mnożnik Income o 20%</td>
                         <td id="IncomeMulti_5-Cena">1,000,000 $</td>
                         <td id="IncomeMulti_5-Kup" class="Hover" onclick="Income_Multi_5()"><u>Kup</u></td>
                         <td id="IncomeMulti_5-Kupione">Nie Kupiono</td>
                     </tr>
                 </table>
                 <hr>
+                <h2>Super Clicker</h2>
+                <table>
+                    <tr>
+                        <th>Opis:</th>
+                        <th colspan="3">Cena:</th>
+                    </tr>
+                    <tr>
+                        <td id="SuperClicker_1-Opis">Odblokowanie Super Clickera. Ma on zwiększony Income (mnożnik 2x), ale do działania potrzebuje Amunicji... co na szczęście można kupić niżej. 5 użyć gratis!</td>
+                        <td id="SuperClicker_1-Cena">100,000 $</td>
+                        <td id="SuperClicker_1-Kup" class="Hover" onclick="Super_Clicker_1()"><u>Kup</u></td>
+                        <td id="SuperClicker_1-Kupione">Nie Kupiono</td>
+                    </tr>
+                    <tr>
+                        <td id="SuperClicker_2-Opis">Użycia Super Clickera (x25)</td>
+                        <td id="SuperClicker_2-Cena">50,000 $</td>
+                        <td id="SuperClicker_2-Kup" class="Hover" colspan="2" onclick="Super_Clicker_2()"><u>Kup</u></td>
+                    </tr>
+                    <tr>
+                        <td id="SuperClicker_3-Opis">Użycia Super Clickera (x250)</td>
+                        <td id="SuperClicker_3-Cena">249,999 $</td>
+                        <td id="SuperClicker_3-Kup" class="Hover" colspan="2" onclick="Super_Clicker_3()"><u>Kup</u></td>
+                    </tr>
+                    <tr>
+                        <td id="SuperClicker_4-Opis">Zwiększa mnożnik Super Clickera o 1x</td>
+                        <td id="SuperClicker_4-Cena">5,000,000 $</td>
+                        <td id="SuperClicker_4-Kup" class="Hover" onclick="Super_Clicker_4()"><u>Kup</u></td>
+                        <td id="SuperClicker_4-Kupione">Nie Kupiono</td>
+                    </tr>
+                    <tr>
+                        <td id="SuperClicker_5-Opis">Zwiększa mnożnik Super Clickera o 1x</td>
+                        <td id="SuperClicker_5-Cena">9,999,999 $</td>
+                        <td id="SuperClicker_5-Kup" class="Hover" onclick="Super_Clicker_5()"><u>Kup</u></td>
+                        <td id="SuperClicker_5-Kupione">Nie Kupiono</td>
+                    </tr>
+                    <tr>
+                        <td id="SuperClicker_6-Opis">Zwiększa mnożnik Super Clickera o 1x</td>
+                        <td id="SuperClicker_6-Cena">999,999,999 $</td>
+                        <td id="SuperClicker_6-Kup" class="Hover" onclick="Super_Clicker_6()"><u>Kup</u></td>
+                        <td id="SuperClicker_6-Kupione">Nie Kupiono</td>
+                    </tr>
+                </table>
+                <hr id="Koniec">
             </section>
-            <section id="Bottom">                
-                <p>By Hubsik</p>
+            <section id="Bottom">
+                
+                    <div id="Kotwica_1"><a href="#Title"><p>Top</p></a></div>
+                    <div id="Credits"><p>By Hubsik</p></div>
+                    <div id="Kotwica_2"><a href="#Koniec"><p>Bottom</p></a></div>
+                
             </section>
         </section>
     </body>

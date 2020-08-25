@@ -177,7 +177,7 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
         case "rick roll":
             document.getElementById("Komunikat").innerHTML = "Never Gonna Give You Up.";
             var Secret = document.createElement("a");
-            Secret.href = "https://youtu.be/dQw4w9WgXcQ?t=43";
+            Secret.href = "https://youtu.be/BjDebmqFRuc?t=43";
             Secret.click();
             break;
         case "Diablo 1":
@@ -202,6 +202,13 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             break;
         case "drop database":
             document.getElementById("Komunikat").innerHTML = "SYNTAX ERROR: Dzbanie, to się C A P S E M pisze!";
+            break;
+        case "Star Wars":
+        case "star wars":
+            document.getElementById("Komunikat").innerHTML = "I find your lack of WIDTH disturbing<br>By losowy komentarz na YT";
+            var Secret = document.createElement("a");
+            Secret.href = "https://youtu.be/17cx2KuiYvg";
+            Secret.click();
             break;
         case "Clicker.html":
             document.getElementById("Komunikat").innerHTML = "Work In Progress jakby co";

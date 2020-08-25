@@ -10,6 +10,8 @@ var AutoClick_Delay = 6000;
 var BiedaIlosc = 0;
 var Crit_Click = 0;
 var Crit_Multi = 1;
+var Super_Clicker_Ammo = 0;
+var Super_Clicker_Multi = 2;
         //* Ilość Ulepszeń Income
 var Upgrade_1_Ilosc = 1;
 var Upgrade_2_Ilosc = 1;
@@ -51,6 +53,11 @@ var Income_Multi_2_Kupione = false;
 var Income_Multi_3_Kupione = false;
 var Income_Multi_4_Kupione = false;
 var Income_Multi_5_Kupione = false;
+        //* Kupione Super Clicker
+var Super_Clicker_1_Kupione = false;
+var Super_Clicker_4_Kupione = false;
+var Super_Clicker_5_Kupione = false;
+var Super_Clicker_6_Kupione = false;
     //! Quality Of Life
 function Formatowanie_Liczb(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -65,6 +72,8 @@ function Aktualizacja_2()
 {
     Real_Income = Math.floor(Income * Income_Multi);
     Real_Income_Crit = Math.floor(((Math.round((Income*Crit_Multi) *10 ) / 10)) * Income_Multi);
+    Real_Income_Super = Math.floor(Income * Income_Multi * Super_Clicker_Multi);
+    Real_Income_Super_Crit = Math.floor((Math.round(Income*Crit_Multi) * 10) / 10);
         //* Money
     document.getElementById("Money").value = Formatowanie_Liczb(Money) +" $";
         //* Income
@@ -79,6 +88,10 @@ function Aktualizacja_2()
     document.getElementById("Szansa_na_Crit_Click").value = Crit_Click+" %";
         //* Mnożnik Krytów
     document.getElementById("Mnożnik_Crit_Click").value = Math.round((Crit_Multi) * 10) / 10 +" x";
+        //* Super Clicker Multi
+    document.getElementById("SuperClicker_Multi").value = Super_Clicker_Multi+" x";
+        //* Super Clicker Ammo
+    document.getElementById("SuperClicker_Ammo").value = Super_Clicker_Ammo;
         //* Ilość ulepszeń
     document.getElementById("Upgrade_1-Ilosc").innerHTML = Upgrade_1_Ilosc - 1;
     document.getElementById("Upgrade_2-Ilosc").innerHTML = Upgrade_2_Ilosc - 1;
@@ -127,15 +140,9 @@ function Animacja_Auto()
 }
 function Clicker()
 {
-    //Money = Money + Income; - Bez krytów
     var Roll_Click = Math.floor((Math.random() * 100) + 1); //? 1 - 100
     if (Roll_Click <= Crit_Click)
     {
-        //Money = Money + Math.floor(Income*Crit_Multi);
-        //Money = Money + (Math.round((Income*Crit_Multi) *10 ) / 10); // Jest 2020, a nie można spokojnie dodać 1+0.1 ...
-        //Money = Math.floor((Money + (Math.round((Income*Crit_Multi) *10 ) / 10)) * Income_Multi);
-        //Real_Income_Crit = Math.floor((Money + (Math.round((Income*Crit_Multi) *10 ) / 10)) * Income_Multi)
-        //Real_Income_Crit = Math.floor(((Math.round((Income*Crit_Multi) *10 ) / 10)) * Income_Multi)
         Money = Money + Real_Income_Crit;
         //alert("Kryt: "+Real_Income_Crit);
             //alert(Money+" + "+Income*Crit_Multi+"\nCrit_Multi: "+Crit_Multi+"\n"+(Math.round((Income*Crit_Multi) *10 ) / 10));
@@ -150,6 +157,37 @@ function Clicker()
         //Real_Income = Math.floor(Income * Income_Multi);
         Money = Money + Real_Income;
         //alert(Real_Income);
+    }
+}
+function Super_Clicker()
+{
+    if (Super_Clicker_1_Kupione == true)
+    {
+        if (Super_Clicker_Ammo > 0)
+        {
+            var Roll_Click = Math.floor((Math.random() * 100) + 1); //? 1 - 100
+            if (Roll_Click <= Real_Income_Super_Crit)
+            {
+                Money = Money + Real_Income_Super_Crit;
+                document.getElementById("TextArea").innerHTML += "Crit Click !\n";
+                var Timer = setTimeout(function()
+                {
+                    document.getElementById("TextArea").innerHTML = "";
+                }, 2500);
+            }
+            else
+            {
+                Money = Money + Real_Income_Super;
+            }
+        }
+        else
+        {
+            alert("ni ma ammo");
+        }
+    }
+    else
+    {
+        Biedak();
     }
 }
 function Progress()
@@ -1145,6 +1183,133 @@ function Income_Multi_5()
             var Timer = setTimeout(function()
                 {
                     document.getElementById("IncomeMulti_5-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+    //! Super Clicker
+function Super_Clicker_1()
+{
+    if (Super_Clicker_1_Kupione == false)
+    {
+        if (Money >= 100000)
+        {
+            Money = Money - 100000;
+            document.getElementById("SuperClicker_1-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("SuperClicker_1-Kupione").innerHTML = "Już to kupiłeś";
+            Super_Clicker_1_Kupione = true;
+            Super_Clicker_Ammo = Super_Clicker_Ammo + 5;
+        }
+        else
+        {
+            document.getElementById("SuperClicker_1-Cena").style.backgroundColor = "tomato";
+            Biedak("SuperClicker_1-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("SuperClicker_1-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function Super_Clicker_2()
+{
+    if (Money >= 50000)
+    {
+        Money = Money - 50000;
+        Super_Clicker_Ammo = Super_Clicker_Ammo + 25;
+    }
+    else
+    {
+        document.getElementById("SuperClicker_2-Cena").style.backgroundColor = "tomato";
+        Biedak("SuperClicker_2-Cena");
+        var Timer = setTimeout(function()
+            {
+                document.getElementById("SuperClicker_2-Cena").style.backgroundColor = "initial";
+            }, 2500);
+    }
+}
+function Super_Clicker_3()
+{
+    if (Money >= 249999)
+    {
+        Money = Money - 249999;
+        Super_Clicker_Ammo = Super_Clicker_Ammo + 250;
+    }
+    else
+    {
+        document.getElementById("SuperClicker_3-Cena").style.backgroundColor = "tomato";
+        Biedak("SuperClicker_3-Cena");
+        var Timer = setTimeout(function()
+            {
+                document.getElementById("SuperClicker_3-Cena").style.backgroundColor = "initial";
+            }, 2500);
+    }
+}
+function Super_Clicker_4()
+{
+    if (Super_Clicker_4_Kupione == false)
+    {
+        if (Money >= 5000000)
+        {
+            Money = Money - 5000000;
+            document.getElementById("SuperClicker_4-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("SuperClicker_4-Kupione").innerHTML = "Już to kupiłeś";
+            Super_Clicker_4_Kupione = true;
+            Super_Clicker_Multi = Super_Clicker_Multi + 1;
+        }
+        else
+        {
+            document.getElementById("SuperClicker_4-Cena").style.backgroundColor = "tomato";
+            Biedak("SuperClicker_4-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("SuperClicker_4-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function Super_Clicker_5()
+{
+    if (Super_Clicker_5_Kupione == false)
+    {
+        if (Money >= 9999999)
+        {
+            Money = Money - 9999999;
+            document.getElementById("SuperClicker_5-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("SuperClicker_5-Kupione").innerHTML = "Już to kupiłeś";
+            Super_Clicker_5_Kupione = true;
+            Super_Clicker_Multi = Super_Clicker_Multi + 1;
+        }
+        else
+        {
+            document.getElementById("SuperClicker_5-Cena").style.backgroundColor = "tomato";
+            Biedak("SuperClicker_5-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("SuperClicker_5-Cena").style.backgroundColor = "initial";
+                }, 2500);
+        }
+    }
+}
+function Super_Clicker_6()
+{
+    if (Super_Clicker_6_Kupione == false)
+    {
+        if (Money >= 999999999)
+        {
+            Money = Money - 999999999;
+            document.getElementById("SuperClicker_6-Kupione").style.backgroundColor = "lightgreen";
+            document.getElementById("SuperClicker_6-Kupione").innerHTML = "Już to kupiłeś";
+            Super_Clicker_6_Kupione = true;
+            Super_Clicker_Multi = Super_Clicker_Multi + 1;
+        }
+        else
+        {
+            document.getElementById("SuperClicker_6-Cena").style.backgroundColor = "tomato";
+            Biedak("SuperClicker_6-Cena");
+            var Timer = setTimeout(function()
+                {
+                    document.getElementById("SuperClicker_6-Cena").style.backgroundColor = "initial";
                 }, 2500);
         }
     }
