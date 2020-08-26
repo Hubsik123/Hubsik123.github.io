@@ -1,6 +1,3 @@
-//TODO:
-//! https://youtu.be/BjDebmqFRuc?t=43 DODAĆ TO GDZIEŚ
-
 //! Ale tak na serio:
     // Czytanie kodu akurat T E G O pliku to odpuść sobie... możesz sobie zepsuć niespodzianke...
     // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
@@ -262,7 +259,6 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             break;
         default:
             document.getElementById("Komunikat").innerHTML = "";
-            //document.getElementById("Content").style.display = "block"; Specjalnie tu jest komentarz ;)
     }
 }
 //Dark Mode, to też z internetu, troszkę pozmieniane, https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf
@@ -296,34 +292,6 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
         localStorage.setItem('Pasek',Pasek.content);
     })
 })
-/*
-document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
-{
-    const Styl = document.getElementById('CSS');
-    const ZapisanyStyl = localStorage.getItem('CSS');
-    var Pasek = document.getElementById('Pasek');
-    if(ZapisanyStyl)
-    {
-        Styl.href = ZapisanyStyl;
-    }
-    const Przycisk = document.getElementById('DarkMode');
-    Przycisk.addEventListener('click', () =>
-    {
-        if(Styl.href.includes('Styl-Ciemny')) // Jasny -> Ciemny
-        {
-            Styl.href = 'Styl.css';
-            Przycisk.innerText = 'Dark Mode';
-            Pasek.setAttribute("content", "#3cd816");
-        }
-        else // Ciemny -> Jasny
-        {
-            Styl.href = 'Styl-Ciemny.css';
-            Przycisk.innerText = 'Light Mode';
-            Pasek.setAttribute("content", "black");
-        }
-        localStorage.setItem('CSS',Styl.href)  // Ciemny -> Jasny
-    })
-})*/
 function No_Spam()
 {
     if (Troll_3 == true)
@@ -341,23 +309,13 @@ var Ksiazki_Blokada = false;
     //? Blokada Spamu jak się go zamknię ___ razy
 function BanSpam()
 {
-    //localStorage.setItem("BanMeter", 0);
     if(typeof(Storage) !== "undefined")
     {
         if (localStorage.BanMeter  >= 5)
         {
             document.getElementById("Spam").style.display = "none";
-            //alert("1\n"+Number(localStorage.BanMeter));
-        }
-        else
-        {
-            //alert("2\n"+Number(localStorage.BanMeter));
         }
     }
-    /*else
-    {
-        alert("Coś się zepsuło...");
-    }*/
 }
     //? Do Blokady Spamu jak się go zamknię ___ razy
 function NoMoreSpam()
@@ -368,9 +326,7 @@ function NoMoreSpam()
     }
     else
     {
-        //localStorage.BanMeter++;
         localStorage.BanMeter = Number(localStorage.BanMeter) + 1;
-        //alert("4\n"+localStorage.BanMeter);
     }
 }
     // Sktypt 1
@@ -401,8 +357,6 @@ function Do_Background()
 }
 function Background()
 {
-    //Licznik_2++;
-    //if (Licznik_2 >= 10 && Troll_2 == false)
     if (Licznik_2 >= 10 && Troll_2 == false)
     {
         //alert("To nie jest żaden Clicker! Może ten przycisk też ma uczucia?!");
@@ -411,9 +365,6 @@ function Background()
         document.getElementById("LinkiMobile").style.display = "none";
         document.getElementById("Menu").style.display = "none";
         document.getElementById("Footer").style.display = "none";
-        //document.getElementById("Spam").style.display = "block";
-        //document.getElementById("Main").style.backgroundImage = "initial";
-        //document.getElementById("Main").style.backgroundColor = "white";
         document.getElementById("Main").style.backgroundImage = "url(Obrazki/Ikona.gif)";
         Troll_2 = true;
         Smutny_Dzbanek();
@@ -484,7 +435,6 @@ function Smutny_Dzbanek()
 {
     if (Troll_1 == true || Troll_2 == true || Troll_3 == true)
     {
-        //document.getElementsByTagName("body").style.cursor = "url('Obrazki/Smutny Dzbanek.png'), auto";
         document.getElementById("Main").style.cursor = "url('Obrazki/Smutny Dzbanek.png'), auto";
     }
 }
@@ -498,10 +448,6 @@ function Kalendarz()
         alert("Happy Birthday To Me");
         document.getElementById("Meta").innerHTML = "Happy birthday to me";
     }
-    /*else
-    {
-        alert(Miesiac+"\n"+Dzien);
-    }*/
 }
 function Message()
 {
@@ -525,13 +471,11 @@ function Message()
         }
         case 4:
         {
-            //document.getElementById("Message").innerHTML = "#Frekwencja_Master_Race #Gaming #Gaming>=Books #Path_Of_Exile #Windows>=Linux>>>MAC #Hack'n'slash #Poe>Diablo_1>Diablo_2>Diablo_3";
             document.getElementById("Message").innerHTML = "01101000 01110100 01110100 01110000 01110011 00111010 00101111 00101111 01111001 01101111 01110101 01110100 01110101 00101110 01100010 01100101 00101111 01100100 01010001 01110111 00110100 01110111 00111001 01010111 01100111 01011000 01100011 01010001 00111111 01110100 00111101 00110100 00110011";
             break;
         }
         case 5:
         {
-            //document.getElementById("Message").innerHTML = "ZOBACZ JAK JEDNYM ZDANIEM OBRAŻA KSIĄŻKOHOLIKÓW: Nigdy nie rozumiałem ludzi, którzy zawsze mówili że książki są delikatnie mówiąc lepsze niż gry komputerowe, wręcz najwyższą (patrz jedyną) formą intelektualnej rozrywki. Na podtrzymanie (patrz wpajanie) tej teori przytaczane były argumenty że książki poszerzają horyzonty, uczą w sumie wszystkiego co się tylko da... Ale niestety często te oczytane i obeznane w świecie (antycznym) osoby nie tolerowały jakiejkolwiek formy gry komputerowej... Twierdząć że to strata czasu i prowadzenie do tego że mózgi nam zgniją... Ale moim zdaniem - uważam takie osoby są po prostu nie toleranycjne, zachowują się na przykład podobnie do rasistów (i moim zdaniem powinni być do nich przyrównywami). Ale jakimś cudem mój mózg ma się w miarę dobrze i to jakoś Ty własnie korzystasz z tej skoromnej stronki i wszystkich plików które są tutaj dostępne. Które zostały zrobione w 200% pod wpływem korzystania z tych całych gier komputerowych. PS: Jak już To 'Diablo' to gra o egzorcyście. Jeśli do Ciebie był skierowany ten krótki tekst - to nie pozdrawiam!";
             document.getElementById("Message").innerHTML = "ZOBACZ JAK JEDNYM ZDANIEM OBRAŻA KSIĄŻKOHOLIKÓW: ";
             var Spoiler = document.createElement("p");
             Spoiler.innerHTML = "Klikasz na własną odpowiedzialność!";
