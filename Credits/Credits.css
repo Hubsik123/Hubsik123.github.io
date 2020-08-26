@@ -53,16 +53,14 @@ a:hover {
     text-align: center;
     color: black;
 }
-.Tekst_Ramka span.border {
+.Tekst_Ramka span.Ramka {
     background-color: #111;
     color: goldenrod;
     padding: 18px;
     font-size: 34px;
     border-radius: 15px;
-    /*letter-spacing: 10px;*/
 }
 h3 {
-    /*letter-spacing: 5px;*/
     text-transform: uppercase;
     font: 20px "Lato", sans-serif;
     color: #00e600;
@@ -70,5 +68,15 @@ h3 {
 @media only screen and (max-device-width: 1024px) {
     .Obrazek_1, .Obrazek_2, .Obrazek_3 {
         background-attachment: scroll;
+    }
+    .Opis {
+        padding: 1vw;
+    }
+    .Tekst_Ramka span.Ramka {
+        display: inline-block;
+        width: 70%;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 5%;
     }
 }
