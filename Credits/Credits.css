@@ -13,6 +13,18 @@ a:hover {
     color: #003300;
 
 }
+.Opis {
+    color: whitesmoke;
+    background-color: #404040;
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
+}
+.Napis {
+    background-color:transparent;
+    font-size:25px;
+    color: #f7f7f7;
+}
 .Obrazek_1, .Obrazek_2, .Obrazek_3 {
     position: relative;
     opacity: 0.65;
@@ -30,7 +42,7 @@ a:hover {
     min-height: 400px;
 }
 .Obrazek_3 {
-    background-image: url("3.jpg");
+    background-image: url("3-1.jpg");
     min-height: 400px;
 }
 .Tekst_Ramka {
