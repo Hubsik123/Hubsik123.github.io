@@ -47,7 +47,7 @@ function Komunikat()
         case (RNG == 9):
         {
             Tekst = "Mam se sobie nadzięje, żę nie przemjmujes siem mojom łórtografiom.";
-            break;dfgdfg
+            break;
         }
         case (RNG == 10):
         {
