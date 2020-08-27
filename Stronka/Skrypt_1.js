@@ -335,7 +335,7 @@ var Troll_1 = false;
 function Rotate()
 {
     Licznik_1++;
-    if (Licznik_1 >= 5 && Troll_1 == false)
+    if (Licznik_1 >= 25 && Troll_1 == false)
     {
         //alert("No i co teraz? Po co Ci było tak klikać???");
         document.getElementById("Main").style.transform = "scaleX(-1)";
@@ -357,7 +357,7 @@ function Do_Background()
 }
 function Background()
 {
-    if (Licznik_2 >= 10 && Troll_2 == false)
+    if (Licznik_2 >= 25 && Troll_2 == false)
     {
         //alert("To nie jest żaden Clicker! Może ten przycisk też ma uczucia?!");
         document.getElementById("Banner").style.display = "none";
@@ -376,7 +376,7 @@ var Troll_3 = false;
 function SuperH1()
 {
     Licznik_3++;
-    if (Licznik_3 >= 10 && Troll_3 == false)
+    if (Licznik_3 >= 25 && Troll_3 == false)
     {
         document.getElementById("SuperHeader").innerHTML = "W matkę też tak klikasz?!";
         document.getElementById("SuperHeader").style.color = "white";
