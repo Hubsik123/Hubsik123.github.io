@@ -161,8 +161,12 @@ html::selection, body::selection {
     padding: 0;
     outline: none;
 }
+#Menu input[type=text]:focus {
+    outline: 2px dashed goldenrod;
+}
 ::placeholder {
     color: white;
+    text-align: center;
 }
 /* Content */
 #Content {
