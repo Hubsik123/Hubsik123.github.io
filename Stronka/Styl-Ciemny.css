@@ -159,6 +159,8 @@ html::selection, body::selection {
     color: white;
     margin: 0;
     padding: 0;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
     outline: none;
 }
 #Menu input[type=text]:focus {
