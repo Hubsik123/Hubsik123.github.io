@@ -1,9 +1,10 @@
 //! Ale tak na serio:
     // Czytanie kodu akurat T E G O pliku to odpuść sobie... możesz sobie zepsuć niespodzianke...
-    // Jeśli dalej to czytasz to kliknij 5 razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
+    // Jeśli dalej to czytasz to kliknij 25* razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
+    // Liczba ta może ulec zmianie
 function Wersja_Stronki()
 {
-    var Wersja = "v 96";
+    var Wersja = "v 97";
     alert("To jest wersja strony nr:\n"+Wersja);
 }
 function Feedback()
