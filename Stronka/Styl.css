@@ -303,17 +303,18 @@ html::selection, body::selection {
     overflow: hidden;
 }
 #Footer button {
-    color: #093527;
+    color: slategrey;
+    background-color: #093527;
     font-size: 2vw;
     height: 100%;
     border: none;
-    background-color: #aaff80;
     transition: 0.5s;
     outline: none;
 }
 #Footer button:hover {
     color: #33ff33;
-    background: linear-gradient(to bottom, #003300 -20%, #669900 120%);
+    background-color: #aaff80;
+    background: linear-gradient(to top, #003300 -20%, #669900 120%);
     cursor: url(Obrazki/Dzbanek.png), auto;
 }
 #Footer p {

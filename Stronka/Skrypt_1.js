@@ -4,7 +4,7 @@
     // Liczba ta może ulec zmianie
 function Wersja_Stronki()
 {
-    var Wersja = "v 97";
+    var Wersja = "v 98";
     alert("To jest wersja strony nr:\n"+Wersja);
 }
 function Feedback()
@@ -443,11 +443,28 @@ function Kalendarz()
 {
     var Data = new Date();
     var Miesiac = Data.getMonth();
-    var Dzien = Data.getDate();
-    if (Miesiac == 2 && Dzien == 3)
+    var Dzien_Miesiaca = Data.getDate();
+    var Dzien_Tygodnia = Data.getDay();
+    if (Miesiac == 2 && Dzien_Miesiaca == 3)
     {
-        alert("Happy Birthday To Me");
+        //alert("Happy Birthday To Me");
         document.getElementById("Meta").innerHTML = "Happy birthday to me";
+    }
+    if (Dzien_Tygodnia == 1) //? Poniedziałek
+    {
+        document.getElementById("SuperHeader").innerHTML += " - Poniedziałek... jeszcze tylko cały tydzień do soboty";
+    }
+    if (Dzien_Tygodnia == 5) //? Piątek
+    {
+        document.getElementById("SuperHeader").innerHTML += " - Jest piątek a ty jeszcze pewnie w szkole biedaczku co?";
+    }
+    if (Dzien_Tygodnia == 6) //? Sobota
+    {
+        document.getElementById("SuperHeader").innerHTML += " - Jest sobota, na pewno nie chcesz wszystkiego zostawić na niedziele?";
+    }
+    if (Dzien_Tygodnia == 0) //? Niedziela
+    {
+        document.getElementById("SuperHeader").innerHTML += " - Znowu zostawiłeś/aś całą naukę na niedziele?";
     }
 }
 function Message()

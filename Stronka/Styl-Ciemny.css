@@ -71,7 +71,8 @@ html::selection, body::selection {
 #Banner {
     width: 100%;
     height: 10%;
-    background: linear-gradient(to bottom right, #000000 0%, #808080 100%);
+    background-color: #1d1e22;
+    /*background: linear-gradient(to bottom right, #feda6a 20%, #393f4d 70%);*/
     float: left;
     overflow: hidden;
 }
@@ -79,10 +80,10 @@ html::selection, body::selection {
     text-align: center;
     font-size: 3vw;
     font-family: Tangerine, Calibri;
-    color: white;
+    color: #feda6a;
     margin-top: 0.5vw;
     margin-bottom: 0.5vw;
-    text-shadow: -0.5vw 0.5vw 0vw #bfbfbf, -0.75vw 0.75vw 0vw #a6a6a6, -1vw 1vw 0vw #8c8c8c;
+    text-shadow: -0.5vw 0.5vw 0vw yellow, -0.75vw 0.75vw 0vw gold, -1vw 1vw 0vw goldenrod;
     text-transform: capitalize;
 }
 /* Menu */
@@ -90,7 +91,7 @@ html::selection, body::selection {
     width: 15%;
     height: 85%;
     color: white;
-    background-color: #262626;
+    background-color: #282828;
     float: left;
     padding: 0.4vw;
     overflow: auto;
@@ -98,6 +99,7 @@ html::selection, body::selection {
 #Menu h1 {
     text-align: center;
     font-size: 2.5vw;
+    color: #feda6a;
     margin-top: 0.01vw;
     margin-bottom: 0.01vw;
     text-shadow: 0.3vw 0.2vw 0px #a6a6a6;
@@ -105,6 +107,7 @@ html::selection, body::selection {
 }
 #Menu h2 {
     text-align: center;
+    color: #d4d4dc;
     font-size: 2vw;
     margin-top: 0.01vw;
     margin-bottom: 0.01vw;
@@ -127,7 +130,7 @@ html::selection, body::selection {
 }
 #Menu a {
     text-decoration: none;
-    background-color: #4d4d33;
+    background-color: #1d1e22;
     border: 0.1vw inset black;
     color: white;
     display: inline-block;
@@ -139,7 +142,7 @@ html::selection, body::selection {
 }
 #Menu a:hover {
     color: black;
-    background: linear-gradient(to right, white 25%, black 150%);
+    background: linear-gradient(to right, #feda6a 0%,#d4d4dc 200%);
     border-bottom-right-radius: 2vw;
     font-style: italic;
     cursor: url(Obrazki/Dzbanek.png), auto;
@@ -147,7 +150,7 @@ html::selection, body::selection {
 #Menu hr {
     width: 100%;
     height: 0.3vw;
-    background: linear-gradient(to right, #ffffff 10%, #000000 110%);
+    background: linear-gradient(to right, #feda6a 10%, #d4d4dc 110%);
     border: 0;
     margin: 0;
 }
@@ -155,7 +158,7 @@ html::selection, body::selection {
     width: 100%;
     font-size: 1vw;
     border: none;
-    background-color: #262626;
+    background-color: #282828;
     color: white;
     margin: 0;
     padding: 0;
@@ -164,7 +167,7 @@ html::selection, body::selection {
     outline: none;
 }
 #Menu input[type=text]:focus {
-    outline: 2px dashed goldenrod;
+    outline: 2px dashed #feda6a;
 }
 ::placeholder {
     color: white;
@@ -180,18 +183,18 @@ html::selection, body::selection {
     overflow: auto;
 }
 #Content h1 {
-    background-color: #262626;
+    background-color: #feda6a;
     font-size: 2vw;
-    color: #d9d9d9;
-    border-left: 0.25vw white solid;
-    text-shadow: #808080 0.15vw 0.15vw 0vw, #595959 0.3vw 0.3vw 0vw;
+    color: #1d1e22;
+    border-left: 0.25vw goldenrod solid;
+    text-shadow: white 0.15vw 0.15vw 0vw, grey 0.3vw 0.3vw 0vw;
     margin-top: 0.25vw;
     margin-bottom: 0.25vw;
     margin-left: 0.125vw;
     text-transform: capitalize;
 }
 #Content h2 {
-    background-color: #333333;
+    background-color: #1d1e22;
     font-size: 1.5vw;
     color: white;
     border-left: 0.25vw white solid;
@@ -234,14 +237,14 @@ html::selection, body::selection {
     border-spacing: 0.5vw;
 }
 #Content th {
-    background-color: #808080;
-    color: white;
+    background-color: #393f4d;
+    color: #feda6a;
     font-size: 1.5vw;
     text-transform: capitalize;
     border-bottom: 0.1vw white dotted;
 }
 #Content td {
-    background-color: #4d4d4d;
+    background-color: #1d1e22;
     font-size: 1.25vw;
     color: whitesmoke;
 }
@@ -268,7 +271,7 @@ html::selection, body::selection {
     /*width: calc(33.33% - 0.5vw); -||- */
     width: calc(33.33% - 1vw);
     color: white;
-    background-color: #737373;
+    background-color: #393f4d;
     font-size: 1.25vw;
     text-align: center;
     margin-top: 0.25vw;
@@ -276,7 +279,7 @@ html::selection, body::selection {
     margin-left: 0.1vw; /* To robi problemy z tym że na tel/zoom nie zgadza się ilość linków na szerokość storny??? */
     margin-right: 0.1vw;
     padding: 0;
-    border: 0.1vw ridge black;
+    border: 0.1vw ridge #feda6a;
     border-radius: 1vw 1vw 0vw 0vw;
     overflow: hidden;
     transition: 0.5s;
@@ -298,7 +301,7 @@ html::selection, body::selection {
 #Footer {
     width: 100%;
     height: 5%;
-    background-color: #262626;
+    background-color: #1d1e22;
     clear: both;
     overflow: hidden;
 }
@@ -307,7 +310,7 @@ html::selection, body::selection {
     font-size: 2vw;
     height: 100%;
     border: none;
-    background-color: #a6a6a6;
+    background-color: #1d1e22;
     transition: 0.5s;
     outline: none;
 }
@@ -379,7 +382,7 @@ html::selection, body::selection {
     text-align: center;
     height: 10%;
     width: 10%;
-  }  
+}  
         /* Układ obrazków */
 .Grafika img {
     opacity: 0.5;
@@ -453,7 +456,7 @@ html::selection, body::selection {
     visibility: visible;
     cursor: url(Obrazki/Dzbanek.png), auto;
 }
-/* Spam, patrz callout, https://www.w3schools.com/howto/howto_js_callout.asp */
+    /* Spam, patrz callout, https://www.w3schools.com/howto/howto_js_callout.asp */
 #Spam {
     position: fixed;
     bottom: 75px;
@@ -470,7 +473,7 @@ html::selection, body::selection {
     border: 2px solid goldenrod;
 }
 #SpamContent {
-    padding: 1vw;
+    padding: 0.5vw;
     background-color: grey;
     color: black;
     border-radius: 0vw 0vw 2.5vw 2.5vw;
@@ -611,7 +614,7 @@ html::selection, body::selection {
     #LinkiMobile {
         display: none;
         color: white;
-        background-color: #666666;
+        background-color: #1d1e22;
         overflow: auto;
         padding: 0.4vw;
         height: 30%;
@@ -620,13 +623,15 @@ html::selection, body::selection {
     #LinkiMobile h1 {
         text-align: center;
         font-size: 4vw;
+        color: #feda6a;
         margin-top: 0.01vw;
         margin-bottom: 0.01vw;
-        text-shadow: 0.3vw 0.2vw 0px #7A7A7A;
+        text-shadow: 0.3vw 0.2vw 0px #a6a6a6;
         text-transform: capitalize;
     }
     #LinkiMobile h2 {
         text-align: center;
+        color: #d4d4dc;
         font-size: 3vw;
         margin-top: 0.01vw;
         margin-bottom: 0.01vw;
@@ -651,7 +656,7 @@ html::selection, body::selection {
     }
     #LinkiMobile a {
         text-decoration: none;
-        background-color: #4d4d33;
+        background-color: #1d1e22;
         border: 0.1vw inset black;
         color: white;
         display: inline-block;
@@ -662,15 +667,16 @@ html::selection, body::selection {
         text-transform: capitalize;
     }
     #LinkiMobile a:hover {
-        color: #3cd816;
-        background: linear-gradient(to right, #000000 -10%, #808080 120%);
+        color: black;
+        background: linear-gradient(to right, #feda6a 0%,#d4d4dc 200%);
         border-bottom-right-radius: 2vw;
         font-style: italic;
+        cursor: url(Obrazki/Dzbanek.png), auto;
     }
     #LinkiMobile hr {
         width: 100%;
         height: 0.3vw;
-        background: linear-gradient(to right, #000000 -10%, #808080 120%);
+        background: linear-gradient(to right, #feda6a 10%, #d4d4dc 110%);
         border: 0;
         margin: 0;
     }
