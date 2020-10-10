@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <title>Powtórzenie</title>
+        <meta charset="utf-8">
+        <style>
+            button, input {
+                border: 1px solid black;
+                outline: none;
+                transition: 0.25s;
+                width: 25%;
+                margin: 2px;
+            }
+            label {
+                text-align: left;
+                display: inline-block;
+                width: 25%;
+                margin: 2px;
+            }
+            button:hover {
+                border: 1px solid gold;
+            }
+        </style>
+        <script>
+            //! Zmienne globalne
+            var Tablica_1 = ["Jeden", "Dwa", "Siedem"];
+            //var Nowy = document.getElementById("Input_Tablica");
+            //! Funkcje
+                //* Window
+            function Komunikat_Alert()
+            {
+                var Input = document.getElementById("Input_Komunikat_1").value;
+                alert("To jest alert: "+Input);
+            }
+            function Komunikat_Confirm()
+            {
+                var Input = document.getElementById("Input_Komunikat_1").value;
+                confirm("To jest alert: "+Input);
+            }
+            function Komunikat_Prompt()
+            {
+                var Input = document.getElementById("Input_Komunikat_1").value;
+                prompt("To jest alert: "+Input,"Placeholder");
+            }
+            function Timer_1()
+            {
+                setTimeout(function()
+                {
+                    alert("Warto było czekać?");
+                },
+                2500)
+            }
+            function Timer_2()
+            {
+                setTimeout(function()
+                {
+                    Komunikat_Alert();
+                },
+                2500)
+            }
+                //* Stringi
+            function Stringi()
+            {
+                var Input = document.getElementById("Input_String_1").value;
+                var Numer = document.getElementById("Input_String_2").value;
+                document.getElementById("Stingi_Wynik").innerHTML = "";
+                document.getElementById("Stingi_Wynik").innerHTML += "Podany Tekst: "+Input+"<br>";
+                document.getElementById("Stingi_Wynik").innerHTML += "Długość Podanego Tekstu: "+Input.length+"<br>";
+                document.getElementById("Stingi_Wynik").innerHTML += "Zmieniony Kolor Podanego Tekstu: "+Input.fontcolor("green")+"<br>";
+                document.getElementById("Stingi_Wynik").innerHTML += "Zmieniony Rozmiar Podanego Tekstu: "+Input.fontsize(12)+"<br>";
+                document.getElementById("Stingi_Wynik").innerHTML += "Zmieniony Styl Podanego Tekstu: "+Input.italics(12)+"<br>";
+                document.getElementById("Stingi_Wynik").innerHTML += "Zmieniony Styl Podanego Tekstu: "+Input.strike(12)+"<br>";
+                document.getElementById("Stingi_Wynik").innerHTML += "Znak o numerze: "+Numer+" To: "+Input.charAt(Numer)+"<br>";
+            }
+                //* Tablice
+            function Tablice()
+            {
+                document.getElementById("Tablice_Wynik").innerHTML = "";
+                document.getElementById("Tablice_Wynik").innerHTML += "Zawartość Całej tablicy: "+Tablica_1+"<br>";
+                document.getElementById("Tablice_Wynik").innerHTML += "Element Tablicy nr 0: "+Tablica_1[0]+"<br>";
+                document.getElementById("Tablice_Wynik").innerHTML += "Element Tablicy nr 1: "+Tablica_1[1]+"<br>";
+                document.getElementById("Tablice_Wynik").innerHTML += "Element Tablicy nr 2: "+ Tablica_1[2]+"<br>";
+                document.getElementById("Tablice_Wynik").innerHTML += "Długość tablicy = "+Tablica_1.length+"<br>";
+            }
+            function Nowy_1()
+            {
+                var Nowy = document.getElementById("Input_Tablica");
+                Tablica_1.push(Nowy.value);
+            }
+            function Nowy_2()
+            {
+                var Nowy = document.getElementById("Input_Tablica");
+                Tablica_1.unshift(Nowy.value);
+            }
+            function Kasuj_1()
+            {
+                var Nowy = document.getElementById("Input_Tablica");
+                Tablica_1.pop(Nowy.value);
+            }
+            function Kasuj_2()
+            {
+                var Nowy = document.getElementById("Input_Tablica");
+                Tablica_1.shift(Nowy.value);
+            }
+            function Tablice_Sortowanie()
+            {
+                document.getElementById("Tablice_Wynik").innerHTML = "Zawartość Całej tablicy: "+Tablica_1.sort();
+                Tablice();
+            }
+                //* Data
+            function Data()
+            {
+                var Data = new Date();
+
+                var Dzien_Miesiaca = Data.getDate();
+                var Dzien_Tygodnia = Data.getDay();
+                var Rok_Dokladny = Data.getFullYear();
+                var Rok = Data.getYear();
+                var Godzina = Data.getHours();
+                var Miesiac = Data.getMonth();
+                var Minuty = Data.getMinutes();
+                var Sekundy = Data.getSeconds();
+                var Milisekundy = Data.getMilliseconds();
+                var Czas = Data.getTime();
+
+                document.getElementById("Data_Wynik").innerHTML = "";
+                document.getElementById("Data_Wynik").innerHTML += "Data: "+Data+"<br>";
+                document.getElementById("Data_Wynik").innerHTML += "Dzień Miesiąca: "+Dzien_Miesiaca+"<br>";
+                document.getElementById("Data_Wynik").innerHTML += "Dzień Tygodnia: "+Dzien_Tygodnia+"<br>";
+                document.getElementById("Data_Wynik").innerHTML += "Rok: "+Rok+"<br>";
+                document.getElementById("Data_Wynik").innerHTML += "Rok Dokładny: "+Rok_Dokladny+"<br>";
+                document.getElementById("Data_Wynik").innerHTML += "Godzina: "+Godzina+"<br>";
+                document.getElementById("Data_Wynik").innerHTML += "Miesiąc: "+Miesiac+"<br>";
+                document.getElementById("Data_Wynik").innerHTML += "Minuty: "+Minuty+"<br>";
+                document.getElementById("Data_Wynik").innerHTML += "Sekundy: "+Sekundy+"<br>";
+                document.getElementById("Data_Wynik").innerHTML += "Milisekundy: "+Milisekundy+"<br>";
+                document.getElementById("Data_Wynik").innerHTML += "'Czas' (w ms) od 1970r: "+Czas+"<br>";
+            }
+                //* Math
+            function Liczby()
+            {
+                var Liczba_1 = parseFloat(document.getElementById("Liczba_1").value);
+                var Liczba_2 = parseFloat(document.getElementById("Liczba_2").value);
+                var Liczba_3 = parseFloat(document.getElementById("Liczba_3").value);
+
+                var Wartosc_Bezwzgledna = Math.abs(Liczba_1);
+                var Zaokroglenie_Dol = Math.floor(Liczba_1);
+                var Zaokroglenie_Gora = Math.ceil(Liczba_1);
+                var Zaokroglenie = Math.round(Liczba_1);
+                var Liczba_Max = Math.max(Liczba_1, Liczba_2, Liczba_3);
+                var Liczba_Min = Math.min(Liczba_1, Liczba_2, Liczba_3);
+                var Potega = Math.pow(Liczba_1,Liczba_2);
+                var Pierwiastek = Math.sqrt(Liczba_1);
+                var Sinus = Math.sin(Liczba_1);
+                var RNG = Math.floor((Math.random()*100)+10); //? 100 - 1
+
+                document.getElementById("Math_Wynik_1").innerHTML = "Liczba #1 = "+Liczba_1+"<br> Liczba #2 = "+Liczba_2+"<br> Liczba #3 = "+Liczba_3;
+                document.getElementById("Math_Wynik_2").innerHTML = "";
+                document.getElementById("Math_Wynik_2").innerHTML += "Wartosc_Bezwzgledna = "+Wartosc_Bezwzgledna+"<br>";
+                document.getElementById("Math_Wynik_2").innerHTML += "Zaokroglenie_Dol = "+Zaokroglenie_Dol+"<br>";
+                document.getElementById("Math_Wynik_2").innerHTML += "Zaokroglenie_Gora = "+Zaokroglenie_Gora+"<br>";
+                document.getElementById("Math_Wynik_2").innerHTML += "Zaokroglenie = "+Zaokroglenie+"<br>";
+                document.getElementById("Math_Wynik_2").innerHTML += "Liczba_Max = "+Liczba_Max+"<br>";
+                document.getElementById("Math_Wynik_2").innerHTML += "Liczba_Min = "+Liczba_Min+"<br>";
+                document.getElementById("Math_Wynik_2").innerHTML += "Potega = "+Potega+"<br>";
+                document.getElementById("Math_Wynik_2").innerHTML += "Pierwiastek = "+Pierwiastek+"<br>";
+                document.getElementById("Math_Wynik_2").innerHTML += "Sinus = "+Sinus+"<br>";
+                document.getElementById("Math_Wynik_2").innerHTML += "RNG = "+RNG+"<br>";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>String</h1> <!-- String -->
+        <label>Podaj tekst: </label>
+            <input type="text" id="Input_String_1"> <br>
+        <label>Podaj numer: </label>
+            <input type="number" id="Input_String_2"> <br>
+        <button onclick="Stringi()">Klikaj</button>
+        <p id="Stingi_Wynik"></p>
+
+            <hr>
+
+        <h1>Window</h1> <!-- Window -->
+        <label>Podaj treść komunikatu: </label>
+            <input type="text" id="Input_Komunikat_1"> <br>
+        <label>Wyświetl Alert - Komunikat: </label>
+            <button id="Input_Komunikat_2" onclick="Komunikat_Alert()">Klikaj</button> <br>
+        <label>Wyświetl Confirm - Potwierdzenie: </label>
+            <button id="Input_Komunikat_3" onclick="Komunikat_Confirm()">Klikaj</button> <br>
+        <label>Wyświetl Prompt - Podanie Danych: </label>
+            <button id="Input_Komunikat_4" onclick="Komunikat_Prompt()">Klikaj</button> <br>
+        <label>Przykład Timera z alertem</label>
+            <button id="Input_Timer" onclick="Timer_1()">Klikaj</button> <br>
+        <label>Przykład Timera, który wywołuje inną funkcje</label>
+            <button id="Input_Timer" onclick="Timer_2()">Klikaj</button> <br>
+
+            <hr>
+
+        <h1>Tablice</h1> <!-- Tablice -->
+        <label>Wpisz tu coś</label>
+            <input type="text" id="Input_Tablica"> <br>
+        <label>Dodaj nowy element na końcu tablicy</label>
+            <button onclick="Nowy_1()">Klikaj</button> <br>
+        <label>Dodaj nowy element na początku tablicy</label>
+            <button onclick="Nowy_2()">Klikaj</button> <br>
+        <label>Usuń z tablicy ostatni element</label>
+            <button onclick="Kasuj_1()">Klikaj</button> <br>
+        <label>Usuń z tablicy pierwszy element</label>
+            <button onclick="Kasuj_2()">Klikaj</button> <br> <br>
+        <label>Wyświetl zawartość tablicy</label>
+            <button onclick="Tablice()">Klikaj</button> <br>
+        <label>Wyświetl posortowaną zawartość tablicy, duże litery są pierwsze, liczby są traktowane jako tekst</label>
+            <button onclick="Tablice_Sortowanie()">Klikaj</button> <br>
+        <p id="Tablice_Wynik"></p>
+
+            <hr>
+
+        <h1>Data</h1> <!-- Data -->
+        <button onclick="Data()">Test</button>
+        <p id="Data_Wynik"></p>
+            <hr>
+        <h1>Math</h1> <!-- Math -->
+        <label>Podaj Liczbę #1: </label>
+            <input type="number" id="Liczba_1"> <br>
+        <label>Podaj Liczbę #2: </label>
+            <input type="number" id="Liczba_2"> <br>
+        <label>Podaj Liczbę #3: </label>
+            <input type="number" id="Liczba_3"> <br>
+        <button onclick="Liczby()">Test</button>
+        <p id="Math_Wynik_1"></p>
+        <p id="Math_Wynik_2"></p>
+    </body>
+</html>
