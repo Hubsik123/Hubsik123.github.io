@@ -1,5 +1,5 @@
 //! Ale tak na serio:
-    // Czytanie kodu akurat T E G O pliku to odpuść sobie... możesz sobie zepsuć niespodzianke...
+    // Uwaga poniższy kod może zawierać spoilery
     // Jeśli dalej to czytasz to kliknij 25* razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
     // Liczba ta może ulec zmianie
 function Wersja_Stronki()
@@ -213,6 +213,14 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             var Secret = document.createElement("a");
             Secret.href = "https://hubsik123.github.io/Clicker/index.html";
             Secret.click();
+            break;
+        case "Thanos":
+        case "thanos":
+            Thanos();
+            break;
+        case "Rainbow":
+        case "rainbow":
+            Kolorki_Ustawianie();
             break;
     // Metody wyświetlania tekstu
         case "360":
@@ -656,4 +664,126 @@ function SayMyName()
             }
         }
     }
+}
+var Snap = true;
+function Thanos()
+{
+    if (Snap == true) 
+    {
+        var Main = document.getElementById("Main");
+        var Linki = Main.getElementsByTagName("a");
+        var Akapity = Main.getElementsByTagName("p");
+        var Naglowki_1 = Main.getElementsByTagName("h1");
+        var Naglowki_2 = Main.getElementsByTagName("h2");
+        var Naglowki_3 = Main.getElementsByTagName("h3");
+        //! Linki
+        for (var x = 0; x < Linki.length; x++)
+        {
+            var RNG = Math.floor((Math.random() * 10) + 1);
+            if (RNG % 2 == 0)
+            {
+                document.getElementsByTagName("a")[x].style.display = "none";
+            }
+        }
+        //! Akapity
+        for (var x = 0; x < Akapity.length; x++)
+        {
+            var RNG = Math.floor((Math.random() * 10) + 1);
+            if (RNG % 2 == 0)
+            {
+                document.getElementsByTagName("p")[x].style.display = "none";
+            }
+        }
+        //! Nahgłówki h1
+        for (var x = 0; x < Naglowki_1.length; x++)
+        {
+            var RNG = Math.floor((Math.random() * 10) + 1);
+            if (RNG % 2 == 0)
+            {
+                document.getElementsByTagName("h1")[x].style.display = "none";
+            }
+        }
+        //! Nahgłówki h2
+        for (var x = 0; x < Naglowki_2.length; x++)
+        {
+            var RNG = Math.floor((Math.random() * 10) + 1);
+            if (RNG % 2 == 0)
+            {
+                document.getElementsByTagName("h2")[x].style.display = "none";
+            }
+        }
+        //! Nahgłówki h3
+        for (var x = 0; x < Naglowki_3.length; x++)
+        {
+            var RNG = Math.floor((Math.random() * 10) + 1);
+            if (RNG % 2 == 0)
+            {
+                document.getElementsByTagName("h3")[x].style.display = "none";
+            }
+        }
+        Snap = false;
+    }
+    else
+    {
+        document.getElementById("Komunikat").innerHTML = "I co magicznie jedną 1/4 chcesz zrobić?";
+    }
+}
+function Kolorki_Losowanie()
+{
+    var Litery = '0123456789ABCDEF';
+    var Kolor = '#';
+    for (var x = 0; x < 6; x++)
+    {
+        Kolor += Litery[Math.floor(Math.random() * 16)];
+    }
+    return Kolor;
+}
+function Kolorki_Ustawianie()
+{
+    //alert(document.getElementsByClassName("Link_2").length);
+    for (var x = 0; x < document.getElementsByClassName("Link_2").length+50; x++) //! Cos nie działa bez tego +50, za mało iteracji, jeśli wiesz jak to poprawić to daj proszę znać
+    {
+        //! Kolor
+        $(".Link_2:nth-child("+x+")").css("color", Kolorki_Losowanie());
+
+        //! Gradient
+        var Kierunek_1 =
+        [
+            "bottom",
+            "right",
+            "top left",
+            "top right",
+            "top",
+            "left",
+            "bottom left",
+            "bottom right",
+        ];
+        var Kierunek_2 = Kierunek_1[Math.floor(Math.random() * 8)];
+
+        var Gradient_1 = 
+        [
+            "linear-gradient",
+            "radial-gradient"
+        ];
+        var Gradient_2 = Gradient_1[Math.floor(Math.random() * 2)];
+
+        if (Gradient_2 == "linear-gradient")
+        {
+            var wip_2 = Gradient_2+"(to "+Kierunek_2+", "+Kolorki_Losowanie()+", "+Kolorki_Losowanie()+", "+Kolorki_Losowanie()+")";
+        }
+        else
+        {
+            var wip_2 = Gradient_2+"("+Kolorki_Losowanie()+", "+Kolorki_Losowanie()+", "+Kolorki_Losowanie()+")";
+        }
+
+        $(".Link_2:nth-child("+x+")").css("background-image", wip_2);
+
+        //! Text-Shadow
+        wip = "50px 50px 10px "+Kolorki_Losowanie();
+        $(".Link_2:nth-child("+x+")").css("text-shadow", wip); 
+    }
+    setTimeout(function()
+    {
+        Kolorki_Ustawianie()
+    }, 250);
 }
