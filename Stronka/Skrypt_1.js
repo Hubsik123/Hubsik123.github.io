@@ -4,7 +4,7 @@
     // Liczba ta może ulec zmianie
 function Wersja_Stronki()
 {
-    var Wersja = "v 98";
+    var Wersja = "v 99";
     alert("To jest wersja strony nr:\n"+Wersja);
 }
 function Feedback()
