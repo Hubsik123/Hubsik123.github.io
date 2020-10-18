@@ -2,15 +2,18 @@
     // Uwaga poniższy kod może zawierać spoilery
     // Jeśli dalej to czytasz to kliknij 25* razy na napis "Menu"... A jeśli to dla Ciebie za mało... to to jest dopiero 1/4...
     // Liczba ta może ulec zmianie
+//! Szybkie sprawdzenie wersji strony po kliknięciu w ikonę
 function Wersja_Stronki()
 {
     var Wersja = "v 99";
     alert("To jest wersja strony nr:\n"+Wersja);
 }
+//! Komunikat po kliknięciu w ikonę
 function Feedback()
 {
     alert("Jeśli podoba ci się ta strona, przydały ci sie te notatki, kod tej strony to daj znać znajomym, im też może się przydać.\nJesli zobaczysz jakieś błędy to proszę daj o tym znać (screeny, model telefonu, przeglądarka będą bardzo pomocne). Mój adres e-mail:\nhubsik321@gmail.com");
 }
+//! Wyświetlenie obrazka w dużym rozmiarze
 function Powiekszenie_Obrazka(imgs)
 {
         // Wybranie obrazka do powiększenia
@@ -24,6 +27,7 @@ function Powiekszenie_Obrazka(imgs)
         // Wyświetlenia obrazka
     Powiekszony_Obrazek.parentElement.style.display = "block";
 }
+//! Zamknięcie powiększonego obrazka
 function Zamkniecie_Obrazka(imgs) // PRAWIE to samo to funkcja Powiekszenie_Obrazka(imgs) ale ta funkcja zamyka obrazek
 {
     var Powiekszony_Obrazek = document.getElementById("Powiekszony_Obrazek");
@@ -32,7 +36,9 @@ function Zamkniecie_Obrazka(imgs) // PRAWIE to samo to funkcja Powiekszenie_Obra
     Opis_Obrazka.innerHTML = imgs.alt;
     Powiekszony_Obrazek.parentElement.style.display = "none";
 }
-var WIP = false; //Niby to całe menu na tel to niby z internetu skopiowane https://www.w3schools.com/howto/howto_js_dropdown.asp i https://www.w3schools.com/howto/howto_js_mobile_navbar.asp, ale to to trzeba praktycznie całe przerobić żeby do czego się nadawało... Trzeba było napisać 3 funkcje żeby to działało (MenuMobile, MobileContent, ZoomFix)...
+//! Skrypty do poprawnego działania strony na telefonach
+//? Niby to całe menu na tel to niby z internetu skopiowane https://www.w3schools.com/howto/howto_js_dropdown.asp i https://www.w3schools.com/howto/howto_js_mobile_navbar.asp, ale to to trzeba praktycznie całe przerobić żeby do czego się nadawało... Trzeba było napisać 3 funkcje żeby to działało (MenuMobile, MobileContent, ZoomFix)...
+var Widok = false;
 function MenuMobile()
 {
     var Banner = document.getElementById("Banner");
@@ -45,7 +51,7 @@ function MenuMobile()
         Banner.style.height = "10%";
         Content.style.height = "85%";
         Footer.style.height = "5%";
-        WIP = false;
+        Widok = false;
     }
     else
     {
@@ -54,9 +60,9 @@ function MenuMobile()
         Linki.style.height = "85%";
         Content.style.display = "none";
         Footer.style.height = "5%";
-        WIP = true;
+        Widok = true;
     }
-    if (WIP == false) // Dzięki temu nie wywala błedu jak kliknie się ikonki 2 razy z rzędu
+    if (Widok == false) // Dzięki temu nie wywala błedu jak kliknie się ikonki 2 razy z rzędu
     {
         Linki.style.display = "none";
         Banner.style.height = "10%";
@@ -64,7 +70,6 @@ function MenuMobile()
         Content.style.height = "85%";
         Footer.style.height = "5%";
     }
-    //Background();
 }
 function MobileContent()
 {
@@ -77,7 +82,6 @@ function MobileContent()
     Content.style.display = "block";
     Content.style.height = "85%";
     Footer.style.height = "5%";
-    //Background();
 }
 var Zoom = false;
 function ZoomFix()
@@ -93,7 +97,9 @@ function ZoomFix()
     Footer.style.height = "5%";
     Background();
 }
-function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie zmieniać https://www.w3schools.com/howto/howto_js_filter_lists.asp, ale można było taki jeden mały detal dodać... to dodałem...
+//! Wyszukiwarka do filtrowania listy w menu
+//? Skopiowane z Internetu, tu nawet nie ma co specjalnie zmieniać https://www.w3schools.com/howto/howto_js_filter_lists.asp, ale można było taki jeden mały detal dodać... to dodałem...
+function Wyszukiwarka()
 {
     var Input = document.getElementById("Wyszukiwarka");
     var Filtr = Input.value.toUpperCase();
@@ -114,7 +120,7 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
         Element[Petla].style.display = "none";
         }
     }
-    switch(Input.value) //he he
+    switch(Input.value) // Bardzo ważny "Fragment" kodu
     {
     //Komunikaty
         case "Wpisz tu coś":
@@ -148,7 +154,7 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             document.getElementById("Komunikat").innerHTML = "NIE TYM TONEM, chamie.\nZapamiętam to sobie... Będziesz chciał jeszcze jakieś notatki...";
             var Audio = document.getElementById("Muzyka");
             Audio.play();
-            document.getElementById("Content").style.display = "none";
+            document.getElementById("Content").style.display = "none"; // Może by to tak w local storage zapisać?
             break;
         case "Diablo lepsze":
         case "Diablo 4":
@@ -251,6 +257,7 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
                     }
                 );
             break;
+        case "Kółko":
         case "kółko":
             document.getElementById("Komunikat").innerHTML = "Zatkało?";
             document.getElementById("Komunikat").animate
@@ -270,7 +277,8 @@ function Wyszukiwarka() // Skopiowane z Internetu, tu nawet nie ma co specjalnie
             document.getElementById("Komunikat").innerHTML = "";
     }
 }
-//Dark Mode, to też z internetu, troszkę pozmieniane, https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf
+//! Tryb ciemny, zapisywany w local storage, działający na podstronach
+//? Dark Mode, to też z internetu, troszkę pozmieniane, https://dev.to/albertomontalesi/add-dark-mode-to-your-website-with-just-a-few-lines-of-code-5baf
 document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
 {
     const Styl = document.getElementById('CSS');
@@ -301,9 +309,10 @@ document.addEventListener('DOMContentLoaded', () => // Po załadowaniu strony
         localStorage.setItem('Pasek',Pasek.content);
     })
 })
+//! Zamknięcie spamu przy zmianie rozmiaru okna
 function No_Spam()
 {
-    if (Troll_3 == true)
+    if (Troll_3 == true) // Przerobić to, wcześniej Troll_3 był do blokowania zamykania spamu
     {
         document.getElementById("Spam").style.display = "block";
     }
@@ -312,10 +321,17 @@ function No_Spam()
         document.getElementById("Spam").style.display = "none";
     }
 }
-// !Bardzo ważne skrypty, to akurat jest w pełni pisane samodzielnie (...nikt by na internety takich pierdół nie dawał), z wiadomych wzgledów nie będzie tu żadnych komentarzy z objaśnieniami...
-    //? Do losowych komunikatów
+//! BARDZO WAŻNE:
+//! BARDZO WAŻNE:
+
+//! Bardzo ważne skrypty, to akurat jest w pełni pisane samodzielnie (...nikt by na internety takich pierdół nie dawał), z wiadomych wzgledów nie będzie tu żadnych komentarzy z objaśnieniami...
+
+//! BARDZO WAŻNE:
+//! BARDZO WAŻNE:
+
+//? Do losowych komunikatów
 var Ksiazki_Blokada = false;
-    //? Blokada Spamu jak się go zamknię ___ razy
+//! Automatyczne zamykanie spamu jeśli kiedyś kliknięto go ___ razy
 function BanSpam()
 {
     if(typeof(Storage) !== "undefined")
@@ -326,7 +342,7 @@ function BanSpam()
         }
     }
 }
-    //? Do Blokady Spamu jak się go zamknię ___ razy
+//! Do automatycznego zamykania spamu, zwiększenie licznika kliknięć
 function NoMoreSpam()
 {
     if (localStorage.getItem("BanMeter") === null)
@@ -338,7 +354,7 @@ function NoMoreSpam()
         localStorage.BanMeter = Number(localStorage.BanMeter) + 1;
     }
 }
-    // Sktypt 1
+//! Bardzo ważny skrypt #1
 var Licznik_1 = 0;
 var Troll_1 = false;
 function Rotate()
@@ -346,7 +362,6 @@ function Rotate()
     Licznik_1++;
     if (Licznik_1 >= 25 && Troll_1 == false)
     {
-        //alert("No i co teraz? Po co Ci było tak klikać???");
         document.getElementById("Main").style.transform = "scaleX(-1)";
         document.getElementById("Meta").innerHTML = "No i co teraz?";
         document.getElementById("Meta").style.transform = "scaleX(-1)";
@@ -357,7 +372,7 @@ function Rotate()
         Smutny_Dzbanek();
     }
 }
-    //Skrypt 2
+//! Bardzo ważny skrypt #2
 var Licznik_2 = 0;
 var Troll_2 = false;
 function Do_Background()
@@ -368,7 +383,6 @@ function Background()
 {
     if (Licznik_2 >= 25 && Troll_2 == false)
     {
-        //alert("To nie jest żaden Clicker! Może ten przycisk też ma uczucia?!");
         document.getElementById("Banner").style.display = "none";
         document.getElementById("Content").style.display = "none";
         document.getElementById("LinkiMobile").style.display = "none";
@@ -380,6 +394,7 @@ function Background()
         Final();
     }
 }
+//! Bardzo ważny skrypt #3
 var Licznik_3 = 0;
 var Troll_3 = false;
 function SuperH1()
@@ -396,6 +411,7 @@ function SuperH1()
         Final();
     }
 }
+//! Bardzo ważny skrypt #4
 var Troll_4 = false;
 function Final()
 {
@@ -440,6 +456,7 @@ function Final()
         Secret.click();
     }
 }
+//! Podmiana ikony na lepszą kiedy wykona się jeden z bardzooo ważnych skryptów
 function Smutny_Dzbanek()
 {
     if (Troll_1 == true || Troll_2 == true || Troll_3 == true)
@@ -447,6 +464,7 @@ function Smutny_Dzbanek()
         document.getElementById("Main").style.cursor = "url('Obrazki/Smutny Dzbanek.png'), auto";
     }
 }
+//! Specjalne komunikaty w odpowiednie dni tygodnia
 function Kalendarz()
 {
     var Data = new Date();
@@ -475,6 +493,7 @@ function Kalendarz()
         document.getElementById("SuperHeader").innerHTML += " - Znowu zostawiłeś/aś całą naukę na niedziele?";
     }
 }
+//! "Losowa" wiadomość po załadowaniu strony
 function Message()
 {
     var RNG = Math.floor((Math.random() * 10) + 1); //? 1-10
@@ -549,6 +568,7 @@ function Message()
         }
     }
 }
+//! Szybka zamiana plików .css
 var Timer = 0;
 var Tryb = 0;
 var Licznik_4 = 0;
@@ -600,11 +620,11 @@ function Ads_2()
     Ad.document.write("<p>dzban</p>");
 }
 */
+//! Specjalna "losowa" animacja po kliknięciu w pewien przycisk
 var Licznik_6 = 0;
 var Link2_Fix = false;
 function SayMyName()
 {
-
     if (Link2_Fix == false)
     {
         if (Licznik_6 < 2)
@@ -665,6 +685,7 @@ function SayMyName()
         }
     }
 }
+//! Losowe usuwanie elementów strony po wpisaniu "Thanos"
 var Snap = true;
 function Thanos()
 {
@@ -728,6 +749,9 @@ function Thanos()
         document.getElementById("Komunikat").innerHTML = "I co magicznie jedną 1/4 chcesz zrobić?";
     }
 }
+//! Losowanie kolorów do funkcji która ustawia losowe kolory czcionki, tła/gradientu i rodzaju gradientu i text-shadow
+//? Oryginalny pomysł nie jest mój https://stackoverflow.com/questions/1484506/random-color-generator bo mój nie działał :(
+//? Więc przerobiłem bardzo mocno to co znalazłem
 function Kolorki_Losowanie()
 {
     var Litery = '0123456789ABCDEF';
@@ -741,7 +765,7 @@ function Kolorki_Losowanie()
 function Kolorki_Ustawianie()
 {
     //alert(document.getElementsByClassName("Link_2").length);
-    for (var x = 0; x < document.getElementsByClassName("Link_2").length+50; x++) //! Cos nie działa bez tego +50, za mało iteracji, jeśli wiesz jak to poprawić to daj proszę znać
+    for (var x = 0; x < document.getElementsByClassName("Link_2").length+50; x++) //* Cos nie działa bez tego +50, za mało iteracji, jeśli wiesz jak to poprawić to daj proszę znać
     {
         //! Kolor
         $(".Link_2:nth-child("+x+")").css("color", Kolorki_Losowanie());
