@@ -30,7 +30,7 @@ Kilka przydatnych linków:
 Hostowanie stron na GitHubie jest bardzo wygodne i łatwe ale ma dwie wady (ale za cenę 0$ to nie ma co specjalnie narzekać):
 
 * Zakaz .php, czyli brak "include", co bardzo by ułatwiło wszystko, pomogło by zapobiegać błędom typu coś jest niezaktualizowane na którejś stronie itp. Jeśli wiesz jak zrobić coś takiego w .html czy .js to prosze daj mi znać
-* 1 GB rozmiaru wszystkicj plików
+* 1 GB rozmiaru wszystkich plików
 
 Jeśli zobaczysz gdzieś błędy, w kodzie albo ortografii to daj proszę znać.:wink: <br>
 <b>By Hubsik 2020</b> :godmode: <br>
