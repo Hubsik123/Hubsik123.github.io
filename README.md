@@ -34,6 +34,5 @@ Hostowanie stron na GitHubie jest bardzo wygodne i łatwe ale ma dwie wady (ale 
 
 Jeśli zobaczysz gdzieś błędy, w kodzie albo ortografii to daj proszę znać.:wink: <br>
 <b>By Hubsik 2020</b> :godmode: <br>
-Jeżeli przeczytałeś to wszystko to pozdrawiam. A jeśli wiesz z jakiej gry jest ta ikona powyżej to wpisz kod który powodóje tę piękną ikonkę w wyszikarkę na mojej stronie. <br>
+Jeżeli przeczytałeś to wszystko to pozdrawiam. A jeśli wiesz z jakiej gry jest ta ikona powyżej to wpisz kod który powodóje tę piękną ikonkę w wyszukiwarkę na mojej stronie. <br>
 :100:% Frekwencja Master Race <br>
-<b>PS: </b>Proszę zignorować wszystkie "warnings". Nic to nie oznacza. Nie wierzysz? Odpal D O W O L N Ą inną stronę i się przekonaj.
