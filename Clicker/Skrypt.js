@@ -61,12 +61,11 @@ var Super_Clicker_6_Kupione = false;
     //! Quality Of Life
 function Formatowanie_Liczb(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    //alert(x);
 }
     //! Podstawowe Funkcje
 function Aktualizacja_1()
 {
-    var Timer = setTimeout(Aktualizacja_2, 125);
+    var Timer = setTimeout(Aktualizacja_2, 100);
 }
 function Aktualizacja_2()
 {
@@ -109,34 +108,6 @@ function Aktualizacja_2()
     }
     Progress();
     Aktualizacja_1();
-}
-function Animacja()
-{
-    document.getElementById("Clicker").animate
-    (
-        [
-            {transform: "rotateY(360deg)"},
-            {transform: "rotateY(0deg)"},
-        ],
-        {
-            duration: 250,
-            iterations: 1
-        }
-    );
-}
-function Animacja_Auto()
-{
-    document.getElementById("Auto_Clicker").animate
-    (
-        [
-            {transform: "rotateX(0deg)"},
-            {transform: "rotateX(360deg)"},
-        ],
-        {
-            duration: 250,
-            iterations: 1
-        }
-    );
 }
 function Clicker()
 {
@@ -1313,4 +1284,42 @@ function Super_Clicker_6()
                 }, 2500);
         }
     }
+}
+//! Animacje
+function Podmiana_Obrazka()
+{
+    document.getElementById("Clicker").setAttribute("src","Guzik_1-ON.svg"); //Podmiana na wciśnięty przycisk
+    setTimeout(function()
+    {
+        Kliknieto_Niedawno = true;
+        document.getElementById("Clicker").setAttribute("src","Guzik_1-OFF.svg"); //Podmiana na nie wciśnięty przycisk
+    }, 100);
+}
+function Animacja()
+{
+    document.getElementById("Clicker").animate
+    (
+        [
+            {transform: "rotateY(360deg)"},
+            {transform: "rotateY(0deg)"},
+        ],
+        {
+            duration: 250,
+            iterations: 1
+        }
+    );
+}
+function Animacja_Auto()
+{
+    document.getElementById("Auto_Clicker").animate
+    (
+        [
+            {transform: "rotateX(0deg)"},
+            {transform: "rotateX(360deg)"},
+        ],
+        {
+            duration: 250,
+            iterations: 1
+        }
+    );
 }
